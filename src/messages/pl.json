@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "stomatologia": "Stomatologia",
+    "medycynaEstetyczna": "Medycyna estetyczna",
+    "wlewyWitaminowe": "Wlewy witaminowe",
+    "cennik": "Cennik",
+    "oNas": "O nas",
+    "kontakt": "Kontakt"
+  },
+  "cta": {
+    "callNow": "Zadzwoń teraz",
+    "bookAppointment": "Umów wizytę",
+    "learnMore": "Dowiedz się więcej",
+    "seeAll": "Zobacz wszystkie",
+    "readMore": "Czytaj więcej"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "hours": "Godziny otwarcia",
+    "contact": "Kontakt",
+    "services": "Usługi"
+  },
+  "common": {
+    "faq": "Często zadawane pytania",
+    "pricing": "Cennik",
+    "team": "Nasz zespół",
+    "aboutUs": "O nas",
+    "relatedServices": "Powiązane usługi"
+  }
+}

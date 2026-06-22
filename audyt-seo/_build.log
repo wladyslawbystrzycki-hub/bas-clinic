@@ -1,0 +1,89 @@
+
+> bas-clinic@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.7s
+  Running TypeScript ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/69) ...
+  Generating static pages using 11 workers (17/69) 
+  Generating static pages using 11 workers (34/69) 
+  Generating static pages using 11 workers (51/69) 
+✓ Generating static pages using 11 workers (69/69) in 1148.8ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /bonding
+├ ○ /btl-exion
+├ ○ /cennik
+├ ○ /chirurgia
+├ ○ /chirurgia/usuwanie-zebow
+├ ○ /higienizacja
+├ ○ /implanty-zebowe
+├ ○ /kontakt
+├ ○ /konturowanie-zuchwy
+├ ○ /korekta-usmiechu-dziaslowego
+├ ○ /laserowe-usuwanie-blizn
+├ ○ /leczenie-bezzebia
+├ ○ /leczenie-nadpotliwosci
+├ ○ /leczenie-zebow
+├ ○ /licowki
+├ ○ /medycyna-estetyczna
+├ ○ /mezoterapia-iglowa
+├ ○ /mezoterapia-mikroiglowa
+├ ○ /mezoterapia-okolicy-oka
+├ ○ /mezoterapia-skory-glowy
+├ ○ /modelowanie-ust
+├ ○ /o-nas
+├ ○ /ortodoncja
+├ ○ /ortodoncja/alignery
+├ ○ /ortodoncja/aparaty-ruchome
+├ ○ /ortodoncja/aparaty-stale
+├ ○ /osocze-bogatoplytkowe
+├ ○ /pilingi-medyczne
+├ ○ /programy-zabiegowe
+├ ○ /protetyka-korony
+├ ○ /redukcja-cieni
+├ ○ /redukcja-drobnych-zmarszczek-ha
+├ ○ /redukcja-glebokich-zmarszczek
+├ ○ /redukcja-zmarszczek-botox
+├ ○ /redukcja-zmarszczek-ha
+├ ○ /regeneracja-konturu-oka
+├ ○ /regeneratory-komorkowe
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+├ ○ /skin-booster
+├ ○ /stomatologia
+├ ○ /stomatologia-dziecieca
+├ ○ /stomatologia-estetyczna
+├ ○ /stomatologia-estetyczna/odbudowa-zebow
+├ ○ /stomatologia-estetyczna/wybielanie-zebow
+├ ○ /stymulatory-tkankowe
+├ ○ /terapia-egzosomami
+├ ○ /usg
+├ ○ /usg/doppler
+├ ○ /usg/doppler-tetnic-szyjnych
+├ ○ /usg/doppler-zyl-konczyn-dolnych
+├ ○ /usg/ginekologiczne
+├ ○ /usg/jader
+├ ○ /usg/jamy-brzusznej
+├ ○ /usg/nerek
+├ ○ /usg/piersi
+├ ○ /usg/prostaty
+├ ○ /usg/slinianek
+├ ○ /usg/stawow
+├ ○ /usg/szyi
+├ ○ /usg/tarczycy
+├ ○ /usg/tkanek-miekkich
+├ ○ /usg/wezlow-chlonnych
+├ ○ /wlewy-witaminowe
+└ ○ /wypelniacze-ha
+
+
+○  (Static)  prerendered as static content
+

@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Primary — cool graphite / charcoal: #1e2225 at 900 (dark body/hero/footer),
+     #5a646b at 500. Hue ~210° (cool grey), very low chroma. Dark-dominant brand.
+     500–700 verified ≥4.5:1 on light relief; 800–950 carry white text (13:1+). */
+  --color-primary-50: #f2f4f5;
+  --color-primary-100: #e3e6e8;
+  --color-primary-200: #c7cdd1;
+  --color-primary-300: #a4acb2;
+  --color-primary-400: #79838a;
+  --color-primary-500: #5a646b;
+  --color-primary-600: #474f55;
+  --color-primary-700: #383f44;
+  --color-primary-800: #2c3236;
+  --color-primary-900: #1e2225;
+  --color-primary-950: #14171a;
+
+  /* Secondary — platinum / silver: cool metallic accent. Used on DARK only
+     (light silver button + dark text = 10.7:1; subtitle text on dark = 10.4:1).
+     Platinum on light bg is invisible (1.7:1) — on light use primary graphite. */
+  --color-secondary-50: #f8f9f9;
+  --color-secondary-100: #f0f1f2;
+  --color-secondary-200: #e4e6e7;
+  --color-secondary-300: #d6d9da;
+  --color-secondary-400: #cdd1d2;
+  --color-secondary-500: #c4c8cb;
+  --color-secondary-600: #a6acb0;
+  --color-secondary-700: #878e92;
+  --color-secondary-800: #6a7175;
+  --color-secondary-900: #565c60;
+  --color-secondary-950: #353a3d;
+
+  /* Relief — cool light grey for the light sections between dark bands.
+     Near-neutral, NOT warm cream. Token name kept as `cream` for back-compat. */
+  --color-cream: #f2f3f4;
+  --color-cream-dark: #e7e9eb;
+
+  /* Fonts */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base styles */
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Hover Gallery — CSS-only image gallery with hover reveal */
+.hover-gallery {
+  --items: 1;
+  display: inline-grid;
+  grid-template-columns: repeat(var(--items), 1fr);
+  width: 100%;
+  gap: 1px;
+  overflow: hidden;
+
+  &:has(> :nth-child(3)) { --items: 2; }
+  &:has(> :nth-child(4)) { --items: 3; }
+  &:has(> :nth-child(5)) { --items: 4; }
+  &:has(> :nth-child(6)) { --items: 5; }
+  &:has(> :nth-child(7)) { --items: 6; }
+  &:has(> :nth-child(8)) { --items: 7; }
+  &:has(> :nth-child(9)) { --items: 8; }
+  &:has(> :nth-child(10)) { --items: 9; }
+
+  > * {
+    opacity: 0;
+    height: 100%;
+    grid-row: 1;
+    object-fit: cover;
+    width: 100%;
+
+    &:nth-child(1) {
+      grid-column: 1 / -1;
+      opacity: 1;
+    }
+    &:nth-child(2) { grid-column: 1; }
+    &:nth-child(3) { grid-column: 2; }
+    &:nth-child(4) { grid-column: 3; }
+    &:nth-child(5) { grid-column: 4; }
+    &:nth-child(6) { grid-column: 5; }
+    &:nth-child(7) { grid-column: 6; }
+    &:nth-child(8) { grid-column: 7; }
+    &:nth-child(9) { grid-column: 8; }
+    &:nth-child(10) { grid-column: 9; }
+    &:nth-child(n + 11) { display: none; }
+  }
+
+  > *:hover {
+    grid-column: 1 / -1;
+    opacity: 1;
+  }
+
+  &:has(*:hover) > :nth-child(1) {
+    display: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hero — animowane drobinki tła (delikatne unoszenie + migotanie). */
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes heroTwinkle {
+  0%, 100% { opacity: 0.18; }
+  50% { opacity: 0.5; }
+}
+/* Akordeon usług — wejście rozwiniętej karty. */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Kompendium wiedzy — powolny obrót pierścienia z tekstem (dekoracja). */
+@keyframes kompendiumSpin {
+  to { transform: rotate(360deg); }
+}
+.kompendium-ring-spin {
+  transform-origin: center;
+  animation: kompendiumSpin 28s linear infinite;
+}
+/* Szacunek dla użytkowników preferujących ograniczony ruch. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim { animation: none !important; }
+  .kompendium-ring-spin { animation: none !important; }
 }

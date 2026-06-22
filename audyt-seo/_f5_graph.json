@@ -1,0 +1,1110 @@
+{
+  "meta": {
+    "N": 64,
+    "chromeThreshold": 58,
+    "chromeCount": 29
+  },
+  "chrome": [
+    "/",
+    "/cennik/",
+    "/chirurgia/",
+    "/higienizacja/",
+    "/implanty-zebowe/",
+    "/kontakt/",
+    "/leczenie-zebow/",
+    "/licowki/",
+    "/medycyna-estetyczna/",
+    "/mezoterapia-iglowa/",
+    "/modelowanie-ust/",
+    "/o-nas/",
+    "/ortodoncja/",
+    "/pilingi-medyczne/",
+    "/redukcja-zmarszczek-botox/",
+    "/skin-booster/",
+    "/stomatologia-estetyczna/",
+    "/stomatologia/",
+    "/stymulatory-tkankowe/",
+    "/usg/",
+    "/usg/doppler/",
+    "/usg/jamy-brzusznej/",
+    "/usg/nerek/",
+    "/usg/piersi/",
+    "/usg/szyi/",
+    "/usg/tarczycy/",
+    "/usg/wezlow-chlonnych/",
+    "/wlewy-witaminowe/",
+    "/wypelniacze-ha/"
+  ],
+  "freqTop": [
+    [
+      "/stomatologia/",
+      63
+    ],
+    [
+      "/medycyna-estetyczna/",
+      63
+    ],
+    [
+      "/usg/",
+      63
+    ],
+    [
+      "/wlewy-witaminowe/",
+      63
+    ],
+    [
+      "/cennik/",
+      63
+    ],
+    [
+      "/o-nas/",
+      63
+    ],
+    [
+      "/kontakt/",
+      63
+    ],
+    [
+      "/implanty-zebowe/",
+      63
+    ],
+    [
+      "/licowki/",
+      63
+    ],
+    [
+      "/stomatologia-estetyczna/",
+      63
+    ],
+    [
+      "/ortodoncja/",
+      63
+    ],
+    [
+      "/higienizacja/",
+      63
+    ],
+    [
+      "/leczenie-zebow/",
+      63
+    ],
+    [
+      "/chirurgia/",
+      63
+    ],
+    [
+      "/wypelniacze-ha/",
+      63
+    ],
+    [
+      "/redukcja-zmarszczek-botox/",
+      63
+    ],
+    [
+      "/mezoterapia-iglowa/",
+      63
+    ],
+    [
+      "/stymulatory-tkankowe/",
+      63
+    ],
+    [
+      "/modelowanie-ust/",
+      63
+    ],
+    [
+      "/pilingi-medyczne/",
+      63
+    ],
+    [
+      "/skin-booster/",
+      63
+    ],
+    [
+      "/usg/jamy-brzusznej/",
+      63
+    ],
+    [
+      "/usg/tarczycy/",
+      63
+    ],
+    [
+      "/usg/piersi/",
+      63
+    ],
+    [
+      "/usg/nerek/",
+      63
+    ],
+    [
+      "/usg/szyi/",
+      63
+    ],
+    [
+      "/usg/wezlow-chlonnych/",
+      63
+    ],
+    [
+      "/usg/doppler/",
+      63
+    ],
+    [
+      "/",
+      63
+    ],
+    [
+      "/usg/slinianek/",
+      5
+    ],
+    [
+      "/usg/prostaty/",
+      4
+    ],
+    [
+      "/usg/tkanek-miekkich/",
+      4
+    ],
+    [
+      "/usg/doppler-tetnic-szyjnych/",
+      4
+    ],
+    [
+      "/undefined/",
+      3
+    ],
+    [
+      "/usg/ginekologiczne/",
+      3
+    ],
+    [
+      "/usg/jader/",
+      2
+    ],
+    [
+      "/usg/doppler-zyl-konczyn-dolnych/",
+      2
+    ],
+    [
+      "/usg/stawow/",
+      2
+    ],
+    [
+      "/btl-exion/",
+      1
+    ],
+    [
+      "/redukcja-zmarszczek-ha/",
+      1
+    ]
+  ],
+  "ctxOrphans": [
+    "/cennik/",
+    "/chirurgia/",
+    "/chirurgia/usuwanie-zebow/",
+    "/higienizacja/",
+    "/implanty-zebowe/",
+    "/kontakt/",
+    "/leczenie-zebow/",
+    "/licowki/",
+    "/medycyna-estetyczna/",
+    "/mezoterapia-iglowa/",
+    "/modelowanie-ust/",
+    "/o-nas/",
+    "/ortodoncja/",
+    "/ortodoncja/alignery/",
+    "/ortodoncja/aparaty-ruchome/",
+    "/ortodoncja/aparaty-stale/",
+    "/pilingi-medyczne/",
+    "/redukcja-zmarszczek-botox/",
+    "/skin-booster/",
+    "/stomatologia/",
+    "/stomatologia-estetyczna/",
+    "/stomatologia-estetyczna/odbudowa-zebow/",
+    "/stomatologia-estetyczna/wybielanie-zebow/",
+    "/stymulatory-tkankowe/",
+    "/usg/",
+    "/usg/doppler/",
+    "/usg/jamy-brzusznej/",
+    "/usg/nerek/",
+    "/usg/piersi/",
+    "/usg/szyi/",
+    "/usg/tarczycy/",
+    "/usg/wezlow-chlonnych/",
+    "/wlewy-witaminowe/",
+    "/wypelniacze-ha/"
+  ],
+  "nearOrphans": [
+    "/bonding/",
+    "/btl-exion/",
+    "/konturowanie-zuchwy/",
+    "/korekta-usmiechu-dziaslowego/",
+    "/laserowe-usuwanie-blizn/",
+    "/leczenie-bezzebia/",
+    "/leczenie-nadpotliwosci/",
+    "/mezoterapia-mikroiglowa/",
+    "/mezoterapia-okolicy-oka/",
+    "/mezoterapia-skory-glowy/",
+    "/osocze-bogatoplytkowe/",
+    "/programy-zabiegowe/",
+    "/protetyka-korony/",
+    "/redukcja-cieni/",
+    "/redukcja-drobnych-zmarszczek-ha/",
+    "/redukcja-glebokich-zmarszczek/",
+    "/redukcja-zmarszczek-ha/",
+    "/regeneracja-konturu-oka/",
+    "/regeneratory-komorkowe/",
+    "/stomatologia-dziecieca/",
+    "/terapia-egzosomami/"
+  ],
+  "anchorStats": {
+    "totalContextualAnchors": 60,
+    "generic": 0
+  },
+  "matrix": {
+    "home": {
+      "home": 0,
+      "stoma": 0,
+      "estet": 0,
+      "estet-hub": 0,
+      "usg": 0,
+      "wlewy": 0,
+      "info": 0
+    },
+    "stoma": {
+      "home": 0,
+      "stoma": 4,
+      "estet": 0,
+      "estet-hub": 0,
+      "usg": 1,
+      "wlewy": 0,
+      "info": 0
+    },
+    "estet": {
+      "home": 0,
+      "stoma": 0,
+      "estet": 0,
+      "estet-hub": 0,
+      "usg": 0,
+      "wlewy": 0,
+      "info": 0
+    },
+    "estet-hub": {
+      "home": 0,
+      "stoma": 0,
+      "estet": 16,
+      "estet-hub": 1,
+      "usg": 0,
+      "wlewy": 0,
+      "info": 0
+    },
+    "usg": {
+      "home": 0,
+      "stoma": 0,
+      "estet": 0,
+      "estet-hub": 0,
+      "usg": 25,
+      "wlewy": 0,
+      "info": 0
+    },
+    "wlewy": {
+      "home": 0,
+      "stoma": 0,
+      "estet": 0,
+      "estet-hub": 0,
+      "usg": 0,
+      "wlewy": 0,
+      "info": 0
+    },
+    "info": {
+      "home": 0,
+      "stoma": 0,
+      "estet": 0,
+      "estet-hub": 0,
+      "usg": 0,
+      "wlewy": 0,
+      "info": 0
+    }
+  },
+  "rows": [
+    {
+      "url": "/chirurgia/usuwanie-zebow/",
+      "cls": "stoma",
+      "fullIn": 0,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 2.344,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/ortodoncja/alignery/",
+      "cls": "stoma",
+      "fullIn": 0,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 2.344,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/ortodoncja/aparaty-ruchome/",
+      "cls": "stoma",
+      "fullIn": 0,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 2.344,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/ortodoncja/aparaty-stale/",
+      "cls": "stoma",
+      "fullIn": 0,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 2.344,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/stomatologia-estetyczna/odbudowa-zebow/",
+      "cls": "stoma",
+      "fullIn": 0,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 2.344,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/stomatologia-estetyczna/wybielanie-zebow/",
+      "cls": "stoma",
+      "fullIn": 0,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 2.344,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/btl-exion/",
+      "cls": "estet-hub",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/konturowanie-zuchwy/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/korekta-usmiechu-dziaslowego/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/laserowe-usuwanie-blizn/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/leczenie-nadpotliwosci/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/mezoterapia-mikroiglowa/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/mezoterapia-okolicy-oka/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/mezoterapia-skory-glowy/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/osocze-bogatoplytkowe/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/programy-zabiegowe/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/redukcja-cieni/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/redukcja-drobnych-zmarszczek-ha/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/redukcja-glebokich-zmarszczek/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/redukcja-zmarszczek-ha/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/regeneracja-konturu-oka/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/regeneratory-komorkowe/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/terapia-egzosomami/",
+      "cls": "estet",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 2.928,
+      "prCtx": 9.677,
+      "ctxInSources": [
+        "/medycyna-estetyczna/"
+      ]
+    },
+    {
+      "url": "/bonding/",
+      "cls": "stoma",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 3.135,
+      "prCtx": 10.782,
+      "ctxInSources": [
+        "/stomatologia/"
+      ]
+    },
+    {
+      "url": "/leczenie-bezzebia/",
+      "cls": "stoma",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 3.135,
+      "prCtx": 10.782,
+      "ctxInSources": [
+        "/stomatologia/"
+      ]
+    },
+    {
+      "url": "/protetyka-korony/",
+      "cls": "stoma",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 3.135,
+      "prCtx": 10.782,
+      "ctxInSources": [
+        "/stomatologia/"
+      ]
+    },
+    {
+      "url": "/stomatologia-dziecieca/",
+      "cls": "stoma",
+      "fullIn": 1,
+      "fullOut": 29,
+      "ctxIn": 1,
+      "ctxOut": 0,
+      "prFull": 3.135,
+      "prCtx": 10.782,
+      "ctxInSources": [
+        "/stomatologia/"
+      ]
+    },
+    {
+      "url": "/usg/stawow/",
+      "cls": "usg",
+      "fullIn": 2,
+      "fullOut": 30,
+      "ctxIn": 2,
+      "ctxOut": 1,
+      "prFull": 3.187,
+      "prCtx": 138.757,
+      "ctxInSources": [
+        "/usg/",
+        "/usg/tkanek-miekkich/"
+      ]
+    },
+    {
+      "url": "/usg/jader/",
+      "cls": "usg",
+      "fullIn": 2,
+      "fullOut": 31,
+      "ctxIn": 2,
+      "ctxOut": 2,
+      "prFull": 3.21,
+      "prCtx": 45.163,
+      "ctxInSources": [
+        "/usg/",
+        "/usg/prostaty/"
+      ]
+    },
+    {
+      "url": "/usg/doppler-zyl-konczyn-dolnych/",
+      "cls": "usg",
+      "fullIn": 2,
+      "fullOut": 30,
+      "ctxIn": 2,
+      "ctxOut": 1,
+      "prFull": 3.939,
+      "prCtx": 14.112,
+      "ctxInSources": [
+        "/usg/",
+        "/usg/doppler/"
+      ]
+    },
+    {
+      "url": "/usg/tkanek-miekkich/",
+      "cls": "usg",
+      "fullIn": 4,
+      "fullOut": 30,
+      "ctxIn": 4,
+      "ctxOut": 1,
+      "prFull": 4.117,
+      "prCtx": 151.25,
+      "ctxInSources": [
+        "/usg/",
+        "/usg/jader/",
+        "/usg/piersi/",
+        "/usg/stawow/"
+      ]
+    },
+    {
+      "url": "/usg/ginekologiczne/",
+      "cls": "usg",
+      "fullIn": 3,
+      "fullOut": 29,
+      "ctxIn": 3,
+      "ctxOut": 0,
+      "prFull": 4.807,
+      "prCtx": 18.028,
+      "ctxInSources": [
+        "/usg/",
+        "/usg/jamy-brzusznej/",
+        "/usg/piersi/"
+      ]
+    },
+    {
+      "url": "/usg/doppler-tetnic-szyjnych/",
+      "cls": "usg",
+      "fullIn": 4,
+      "fullOut": 29,
+      "ctxIn": 4,
+      "ctxOut": 0,
+      "prFull": 4.919,
+      "prCtx": 30.023,
+      "ctxInSources": [
+        "/usg/",
+        "/usg/doppler-zyl-konczyn-dolnych/",
+        "/usg/doppler/",
+        "/usg/szyi/"
+      ]
+    },
+    {
+      "url": "/usg/prostaty/",
+      "cls": "usg",
+      "fullIn": 4,
+      "fullOut": 30,
+      "ctxIn": 4,
+      "ctxOut": 1,
+      "prFull": 4.924,
+      "prCtx": 41.139,
+      "ctxInSources": [
+        "/usg/",
+        "/usg/jader/",
+        "/usg/jamy-brzusznej/",
+        "/usg/nerek/"
+      ]
+    },
+    {
+      "url": "/usg/slinianek/",
+      "cls": "usg",
+      "fullIn": 5,
+      "fullOut": 29,
+      "ctxIn": 5,
+      "ctxOut": 0,
+      "prFull": 6.525,
+      "prCtx": 31.345,
+      "ctxInSources": [
+        "/stomatologia/",
+        "/usg/",
+        "/usg/szyi/",
+        "/usg/tarczycy/",
+        "/usg/wezlow-chlonnych/"
+      ]
+    },
+    {
+      "url": "/",
+      "cls": "home",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/cennik/",
+      "cls": "info",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/chirurgia/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/higienizacja/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/implanty-zebowe/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/kontakt/",
+      "cls": "info",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/leczenie-zebow/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/licowki/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/mezoterapia-iglowa/",
+      "cls": "estet",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/modelowanie-ust/",
+      "cls": "estet",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/o-nas/",
+      "cls": "info",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/ortodoncja/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/pilingi-medyczne/",
+      "cls": "estet",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/redukcja-zmarszczek-botox/",
+      "cls": "estet",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/skin-booster/",
+      "cls": "estet",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/stomatologia-estetyczna/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/stymulatory-tkankowe/",
+      "cls": "estet",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/wlewy-witaminowe/",
+      "cls": "wlewy",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/wypelniacze-ha/",
+      "cls": "estet",
+      "fullIn": 63,
+      "fullOut": 28,
+      "ctxIn": 0,
+      "ctxOut": 0,
+      "prFull": 30.585,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/nerek/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 1,
+      "prFull": 30.616,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/tarczycy/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 1,
+      "prFull": 30.616,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/wezlow-chlonnych/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 29,
+      "ctxIn": 0,
+      "ctxOut": 1,
+      "prFull": 30.616,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/doppler/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 30,
+      "ctxIn": 0,
+      "ctxOut": 2,
+      "prFull": 30.646,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/jamy-brzusznej/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 30,
+      "ctxIn": 0,
+      "ctxOut": 2,
+      "prFull": 30.646,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/piersi/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 30,
+      "ctxIn": 0,
+      "ctxOut": 2,
+      "prFull": 30.646,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/szyi/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 30,
+      "ctxIn": 0,
+      "ctxOut": 2,
+      "prFull": 30.646,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/stomatologia/",
+      "cls": "stoma",
+      "fullIn": 63,
+      "fullOut": 33,
+      "ctxIn": 0,
+      "ctxOut": 5,
+      "prFull": 30.723,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/usg/",
+      "cls": "usg",
+      "fullIn": 63,
+      "fullOut": 36,
+      "ctxIn": 0,
+      "ctxOut": 8,
+      "prFull": 30.787,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    },
+    {
+      "url": "/medycyna-estetyczna/",
+      "cls": "estet-hub",
+      "fullIn": 63,
+      "fullOut": 45,
+      "ctxIn": 0,
+      "ctxOut": 17,
+      "prFull": 30.93,
+      "prCtx": 9.216,
+      "ctxInSources": []
+    }
+  ]
+}

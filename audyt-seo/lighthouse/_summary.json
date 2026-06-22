@@ -1,0 +1,122 @@
+[
+  {
+    "page": "home",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 96
+    },
+    "cwv": {
+      "LCP": 662.1762,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 217.0881
+    }
+  },
+  {
+    "page": "implanty-zebowe",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 96
+    },
+    "cwv": {
+      "LCP": 612.3142,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 209.1571
+    }
+  },
+  {
+    "page": "kontakt",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 95
+    },
+    "cwv": {
+      "LCP": 613.3612,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 208.68060000000003
+    }
+  },
+  {
+    "page": "medycyna-estetyczna",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 96
+    },
+    "cwv": {
+      "LCP": 647.6246,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 247.8123
+    }
+  },
+  {
+    "page": "o-nas",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 96
+    },
+    "cwv": {
+      "LCP": 606.0942,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 208.5471
+    }
+  },
+  {
+    "page": "stomatologia-estetyczna_wybielanie-zebow",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 96
+    },
+    "cwv": {
+      "LCP": 611.1314,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 209.5657
+    }
+  },
+  {
+    "page": "stomatologia",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 96
+    },
+    "cwv": {
+      "LCP": 628.4896,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 207.7448
+    }
+  },
+  {
+    "page": "usg",
+    "scores": {
+      "perf": 100,
+      "seo": 100,
+      "bestPractices": 100,
+      "a11y": 96
+    },
+    "cwv": {
+      "LCP": 673.1024,
+      "CLS": 0,
+      "TBT": 0,
+      "FCP": 250.0512
+    }
+  }
+]

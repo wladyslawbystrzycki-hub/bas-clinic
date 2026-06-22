@@ -1,0 +1,98 @@
+# F3 — analiza rendered-text (k=8 shingle, 64 stron)
+
+## Duplikacja treści (shingleInfo / OriginalContentScore proxy)
+Top boilerplate shingle (≥5 stron):
+  63x  "kompleksowa opieka stomatologiczna medycyna estetyczna na najwyższym poziomie"
+  63x  "opieka stomatologiczna medycyna estetyczna na najwyższym poziomie nowoczesny"
+  63x  "stomatologiczna medycyna estetyczna na najwyższym poziomie nowoczesny sprzęt"
+  63x  "medycyna estetyczna na najwyższym poziomie nowoczesny sprzęt i"
+  63x  "estetyczna na najwyższym poziomie nowoczesny sprzęt i technologie"
+  63x  "na najwyższym poziomie nowoczesny sprzęt i technologie indywidualne"
+  63x  "najwyższym poziomie nowoczesny sprzęt i technologie indywidualne podejście"
+  63x  "poziomie nowoczesny sprzęt i technologie indywidualne podejście do"
+  63x  "nowoczesny sprzęt i technologie indywidualne podejście do każdego"
+  63x  "sprzęt i technologie indywidualne podejście do każdego pacjenta"
+  63x  "i technologie indywidualne podejście do każdego pacjenta ponad"
+  63x  "technologie indywidualne podejście do każdego pacjenta ponad 15"
+  63x  "indywidualne podejście do każdego pacjenta ponad 15 lat"
+  63x  "podejście do każdego pacjenta ponad 15 lat doświadczenia"
+  63x  "do każdego pacjenta ponad 15 lat doświadczenia wlewy"
+  63x  "każdego pacjenta ponad 15 lat doświadczenia wlewy witaminowe"
+  63x  "pacjenta ponad 15 lat doświadczenia wlewy witaminowe i"
+  63x  "ponad 15 lat doświadczenia wlewy witaminowe i terapie"
+  63x  "15 lat doświadczenia wlewy witaminowe i terapie infuzyjne"
+  63x  "lat doświadczenia wlewy witaminowe i terapie infuzyjne komfortowa"
+  63x  "doświadczenia wlewy witaminowe i terapie infuzyjne komfortowa atmosfera"
+  63x  "wlewy witaminowe i terapie infuzyjne komfortowa atmosfera kliniki"
+  63x  "witaminowe i terapie infuzyjne komfortowa atmosfera kliniki doświadczony"
+  63x  "i terapie infuzyjne komfortowa atmosfera kliniki doświadczony zespół"
+  63x  "terapie infuzyjne komfortowa atmosfera kliniki doświadczony zespół specjalistów"
+liczba shingli współdzielonych ≥5 stron: 95
+
+## Udział nie-unikalnej treści na stronę (top 20 najwyższy frac)
+  frac=0.5 (shingli=44)  /kontakt/
+  frac=0.27 (shingli=192)  /redukcja-drobnych-zmarszczek-ha/
+  frac=0.26 (shingli=170)  /regeneratory-komorkowe/
+  frac=0.25 (shingli=196)  /laserowe-usuwanie-blizn/
+  frac=0.25 (shingli=176)  /mezoterapia-mikroiglowa/
+  frac=0.25 (shingli=185)  /skin-booster/
+  frac=0.24 (shingli=286)  /
+  frac=0.24 (shingli=201)  /konturowanie-zuchwy/
+  frac=0.24 (shingli=197)  /redukcja-glebokich-zmarszczek/
+  frac=0.24 (shingli=165)  /stomatologia-estetyczna/odbudowa-zebow/
+  frac=0.24 (shingli=865)  /usg/
+  frac=0.23 (shingli=188)  /mezoterapia-okolicy-oka/
+  frac=0.23 (shingli=173)  /programy-zabiegowe/
+  frac=0.23 (shingli=186)  /redukcja-cieni/
+  frac=0.23 (shingli=174)  /regeneracja-konturu-oka/
+  frac=0.22 (shingli=186)  /modelowanie-ust/
+  frac=0.22 (shingli=180)  /pilingi-medyczne/
+  frac=0.22 (shingli=181)  /redukcja-zmarszczek-ha/
+  frac=0.21 (shingli=177)  /korekta-usmiechu-dziaslowego/
+  frac=0.21 (shingli=177)  /leczenie-bezzebia/
+mediana frac (usługi): 0.2
+
+## Near-duplicate pary stron usług (Jaccard shingle ≥0.12)
+liczba par ≥0.12: 100 | ≥0.20: 0 | ≥0.30: 0
+  J=0.14  /mezoterapia-mikroiglowa/  <>  /skin-booster/
+  J=0.13  /korekta-usmiechu-dziaslowego/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.13  /laserowe-usuwanie-blizn/  <>  /mezoterapia-mikroiglowa/
+  J=0.13  /laserowe-usuwanie-blizn/  <>  /skin-booster/
+  J=0.13  /leczenie-bezzebia/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.13  /mezoterapia-mikroiglowa/  <>  /redukcja-drobnych-zmarszczek-ha/
+  J=0.13  /mezoterapia-mikroiglowa/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.13  /programy-zabiegowe/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.13  /redukcja-drobnych-zmarszczek-ha/  <>  /skin-booster/
+  J=0.13  /regeneracja-konturu-oka/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.13  /regeneratory-komorkowe/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.12  /higienizacja/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.12  /konturowanie-zuchwy/  <>  /redukcja-glebokich-zmarszczek/
+  J=0.12  /konturowanie-zuchwy/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /leczenie-bezzebia/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /leczenie-zebow/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /mezoterapia-mikroiglowa/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /mezoterapia-okolicy-oka/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /modelowanie-ust/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /pilingi-medyczne/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /programy-zabiegowe/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /redukcja-cieni/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /redukcja-zmarszczek-ha/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /regeneracja-konturu-oka/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /regeneratory-komorkowe/
+  J=0.12  /korekta-usmiechu-dziaslowego/  <>  /skin-booster/
+  J=0.12  /laserowe-usuwanie-blizn/  <>  /redukcja-drobnych-zmarszczek-ha/
+  J=0.12  /laserowe-usuwanie-blizn/  <>  /regeneratory-komorkowe/
+  J=0.12  /laserowe-usuwanie-blizn/  <>  /stomatologia-estetyczna/odbudowa-zebow/
+  J=0.12  /leczenie-bezzebia/  <>  /leczenie-zebow/
+
+## Markery Experience (1-os. doświadczenie / liczby z praktyki)
+strony z markerem Experience: 2/64
+  EXP  /o-nas/
+  EXP  /wlewy-witaminowe/
+strony z liczbami z praktyki: 63/64
+
+## Struktura treści (tabele / listy ol / listy ul w <main>)
+strony z ≥1 <table>: 1/64
+strony z ≥1 <ol>: 60/64
+strony z ≥1 <ul> (w main): 16/64
+  TABLE /cennik/ x6
