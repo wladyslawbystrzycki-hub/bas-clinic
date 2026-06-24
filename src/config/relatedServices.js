@@ -20,27 +20,27 @@ import {
 // Nadpisują automatyczne wyprowadzenie. Używaj tylko slugów istniejących usług.
 const RELATED_OVERRIDES = {
   // --- Stomatologia: estetyka uśmiechu (naturalne cross-selle) ---
-  licowki: ['bonding', 'stomatologia-estetyczna/wybielanie-zebow', 'protetyka-korony', 'stomatologia-estetyczna'],
-  bonding: ['licowki', 'stomatologia-estetyczna/wybielanie-zebow', 'stomatologia-estetyczna'],
-  'stomatologia-estetyczna/wybielanie-zebow': ['licowki', 'bonding', 'stomatologia-estetyczna/odbudowa-zebow', 'stomatologia-estetyczna'],
-  'stomatologia-estetyczna/odbudowa-zebow': ['licowki', 'bonding', 'stomatologia-estetyczna/wybielanie-zebow', 'protetyka-korony'],
+  'stomatologia/licowki': ['stomatologia/bonding', 'stomatologia/wybielanie-zebow', 'stomatologia/protetyka-korony', 'stomatologia/estetyczna'],
+  'stomatologia/bonding': ['stomatologia/licowki', 'stomatologia/wybielanie-zebow', 'stomatologia/estetyczna'],
+  'stomatologia/wybielanie-zebow': ['stomatologia/licowki', 'stomatologia/bonding', 'stomatologia/odbudowa-zebow', 'stomatologia/estetyczna'],
+  'stomatologia/odbudowa-zebow': ['stomatologia/licowki', 'stomatologia/bonding', 'stomatologia/wybielanie-zebow', 'stomatologia/protetyka-korony'],
   // --- Stomatologia: odbudowa / braki zębowe ---
-  'implanty-zebowe': ['leczenie-bezzebia', 'protetyka-korony', 'chirurgia'],
-  'leczenie-bezzebia': ['implanty-zebowe', 'protetyka-korony'],
-  'protetyka-korony': ['implanty-zebowe', 'licowki', 'leczenie-bezzebia'],
+  'stomatologia/implanty-zebowe': ['stomatologia/leczenie-bezzebia', 'stomatologia/protetyka-korony', 'stomatologia/chirurgia'],
+  'stomatologia/leczenie-bezzebia': ['stomatologia/implanty-zebowe', 'stomatologia/protetyka-korony'],
+  'stomatologia/protetyka-korony': ['stomatologia/implanty-zebowe', 'stomatologia/licowki', 'stomatologia/leczenie-bezzebia'],
   // --- Stomatologia: zachowawcza / profilaktyka ---
-  higienizacja: ['leczenie-zebow', 'stomatologia-estetyczna/wybielanie-zebow', 'stomatologia-dziecieca'],
-  'leczenie-zebow': ['higienizacja', 'chirurgia', 'stomatologia-dziecieca'],
-  'stomatologia-dziecieca': ['leczenie-zebow', 'higienizacja', 'ortodoncja'],
-  'chirurgia/usuwanie-zebow': ['implanty-zebowe', 'chirurgia', 'leczenie-zebow'],
+  'stomatologia/higienizacja': ['stomatologia/leczenie-zebow', 'stomatologia/wybielanie-zebow', 'stomatologia/dziecieca'],
+  'stomatologia/leczenie-zebow': ['stomatologia/higienizacja', 'stomatologia/chirurgia', 'stomatologia/dziecieca'],
+  'stomatologia/dziecieca': ['stomatologia/leczenie-zebow', 'stomatologia/higienizacja', 'stomatologia/ortodoncja'],
+  'stomatologia/usuwanie-zebow': ['stomatologia/implanty-zebowe', 'stomatologia/chirurgia', 'stomatologia/leczenie-zebow'],
   // --- Estetyka: usta / harmonizacja twarzy ---
-  'modelowanie-ust': ['wypelniacze-ha', 'korekta-usmiechu-dziaslowego', 'redukcja-zmarszczek-botox'],
-  'korekta-usmiechu-dziaslowego': ['modelowanie-ust', 'redukcja-zmarszczek-botox', 'wypelniacze-ha'],
+  'medycyna-estetyczna/modelowanie-ust': ['medycyna-estetyczna/wypelniacze-ha', 'medycyna-estetyczna/korekta-usmiechu-dziaslowego', 'medycyna-estetyczna/redukcja-zmarszczek-botox'],
+  'medycyna-estetyczna/korekta-usmiechu-dziaslowego': ['medycyna-estetyczna/modelowanie-ust', 'medycyna-estetyczna/redukcja-zmarszczek-botox', 'medycyna-estetyczna/wypelniacze-ha'],
   // --- Estetyka: pojedyncze obszary (mało „sąsiadów" wg bodyArea) ---
-  'leczenie-nadpotliwosci': ['redukcja-zmarszczek-botox', 'mezoterapia-iglowa'],
-  'laserowe-usuwanie-blizn': ['mezoterapia-mikroiglowa', 'mezoterapia-iglowa', 'osocze-bogatoplytkowe'],
-  'mezoterapia-skory-glowy': ['osocze-bogatoplytkowe', 'mezoterapia-iglowa'],
-  'osocze-bogatoplytkowe': ['mezoterapia-skory-glowy', 'mezoterapia-iglowa'],
+  'medycyna-estetyczna/leczenie-nadpotliwosci': ['medycyna-estetyczna/redukcja-zmarszczek-botox', 'medycyna-estetyczna/mezoterapia-iglowa'],
+  'medycyna-estetyczna/laserowe-usuwanie-blizn': ['medycyna-estetyczna/mezoterapia-mikroiglowa', 'medycyna-estetyczna/mezoterapia-iglowa', 'medycyna-estetyczna/osocze-bogatoplytkowe'],
+  'medycyna-estetyczna/mezoterapia-skory-glowy': ['medycyna-estetyczna/osocze-bogatoplytkowe', 'medycyna-estetyczna/mezoterapia-iglowa'],
+  'medycyna-estetyczna/osocze-bogatoplytkowe': ['medycyna-estetyczna/mezoterapia-skory-glowy', 'medycyna-estetyczna/mezoterapia-iglowa'],
 };
 
 // Hub + etykieta CTA per kategoria.

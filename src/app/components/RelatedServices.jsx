@@ -26,7 +26,7 @@ export default function RelatedServices({
 
   return (
     <section id={id} className="scroll-mt-20 bg-cream py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           {/* ----------------------- Lewa: kolumna edytorska ---------------------- */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">

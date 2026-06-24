@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div
           className="relative flex h-20 items-center justify-between"
           onMouseLeave={() => setOpenDropdown(null)}
@@ -25,8 +25,9 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex lg:items-center lg:gap-0.5">
+          {/* Desktop Navigation — pasek od xl (1280px); poniżej 9 długich pozycji
+              nie mieści się w wierszu i etykiety się zawijają → hamburger */}
+          <nav className="hidden xl:flex xl:items-center xl:gap-0.5">
             {menuItems.map((item) => {
               const isOpen = openDropdown === item.id;
               return (
@@ -39,7 +40,7 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
-                    className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                    className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2.5 py-2 text-sm font-medium transition-colors ${
                       isOpen
                         ? 'bg-primary-50 text-primary-700'
                         : 'text-gray-700 hover:bg-primary-50 hover:text-primary-700'
@@ -100,16 +101,17 @@ export default function Header() {
           {/* CTA Phone */}
           <a
             href={`tel:${CLINIC.phoneRaw}`}
+            aria-label={`Zadzwoń: ${CLINIC.phone}`}
             className="hidden items-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700 sm:inline-flex"
           >
             <PhoneIcon className="h-4 w-4" />
-            {CLINIC.phone}
+            Zadzwoń
           </a>
 
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 lg:hidden"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 xl:hidden"
             aria-label="Menu"
             aria-expanded={mobileOpen}
           >
@@ -124,8 +126,8 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-gray-100 bg-white lg:hidden">
-          <nav className="mx-auto max-w-[100rem] divide-y divide-gray-100 px-4 py-2 sm:px-6">
+        <div className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-gray-100 bg-white xl:hidden">
+          <nav className="mx-auto max-w-[90rem] divide-y divide-gray-100 px-4 py-2 sm:px-6">
             {menuItems.map((item) => (
               <MobileMenuItem
                 key={item.id}
@@ -134,7 +136,7 @@ export default function Header() {
               />
             ))}
           </nav>
-          <div className="mx-auto max-w-[100rem] px-4 pb-5 pt-3 sm:px-6">
+          <div className="mx-auto max-w-[90rem] px-4 pb-5 pt-3 sm:px-6">
             <a
               href={`tel:${CLINIC.phoneRaw}`}
               className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-600 px-5 py-3 text-sm font-semibold text-white shadow-sm"

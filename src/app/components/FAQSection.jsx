@@ -37,12 +37,13 @@ export default function FAQSection({
   intro = 'Zebraliśmy odpowiedzi na pytania, które słyszymy najczęściej. Jeśli nie znajdziesz swojego — po prostu się z nami skontaktuj, chętnie wszystko spokojnie wyjaśnimy.',
   image = FAQ_IMAGE,
   imageAlt = 'Konsultacja i opieka w Bas Clinic',
+  imageRatio = 'aspect-[4/5]',
 }) {
   if (!items || items.length === 0) return null;
 
   return (
     <section id={id} className="bg-cream py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
           {/* ----------------------------- Lewa: treść --------------------------- */}
           <div>
@@ -90,7 +91,7 @@ export default function FAQSection({
               <img
                 src={image}
                 alt={imageAlt}
-                className="aspect-[4/5] w-full object-cover"
+                className={`${imageRatio} w-full object-cover`}
                 loading="lazy"
                 decoding="async"
               />

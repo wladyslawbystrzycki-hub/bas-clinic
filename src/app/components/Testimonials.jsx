@@ -29,7 +29,7 @@ export default function Testimonials({
         className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-primary-700/40 blur-[120px]"
       />
 
-      <div className="relative mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         {/* Nagłówek — wyśrodkowany, platynowy eyebrow (konwencja na ciemnym tle) */}
         <div className="mx-auto mb-12 max-w-2xl text-center">
           {eyebrow && (

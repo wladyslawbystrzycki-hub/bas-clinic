@@ -16,7 +16,7 @@ export const METAMORFOZY_CASES = [
     id: 'licowki',
     area: 'Stomatologia estetyczna',
     service: 'Licówki',
-    serviceHref: '/licowki/',
+    serviceHref: '/stomatologia/licowki/',
     title: 'Korekta kształtu i koloru uśmiechu',
     summary:
       'Licówki ceramiczne wykorzystywane do korekty proporcji, koloru i ustawienia zębów przednich. Plan dobierany indywidualnie.',
@@ -28,7 +28,7 @@ export const METAMORFOZY_CASES = [
     id: 'wybielanie-zebow',
     area: 'Stomatologia estetyczna',
     service: 'Wybielanie zębów',
-    serviceHref: '/stomatologia-estetyczna/wybielanie-zebow/',
+    serviceHref: '/stomatologia/wybielanie-zebow/',
     title: 'Rozjaśnienie odcienia zębów',
     summary:
       'Profesjonalne wybielanie gabinetowe jako element planu estetycznego. Odcień wyjściowy i końcowy oceniamy podczas konsultacji.',
@@ -40,7 +40,7 @@ export const METAMORFOZY_CASES = [
     id: 'bonding',
     area: 'Stomatologia estetyczna',
     service: 'Bonding',
-    serviceHref: '/bonding/',
+    serviceHref: '/stomatologia/bonding/',
     title: 'Domknięcie szpar i korekta krawędzi',
     summary:
       'Bonding kompozytowy stosowany m.in. do korekty drobnych ubytków, szpar i kształtu zębów bez szlifowania.',
@@ -52,7 +52,7 @@ export const METAMORFOZY_CASES = [
     id: 'modelowanie-ust',
     area: 'Medycyna estetyczna',
     service: 'Modelowanie ust',
-    serviceHref: '/modelowanie-ust/',
+    serviceHref: '/medycyna-estetyczna/modelowanie-ust/',
     title: 'Modelowanie i nawilżenie ust',
     summary:
       'Modelowanie ust kwasem hialuronowym z naciskiem na naturalne proporcje i symetrię. Zakres ustalany z Pacjentem.',
@@ -64,7 +64,7 @@ export const METAMORFOZY_CASES = [
     id: 'redukcja-zmarszczek-botox',
     area: 'Medycyna estetyczna',
     service: 'Redukcja zmarszczek toksyną botulinową',
-    serviceHref: '/redukcja-zmarszczek-botox/',
+    serviceHref: '/medycyna-estetyczna/redukcja-zmarszczek-botox/',
     title: 'Wygładzenie zmarszczek mimicznych',
     summary:
       'Zabieg toksyną botulinową w obrębie górnej części twarzy. Dawkowanie dobierane do mimiki i oczekiwań Pacjenta.',
@@ -76,7 +76,7 @@ export const METAMORFOZY_CASES = [
     id: 'wypelniacze-ha',
     area: 'Medycyna estetyczna',
     service: 'Wypełniacze HA',
-    serviceHref: '/wypelniacze-ha/',
+    serviceHref: '/medycyna-estetyczna/wypelniacze-ha/',
     title: 'Przywrócenie objętości i konturu twarzy',
     summary:
       'Wypełniacze na bazie kwasu hialuronowego stosowane do modelowania konturu i uzupełnienia objętości w wybranych okolicach.',

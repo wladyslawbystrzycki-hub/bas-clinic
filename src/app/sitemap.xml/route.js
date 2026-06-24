@@ -38,6 +38,7 @@ export async function GET() {
   urls.push(buildUrl('/medycyna-estetyczna/', 0.9, 'weekly'));
   urls.push(buildUrl('/usg/', 0.9, 'weekly'));
   urls.push(buildUrl('/wlewy-witaminowe/', 0.8, 'monthly'));
+  urls.push(buildUrl('/leczenie-uzaleznien/', 0.8, 'monthly'));
   urls.push(buildUrl('/metamorfozy/', 0.7, 'monthly'));
   urls.push(buildUrl('/cennik/', 0.7, 'monthly'));
   urls.push(buildUrl('/o-nas/', 0.6, 'monthly'));

@@ -93,7 +93,7 @@ export default function HeroSection({
 
       {/* ------------------------------ Zawartość ----------------------------- */}
       <div
-        className={`relative z-10 mx-auto w-full max-w-[100rem] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 ${
+        className={`relative z-10 mx-auto w-full max-w-[90rem] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 ${
           isHome ? 'lg:py-28' : 'lg:py-24'
         }`}
       >

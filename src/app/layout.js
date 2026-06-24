@@ -19,7 +19,7 @@ export const metadata = {
     template: '%s | Bas Clinic',
   },
   description:
-    'Klinika stomatologiczno-estetyczna Bogdana i Iwanny Bas we Wrocławiu. Stomatologia, medycyna estetyczna, wlewy witaminowe. Kompleksowa opieka w nowoczesnym gabinecie.',
+    'Klinika stomatologiczno-estetyczna Bogdana i Ivanny Bas we Wrocławiu. Stomatologia, medycyna estetyczna, wlewy witaminowe. Kompleksowa opieka w nowoczesnym gabinecie.',
   openGraph: {
     type: 'website',
     locale: 'pl_PL',

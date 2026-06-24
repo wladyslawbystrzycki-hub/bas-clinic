@@ -52,7 +52,7 @@ export default function AuthorBio({
   return (
     <section id={id} className="scroll-mt-20 bg-white py-12 sm:py-14 lg:py-16">
       <JsonLd data={personData} />
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <figure className="flex flex-col items-center gap-6 rounded-3xl border border-gray-100 bg-cream p-7 text-center shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:p-9 sm:text-left lg:gap-12 lg:p-10">
           <Avatar image={image} initials={initials} name={name} />
           <figcaption className="min-w-0 sm:flex-1">

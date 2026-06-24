@@ -9,14 +9,14 @@ import { CLINIC } from '@/config/clinic';
 export const metadata = generatePageMetadata({
   title: 'O nas',
   description:
-    'Poznaj Bas Clinic - stomatologię i medycynę estetyczną we Wrocławiu. Dowiedz się więcej o naszych założycielach: Bogdanie i Iwannie Bas.',
+    'Poznaj Bas Clinic - stomatologię i medycynę estetyczną we Wrocławiu. Dowiedz się więcej o naszych założycielach: Bogdanie i Ivannie Bas.',
   path: '/o-nas/',
 });
 
 const BREADCRUMBS = [{ label: 'O nas' }];
 
 const bogdan = CLINIC.founders[0];
-const iwanna = CLINIC.founders[1];
+const ivanna = CLINIC.founders[1];
 
 export default function ONasPage() {
   return (
@@ -71,32 +71,47 @@ export default function ONasPage() {
               ))}
             </div>
 
-            {/* Quote */}
+            {/* Cytat */}
             <blockquote className="mt-8 border-l-4 border-secondary-400 pl-6">
               <p className="text-lg italic text-gray-700">
                 &ldquo;{bogdan.quote}&rdquo;
               </p>
-              <footer className="mt-2 text-sm font-medium text-gray-500">
-                — {bogdan.name}
-              </footer>
             </blockquote>
+
+            {/* Podpis bez tytułu „lek. med." — pełna, tytułowana forma jest w nagłówku wyżej */}
+            <div className="mt-8">
+              <p className="font-display text-xl font-semibold text-gray-900">Bogdan Bas</p>
+              <p className="mt-1 text-sm font-medium text-gray-500">
+                Założyciel {CLINIC.name}
+              </p>
+            </div>
           </div>
         </div>
       </Section>
 
-      {/* Iwanna Bas */}
-      <Section bg="light" id="iwanna-bas">
+      {/* Ivanna Bas */}
+      <Section bg="light" id="ivanna-bas">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-5">
           <div className="order-2 lg:order-1 lg:col-span-3">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary-500">
               Współzałożycielka Bas Clinic
             </p>
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              {iwanna.name}
+              {ivanna.name}
             </h2>
-            <p className="mt-8 text-lg leading-relaxed text-gray-600">
-              {iwanna.description}
-            </p>
+            <div className="mt-8 space-y-5 text-lg leading-relaxed text-gray-600">
+              {ivanna.bio.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
+
+            {/* Podpis bez tytułu „lek. dent." — pełna, tytułowana forma jest w nagłówku wyżej */}
+            <div className="mt-10">
+              <p className="font-display text-xl font-semibold text-gray-900">Ivanna Bas</p>
+              <p className="mt-1 text-sm font-medium text-gray-500">
+                Współzałożycielka {CLINIC.name}
+              </p>
+            </div>
           </div>
 
           <div className="order-1 lg:order-2 lg:col-span-2">
@@ -120,7 +135,7 @@ export default function ONasPage() {
         <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-gray-600">
           <p>
             Bas Clinic to nowoczesny gabinet stomatologiczno-estetyczny
-            założony przez małżeństwo lekarzy - Bogdana i Iwannę Bas. Nasza
+            założony przez małżeństwo lekarzy - Bogdana i Ivannę Bas. Nasza
             klinika łączy doświadczenie w stomatologii z najnowszymi osiągnięciami
             medycyny estetycznej.
           </p>

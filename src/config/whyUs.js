@@ -14,7 +14,7 @@
 
 export const WHY_US = {
   // ————————————————————————— Stomatologia —————————————————————————
-  'licowki': {
+  'stomatologia/licowki': {
     title: 'Dlaczego licówki w Bas Clinic?',
     intro: 'Projektujemy uśmiech indywidualnie i pokazujemy jego podgląd, zanim wykonamy licówki — aby efekt był naturalny i trwały.',
     benefits: [
@@ -25,6 +25,10 @@ export const WHY_US = {
       'Minimalne, precyzyjne szlifowanie',
       'Doświadczenie w pracach estetycznych',
     ],
+    image: '/uploads/services/dlaczego-my-licowki-pacjentka-bas-clinic-wroclaw.webp',
+    imageAlt: 'Zadowolona pacjentka po założeniu licówek w Bas Clinic we Wrocławiu',
+    image2: '/uploads/services/dlaczego-my-licowki-model-bas-clinic-wroclaw.webp',
+    image2Alt: 'Model do planowania licówek w Bas Clinic we Wrocławiu',
   },
   'stomatologia': {
     title: 'Dlaczego stomatologia w Bas Clinic?',
@@ -38,7 +42,7 @@ export const WHY_US = {
       'Przejrzyste etapy i wycena',
     ],
   },
-  'stomatologia-estetyczna': {
+  'stomatologia/estetyczna': {
     title: 'Dlaczego stomatologia estetyczna u nas?',
     intro: 'Estetykę uśmiechu projektujemy z dbałością o proporcje twarzy, dobierając metodę do oczekiwań i naturalnego wyglądu zębów.',
     benefits: [
@@ -50,7 +54,7 @@ export const WHY_US = {
       'Konsultacja przed leczeniem',
     ],
   },
-  'stomatologia-estetyczna/wybielanie-zebow': {
+  'stomatologia/wybielanie-zebow': {
     title: 'Dlaczego wybielanie zębów w Bas Clinic?',
     intro: 'Wybielanie prowadzimy w gabinecie pod kontrolą lekarza, po wcześniejszej ocenie stanu zębów i dziąseł, z dbałością o komfort.',
     benefits: [
@@ -62,7 +66,7 @@ export const WHY_US = {
       'Wskazówki na utrzymanie efektu',
     ],
   },
-  'stomatologia-estetyczna/odbudowa-zebow': {
+  'stomatologia/odbudowa-zebow': {
     title: 'Dlaczego odbudowa zębów u nas?',
     intro: 'Ubytki i ułamane zęby odbudowujemy z dbałością o anatomię i kolor, tak aby uzupełnienie wtopiło się w naturalny uśmiech.',
     benefits: [
@@ -73,8 +77,12 @@ export const WHY_US = {
       'Odbudowa w jednej wizycie',
       'Doświadczenie w pracach estetycznych',
     ],
+    image: '/uploads/services/dlaczego-my-odbudowa-zebow-pacjentka-bas-clinic-wroclaw.webp',
+    imageAlt: 'Zadowolona pacjentka po odbudowie zębów w Bas Clinic we Wrocławiu',
+    image2: '/uploads/services/dlaczego-my-odbudowa-zebow-opieka-bas-clinic-wroclaw.webp',
+    image2Alt: 'Konsultacja i opieka przy odbudowie zębów w Bas Clinic we Wrocławiu',
   },
-  'implanty-zebowe': {
+  'stomatologia/implanty-zebowe': {
     title: 'Dlaczego implanty zębowe w Bas Clinic?',
     intro: 'Leczenie implantologiczne planujemy w oparciu o diagnostykę obrazową i indywidualne warunki kości, prowadząc Pacjenta przez wszystkie etapy.',
     benefits: [
@@ -85,8 +93,12 @@ export const WHY_US = {
       'Opieka na każdym etapie',
       'Kontrola gojenia po zabiegu',
     ],
+    image: '/uploads/services/dlaczego-my-implanty-zebowe-efekt-bas-clinic-wroclaw.webp',
+    imageAlt: 'Efekt leczenia implantologicznego w Bas Clinic we Wrocławiu',
+    // Główne zdjęcie to kolaż przed/po — nakładka zasłaniałaby „po" w rogu, więc ją wyłączamy.
+    image2: null,
   },
-  'leczenie-bezzebia': {
+  'stomatologia/leczenie-bezzebia': {
     title: 'Dlaczego leczenie bezzębia u nas?',
     intro: 'Pacjentom z bezzębiem proponujemy rozwiązania na implantach i protezy, dobierane do warunków jamy ustnej, oczekiwań i komfortu codziennego.',
     benefits: [
@@ -97,8 +109,12 @@ export const WHY_US = {
       'Przejrzysty plan postępowania',
       'Stała opieka protetyczna',
     ],
+    image: '/uploads/services/dlaczego-my-leczenie-bezzebia-efekt-bas-clinic-wroclaw.webp',
+    imageAlt: 'Efekt leczenia bezzębia w Bas Clinic we Wrocławiu',
+    // Główne zdjęcie to kolaż przed/po — nakładka zasłaniałaby „po" w rogu, więc ją wyłączamy.
+    image2: null,
   },
-  'bonding': {
+  'stomatologia/bonding': {
     title: 'Dlaczego bonding w Bas Clinic?',
     intro: 'Bonding wykonujemy bez szlifowania zębów, modelując kształt materiałem kompozytowym podczas jednej wizyty, z dbałością o naturalny wygląd.',
     benefits: [
@@ -109,8 +125,12 @@ export const WHY_US = {
       'Modelowanie ręką lekarza',
       'Możliwa późniejsza korekta',
     ],
+    image: '/uploads/services/dlaczego-my-bonding-pacjent-bas-clinic-wroclaw.webp',
+    imageAlt: 'Zadowolony pacjent po bondingu zębów w Bas Clinic we Wrocławiu',
+    image2: '/uploads/services/dlaczego-my-bonding-gabinet-bas-clinic-wroclaw.webp',
+    image2Alt: 'Nowoczesny gabinet stomatologiczny Bas Clinic we Wrocławiu',
   },
-  'protetyka-korony': {
+  'stomatologia/protetyka-korony': {
     title: 'Dlaczego korony protetyczne u nas?',
     intro: 'Korony projektujemy cyfrowo i dobieramy materiał do funkcji oraz estetyki zęba, dbając o precyzyjne dopasowanie i naturalny wygląd.',
     benefits: [
@@ -121,8 +141,12 @@ export const WHY_US = {
       'Współpraca z pracownią techniczną',
       'Ochrona osłabionego zęba',
     ],
+    image: '/uploads/services/dlaczego-my-protetyka-korony-lekarka-bas-clinic-wroclaw.webp',
+    imageAlt: 'Lekarka protetyk w gabinecie Bas Clinic we Wrocławiu',
+    image2: '/uploads/services/dlaczego-my-protetyka-korony-gabinet-bas-clinic-wroclaw.webp',
+    image2Alt: 'Nowoczesny gabinet protetyczny Bas Clinic we Wrocławiu',
   },
-  'higienizacja': {
+  'stomatologia/higienizacja': {
     title: 'Dlaczego higienizacja w Bas Clinic?',
     intro: 'Higienizację prowadzimy etapami — skaling, piaskowanie i polerowanie — z dbałością o komfort dziąseł i indywidualne wskazówki domowe.',
     benefits: [
@@ -133,8 +157,12 @@ export const WHY_US = {
       'Dobór szczotek i past',
       'Przypomnienia o kolejnej wizycie',
     ],
+    image: '/uploads/services/dlaczego-my-higienizacja-higienistka-bas-clinic-wroclaw.webp',
+    imageAlt: 'Higienistka stomatologiczna w gabinecie Bas Clinic we Wrocławiu',
+    image2: '/uploads/services/dlaczego-my-higienizacja-gabinet-bas-clinic-wroclaw.webp',
+    image2Alt: 'Nowoczesny gabinet higienizacji Bas Clinic we Wrocławiu',
   },
-  'stomatologia-dziecieca': {
+  'stomatologia/dziecieca': {
     title: 'Dlaczego stomatologia dziecięca u nas?',
     intro: 'Najmłodszych Pacjentów oswajamy z gabinetem bez pośpiechu, tłumaczymy każdy krok i budujemy pozytywne skojarzenia z wizytą u dentysty.',
     benefits: [
@@ -145,8 +173,12 @@ export const WHY_US = {
       'Lakowanie i fluoryzacja',
       'Wsparcie i obecność rodzica',
     ],
+    image: '/uploads/services/dlaczego-my-dziecieca-lekarka-bas-clinic-wroclaw.webp',
+    imageAlt: 'Lekarka stomatolog dziecięcy w gabinecie Bas Clinic we Wrocławiu',
+    image2: '/uploads/services/dlaczego-my-dziecieca-gabinet-bas-clinic-wroclaw.webp',
+    image2Alt: 'Przyjazny dzieciom gabinet stomatologiczny Bas Clinic we Wrocławiu',
   },
-  'leczenie-zebow': {
+  'stomatologia/leczenie-zebow': {
     title: 'Dlaczego leczenie zębów w Bas Clinic?',
     intro: 'Próchnicę i kanały leczymy pod powiększeniem, w komfortowym znieczuleniu, dbając o zachowanie jak największej ilości zdrowej tkanki zęba.',
     benefits: [
@@ -157,8 +189,10 @@ export const WHY_US = {
       'Diagnostyka obrazowa na miejscu',
       'Spokojny przebieg wizyty',
     ],
+    image: '/uploads/services/dlaczego-my-leczenie-zebow-lekarka-bas-clinic-wroclaw.webp',
+    imageAlt: 'Lekarka stomatolog w gabinecie Bas Clinic we Wrocławiu',
   },
-  'ortodoncja': {
+  'stomatologia/ortodoncja': {
     title: 'Dlaczego ortodoncja u nas?',
     intro: 'Metodę prostowania zębów dobieramy po diagnostyce zgryzu, tłumacząc różnice między aparatami stałymi, ruchomymi i alignerami.',
     benefits: [
@@ -170,7 +204,7 @@ export const WHY_US = {
       'Leczenie dzieci i dorosłych',
     ],
   },
-  'ortodoncja/aparaty-stale': {
+  'stomatologia/aparaty-stale': {
     title: 'Dlaczego aparaty stałe w Bas Clinic?',
     intro: 'Aparat stały dobieramy do potrzeb estetycznych i zgryzu, prowadząc leczenie systematycznie i objaśniając pielęgnację zamków podczas terapii.',
     benefits: [
@@ -182,7 +216,7 @@ export const WHY_US = {
       'Opieka do końca terapii',
     ],
   },
-  'ortodoncja/alignery': {
+  'stomatologia/alignery': {
     title: 'Dlaczego alignery u nas?',
     intro: 'Leczenie nakładkami planujemy cyfrowo i pokazujemy kolejne etapy przesuwania zębów, stawiając na dyskrecję i wygodę w codziennym noszeniu.',
     benefits: [
@@ -194,7 +228,7 @@ export const WHY_US = {
       'Łatwa higiena jamy ustnej',
     ],
   },
-  'ortodoncja/aparaty-ruchome': {
+  'stomatologia/aparaty-ruchome': {
     title: 'Dlaczego aparaty ruchome w Bas Clinic?',
     intro: 'Aparaty ruchome stosujemy zwłaszcza u dzieci we wczesnej fazie leczenia, dobierając rozwiązanie wygodne w noszeniu i łatwe w utrzymaniu.',
     benefits: [
@@ -206,7 +240,7 @@ export const WHY_US = {
       'Wskazówki dla rodzica',
     ],
   },
-  'chirurgia': {
+  'stomatologia/chirurgia': {
     title: 'Dlaczego chirurgia stomatologiczna u nas?',
     intro: 'Zabiegi chirurgiczne przeprowadzamy w warunkach sterylnych i komfortowym znieczuleniu, omawiając wcześniej przebieg oraz zalecenia po zabiegu.',
     benefits: [
@@ -218,7 +252,7 @@ export const WHY_US = {
       'Kontrola gojenia rany',
     ],
   },
-  'chirurgia/usuwanie-zebow': {
+  'stomatologia/usuwanie-zebow': {
     title: 'Dlaczego usuwanie zębów w Bas Clinic?',
     intro: 'Ekstrakcje, także zębów mądrości, wykonujemy w komfortowym znieczuleniu i możliwie oszczędnie, przekazując czytelne zalecenia na czas gojenia.',
     benefits: [
@@ -244,7 +278,7 @@ export const WHY_US = {
       'Dyskrecja i komfort',
     ],
   },
-  'btl-exion': {
+  'medycyna-estetyczna/btl-exion': {
     title: 'Dlaczego BTL Exion w Bas Clinic?',
     intro: 'Łączymy nieinwazyjną technologię z konsultacją lekarską, aby dobrać parametry zabiegu do kondycji i potrzeb Twojej skóry.',
     benefits: [
@@ -256,7 +290,7 @@ export const WHY_US = {
       'Opieka lekarska podczas serii',
     ],
   },
-  'redukcja-zmarszczek-botox': {
+  'medycyna-estetyczna/redukcja-zmarszczek-botox': {
     title: 'Dlaczego botoks w Bas Clinic?',
     intro: 'Zabieg planujemy po ocenie mimiki twarzy, aby wygładzić zmarszczki przy zachowaniu naturalnego wyrazu i swobody mimicznej.',
     benefits: [
@@ -268,7 +302,7 @@ export const WHY_US = {
       'Wizyta kontrolna po zabiegu',
     ],
   },
-  'wypelniacze-ha': {
+  'medycyna-estetyczna/wypelniacze-ha': {
     title: 'Dlaczego wypełniacze HA w Bas Clinic?',
     intro: 'Modelujemy rysy po wcześniejszej analizie proporcji twarzy, aby wypełnienie podkreślało Twoją urodę w sposób harmonijny.',
     benefits: [
@@ -280,7 +314,7 @@ export const WHY_US = {
       'Znieczulenie dla komfortu',
     ],
   },
-  'redukcja-zmarszczek-ha': {
+  'medycyna-estetyczna/redukcja-zmarszczek-ha': {
     title: 'Dlaczego redukcja zmarszczek HA u nas?',
     intro: 'Dobieramy technikę podania kwasu hialuronowego do rodzaju zmarszczek, aby wygładzić skórę bez efektu przeciążenia.',
     benefits: [
@@ -292,7 +326,7 @@ export const WHY_US = {
       'Plan podtrzymania efektu',
     ],
   },
-  'stymulatory-tkankowe': {
+  'medycyna-estetyczna/stymulatory-tkankowe': {
     title: 'Dlaczego stymulatory tkankowe w Bas Clinic?',
     intro: 'Biostymulację planujemy jako przemyślaną serię po ocenie kondycji skóry, aby pobudzać jej naturalną odnowę stopniowo.',
     benefits: [
@@ -304,7 +338,7 @@ export const WHY_US = {
       'Monitorowanie kolejnych wizyt',
     ],
   },
-  'mezoterapia-iglowa': {
+  'medycyna-estetyczna/mezoterapia-iglowa': {
     title: 'Dlaczego mezoterapia igłowa w Bas Clinic?',
     intro: 'Koktajl odżywczy dobieramy do potrzeb skóry, podając go precyzyjnie iniekcyjnie w sterylnych warunkach gabinetu lekarskiego.',
     benefits: [
@@ -316,7 +350,7 @@ export const WHY_US = {
       'Zalecenia pielęgnacyjne po zabiegu',
     ],
   },
-  'mezoterapia-mikroiglowa': {
+  'medycyna-estetyczna/mezoterapia-mikroiglowa': {
     title: 'Dlaczego mezoterapia mikroigłowa u nas?',
     intro: 'Głębokość mikronakłuć dobieramy do obszaru i kondycji skóry, aby pobudzić produkcję kolagenu w komfortowych warunkach.',
     benefits: [
@@ -328,7 +362,7 @@ export const WHY_US = {
       'Wskazówki na okres gojenia',
     ],
   },
-  'pilingi-medyczne': {
+  'medycyna-estetyczna/pilingi-medyczne': {
     title: 'Dlaczego pilingi medyczne w Bas Clinic?',
     intro: 'Rodzaj i moc pilingu dobieramy po ocenie skóry i jej problemów, aby odnowa była skuteczna i bezpieczna.',
     benefits: [
@@ -340,7 +374,7 @@ export const WHY_US = {
       'Zalecenia i ochrona po pilingu',
     ],
   },
-  'programy-zabiegowe': {
+  'medycyna-estetyczna/programy-zabiegowe': {
     title: 'Dlaczego programy zabiegowe w Bas Clinic?',
     intro: 'Łączymy wybrane zabiegi w spójny program po konsultacji, aby kompleksowo zadbać o owal twarzy i jakość skóry.',
     benefits: [
@@ -352,7 +386,7 @@ export const WHY_US = {
       'Bieżąca kontrola postępów',
     ],
   },
-  'regeneratory-komorkowe': {
+  'medycyna-estetyczna/regeneratory-komorkowe': {
     title: 'Dlaczego regeneratory komórkowe u nas?',
     intro: 'Zaawansowaną regenerację prowadzimy po ocenie potrzeb skóry, aby wspierać jej naturalne procesy odnowy w bezpieczny sposób.',
     benefits: [
@@ -364,7 +398,7 @@ export const WHY_US = {
       'Indywidualny plan zabiegów',
     ],
   },
-  'terapia-egzosomami': {
+  'medycyna-estetyczna/terapia-egzosomami': {
     title: 'Dlaczego terapia egzosomami w Bas Clinic?',
     intro: 'Tę zaawansowaną terapię prowadzimy w komfortowych, dyskretnych warunkach po lekarskiej kwalifikacji do zabiegu.',
     benefits: [
@@ -376,7 +410,7 @@ export const WHY_US = {
       'Opieka po zabiegu',
     ],
   },
-  'redukcja-glebokich-zmarszczek': {
+  'medycyna-estetyczna/redukcja-glebokich-zmarszczek': {
     title: 'Dlaczego redukcja głębokich zmarszczek u nas?',
     intro: 'W delikatnej okolicy oczu pracujemy szczególnie ostrożnie, dobierając preparat i technikę do wymagającej, cienkiej skóry.',
     benefits: [
@@ -388,7 +422,7 @@ export const WHY_US = {
       'Kontrola efektu po zabiegu',
     ],
   },
-  'mezoterapia-okolicy-oka': {
+  'medycyna-estetyczna/mezoterapia-okolicy-oka': {
     title: 'Dlaczego mezoterapia okolicy oka w Bas Clinic?',
     intro: 'Wokół oczu działamy delikatnie i precyzyjnie, dobierając koktajl nawilżający do wyjątkowo cienkiej i wrażliwej skóry.',
     benefits: [
@@ -400,7 +434,7 @@ export const WHY_US = {
       'Zalecenia pielęgnacyjne po zabiegu',
     ],
   },
-  'regeneracja-konturu-oka': {
+  'medycyna-estetyczna/regeneracja-konturu-oka': {
     title: 'Dlaczego regeneracja konturu oka u nas?',
     intro: 'Kontur oka regenerujemy całościowo po ocenie okolicy, aby odświeżyć spojrzenie w sposób naturalny i wyważony.',
     benefits: [
@@ -412,7 +446,7 @@ export const WHY_US = {
       'Komfortowy przebieg wizyty',
     ],
   },
-  'redukcja-cieni': {
+  'medycyna-estetyczna/redukcja-cieni': {
     title: 'Dlaczego redukcja cieni pod oczami u nas?',
     intro: 'Przyczynę cieni oceniamy podczas konsultacji, aby dobrać postępowanie do Twojej dolinki łzowej i charakteru zmian.',
     benefits: [
@@ -424,7 +458,7 @@ export const WHY_US = {
       'Wizyta kontrolna po zabiegu',
     ],
   },
-  'blefaroplastyka': {
+  'medycyna-estetyczna/blefaroplastyka': {
     title: 'Dlaczego blefaroplastyka w Bas Clinic?',
     intro: 'Zabieg na powiekach poprzedzamy konsultacją i oceną okolicy oczu, omawiając zakres korekty oraz przebieg gojenia, zanim podejmiemy decyzję o zabiegu.',
     benefits: [
@@ -436,7 +470,7 @@ export const WHY_US = {
       'Jasne zalecenia pozabiegowe',
     ],
   },
-  'modelowanie-ust': {
+  'medycyna-estetyczna/modelowanie-ust': {
     title: 'Dlaczego modelowanie ust w Bas Clinic?',
     intro: 'Usta modelujemy do proporcji Twojej twarzy, dbając o naturalny kształt, symetrię i komfort podczas zabiegu.',
     benefits: [
@@ -448,7 +482,7 @@ export const WHY_US = {
       'Kontrola wyniku po zabiegu',
     ],
   },
-  'korekta-usmiechu-dziaslowego': {
+  'medycyna-estetyczna/korekta-usmiechu-dziaslowego': {
     title: 'Dlaczego korekta uśmiechu dziąsłowego u nas?',
     intro: 'Korektę uśmiechu dziąsłowego planujemy po analizie mimiki i proporcji uśmiechu, aby odsłonięcie dziąseł było mniej widoczne.',
     benefits: [
@@ -460,7 +494,7 @@ export const WHY_US = {
       'Wiedza stomatologiczna i estetyczna',
     ],
   },
-  'redukcja-drobnych-zmarszczek-ha': {
+  'medycyna-estetyczna/redukcja-drobnych-zmarszczek-ha': {
     title: 'Dlaczego redukcja drobnych zmarszczek u nas?',
     intro: 'Szyję i dekolt traktujemy jako wymagający obszar, podając lekki kwas hialuronowy techniką dopasowaną do cienkiej skóry.',
     benefits: [
@@ -472,7 +506,7 @@ export const WHY_US = {
       'Plan serii zabiegów',
     ],
   },
-  'konturowanie-zuchwy': {
+  'medycyna-estetyczna/konturowanie-zuchwy': {
     title: 'Dlaczego konturowanie żuchwy w Bas Clinic?',
     intro: 'Linię żuchwy i brody modelujemy po analizie proporcji profilu, aby podkreślić kontur dolnej części twarzy harmonijnie.',
     benefits: [
@@ -484,7 +518,7 @@ export const WHY_US = {
       'Ocena efektu po zabiegu',
     ],
   },
-  'skin-booster': {
+  'medycyna-estetyczna/skin-booster': {
     title: 'Dlaczego skin booster w Bas Clinic?',
     intro: 'Głębokie nawilżenie planujemy po ocenie poziomu odwodnienia skóry, aby przywrócić jej gładkość i świeży wygląd.',
     benefits: [
@@ -496,7 +530,7 @@ export const WHY_US = {
       'Plan podtrzymania nawilżenia',
     ],
   },
-  'mezoterapia-skory-glowy': {
+  'medycyna-estetyczna/mezoterapia-skory-glowy': {
     title: 'Dlaczego mezoterapia skóry głowy u nas?',
     intro: 'Skórę głowy oceniamy przed zabiegiem, aby dobrać koktajl wspierający kondycję włosów i prawidłowo podać go w okolicę cebulek.',
     benefits: [
@@ -508,7 +542,7 @@ export const WHY_US = {
       'Plan regularnych wizyt',
     ],
   },
-  'osocze-bogatoplytkowe': {
+  'medycyna-estetyczna/osocze-bogatoplytkowe': {
     title: 'Dlaczego osocze bogatopłytkowe w Bas Clinic?',
     intro: 'Pracujemy na Twoim własnym osoczu przygotowanym na miejscu, podając je w sterylnych warunkach po lekarskiej kwalifikacji.',
     benefits: [
@@ -520,7 +554,7 @@ export const WHY_US = {
       'Indywidualny plan serii',
     ],
   },
-  'przeszczep-wlosow': {
+  'medycyna-estetyczna/przeszczep-wlosow': {
     title: 'Dlaczego przeszczep włosów w Bas Clinic?',
     intro: 'Plan przeszczepu ustalamy po ocenie skóry głowy i obszaru dawczego, omawiając przebieg zabiegu oraz okres gojenia podczas konsultacji.',
     benefits: [
@@ -532,7 +566,7 @@ export const WHY_US = {
       'Opieka i zalecenia po zabiegu',
     ],
   },
-  'laserowe-usuwanie-blizn': {
+  'medycyna-estetyczna/laserowe-usuwanie-blizn': {
     title: 'Dlaczego laserowe usuwanie blizn u nas?',
     intro: 'Parametry lasera dobieramy po ocenie rodzaju blizn i rozstępów, aby pracować nad ich wyglądem bezpiecznie i etapowo.',
     benefits: [
@@ -544,7 +578,7 @@ export const WHY_US = {
       'Zalecenia na okres gojenia',
     ],
   },
-  'leczenie-nadpotliwosci': {
+  'medycyna-estetyczna/leczenie-nadpotliwosci': {
     title: 'Dlaczego leczenie nadpotliwości w Bas Clinic?',
     intro: 'Po kwalifikacji lekarskiej podajemy toksynę botulinową precyzyjnie w obszar objęty nadpotliwością, dbając o komfort zabiegu.',
     benefits: [
@@ -570,7 +604,7 @@ export const WHY_US = {
       'Krótkie terminy badań',
     ],
   },
-  'usg/jamy-brzusznej': {
+  'usg/jama-brzuszna': {
     title: 'Dlaczego USG brzucha w Bas Clinic?',
     intro: 'Przeglądowe badanie wątroby, trzustki, nerek, śledziony i pęcherzyka żółciowego wykonuje i opisuje lekarz, który od razu omawia z Tobą obraz.',
     benefits: [
@@ -582,7 +616,7 @@ export const WHY_US = {
       'Możliwość rozszerzenia o nerki',
     ],
   },
-  'usg/watroby': {
+  'usg/watroba': {
     title: 'Dlaczego USG wątroby w Bas Clinic?',
     intro: 'Skupiamy badanie na ocenie miąższu wątroby i dróg żółciowych, a obraz na bieżąco omawia z Tobą lekarz wykonujący badanie.',
     benefits: [
@@ -594,7 +628,7 @@ export const WHY_US = {
       'Wygodna kontrola znanych zmian',
     ],
   },
-  'usg/nerek': {
+  'usg/nerki': {
     title: 'Dlaczego USG nerek w Bas Clinic?',
     intro: 'Oceniamy strukturę nerek i dróg moczowych w jednym badaniu, które wykonuje i opisuje lekarz, omawiając obraz na bieżąco.',
     benefits: [
@@ -606,7 +640,7 @@ export const WHY_US = {
       'Wygodna kontrola po badaniu',
     ],
   },
-  'usg/prostaty': {
+  'usg/prostata': {
     title: 'Dlaczego USG prostaty w Bas Clinic?',
     intro: 'Wykonujemy przezbrzuszne USG gruczołu krokowego z oceną zalegania moczu, a obraz i opis przekazuje lekarz prowadzący badanie.',
     benefits: [
@@ -618,7 +652,7 @@ export const WHY_US = {
       'Komfort i dyskrecja',
     ],
   },
-  'usg/tarczycy': {
+  'usg/tarczyca': {
     title: 'Dlaczego USG tarczycy w Bas Clinic?',
     intro: 'Oceniamy strukturę, objętość i ewentualne guzki tarczycy, a obraz oraz opis wyniku przekazuje lekarz wykonujący badanie.',
     benefits: [
@@ -630,7 +664,7 @@ export const WHY_US = {
       'Możliwość oceny węzłów szyi',
     ],
   },
-  'usg/szyi': {
+  'usg/szyja': {
     title: 'Dlaczego USG szyi w Bas Clinic?',
     intro: 'W jednym badaniu oceniamy tkanki miękkie szyi, węzły chłonne i ślinianki, a obraz na bieżąco omawia lekarz wykonujący badanie.',
     benefits: [
@@ -642,7 +676,7 @@ export const WHY_US = {
       'Opis wyniku od razu',
     ],
   },
-  'usg/slinianek': {
+  'usg/slinianki': {
     title: 'Dlaczego USG ślinianek w Bas Clinic?',
     intro: 'Oceniamy ślinianki przyuszne i podżuchwowe w badaniu celowanym, które wykonuje i opisuje lekarz, omawiając obraz na bieżąco.',
     benefits: [
@@ -654,7 +688,7 @@ export const WHY_US = {
       'Możliwość oceny węzłów szyi',
     ],
   },
-  'usg/wezlow-chlonnych': {
+  'usg/wezly-chlonne': {
     title: 'Dlaczego USG węzłów chłonnych u nas?',
     intro: 'Oceniamy węzły chłonne szyi, pach i pachwin w jednym badaniu, a obraz oraz opis wyniku przekazuje lekarz wykonujący badanie.',
     benefits: [
@@ -678,7 +712,7 @@ export const WHY_US = {
       'Komfort i dyskrecja',
     ],
   },
-  'usg/tkanek-miekkich': {
+  'usg/tkanki-miekkie': {
     title: 'Dlaczego USG tkanek miękkich u nas?',
     intro: 'Oceniamy guzki podskórne, mięśnie i ścięgna w celowanym badaniu, które wykonuje i opisuje lekarz, omawiając obraz na bieżąco.',
     benefits: [
@@ -690,7 +724,7 @@ export const WHY_US = {
       'Opis wyniku od razu',
     ],
   },
-  'usg/jader': {
+  'usg/jadra': {
     title: 'Dlaczego USG jąder w Bas Clinic?',
     intro: 'Oceniamy jądra i mosznę z opcją Dopplera, w spokojnej i dyskretnej atmosferze, a obraz oraz opis przekazuje lekarz wykonujący badanie.',
     benefits: [
@@ -726,7 +760,7 @@ export const WHY_US = {
       'Bezbolesne, bez promieniowania',
     ],
   },
-  'usg/doppler-zyl-konczyn-dolnych': {
+  'usg/doppler-zyly-konczyn-dolnych': {
     title: 'Dlaczego Doppler żył nóg w Bas Clinic?',
     intro: 'Oceniamy przepływ w żyłach kończyn dolnych metodą Dopplera w kierunku żylaków i zakrzepicy, a obraz omawia lekarz wykonujący badanie.',
     benefits: [
@@ -738,7 +772,7 @@ export const WHY_US = {
       'Bezbolesne, bez promieniowania',
     ],
   },
-  'usg/doppler-tetnic-szyjnych': {
+  'usg/doppler-tetnice-szyjne': {
     title: 'Dlaczego Doppler tętnic szyjnych u nas?',
     intro: 'Oceniamy przepływ i blaszki w tętnicach dogłowowych metodą Dopplera, a obraz oraz opis wyniku przekazuje lekarz wykonujący badanie.',
     benefits: [
@@ -750,7 +784,7 @@ export const WHY_US = {
       'Opis wyniku od razu',
     ],
   },
-  'usg/serca': {
+  'usg/serce': {
     title: 'Dlaczego echo serca w Bas Clinic?',
     intro: 'Wykonujemy echokardiografię z oceną kurczliwości i zastawek, a obraz na bieżąco omawia i opisuje lekarz wykonujący badanie.',
     benefits: [
@@ -762,7 +796,7 @@ export const WHY_US = {
       'Opis wyniku od razu',
     ],
   },
-  'usg/pluc': {
+  'usg/pluca': {
     title: 'Dlaczego USG płuc w Bas Clinic?',
     intro: 'Oceniamy obwodowe partie płuc i obecność płynu w jamie opłucnej, a obraz oraz opis wyniku przekazuje lekarz wykonujący badanie.',
     benefits: [
@@ -774,7 +808,7 @@ export const WHY_US = {
       'Opis wyniku od razu',
     ],
   },
-  'usg/stawow': {
+  'usg/stawy': {
     title: 'Dlaczego USG stawów w Bas Clinic?',
     intro: 'Oceniamy stawy, ścięgna i więzadła, także w ruchu, a obraz na bieżąco omawia i opisuje lekarz wykonujący badanie.',
     benefits: [
@@ -786,7 +820,7 @@ export const WHY_US = {
       'Opis wyniku od razu',
     ],
   },
-  'usg/stawu-skokowego': {
+  'usg/staw-skokowy': {
     title: 'Dlaczego USG kostki w Bas Clinic?',
     intro: 'Oceniamy więzadła i ścięgna stawu skokowego, także po skręceniu kostki, a obraz na bieżąco omawia lekarz wykonujący badanie.',
     benefits: [
@@ -798,7 +832,7 @@ export const WHY_US = {
       'Opis wyniku od razu',
     ],
   },
-  'usg/stopy': {
+  'usg/stopa': {
     title: 'Dlaczego USG stopy w Bas Clinic?',
     intro: 'Oceniamy rozcięgno podeszwowe, ścięgna i okolicę nerwiaka Mortona, a obraz na bieżąco omawia i opisuje lekarz wykonujący badanie.',
     benefits: [
@@ -822,6 +856,20 @@ export const WHY_US = {
       'Komfortowa, spokojna atmosfera',
       'Opieka podczas wlewu',
       'Dyskretne, wygodne stanowiska',
+    ],
+  },
+
+  // ———————————————————————— Leczenie uzależnień ————————————————————————
+  'leczenie-uzaleznien': {
+    title: 'Dlaczego leczenie uzależnień w Bas Clinic?',
+    intro: 'Łączymy opiekę lekarską z psychoterapią i prowadzimy Pacjenta przez kolejne etapy — od pierwszej rozmowy po wsparcie dla bliskich, dyskretnie i bez oceniania.',
+    benefits: [
+      'Opieka lekarza medycyny',
+      'Detoksykacja pod nadzorem',
+      'Indywidualny plan leczenia',
+      'Farmakoterapia i psychoterapia',
+      'Wsparcie dla rodzin',
+      'Dyskrecja i tajemnica lekarska',
     ],
   },
 };

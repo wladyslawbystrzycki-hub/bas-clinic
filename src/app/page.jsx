@@ -1,4 +1,5 @@
 import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
 import Section from './components/Section';
 import SectionHeader from './components/SectionHeader';
 import ServicesAccordion from './components/ServicesAccordion';
@@ -21,37 +22,99 @@ const FEATURED_SERVICES = [
     icon: 'stomatologia',
     title: 'Stomatologia',
     href: '/stomatologia/',
+    image: '/uploads/services/gabinet-stomatologiczny-bas-clinic-wroclaw.webp',
+    imageAlt: 'Gabinet stomatologiczny Bas Clinic we Wrocławiu — lekarz dentysta podczas wizyty',
     description:
-      'Kompleksowa opieka nad uśmiechem — od profilaktyki i leczenia po zaawansowaną implantologię i protetykę.',
-    bullets: ['Implanty i protetyka', 'Leczenie kanałowe', 'Stomatologia dziecięca'],
-    expert: { name: 'lek. med. Bogdan Bas', role: 'Stomatologia', initials: 'BB' },
+      'Kompleksowa opieka stomatologiczna od konsultacji i profilaktyki, przez nowoczesne leczenie zachowawcze oraz endodontyczne, aż po zabiegi z zakresu stomatologii estetycznej, w tym profesjonalne wybielanie zębów.\n\nDbamy nie tylko o zdrowie zębów, ale również o komfort i dobre samopoczucie naszych Pacjentów. Dzięki indywidualnemu podejściu, nowoczesnym technologiom i skutecznym metodom leczenia pomagamy przywrócić zdrowy, piękny uśmiech oraz pewność siebie.',
+    bullets: [
+      'Leczenie zachowawcze',
+      'Leczenie kanałowe',
+      'Implanty i protetyka',
+      'Chirurgia stomatologiczna',
+      'Licówki',
+      'Ortodoncja',
+      'Bonding zębów',
+      'Higienizacja',
+      'Wybielanie zębów',
+      'Stomatologia dziecięca',
+    ],
+    expert: { name: 'lek. dent. Ivanna Bas', role: 'Stomatologia', initials: 'IB' },
+  },
+  {
+    icon: 'uzaleznienia',
+    title: 'Leczenie uzależnień',
+    href: '/leczenie-uzaleznien/',
+    image: '/uploads/services/leczenie-uzaleznien-bas-clinic-wroclaw.webp',
+    imageAlt: 'Leczenie uzależnień w Bas Clinic we Wrocławiu — dyskretna konsultacja z lekarzem',
+    description:
+      'Kompleksowa, dyskretna pomoc w wychodzeniu z uzależnienia — łączymy opiekę lekarską, farmakoterapię i psychoterapię, bez oceniania.',
+    bullets: ['Detoksykacja alkoholowa', 'Farmakoterapia uzależnień', 'Terapia indywidualna', 'Wsparcie dla rodzin'],
+    expert: { name: 'lek. med. Bogdan Bas', role: 'Leczenie uzależnień', initials: 'BB' },
   },
   {
     icon: 'estetyka',
     title: 'Medycyna estetyczna',
     href: '/medycyna-estetyczna/',
+    image: '/uploads/services/medycyna-estetyczna-bas-clinic-wroclaw.webp',
+    imageAlt: 'Medycyna estetyczna w Bas Clinic we Wrocławiu — pacjentka w gabinecie zabiegowym',
     description:
-      'Subtelne zabiegi odmładzające i modelujące, które podkreślają naturalne piękno i pewność siebie.',
-    bullets: ['Modelowanie ust i twarzy', 'Mezoterapia', 'Wypełniacze HA'],
-    expert: { name: 'lek. med. Iwanna Bas', role: 'Medycyna estetyczna', initials: 'IB' },
+      'W Bas Clinic medycyna estetyczna podkreśla naturalne piękno, a nie je zmienia. Przywracamy harmonię, świeżość i pewność siebie bezpiecznymi, nowoczesnymi i indywidualnie dobranymi terapiami.\n\nKażdy zabieg poprzedzamy konsultacją i oceną potrzeb Pacjenta, a plan leczenia tworzymy spersonalizowanie — na sprawdzonych preparatach i z najwyższym standardem bezpieczeństwa oraz komfortu.\n\nNie tworzymy nowej wersji Ciebie. Odsłaniamy tę właściwą.',
+    bulletGroups: [
+      {
+        label: 'Zabiegi dla kobiet',
+        items: [
+          'Korekcja i wygładzenie zmarszczek',
+          'Powiększanie i modelowanie ust',
+          'Mezoterapia igłowa twarzy i dłoni',
+          'Modelowanie konturów twarzy',
+        ],
+      },
+      {
+        label: 'Zabiegi dla mężczyzn',
+        items: [
+          'Korekcja zmarszczek mimicznych',
+          'Leczenie blizn potrądzikowych',
+          'Modelowanie konturów twarzy',
+          'Leczenie nadpotliwości',
+        ],
+      },
+    ],
+    expert: { name: 'lek. dent. Ivanna Bas', role: 'Medycyna estetyczna', initials: 'IB' },
   },
   {
     icon: 'usg',
     title: 'USG — ultrasonografia',
     href: '/usg/',
+    image: '/uploads/services/usg-bas-clinic-wroclaw.webp',
+    imageAlt: 'Pracownia USG w Bas Clinic we Wrocławiu — lekarz przy aparacie ultrasonograficznym',
     description:
-      'Bezbolesna, nieinwazyjna diagnostyka obrazowa — wykonywana i opisywana na miejscu przez lekarza.',
-    bullets: ['Jama brzuszna i tarczyca', 'Piersi i węzły chłonne', 'Doppler naczyniowy'],
+      'Kompleksowa diagnostyka ultrasonograficzna — szybka, bezbolesna i bezpieczna ocena stanu zdrowia, bez promieniowania. Badania prowadzimy na nowoczesnym sprzęcie, a ich wynik lekarz opisuje od razu na miejscu.\n\nPrecyzyjna diagnostyka to podstawa skutecznego leczenia — pozwala szybko wdrożyć właściwą terapię.',
+    bullets: [
+      'Głowa i szyja',
+      'Jama brzuszna i układ moczowy',
+      'Piersi i tkanki miękkie',
+      'Diagnostyka uroginekologiczna',
+      'Doppler naczyniowy',
+      'Serce i klatka piersiowa',
+      'Narząd ruchu',
+    ],
     expert: { name: 'lek. med. Bogdan Bas', role: 'Diagnostyka USG', initials: 'BB' },
   },
   {
     icon: 'wlewy',
     title: 'Wlewy witaminowe',
     href: '/wlewy-witaminowe/',
+    image: '/uploads/services/wlewy-witaminowe-bas-clinic-wroclaw.webp',
+    imageAlt: 'Wlewy witaminowe w Bas Clinic we Wrocławiu — pacjentka podczas terapii dożylnej',
     description:
-      'Terapie infuzyjne dostarczające witaminy i minerały wprost do organizmu — dla energii i odporności.',
-    bullets: ['Indywidualne formuły', 'Witaminy i minerały', 'Wsparcie odporności'],
-    expert: { name: 'lek. med. Iwanna Bas', role: 'Terapie infuzyjne', initials: 'IB' },
+      'Nowoczesna terapia dożylna, która wspiera organizm tam, gdzie najbardziej tego potrzebuje. Każdy wlew dobieramy indywidualnie — pod stan zdrowia, styl życia i cel terapii — aby uzupełnić niedobory, poprawić samopoczucie i wesprzeć naturalną regenerację.\n\nZadbaj o zdrowie od wewnątrz — dobre samopoczucie zaczyna się na poziomie komórkowym.',
+    bullets: [
+      'Wlewy witaminowe – odporność, witalność, anti-aging',
+      'Wlewy sportowe – regeneracja po wysiłku',
+      'Wlewy na kaca – nawodnienie i detoksykacja',
+      'Wlewy na zjazd – energia i wsparcie wątroby',
+    ],
+    expert: { name: 'lek. dent. Ivanna Bas', role: 'Terapie infuzyjne', initials: 'IB' },
   },
 ];
 
@@ -60,22 +123,22 @@ const FEATURED_SERVICES = [
 const FAQ = [
   {
     question: 'Jak umówić wizytę w Bas Clinic?',
-    answer: `Najprościej zadzwonić pod ${CLINIC.phone} lub skorzystać z rejestracji online. Wspólnie dobierzemy termin dopasowany do Twojego grafiku, a w razie potrzeby zaproponujemy wcześniejszą konsultację, by spokojnie omówić plan leczenia.`,
+    answer: `Aby umówić się na wizytę, należy zadzwonić pod ${CLINIC.phone} lub skorzystać z rejestracji online. Wspólnie dobierzemy termin dopasowany do Twojego grafiku, a w razie potrzeby zaproponujemy wcześniejszą konsultację, by spokojnie omówić plan leczenia.`,
   },
   {
     question: 'Czy przed zabiegiem odbywa się konsultacja?',
     answer:
-      'Tak. Każdy plan leczenia — stomatologiczny czy estetyczny — poprzedzamy indywidualną konsultacją. Lekarz ocenia Twoją sytuację, odpowiada na wszystkie pytania i proponuje rozwiązanie dopasowane do Twoich potrzeb oraz oczekiwań.',
+      'Tak. Każdy plan leczenia — stomatologiczny czy estetyczny — poprzedzony jest indywidualną konsultacją. Lekarz ocenia Twoją sytuację, odpowiada na wszystkie pytania i proponuje rozwiązanie dopasowane do Twoich potrzeb oraz oczekiwań.',
   },
   {
     question: 'Czy zabiegi medycyny estetycznej są bolesne?',
     answer:
-      'Większość zabiegów jest dobrze tolerowana. Tam, gdzie to potrzebne, stosujemy znieczulenie miejscowe lub kremy znieczulające, aby zapewnić Ci komfort. Przebieg zabiegu i ewentualne odczucia zawsze omawiamy wcześniej.',
+      'Większość zabiegów z zakresu medycyny estetycznej jest dobrze tolerowana przez Pacjentów. Tam, gdzie to potrzebne, stosujemy znieczulenie miejscowe lub kremy znieczulające, aby zapewnić komfort i zniwelować odczuwany ból. Przebieg zabiegu i ewentualne odczucia zawsze omawiamy wcześniej.',
   },
   {
     question: 'Jakie metody płatności akceptujecie?',
     answer:
-      'Płatność można uregulować gotówką lub kartą. Koszt zabiegu ustalamy i przedstawiamy przed jego rozpoczęciem — bez ukrytych opłat i niespodzianek.',
+      'Płatność można uregulować gotówką lub kartą. Koszt zabiegu ustalamy i przedstawiamy przed jego rozpoczęciem — zachowujemy pełną transparentność, bez ukrytych opłat i niespodzianek.',
   },
   {
     question: 'Czy mogę przełożyć lub odwołać wizytę?',
@@ -96,16 +159,18 @@ export default function HomePage() {
         title="Bas Clinic"
         lead="Nie tworzymy nowej wersji Ciebie. Odsłaniamy tę właściwą."
         quote="Nasze zabiegi skierowane są ku świadomej, subtelnej poprawie wizerunku — takiej, która pozostaje niewidoczna dla innych, a zostaje odczuwalna dla Ciebie."
-        quoteAuthor="Bogdan Bas & Iwanna Bas"
+        quoteAuthor="Bogdan Bas & Ivanna Bas"
         showReviews
       />
+
+      {/* O nas — cichy manifest typograficzny pod hero */}
+      <AboutSection />
 
       {/* Team */}
       <Section id="zalozyciele" bg="light">
         <SectionHeader
           subtitle="Nasz zespół"
           title="Poznaj założycieli Bas Clinic"
-          description="Doświadczeni specjaliści z pasją do medycyny i estetyki."
         />
         <FoundersSlider founders={CLINIC.founders} />
       </Section>
@@ -134,7 +199,14 @@ export default function HomePage() {
 
       {/* FAQ */}
       <FAQPageSchema questions={FAQ} />
-      <FAQSection id="faq" items={FAQ} />
+      <FAQSection
+        id="faq"
+        items={FAQ}
+        intro="Zebraliśmy odpowiedzi na pytania, które Pacjenci zadają nam najczęściej. Jeśli nie znajdziesz tutaj potrzebnych informacji, zapraszamy do kontaktu — chętnie wszystko wyjaśnimy podczas rozmowy."
+        image="/uploads/services/faq-recepcja-bas-clinic-wroclaw.webp"
+        imageAlt="Recepcja Bas Clinic we Wrocławiu — rejestracja i kontakt z Pacjentem"
+        imageRatio="aspect-[5/6]"
+      />
 
       {/* Contact */}
       <Section id="kontakt">

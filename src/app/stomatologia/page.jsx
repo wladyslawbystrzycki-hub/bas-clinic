@@ -37,14 +37,14 @@ const EXPERT_INFO = [
     content:
       '<p>Stomatologia obejmuje kilka wyspecjalizowanych dziedzin, które najczęściej uzupełniają się w obrębie jednego planu leczenia. W naszym gabinecie pacjent znajduje je w jednym miejscu:</p>' +
       '<ul>' +
-      '<li><strong>Profilaktyka i higienizacja</strong> - przeglądy, skaling i piaskowanie; podstawa zdrowia jamy ustnej (<a href="/higienizacja/">profesjonalna higienizacja</a>).</li>' +
-      '<li><strong>Stomatologia zachowawcza i endodoncja</strong> - leczenie próchnicy oraz leczenie kanałowe (<a href="/leczenie-zebow/">leczenie zębów i kanałowe</a>).</li>' +
-      '<li><strong>Protetyka</strong> - odbudowa zniszczonych lub utraconych zębów koronami i mostami (<a href="/protetyka-korony/">korony protetyczne</a>).</li>' +
-      '<li><strong>Implantologia</strong> - odtwarzanie pojedynczych braków oraz <a href="/leczenie-bezzebia/">leczenie bezzębia</a> z użyciem <a href="/implanty-zebowe/">implantów zębowych</a>.</li>' +
-      '<li><strong>Ortodoncja</strong> - korekta wad zgryzu aparatami i nakładkami (<a href="/ortodoncja/">leczenie ortodontyczne</a>).</li>' +
-      '<li><strong>Chirurgia stomatologiczna</strong> - usuwanie zębów i zabiegi w obrębie jamy ustnej (<a href="/chirurgia/">chirurgia stomatologiczna</a>).</li>' +
-      '<li><strong>Stomatologia dziecięca</strong> - opieka nad zębami mlecznymi i stałymi u najmłodszych (<a href="/stomatologia-dziecieca/">stomatologia dziecięca</a>).</li>' +
-      '<li><strong>Stomatologia estetyczna</strong> - poprawa wyglądu uśmiechu, między innymi <a href="/licowki/">licówki</a> i <a href="/bonding/">bonding</a> (<a href="/stomatologia-estetyczna/">stomatologia estetyczna</a>).</li>' +
+      '<li><strong>Profilaktyka i higienizacja</strong> - przeglądy, skaling i piaskowanie; podstawa zdrowia jamy ustnej (<a href="/stomatologia/higienizacja/">profesjonalna higienizacja</a>).</li>' +
+      '<li><strong>Stomatologia zachowawcza i endodoncja</strong> - leczenie próchnicy oraz leczenie kanałowe (<a href="/stomatologia/leczenie-zebow/">leczenie zębów i kanałowe</a>).</li>' +
+      '<li><strong>Protetyka</strong> - odbudowa zniszczonych lub utraconych zębów koronami i mostami (<a href="/stomatologia/protetyka-korony/">korony protetyczne</a>).</li>' +
+      '<li><strong>Implantologia</strong> - odtwarzanie pojedynczych braków oraz <a href="/stomatologia/leczenie-bezzebia/">leczenie bezzębia</a> z użyciem <a href="/stomatologia/implanty-zebowe/">implantów zębowych</a>.</li>' +
+      '<li><strong>Ortodoncja</strong> - korekta wad zgryzu aparatami i nakładkami (<a href="/stomatologia/ortodoncja/">leczenie ortodontyczne</a>).</li>' +
+      '<li><strong>Chirurgia stomatologiczna</strong> - usuwanie zębów i zabiegi w obrębie jamy ustnej (<a href="/stomatologia/chirurgia/">chirurgia stomatologiczna</a>).</li>' +
+      '<li><strong>Stomatologia dziecięca</strong> - opieka nad zębami mlecznymi i stałymi u najmłodszych (<a href="/stomatologia/dziecieca/">stomatologia dziecięca</a>).</li>' +
+      '<li><strong>Stomatologia estetyczna</strong> - poprawa wyglądu uśmiechu, między innymi <a href="/stomatologia/licowki/">licówki</a> i <a href="/stomatologia/bonding/">bonding</a> (<a href="/stomatologia/estetyczna/">stomatologia estetyczna</a>).</li>' +
       '</ul>',
   },
   {
@@ -53,7 +53,7 @@ const EXPERT_INFO = [
     content:
       '<p><strong>Profilaktyka</strong> stomatologiczna - regularne przeglądy, higienizacja i prawidłowa higiena domowa - pozwala wykryć próchnicę i choroby dziąseł, zanim staną się bolesne i wymagające rozległego leczenia.</p>' +
       '<p>Codzienna higiena ma policzalny efekt. Przeglądy systematyczne Cochrane wskazują, że pasta z <strong>fluorem</strong> w stężeniu co najmniej 1000 ppm zmniejsza próchnicę o około 24% w porównaniu z pastą bez fluoru, a szczotkowanie dwa razy dziennie zwiększa tę korzyść (Cochrane, Walsh i wsp., 2019). Na ryzyko próchnicy i chorób przyzębia wpływają też dieta bogata w cukry, palenie tytoniu oraz alkohol.</p>' +
-      '<p>Z tego powodu domową higienę łączymy z regularną <a href="/higienizacja/">higienizacją w gabinecie</a>, która usuwa płytkę i kamień w miejscach niedostępnych dla szczoteczki.</p>',
+      '<p>Z tego powodu domową higienę łączymy z regularną <a href="/stomatologia/higienizacja/">higienizacją w gabinecie</a>, która usuwa płytkę i kamień w miejscach niedostępnych dla szczoteczki.</p>',
   },
   {
     title: 'Jak często chodzić do stomatologa?',
@@ -74,7 +74,7 @@ const EXPERT_INFO = [
       '<li>plan leczenia z ustaloną kolejnością i zakresem zabiegów;</li>' +
       '<li>realizacja zabiegów, w razie potrzeby w <strong>znieczuleniu miejscowym</strong>.</li>' +
       '</ol>' +
-      '<p>W diagnostyce zmian w obrębie głowy i szyi gabinet korzysta także z badań ultrasonograficznych, na przykład <a href="/usg/slinianek/">USG ślinianek</a> czy <a href="/usg/szyi/">USG szyi</a>, co pozwala ocenić ślinianki i węzły chłonne bez promieniowania.</p>',
+      '<p>W diagnostyce zmian w obrębie głowy i szyi gabinet korzysta także z badań ultrasonograficznych, na przykład <a href="/usg/slinianki/">USG ślinianek</a> czy <a href="/usg/szyja/">USG szyi</a>, co pozwala ocenić ślinianki i węzły chłonne bez promieniowania.</p>',
   },
   {
     title: 'Próchnica i choroby przyzębia - najczęstsze problemy',
@@ -92,10 +92,10 @@ const EXPERT_INFO = [
       '<h3>Porównanie metod odbudowy zęba</h3>' +
       '<table>' +
       '<tr><th>Metoda</th><th>Cel</th><th>Kiedy rozważana</th></tr>' +
-      '<tr><td><a href="/leczenie-zebow/">Leczenie zachowawcze i kanałowe</a></td><td>zachowanie naturalnego zęba</td><td>próchnica, zapalenie miazgi, odwracalne uszkodzenia</td></tr>' +
-      '<tr><td><a href="/protetyka-korony/">Korona protetyczna</a></td><td>odbudowa mocno zniszczonego zęba</td><td>rozległa utrata tkanek, ząb po leczeniu kanałowym</td></tr>' +
-      '<tr><td><a href="/implanty-zebowe/">Implant zębowy</a></td><td>zastąpienie utraconego zęba</td><td>pojedyncze braki, brak możliwości uratowania zęba</td></tr>' +
-      '<tr><td><a href="/leczenie-bezzebia/">Leczenie bezzębia</a></td><td>odbudowa wielu lub wszystkich zębów</td><td>rozległe lub całkowite braki zębowe</td></tr>' +
+      '<tr><td><a href="/stomatologia/leczenie-zebow/">Leczenie zachowawcze i kanałowe</a></td><td>zachowanie naturalnego zęba</td><td>próchnica, zapalenie miazgi, odwracalne uszkodzenia</td></tr>' +
+      '<tr><td><a href="/stomatologia/protetyka-korony/">Korona protetyczna</a></td><td>odbudowa mocno zniszczonego zęba</td><td>rozległa utrata tkanek, ząb po leczeniu kanałowym</td></tr>' +
+      '<tr><td><a href="/stomatologia/implanty-zebowe/">Implant zębowy</a></td><td>zastąpienie utraconego zęba</td><td>pojedyncze braki, brak możliwości uratowania zęba</td></tr>' +
+      '<tr><td><a href="/stomatologia/leczenie-bezzebia/">Leczenie bezzębia</a></td><td>odbudowa wielu lub wszystkich zębów</td><td>rozległe lub całkowite braki zębowe</td></tr>' +
       '</table>',
   },
   {
@@ -103,7 +103,7 @@ const EXPERT_INFO = [
     tocLabel: 'Przeciwwskazania',
     content:
       '<p>Większość zabiegów stomatologicznych jest bezpieczna, jednak część wymaga uwzględnienia stanu ogólnego pacjenta i indywidualnych przeciwwskazań. Dlatego wywiad zdrowotny przed leczeniem jest tak samo ważny jak samo badanie zębów.</p>' +
-      '<h3>Kiedy potrzebna jest szczególna ostrożność</h3>' +
+      '<h3>Kiedy leczenie zębów wymaga ostrożności?</h3>' +
       '<p>Szczególnej ostrożności lub modyfikacji planu wymagają między innymi:</p>' +
       '<ul>' +
       '<li>ciąża i karmienie piersią - zabiegi planowe ustalamy z lekarzem, a zdjęcia RTG wykonujemy z osłoną i tylko gdy są konieczne;</li>' +
@@ -112,7 +112,7 @@ const EXPERT_INFO = [
       '<li>osteoporoza leczona bisfosfonianami i inne choroby kości - wymagają oceny przed zabiegami chirurgicznymi i implantacją;</li>' +
       '<li>czynne zakażenie w jamie ustnej oraz alergie na leki lub środki znieczulające.</li>' +
       '</ul>' +
-      '<h3>Czego nie robić samodzielnie</h3>' +
+      '<h3>Czego nie robić samodzielnie?</h3>' +
       '<p>Nie zaleca się samodzielnego wybielania ani leczenia bólu zęba bez wcześniejszej diagnozy - objaw może maskować poważniejszy problem. O kwalifikacji do konkretnego zabiegu zawsze decyduje lekarz.</p>',
   },
   {

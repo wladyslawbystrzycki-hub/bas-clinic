@@ -4,7 +4,7 @@ import { CLINIC } from '@/config/clinic';
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-primary-950 text-gray-300">
-      <div className="mx-auto max-w-[100rem] px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
           {/* Column 1: Logo & Contact */}
           <div>
@@ -40,13 +40,13 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
               {[
-                { href: '/implanty-zebowe/', label: 'Implanty zębowe' },
-                { href: '/licowki/', label: 'Licówki' },
-                { href: '/stomatologia-estetyczna/', label: 'Stomatologia estetyczna' },
-                { href: '/ortodoncja/', label: 'Ortodoncja' },
-                { href: '/higienizacja/', label: 'Higienizacja' },
-                { href: '/leczenie-zebow/', label: 'Leczenie zębów' },
-                { href: '/chirurgia/', label: 'Chirurgia' },
+                { href: '/stomatologia/implanty-zebowe/', label: 'Implanty zębowe' },
+                { href: '/stomatologia/licowki/', label: 'Licówki' },
+                { href: '/stomatologia/estetyczna/', label: 'Stomatologia estetyczna' },
+                { href: '/stomatologia/ortodoncja/', label: 'Ortodoncja' },
+                { href: '/stomatologia/higienizacja/', label: 'Higienizacja' },
+                { href: '/stomatologia/leczenie-zebow/', label: 'Leczenie zębów' },
+                { href: '/stomatologia/chirurgia/', label: 'Chirurgia' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -68,13 +68,13 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {[
                 { href: '/medycyna-estetyczna/', label: 'Wszystkie zabiegi' },
-                { href: '/wypelniacze-ha/', label: 'Wypełniacze HA' },
-                { href: '/redukcja-zmarszczek-botox/', label: 'Redukcja zmarszczek botox' },
-                { href: '/mezoterapia-iglowa/', label: 'Mezoterapia igłowa' },
-                { href: '/stymulatory-tkankowe/', label: 'Stymulatory tkankowe' },
-                { href: '/modelowanie-ust/', label: 'Modelowanie ust' },
-                { href: '/pilingi-medyczne/', label: 'Pilingi medyczne' },
-                { href: '/skin-booster/', label: 'Skin booster' },
+                { href: '/medycyna-estetyczna/wypelniacze-ha/', label: 'Wypełniacze HA' },
+                { href: '/medycyna-estetyczna/redukcja-zmarszczek-botox/', label: 'Redukcja zmarszczek botox' },
+                { href: '/medycyna-estetyczna/mezoterapia-iglowa/', label: 'Mezoterapia igłowa' },
+                { href: '/medycyna-estetyczna/stymulatory-tkankowe/', label: 'Stymulatory tkankowe' },
+                { href: '/medycyna-estetyczna/modelowanie-ust/', label: 'Modelowanie ust' },
+                { href: '/medycyna-estetyczna/pilingi-medyczne/', label: 'Pilingi medyczne' },
+                { href: '/medycyna-estetyczna/skin-booster/', label: 'Skin booster' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -96,12 +96,12 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {[
                 { href: '/usg/', label: 'Wszystkie badania USG' },
-                { href: '/usg/jamy-brzusznej/', label: 'USG jamy brzusznej' },
-                { href: '/usg/tarczycy/', label: 'USG tarczycy' },
+                { href: '/usg/jama-brzuszna/', label: 'USG jamy brzusznej' },
+                { href: '/usg/tarczyca/', label: 'USG tarczycy' },
                 { href: '/usg/piersi/', label: 'USG piersi' },
-                { href: '/usg/nerek/', label: 'USG nerek' },
-                { href: '/usg/szyi/', label: 'USG szyi' },
-                { href: '/usg/wezlow-chlonnych/', label: 'USG węzłów chłonnych' },
+                { href: '/usg/nerki/', label: 'USG nerek' },
+                { href: '/usg/szyja/', label: 'USG szyi' },
+                { href: '/usg/wezly-chlonne/', label: 'USG węzłów chłonnych' },
                 { href: '/usg/doppler/', label: 'USG Doppler naczyń' },
               ].map((link) => (
                 <li key={link.href}>

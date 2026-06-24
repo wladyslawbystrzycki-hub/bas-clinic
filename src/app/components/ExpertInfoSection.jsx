@@ -55,6 +55,67 @@ function injectedHtmlClass(light) {
   ].join(' ');
 }
 
+// Sekcja „Źródła" bywa długa (10+ pozycji) — pokazujemy kilka, resztę chowamy
+// za checkboxem (peer + :checked), bez JS (komponent zostaje serwerowy).
+const VISIBLE_SOURCES = 3;
+
+/**
+ * Wyciąga z treści źródeł listę `<li>`. Zwraca null, gdy treść nie pasuje do
+ * oczekiwanego kształtu (`<ol>`) albo lista jest krótka — wtedy renderujemy ją
+ * normalnie, bez chowania.
+ */
+function splitSources(content) {
+  const ol = content.match(/<ol[^>]*>([\s\S]*?)<\/ol>/i);
+  if (!ol) return null;
+  const items = ol[1].match(/<li[\s\S]*?<\/li>/gi) || [];
+  if (items.length <= VISIBLE_SOURCES + 1) return null;
+  return {
+    before: content.slice(0, ol.index), // ewentualny akapit-wstęp przed listą
+    all: items.join(''),
+    hiddenCount: items.length - VISIBLE_SOURCES,
+  };
+}
+
+/** Treść sekcji „Źródła" — jedna lista, nadmiarowe pozycje chowane pod przyciskiem. */
+function SourcesContent({ content, className, light, id }) {
+  const split = splitSources(content);
+  if (!split) return <div className={className} dangerouslySetInnerHTML={{ __html: content }} />;
+
+  const toggleId = `${id}-toggle`;
+  return (
+    <div className={className}>
+      {split.before && <div dangerouslySetInnerHTML={{ __html: split.before }} />}
+      <input type="checkbox" id={toggleId} className="peer sr-only" />
+      {/* jedna jednolita lista; poz. 4+ (n+4 = VISIBLE_SOURCES+1) ukryte do zaznaczenia */}
+      <ol
+        className="[&>li:nth-child(n+4)]:hidden peer-checked:[&>li:nth-child(n+4)]:list-item"
+        dangerouslySetInnerHTML={{ __html: split.all }}
+      />
+      {/* przełączniki sterowane z label (peer-checked) — spany w środku nie są
+          rodzeństwem checkboxa, więc wariant musi celować w nie przez label */}
+      <label
+        htmlFor={toggleId}
+        className={`mt-3 inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium transition-colors [&_[data-less]]:hidden peer-checked:[&_[data-more]]:hidden peer-checked:[&_[data-less]]:inline peer-checked:[&_svg]:rotate-180 ${
+          light ? 'text-secondary-300 hover:text-white' : 'text-primary-700 hover:text-primary-800'
+        }`}
+      >
+        <span data-more>Więcej źródeł ({split.hiddenCount})</span>
+        <span data-less>Mniej źródeł</span>
+        <svg
+          className="h-3.5 w-3.5 transition-transform"
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          aria-hidden="true"
+        >
+          <path d="M6 8l4 4 4-4" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </label>
+    </div>
+  );
+}
+
 export default function ExpertInfoSection({ items, light = false, eyebrow }) {
   if (!items || items.length === 0) return null;
 
@@ -83,10 +144,14 @@ export default function ExpertInfoSection({ items, light = false, eyebrow }) {
               {s.title}
             </h2>
           )}
-          <div
-            className={injectedHtmlClass(light)}
-            dangerouslySetInnerHTML={{ __html: s.content }}
-          />
+          {slugify(s.title || '') === 'zrodla' ? (
+            <SourcesContent content={s.content} className={injectedHtmlClass(light)} light={light} id={s.id} />
+          ) : (
+            <div
+              className={injectedHtmlClass(light)}
+              dangerouslySetInnerHTML={{ __html: s.content }}
+            />
+          )}
         </div>
       ))}
     </div>

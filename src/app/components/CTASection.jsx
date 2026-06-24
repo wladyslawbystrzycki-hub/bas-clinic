@@ -19,12 +19,16 @@ export default function CTASection({
   title = 'Dlaczego warto wybrać Bas Clinic?',
   intro = 'Łączymy stomatologię, medycynę estetyczną i diagnostykę USG pod jednym dachem. Każdy plan leczenia tworzymy indywidualnie — w oparciu o medyczną wiedzę w trzecim pokoleniu, nowoczesny sprzęt i szczere, pełne empatii podejście do Pacjenta.',
   benefits = DEFAULT_BENEFITS,
+  image = '/uploads/services/dlaczego-my-pacjentka-bas-clinic-wroclaw.webp',
+  imageAlt = 'Zadowolona Pacjentka Bas Clinic we Wrocławiu',
+  image2 = '/uploads/services/dlaczego-my-opieka-bas-clinic-wroclaw.webp',
+  image2Alt = 'Opieka i konsultacja w Bas Clinic we Wrocławiu',
 }) {
   const experience = CLINIC.founders?.[0]?.experience;
 
   return (
     <section id={id} className="py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">
           {/* ----------------------------- Lewa: treść ---------------------------- */}
           <div>
@@ -88,9 +92,9 @@ export default function CTASection({
             <div className="relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=900&h=1100&fit=crop"
-                alt="Zadowolona Pacjentka Bas Clinic"
-                className="aspect-[4/5] w-full object-cover"
+                src={image}
+                alt={imageAlt}
+                className="aspect-square w-full object-cover"
                 loading="lazy"
                 decoding="async"
               />
@@ -100,17 +104,21 @@ export default function CTASection({
               />
             </div>
 
-            {/* zdjęcie poboczne — nakładka (od sm) */}
-            <div className="absolute -bottom-8 -right-3 hidden w-2/5 overflow-hidden rounded-2xl shadow-xl ring-4 ring-white sm:block lg:-right-6">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=520&h=520&fit=crop"
-                alt="Zabieg w Bas Clinic"
-                className="aspect-square w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+            {/* zdjęcie poboczne — nakładka (od sm). Opcjonalna: strona może ją
+                wyłączyć (image2={null}), gdy główne zdjęcie to pełny rezultat,
+                którego róg nie może być zasłonięty (np. kolaż przed/po). */}
+            {image2 && (
+              <div className="absolute -bottom-8 -right-3 hidden w-2/5 overflow-hidden rounded-2xl shadow-xl ring-4 ring-white sm:block lg:-right-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={image2}
+                  alt={image2Alt}
+                  className="aspect-square w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            )}
 
             {/* odznaka opinii Google (dane z CLINIC.reviews) */}
             <div className="absolute -top-5 right-3 sm:right-6 lg:-right-6">

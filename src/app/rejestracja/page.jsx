@@ -24,7 +24,7 @@ export default function RejestracjaPage() {
           <div className="absolute right-[-6%] top-[-12%] h-[28rem] w-[28rem] rounded-full bg-primary-700/30 blur-[120px]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] opacity-[0.06] [background-size:46px_46px] [mask-image:linear-gradient(to_left,black,transparent_55%)] [-webkit-mask-image:linear-gradient(to_left,black,transparent_55%)]" />
         </div>
-        <div className="relative z-10 mx-auto max-w-[100rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="relative z-10 mx-auto max-w-[90rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex flex-wrap items-center gap-1.5 text-sm">
               <li>

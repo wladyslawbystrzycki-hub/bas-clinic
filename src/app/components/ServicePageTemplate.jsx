@@ -32,6 +32,8 @@ export default function ServicePageTemplate({
   schemaType,
   usesDevice,
   testimonials,
+  faqImage,
+  faqImageAlt,
 }) {
   // Opinie relewantne z kategorią usługi (z heroSubtitle). Strona może nadpisać
   // własną tablicą `testimonials`, albo ukryć sekcję przekazując `testimonials={[]}`.
@@ -41,7 +43,7 @@ export default function ServicePageTemplate({
   // „Kompendium wiedzy" pod hero — treść per-kategoria (fallback: KNOWLEDGE.default).
   const knowledge = getKnowledge(slug, heroSubtitle);
   // Podpis autora/specjalistki (EEAT) — tylko stomatologia i medycyna estetyczna
-  // (null dla USG/wlewów). Patrz src/config/authors.js (decyzja: Iwanna Bas).
+  // (null dla USG/wlewów). Patrz src/config/authors.js (decyzja: Ivanna Bas).
   const author = getPageAuthor(heroSubtitle);
   // „Powiązane zabiegi" — relewantne linki wyprowadzone z modelu danych (per slug).
   // Jawna lista `childServices` (kuratorska na stronie) nadpisuje usługi, zachowując
@@ -100,14 +102,21 @@ export default function ServicePageTemplate({
 
       {/* Autor / specjalistka — podpis EEAT pod treścią. Tylko stomatologia i
           medycyna estetyczna (USG/wlewy → author=null, sekcja się nie renderuje).
-          Treść/osoba z src/config/authors.js (decyzja: Iwanna Bas na obu). */}
+          Treść/osoba z src/config/authors.js (decyzja: Ivanna Bas na obu). */}
       {author && <AuthorBio {...author} />}
 
       {/* Powiązane zabiegi — relewantne linkowanie wewnętrzne (globalny komponent) */}
       {related && related.services?.length > 0 && <RelatedServices {...related} />}
 
       {/* FAQ — wspólna sekcja (renderuje własny <section bg-cream>, jak na stronie głównej) */}
-      {faq && faq.length > 0 && <FAQSection items={faq} contactHref="/kontakt/" />}
+      {faq && faq.length > 0 && (
+        <FAQSection
+          items={faq}
+          contactHref="/kontakt/"
+          image={faqImage}
+          imageAlt={faqImageAlt}
+        />
+      )}
 
       {/* Opinie Pacjentów — dobrane tematycznie (PLACEHOLDER, patrz testimonials.js) */}
       {testimonialItems && testimonialItems.length > 0 && (

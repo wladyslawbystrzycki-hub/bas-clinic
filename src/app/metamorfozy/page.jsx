@@ -22,7 +22,7 @@ export default function MetamorfozyPage() {
 
       {/* Nagłówek — zwykły pasek (jak na cenniku), bez pełnego hero */}
       <section id="hero" className="bg-gradient-to-r from-primary-800 to-primary-900 py-16 sm:py-20">
-        <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={BREADCRUMBS} />
           <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Metamorfozy

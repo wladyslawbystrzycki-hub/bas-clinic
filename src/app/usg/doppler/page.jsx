@@ -15,9 +15,9 @@ const BREADCRUMBS = [
 ];
 
 const RELATED = [
-  'usg/doppler-zyl-konczyn-dolnych',
-  'usg/doppler-tetnic-szyjnych',
-  'usg/nerek',
+  'usg/doppler-zyly-konczyn-dolnych',
+  'usg/doppler-tetnice-szyjne',
+  'usg/nerki',
 ].map(getServiceBySlug);
 
 const EXPERT_INFO = [
@@ -33,9 +33,9 @@ const EXPERT_INFO = [
     content:
       '<p>Badania dopplerowskie naczyń obejmują kilka odrębnych zakresów, dobieranych w zależności od ocenianej okolicy ciała. USG Doppler naczyń pełni rolę punktu wyjścia, z którego kieruje się pacjenta do węższego, ukierunkowanego badania konkretnego obszaru.</p>' +
       '<ul>' +
-      '<li><strong>Tętnice dogłowowe i szyjne oraz tętnice kręgowe</strong> - ocena tętnic doprowadzających krew do mózgu, istotna w profilaktyce naczyniowej. Szczegółowy zakres opisuje badanie <a href="/usg/doppler-tetnic-szyjnych/">USG Doppler tętnic szyjnych</a>.</li>' +
-      '<li><strong>Żyły kończyn dolnych</strong> - ocena drożności i wydolności żył nóg, przydatna przy żylakach, obrzękach oraz podejrzeniu zakrzepicy. Pełen opis zawiera badanie <a href="/usg/doppler-zyl-konczyn-dolnych/">USG Doppler żył kończyn dolnych</a>.</li>' +
-      '<li><strong>Naczynia jamy brzusznej</strong> - ocena aorty brzusznej oraz tętnic nerkowych. Tętnice nerkowe ocenia się również w ramach badania <a href="/usg/nerek/">USG nerek</a>.</li>' +
+      '<li><strong>Tętnice dogłowowe i szyjne oraz tętnice kręgowe</strong> - ocena tętnic doprowadzających krew do mózgu, istotna w profilaktyce naczyniowej. Szczegółowy zakres opisuje badanie <a href="/usg/doppler-tetnice-szyjne/">USG Doppler tętnic szyjnych</a>.</li>' +
+      '<li><strong>Żyły kończyn dolnych</strong> - ocena drożności i wydolności żył nóg, przydatna przy żylakach, obrzękach oraz podejrzeniu zakrzepicy. Pełen opis zawiera badanie <a href="/usg/doppler-zyly-konczyn-dolnych/">USG Doppler żył kończyn dolnych</a>.</li>' +
+      '<li><strong>Naczynia jamy brzusznej</strong> - ocena aorty brzusznej oraz tętnic nerkowych. Tętnice nerkowe ocenia się również w ramach badania <a href="/usg/nerki/">USG nerek</a>.</li>' +
       '</ul>' +
       '<p>W obrębie każdego z tych badań stosuje się różne tryby obrazowania przepływu: Doppler kolorowy (color Doppler) nakłada barwną mapę przepływu na obraz naczynia, Doppler spektralny przedstawia prędkość krwi w formie wykresu, a opcja duplex łączy obraz struktury z oceną przepływu. Są to sposoby prezentacji przepływu w trakcie jednego badania, a nie osobne usługi.</p>',
   },

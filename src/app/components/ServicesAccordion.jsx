@@ -95,24 +95,45 @@ function DesktopPanel({ item, index, isActive, onOpen }) {
 function DesktopExpanded({ item, num, Icon }) {
   return (
     <div className="relative flex h-full animate-[fadeIn_0.5s_ease] gap-5 p-4 lg:p-5">
-      {/* Panel wizualny (grafit + ikona + tekstura) */}
+      {/* Panel wizualny — realne foto (gdy `image`) albo grafit + ikona */}
       <div className="relative hidden w-[38%] shrink-0 flex-col overflow-hidden rounded-xl bg-primary-950 md:flex">
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_30%_0%,var(--color-primary-800)_0%,transparent_60%)]"
-        />
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] [background-size:22px_22px]"
-        />
-        <div className="relative flex flex-1 items-center justify-center p-6">
-          <span className="flex h-24 w-24 items-center justify-center rounded-2xl bg-white/[0.07] text-secondary-400 ring-1 ring-white/15">
-            <Icon className="h-12 w-12" />
-          </span>
-        </div>
+        {item.image ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={item.image}
+              alt={item.imageAlt}
+              title={item.title}
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            {/* scrim u dołu — czytelność białego CTA na zdjęciu */}
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary-950/85 via-primary-950/20 to-transparent"
+            />
+          </>
+        ) : (
+          <>
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_30%_0%,var(--color-primary-800)_0%,transparent_60%)]"
+            />
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] [background-size:22px_22px]"
+            />
+            <div className="relative flex flex-1 items-center justify-center p-6">
+              <span className="flex h-24 w-24 items-center justify-center rounded-2xl bg-white/[0.07] text-secondary-400 ring-1 ring-white/15">
+                <Icon className="h-12 w-12" />
+              </span>
+            </div>
+          </>
+        )}
         <Link
           href="/rejestracja/"
-          className="relative m-3 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary-900 transition-colors hover:bg-secondary-200"
+          className="relative m-3 mt-auto inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary-900 transition-colors hover:bg-secondary-200"
         >
           <CalendarIcon className="h-4 w-4" />
           Umów wizytę
@@ -127,19 +148,18 @@ function DesktopExpanded({ item, num, Icon }) {
         >
           {num}
         </span>
-        <h3 className="relative font-display text-2xl font-bold text-gray-900">{item.title}</h3>
-        <p className="relative mt-3 max-w-md text-sm leading-relaxed text-gray-600">
-          {item.description}
-        </p>
-        <ul className="relative mt-5 space-y-2.5">
-          {item.bullets.map((b) => (
-            <li key={b} className="flex items-center gap-2.5 text-sm font-medium text-gray-800">
-              <CheckBadge />
-              {b}
-            </li>
-          ))}
-        </ul>
-        <div className="relative mt-auto flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
+        {/* Strefa treści przewija się, gdy karta ma gęstą zawartość (np. estetyka),
+            dzięki czemu stała wysokość panelu jej nie przycina; stopka zostaje przypięta. */}
+        <div className="relative flex-1 overflow-y-auto pr-1 [scrollbar-width:thin]">
+          <h3 className="font-display text-2xl font-bold text-gray-900">{item.title}</h3>
+          <div className="mt-3 max-w-md space-y-3 text-sm leading-relaxed text-gray-600">
+            {item.description.split('\n\n').map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+          <Bullets item={item} />
+        </div>
+        <div className="relative mt-4 flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
           <Expert expert={item.expert} />
           <Link
             href={item.href}
@@ -194,15 +214,12 @@ function MobilePanel({ item, index, isActive, onToggle }) {
       >
         <div className="overflow-hidden">
           <div className="px-4 pb-5">
-            <p className="text-sm leading-relaxed text-gray-600">{item.description}</p>
-            <ul className="mt-4 space-y-2.5">
-              {item.bullets.map((b) => (
-                <li key={b} className="flex items-center gap-2.5 text-sm font-medium text-gray-800">
-                  <CheckBadge />
-                  {b}
-                </li>
+            <div className="space-y-3 text-sm leading-relaxed text-gray-600">
+              {item.description.split('\n\n').map((p) => (
+                <p key={p}>{p}</p>
               ))}
-            </ul>
+            </div>
+            <Bullets item={item} />
             <div className="mt-5 border-t border-gray-100 pt-4">
               <Expert expert={item.expert} />
             </div>
@@ -245,6 +262,53 @@ function Expert({ expert }) {
   );
 }
 
+/**
+ * Lista zabiegów karty. Dwa kształty danych:
+ * - `bulletGroups` (np. estetyka: kobiety / mężczyźni) → grupy z nagłówkami, obok
+ *   siebie od sm; pozycje wieloliniowe (align do góry).
+ * - `bullets` (płaska lista) → 1 kolumna, a przy >4 punktach 2 kolumny.
+ */
+function Bullets({ item }) {
+  if (item.bulletGroups) {
+    return (
+      <div className="relative mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+        {item.bulletGroups.map((group) => (
+          <div key={group.label}>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-600">
+              {group.label}
+            </p>
+            <ul className="mt-3 space-y-2">
+              {group.items.map((b) => (
+                <li key={b} className="flex items-start gap-2.5 text-sm font-medium text-gray-800">
+                  <span className="mt-0.5">
+                    <CheckBadge />
+                  </span>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <ul
+      className={`relative mt-5 ${
+        item.bullets.length > 4 ? 'grid grid-cols-2 gap-x-5 gap-y-2.5' : 'space-y-2.5'
+      }`}
+    >
+      {item.bullets.map((b) => (
+        <li key={b} className="flex items-center gap-2.5 text-sm font-medium text-gray-800">
+          <CheckBadge />
+          {b}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function CheckBadge() {
   return (
     <span
@@ -271,6 +335,7 @@ const ICONS = {
   estetyka: SparklesIcon,
   usg: PulseIcon,
   wlewy: DropletIcon,
+  uzaleznienia: LifeRingIcon,
 };
 
 function ArrowUpRight({ className }) {
@@ -317,6 +382,17 @@ function DropletIcon({ className }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
       <path d="M12 3.25S6.5 9.65 6.5 14a5.5 5.5 0 0 0 11 0c0-4.35-5.5-10.75-5.5-10.75Z" />
+    </svg>
+  );
+}
+
+// Koło ratunkowe — metafora wsparcia/pomocy (leczenie uzależnień).
+function LifeRingIcon({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="3.6" />
+      <path d="m9.46 9.46-3.82-3.82M14.54 9.46l3.82-3.82M14.54 14.54l3.82 3.82M9.46 14.54l-3.82 3.82" />
     </svg>
   );
 }

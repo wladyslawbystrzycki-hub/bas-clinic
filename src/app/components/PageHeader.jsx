@@ -36,7 +36,7 @@ export default function PageHeader({ eyebrow, title, description, breadcrumbs = 
       </div>
 
       {/* ------------------------------ Zawartość ----------------------------- */}
-      <div className="relative z-10 mx-auto w-full max-w-[100rem] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div className="relative z-10 mx-auto w-full max-w-[90rem] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         {breadcrumbs.length > 0 && (
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex flex-wrap items-center gap-1.5 text-sm">

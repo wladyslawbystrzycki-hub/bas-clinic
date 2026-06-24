@@ -59,7 +59,7 @@ export default function ClinicGallery({
   return (
     <section id={id} className="bg-cream py-16 sm:py-20 lg:py-24">
       {/* Nagłówek + nawigacja */}
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
             {subtitle && (
@@ -93,13 +93,13 @@ export default function ClinicGallery({
       </div>
 
       {/* Karuzela — pełna szerokość ekranu na desktopie (full-bleed). Lewy padding
-          wyrównuje pierwszą kartę do kolumny nagłówka (max-w-[100rem]), a karty „wychodzą"
+          wyrównuje pierwszą kartę do kolumny nagłówka (max-w-[90rem]), a karty „wychodzą"
           ku prawej krawędzi ekranu, dając premium efekt szerokiego sliderka. */}
       <div className="relative">
         <ul
           ref={scrollerRef}
           aria-label="Galeria zdjęć kliniki"
-          className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 pl-4 pr-4 sm:pl-6 sm:pr-6 lg:pr-8 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] motion-safe:scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 pl-4 pr-4 sm:pl-6 sm:pr-6 lg:pr-8 lg:pl-[max(2rem,calc((100vw-90rem)/2+2rem))] motion-safe:scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {images.map((img, i) => (
             <li

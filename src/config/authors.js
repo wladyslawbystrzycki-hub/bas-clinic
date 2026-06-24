@@ -4,40 +4,43 @@ import { CLINIC } from './clinic';
  * EEAT — podpis autora/specjalistki pod treścią stron usług (komponent
  * `AuthorBio`, wpinany automatycznie przez `ServicePageTemplate`).
  *
- * Zakres: TYLKO stomatologia i medycyna estetyczna (USG / wlewy → brak podpisu).
- * Osoba: Iwanna Bas na OBU kategoriach — świadoma decyzja właściciela
- * (potwierdzona), mimo że dla samego EEAT silniejszy byłby autor zgodny z
- * tematem (Bogdan Bas ma kompetencje stomatologiczne). Aby przełączyć na model
- * „per kategoria", podmień wartość w `AUTHOR_FOR` (np. stomatologia → 'Bogdan').
+ * Zakres: stomatologia, medycyna estetyczna i leczenie uzależnień (USG / wlewy → brak podpisu).
+ * Autorzy dobrani tematycznie: Ivanna Bas (lek. dent.) podpisuje stomatologię i
+ * medycynę estetyczną (jest dentystką i lekarką medycyny estetycznej), a Bogdan Bas
+ * (lek. med.) — leczenie uzależnień (jego specjalność). Bogdan celowo NIE jest
+ * autorem stron stomatologicznych. Mapowanie kategoria → osoba w `AUTHOR_FOR`.
  *
  * Zdjęcie i tytuł pochodzą z `CLINIC.founders` (single source of truth) — gdy
- * Iwanna dostanie wycinankę (`image` w clinic.js), podpis pokaże ją automatycznie;
+ * Ivanna dostanie wycinankę (`image` w clinic.js), podpis pokaże ją automatycznie;
  * do tego czasu `AuthorBio` renderuje elegancki monogram (jak FoundersSlider).
  *
  * ⚠️ `blurb` to opis KOMPETENCJI — bez obietnic skuteczności/leczenia ani
  * wymyślonych liczb (UOKiK/Omnibus + reklama usług medycznych).
  */
 
-// Krótki, kompetencyjny opis. Celowo OGÓLNY (lekarka + współzałożycielka), by
-// pasował także do stron stomatologii — NIE przypisuje Iwannie zabiegów
-// dentystycznych. Klucz = pełne imię i nazwisko z clinic.js.
+// Krótki, kompetencyjny opis. Klucz = pełne imię i nazwisko z clinic.js. Blurb
+// Ivanny jest OGÓLNY (pasuje do stomatologii i medycyny estetycznej); blurb
+// Bogdana dotyczy jego specjalności — leczenia uzależnień.
 const AUTHOR_BLURB = {
-  'lek. med. Iwanna Bas':
+  'lek. dent. Ivanna Bas':
     'Lekarka i współzałożycielka Bas Clinic. Łączy wiedzę medyczną z uważnym, indywidualnym podejściem do każdego Pacjenta — od konsultacji, przez dobór rozwiązania, po opiekę po zabiegu.',
+  'lek. med. Bogdan Bas':
+    'Lekarz medycyny i założyciel Bas Clinic. Od ponad 15 lat pomaga osobom uzależnionym, łącząc leczenie medyczne z psychoterapią — z indywidualnym planem, empatią i bez oceniania.',
 };
 
 function founderByName(needle) {
   return CLINIC.founders.find((f) => f.name.includes(needle)) || null;
 }
 
-// Autor per kategoria. Decyzja: Iwanna Bas na obu (patrz nagłówek pliku).
+// Autor per kategoria — dobór tematyczny (patrz nagłówek pliku).
 const AUTHOR_FOR = {
-  stomatologia: 'Iwanna',
-  estetyka: 'Iwanna',
+  stomatologia: 'Ivanna',
+  estetyka: 'Ivanna',
+  uzaleznienia: 'Bogdan',
 };
 
 // Kategoria z `heroSubtitle` — TA SAMA logika co getKnowledge/getWhyUs.
-// Zwraca null dla USG / wlewów (i wszystkiego innego) → brak podpisu EEAT.
+// Zwraca null dla USG / wlewów (i nierozpoznanych) → brak podpisu EEAT.
 function categoryOf(subtitle = '') {
   const c = (subtitle || '').toLowerCase();
   if (
@@ -49,6 +52,7 @@ function categoryOf(subtitle = '') {
     return 'stomatologia';
   }
   if (c.includes('estetyczn') || c.includes('estetyk')) return 'estetyka';
+  if (c.includes('uzależ')) return 'uzaleznienia';
   return null;
 }
 

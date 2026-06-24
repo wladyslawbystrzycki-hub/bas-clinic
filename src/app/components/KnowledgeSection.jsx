@@ -38,7 +38,7 @@ export default function KnowledgeSection({
       id={id}
       className={`${bg === 'light' ? 'bg-cream' : 'bg-white'} py-16 sm:py-20 lg:py-24`}
     >
-      <div className="mx-auto max-w-[100rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* ----------------------- Treść (na desktopie po prawej) ---------------------- */}
           <div className="lg:order-2">
@@ -63,16 +63,16 @@ export default function KnowledgeSection({
                     <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary-50 font-display text-sm font-semibold tabular-nums text-primary-700 ring-1 ring-primary-100">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span>
-                      <span className="block font-display text-base font-semibold text-primary-900">
+                    <div>
+                      <h3 className="font-display text-base font-semibold text-primary-900">
                         {point.title}
-                      </span>
+                      </h3>
                       {point.text && (
-                        <span className="mt-1 block text-sm leading-relaxed text-gray-600">
+                        <p className="mt-1 text-sm leading-relaxed text-gray-600">
                           {point.text}
-                        </span>
+                        </p>
                       )}
-                    </span>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -98,9 +98,6 @@ export default function KnowledgeSection({
               aria-hidden
               className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary-100/60 via-cream to-transparent blur-2xl"
             />
-
-            {/* dekoracyjny łuk po lewej (jak nawias na referencji) */}
-            <DecorArc className="absolute left-0 top-1/2 hidden h-[110%] w-auto -translate-x-4 -translate-y-1/2 text-primary-200 sm:block lg:-translate-x-8" />
 
             {/* zdjęcie główne */}
             <figure className="relative w-full overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5 sm:ml-auto sm:w-[84%]">
@@ -164,20 +161,6 @@ export default function KnowledgeSection({
 }
 
 /* -------------------------------- Ikony / dekoracje --------------------------------- */
-
-function DecorArc({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 48 420" fill="none" aria-hidden>
-      <path
-        d="M36 6 C 8 84, 8 336, 36 414"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path d="M31 405 l5 5 5-5 -5-5 z" className="fill-current" />
-    </svg>
-  );
-}
 
 function SparkleIcon({ className }) {
   return (

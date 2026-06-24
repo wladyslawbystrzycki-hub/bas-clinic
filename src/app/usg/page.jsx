@@ -26,10 +26,10 @@ const BREADCRUMBS = [{ label: 'USG', href: '/usg/' }];
 
 // Najczęściej wybierane badania - szybkie deeplinki (Daughter-links)
 const POPULAR_EXAMS = [
-  { name: 'USG jamy brzusznej', slug: 'usg/jamy-brzusznej' },
-  { name: 'USG tarczycy', slug: 'usg/tarczycy' },
+  { name: 'USG jamy brzusznej', slug: 'usg/jama-brzuszna' },
+  { name: 'USG tarczycy', slug: 'usg/tarczyca' },
   { name: 'USG piersi', slug: 'usg/piersi' },
-  { name: 'USG nerek', slug: 'usg/nerek' },
+  { name: 'USG nerek', slug: 'usg/nerki' },
 ];
 
 // FAQ ogólne dla huba (samodzielne chunki, keyword-echo na początku odpowiedzi)

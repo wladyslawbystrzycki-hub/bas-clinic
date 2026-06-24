@@ -2,6 +2,41 @@
 
 Website for Bas Clinic (bas.clinic) — dental and aesthetic medicine clinic by Bogdan & Iwanna Bas in Wroclaw.
 
+## ⚠️ Zasady pracy (najwyższy priorytet — czytaj przed każdą zmianą)
+
+Pracujesz nad tym projektem jak senior software engineer. Spójność z resztą repo i najlepsze praktyki mają pierwszeństwo nad szybką, łatającą drogą, która zwiększa dług techniczny.
+
+**Filozofia (cytat właściciela):** *„weź to zbadaj dokładnie, i nie używaj łatania błędów bo to będzie pogłębiać dług i właśnie z tym teraz walczymy, róbmy zgodnie z najlepszymi zasadami"*.
+
+### Styl odpowiedzi (ma pierwszeństwo nad domyślnym „pełnym raportem")
+
+- **Wynik najpierw, krótko.** „Dlaczego" tylko gdy nieoczywiste (1–2 zdania).
+- **Bez narracji.** Nie streszczaj kontekstu, nie pisz „co zrobię", nie wymieniaj odrzuconych opcji.
+- **Diagnoza = root cause + fix w 1–2 liniach.** Pełny ślad analizy tylko na żądanie.
+- **Weryfikacja jedną linią** (co przeszło: `npm run build` / `npm run lint`). Nie wklejaj zielonych outputów.
+- **Nagłówki tylko gdy realnie pomagają.** Krótka odpowiedź = zwykły akapit.
+- **Nieusuwalne:** ostrzeżenia bezpieczeństwa (push / deploy na Vercel) i „nie commitowałem".
+- **Szablon podsumowania ukończonego zadania** (limit ~15 linii):
+  ```
+  <Wynik w 1 linii — co naprawione/dodane, commit, deploy>
+  - <zmiana 1, plik/mechanizm w pół linii>
+  - <zmiana 2…>
+  Weryfikacja: <build / lint / live — jedna linia>.
+  ⚠️ <ostrzeżenia / backlog — tylko jeśli są>
+  ```
+
+### Reguły inżynierskie
+
+1. **Root cause, nie objaw.** Zrozum dlaczego coś nie działa, zanim naprawisz. Żadnego łatania bez wyraźnej zgody i komentarza WHY: brak połykania błędów, brak `eslint-disable` ani `--no-verify` bez inline-komentarza dlaczego prawdziwa naprawa jest niemożliwa. Sankcjonowany wyjątek już w repo: `// eslint-disable-next-line @next/next/no-img-element` dla intencjonalnego `<img>` zamiast `next/image`.
+2. **Czytaj sąsiedztwo, reuse istniejących wzorców.** Nie wprowadzaj nowego wzorca, gdy istnieje sprawdzony. Kanoniczne kształty repo: `ServicePageTemplate` (każda strona usługi), resolvery `getWhyUs`/`getKnowledge`/`getTestimonials`/`getPageAuthor` w `src/config/*.js`, wspólny wzorzec karuzeli (`FoundersSlider`/`RelatedServicesSlider`/`ClinicGallery`). Konwencje spisane w `.claude/rules/components.md`.
+3. **Single responsibility.** Komponent/funkcja robi jedną rzecz. >500 linii = sygnał do dekompozycji, ale TYLKO dla komponentów/logiki (np. `BookingFlow.jsx`, `Header.jsx`). Pliki danych/configu (`src/config/whyUs.js`, `services.js`) są celowo długie — NIE dekomponuj ich.
+4. **Brak martwego kodu.** Nieużywane importy/zmienne/propsy/eksporty usuwaj od razu. Aktualnie martwe (zero importerów, do usunięcia/pominięcia): `src/lib/data.js`, puste `src/data/`, `src/messages/pl.json`. Żywe i potrzebne: `src/lib/metadata.js`, `src/lib/siteUrl.js`.
+5. **Komentarze: tylko WHY, po polsku.** Komentarz wyjaśnia nieoczywiste „dlaczego" (kompromis biznesowy, a11y, intencjonalnie wąska tablica deps), nigdy „co" robi kod. Komentarz typu `// pobierz dane` nad oczywistym kodem — usuwany.
+6. **`useEffect` to ostateczność.** Preferuj derived state / `useMemo` / event handler (wzorzec: `useMemo` w `BookingFlow.jsx`, zero zbędnych effectów). Effect tylko dla realnej synchronizacji z systemem zewnętrznym (scroll, `matchMedia`, `setInterval`, `requestAnimationFrame`) — dziś istnieje tylko w `BackToTop`, `FoundersSlider`, `RelatedServicesSlider`, `ClinicGallery`. Effect inline jest OK; wyciągaj do hooka dopiero przy realnym reuse (nie ma katalogu hooków — nie twórz go pod jeden effect). Jeśli celowo zawężasz tablicę deps: jednolinijkowy WHY + `eslint-disable-next-line react-hooks/exhaustive-deps` w tej samej linii (dziś jest zero takich — każdy nowy to red flag wymagający uzasadnienia).
+7. **YAGNI — trust internal code.** Bez feature-flagów, fallbacków i walidacji „na wszelki wypadek". Jedyna realna granica walidacji to formularz `BookingFlow` (brak API/backendu; submit przez `mailto:`). Nie projektuj pod hipotetyczne wymagania.
+
+> Świadomie pominięte z oryginalnej propozycji (pochodziła z innego projektu — TS monorepo z bookingiem): reguły o TypeScript/`any`/typach, CSS Modules, `useTranslations`/`@nasz/ui`, oraz precedensy `NotificationContext`/`bookingState.ts`/`booking/hooks/`. Nie istnieją w tym repo — to czysty JS/JSX, Tailwind v4, inline-PL, pojedyncza aplikacja.
+
 ## Tech Stack
 
 - Next.js 16 (App Router, SSG)
@@ -21,7 +56,7 @@ npm run lint      # ESLint
 
 - Polish language throughout all UI text and content
 - IMPORTANT: Use Tailwind CSS v4 utility classes only. Theme tokens in `src/app/globals.css` via `@theme inline`
-- Server Components by default. `"use client"` only for interactive elements (Header, BackToTop, FAQSection)
+- Server Components by default. `"use client"` only for interactive elements (Header, BackToTop, FAQAccordion, FoundersSlider, RelatedServicesSlider, ClinicGallery, ServicesAccordion, BookingFlow)
 - Import alias: `@/` maps to `./src/`
 - All URLs use trailing slashes (`trailingSlash: true` in next.config.mjs)
 - Clinic data centralized in `src/config/clinic.js` — never hardcode phone/address/email
