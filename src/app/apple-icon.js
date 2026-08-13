@@ -2,13 +2,13 @@ import { ImageResponse } from 'next/og';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-// apple-touch-icon (ekran startowy iOS) — brakujący dotąd element (T-29). Solidne
-// grafitowe tło (bez przezroczystości, jak wymaga iOS) + markowe „B".
+// apple-touch-icon (ekran startowy iOS) — sygnet marki na pełnym białym tle
+// (iOS nie obsługuje przezroczystości i sam nakłada zaokrąglenie).
 export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
 
 export default async function AppleIcon() {
-  const semibold = await readFile(join(process.cwd(), 'src/app/_fonts/Poppins-SemiBold.ttf'));
+  const logo = await readFile(join(process.cwd(), 'public/logo-bas-clinic-wroclaw.svg'));
 
   return new ImageResponse(
     (
@@ -19,17 +19,18 @@ export default async function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#14171a',
-          backgroundImage: 'radial-gradient(120% 100% at 50% 0%, #2a3034 0%, transparent 60%)',
-          fontFamily: 'Poppins',
-          color: '#e8eaeb',
-          fontSize: 118,
-          fontWeight: 600,
+          backgroundColor: '#ffffff',
         }}
       >
-        B
+        {/* satori (ImageResponse) rozumie tylko <img> + data URI — next/image tu nie działa */}
+        <img
+          src={`data:image/svg+xml;base64,${logo.toString('base64')}`}
+          width={150}
+          height={150}
+          alt=""
+        />
       </div>
     ),
-    { ...size, fonts: [{ name: 'Poppins', data: semibold, weight: 600, style: 'normal' }] }
+    size
   );
 }

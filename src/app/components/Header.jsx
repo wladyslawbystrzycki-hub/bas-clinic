@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getMainMenu } from '@/config/menuConfig';
-import { CLINIC } from '@/config/clinic';
+import { CLINIC, LOGO } from '@/config/clinic';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,7 +20,18 @@ export default function Header() {
           onMouseLeave={() => setOpenDropdown(null)}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2.5">
+            {/* unoptimized: optymalizator next/image odrzuca SVG (dangerouslyAllowSVG),
+                a wektor i tak nic nie zyskuje na rasteryzacji */}
+            <Image
+              src={LOGO.src}
+              alt={LOGO.alt}
+              width={40}
+              height={40}
+              priority
+              unoptimized
+              className="h-9 w-9 sm:h-10 sm:w-10"
+            />
             <span className="font-display text-2xl font-bold text-primary-800">
               Bas Clinic
             </span>

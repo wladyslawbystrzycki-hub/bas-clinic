@@ -1,4 +1,4 @@
-import { CLINIC } from '@/config/clinic';
+import { CLINIC, LOGO } from '@/config/clinic';
 import JsonLd from './JsonLd';
 
 export default function OrganizationSchema() {
@@ -8,6 +8,7 @@ export default function OrganizationSchema() {
     '@id': `${CLINIC.url}/#organization`,
     name: CLINIC.name,
     url: CLINIC.url,
+    logo: `${CLINIC.url}${LOGO.src}`,
     telephone: CLINIC.phone,
     email: CLINIC.email,
     address: {

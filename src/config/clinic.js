@@ -98,3 +98,12 @@ export const CLINIC = {
   krs: '0000763394',
   nip: '8971862168',
 };
+
+// Sygnet marki (Star of Life z laską Asklepiosa) — jedno źródło prawdy dla nagłówka,
+// stopki, ikon (icon.js/apple-icon.js) i pola `logo` w JSON-LD organizacji.
+export const LOGO = {
+  src: '/logo-bas-clinic-wroclaw.svg',
+  alt: 'Logo Bas Clinic — klinika stomatologii i medycyny estetycznej we Wrocławiu',
+  width: 1080,
+  height: 1080,
+};

@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { CLINIC } from '@/config/clinic';
+import { CLINIC, LOGO } from '@/config/clinic';
 
 export default function Footer() {
   // Tylko realne profile się renderują — `social` puste, dopóki Bas Clinic nie ma
@@ -23,8 +24,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
           {/* Column 1: Logo & Contact */}
           <div>
-            <Link href="/" className="font-display text-2xl font-bold text-white">
-              Bas Clinic
+            <Link href="/" className="flex items-center gap-2.5">
+              {/* unoptimized: optymalizator next/image odrzuca SVG (dangerouslyAllowSVG),
+                  a wektor i tak nic nie zyskuje na rasteryzacji */}
+              <Image
+                src={LOGO.src}
+                alt={LOGO.alt}
+                width={40}
+                height={40}
+                unoptimized
+                className="h-10 w-10"
+              />
+              <span className="font-display text-2xl font-bold text-white">
+                Bas Clinic
+              </span>
             </Link>
             <p className="mt-4 text-sm leading-6 text-gray-400">
               Stomatologia i Medycyna Estetyczna we Wrocławiu. Kompleksowa opieka
