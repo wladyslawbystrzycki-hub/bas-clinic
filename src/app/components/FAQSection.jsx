@@ -25,9 +25,8 @@ import FAQAccordion from './FAQAccordion';
  * @param imageAlt    - alt zdjęcia
  */
 
-// PLACEHOLDER — zdjęcie z Unsplash; podmień na realne foto Bas Clinic (portret 4:5).
-const FAQ_IMAGE =
-  'https://images.unsplash.com/photo-1551076805-e1869033e561?w=900&h=1100&fit=crop';
+// Licencjonowany stock (nie AI), portret 4:5 — podmień na realne foto Bas Clinic.
+const FAQ_IMAGE = '/uploads/services/faq-konsultacja-bas-clinic-wroclaw.webp';
 
 export default function FAQSection({
   items = [],

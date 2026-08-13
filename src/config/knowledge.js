@@ -16,19 +16,25 @@
  * streszczenie EXPERT_INFO, nie ogólny opis kliniki. ⚠️ BEZ obietnic
  * skuteczności, gwarancji efektu i twierdzeń diagnostycznych; BEZ zmyślonych
  * liczb/marek (ryzyko UOKiK/Omnibus + reklama usług medycznych). Zdjęcia to
- * placeholdery (Unsplash, te same kadry co w galerii/CTA) — podmień na realne.
+ * licencjonowanym stockiem (lokalnie, para zdjęć per kategoria) — podmień na realne.
  */
 
-// Zdjęcia (placeholdery — znane, sprawdzone kadry z galerii/CTA).
+// Zdjęcia per kategoria: para (pion 4:5 + kwadrat) unikalna dla każdej kategorii,
+// żeby kompendium stomatologii, estetyki, USG i wlewów nie pokazywało tego samego
+// kadru. Licencjonowany stock (nie AI) hostowany lokalnie — do podmiany na realne foto.
 const IMG = {
-  gabinet: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&h=1100&fit=crop',
-  unit: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=560&h=560&fit=crop',
-  sprzet: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&h=1100&fit=crop',
-  sala: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=900&h=1100&fit=crop',
-  salaSq: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=560&h=560&fit=crop',
-  estetyka: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=900&h=1100&fit=crop',
-  sprzetSq: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=560&h=560&fit=crop',
-  gabinetSq: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=560&h=560&fit=crop',
+  stomatologia: '/uploads/services/kompendium-stomatologia-gabinet-bas-clinic-wroclaw.webp',
+  stomatologiaSq: '/uploads/services/kompendium-stomatologia-narzedzia-bas-clinic-wroclaw.webp',
+  estetyka: '/uploads/services/kompendium-estetyka-zabieg-bas-clinic-wroclaw.webp',
+  estetykaSq: '/uploads/services/kompendium-estetyka-kosmetyki-bas-clinic-wroclaw.webp',
+  usg: '/uploads/services/kompendium-usg-badanie-bas-clinic-wroclaw.webp',
+  usgSq: '/uploads/services/kompendium-usg-glowica-bas-clinic-wroclaw.webp',
+  wlewy: '/uploads/services/kompendium-wlewy-kroplowka-bas-clinic-wroclaw.webp',
+  wlewySq: '/uploads/services/kompendium-wlewy-detal-bas-clinic-wroclaw.webp',
+  konsultacja: '/uploads/services/kompendium-konsultacja-lekarska-bas-clinic-wroclaw.webp',
+  gabinetSq: '/uploads/services/kompendium-gabinet-lekarski-bas-clinic-wroclaw.webp',
+  rozmowa: '/uploads/services/kompendium-uzaleznienia-rozmowa-bas-clinic-wroclaw.webp',
+  rozmowaSq: '/uploads/services/kompendium-uzaleznienia-gabinet-bas-clinic-wroclaw.webp',
 };
 
 export const KNOWLEDGE = {
@@ -55,9 +61,9 @@ export const KNOWLEDGE = {
         text: 'Po zakończonym leczeniu przekazujemy zalecenia i zapraszamy na wizyty kontrolne.',
       },
     ],
-    image: IMG.gabinet,
-    image2: IMG.unit,
-    imageAlt: 'Gabinet stomatologiczny w Bas Clinic',
+    image: IMG.stomatologia,
+    image2: IMG.stomatologiaSq,
+    imageAlt: 'Gabinet stomatologiczny w Bas Clinic we Wrocławiu',
   },
 
   estetyka: {
@@ -84,8 +90,8 @@ export const KNOWLEDGE = {
       },
     ],
     image: IMG.estetyka,
-    image2: IMG.sprzetSq,
-    imageAlt: 'Strefa medycyny estetycznej w Bas Clinic',
+    image2: IMG.estetykaSq,
+    imageAlt: 'Zabieg medycyny estetycznej w Bas Clinic we Wrocławiu',
   },
 
   usg: {
@@ -111,9 +117,9 @@ export const KNOWLEDGE = {
         text: 'Na badanie umówisz się prywatnie, w krótkim terminie i bez skierowania.',
       },
     ],
-    image: IMG.sprzet,
-    image2: IMG.salaSq,
-    imageAlt: 'Nowoczesny sprzęt diagnostyczny w Bas Clinic',
+    image: IMG.usg,
+    image2: IMG.usgSq,
+    imageAlt: 'Badanie USG w pracowni Bas Clinic we Wrocławiu',
   },
 
   wlewy: {
@@ -139,9 +145,9 @@ export const KNOWLEDGE = {
         text: 'Zadbamy o wygodne, dyskretne stanowisko, abyś mógł odpocząć podczas wlewu.',
       },
     ],
-    image: IMG.sala,
-    image2: IMG.unit,
-    imageAlt: 'Komfortowa sala zabiegowa w Bas Clinic',
+    image: IMG.wlewy,
+    image2: IMG.wlewySq,
+    imageAlt: 'Wlew witaminowy podawany w Bas Clinic we Wrocławiu',
   },
 
   // Fallback dla podstron, których kategorii nie rozpoznano po heroSubtitle.
@@ -168,9 +174,9 @@ export const KNOWLEDGE = {
         text: 'Przekazujemy czytelne zalecenia i pozostajemy w kontakcie po wizycie.',
       },
     ],
-    image: IMG.estetyka,
+    image: IMG.konsultacja,
     image2: IMG.gabinetSq,
-    imageAlt: 'Wnętrze Bas Clinic',
+    imageAlt: 'Konsultacja lekarska w Bas Clinic we Wrocławiu',
   },
 };
 
@@ -357,10 +363,10 @@ const KNOWLEDGE_BY_SLUG = {
       { title: "Esperal, leki i terapia", text: "Leki łagodzą objawy odstawienne i głód alkoholowy (m.in. wszywka Esperal), a uzupełnia je terapia indywidualna nad przyczynami choroby." },
       { title: "Dyskrecja i pomoc rodzinie", text: "Na wizytę można przyjść samemu lub z osobą bliską, a rodzinom oferujemy psychoedukację i naukę zdrowej komunikacji." },
     ],
-    // Sensytywny temat — własny, dyskretny kadr zamiast domyślnego (estetyka).
-    image: IMG.sala,
-    image2: IMG.unit,
-    imageAlt: 'Komfortowe, dyskretne wnętrze Bas Clinic',
+    // Sensytywny temat — własny, dyskretny kadr (rozmowa) zamiast domyślnego.
+    image: IMG.rozmowa,
+    image2: IMG.rozmowaSq,
+    imageAlt: 'Dyskretna rozmowa z lekarzem w Bas Clinic we Wrocławiu',
   },
   "stomatologia/leczenie-zebow": {
     title: "Co warto wiedzieć o leczeniu zębów",

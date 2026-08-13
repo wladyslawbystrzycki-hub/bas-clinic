@@ -12,7 +12,7 @@ import Image from 'next/image';
  * wygaszają się na krańcach, a płynne przewijanie respektuje `prefers-reduced-motion`.
  *
  * Renderuje WŁASNĄ sekcję (jak CTASection) — nie owijać w <Section>.
- * Zdjęcia to placeholdery (Unsplash) — podmień na realne foto Bas Clinic.
+ * Zdjęcia to licencjonowany stock (lokalnie w /public/uploads/galeria) — podmień na realne foto Bas Clinic.
  */
 export default function ClinicGallery({
   id,

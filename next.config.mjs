@@ -4,10 +4,6 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
-    // Placeholdery galerii/kompendium/FAQ hostowane są jeszcze na Unsplash (do
-    // podmiany na realne foto) — optymalizator next/image musi mieć jawnie
-    // dozwolony host zewnętrzny, inaczej odrzuca <Image src> spoza domeny.
-    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
   },
   async redirects() {
     // 301 po zmianie slugów USG (dopełniacz -> mianownik): stare, zaindeksowane

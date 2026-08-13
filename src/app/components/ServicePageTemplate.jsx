@@ -16,7 +16,7 @@ import { getWhyUs } from '@/config/whyUs';
 import { getRelatedServices, getHubForSlug } from '@/config/relatedServices';
 import { getKnowledge } from '@/config/knowledge';
 import { getPageAuthor } from '@/config/authors';
-import { CLINIC_GALLERY } from '@/config/gallery';
+import { getGallery } from '@/config/gallery';
 
 export default function ServicePageTemplate({
   breadcrumbs,
@@ -89,9 +89,10 @@ export default function ServicePageTemplate({
           jasne kompendium → cream galeria → białe informacje. */}
       <KnowledgeSection id="kompendium" {...knowledge} />
 
-      {/* Galeria — wnętrza i sprzęt (globalny komponent). Full-bleed slider
-          na desktopie; dane wspólne z homepage (src/config/gallery.js). */}
-      <ClinicGallery id="galeria" images={CLINIC_GALLERY} />
+      {/* Galeria — wnętrza i sprzęt relewantne z kategorią usługi (stomatologia,
+          estetyka, USG, wlewy; fallback: neutralne wnętrza kliniki). Full-bleed
+          slider na desktopie; dane z src/config/gallery.js. */}
+      <ClinicGallery id="galeria" images={getGallery(heroSubtitle)} />
 
       {/* Expert content */}
       {expertInfo && expertInfo.length > 0 && (

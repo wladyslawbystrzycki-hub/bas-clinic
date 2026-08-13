@@ -14,7 +14,7 @@ import OrganizationSchema from './components/schema/OrganizationSchema';
 import FAQPageSchema from './components/schema/FAQPageSchema';
 import { CLINIC } from '@/config/clinic';
 import { TESTIMONIALS } from '@/config/testimonials';
-import { CLINIC_GALLERY } from '@/config/gallery';
+import { GALLERY_HOME } from '@/config/gallery';
 import { KNOWLEDGE_HOME } from '@/config/knowledge';
 import { generatePageMetadata } from '@/lib/metadata';
 
@@ -199,7 +199,7 @@ export default function HomePage() {
       </Section>
 
       {/* Gallery — wnętrza i sprzęt */}
-      <ClinicGallery id="galeria" images={CLINIC_GALLERY} />
+      <ClinicGallery id="galeria" images={GALLERY_HOME} />
 
       {/* Kompendium wiedzy — sekcja edukacyjna (ogólnoklinicza, NIE pod hero) */}
       <KnowledgeSection id="kompendium" {...KNOWLEDGE_HOME} />
