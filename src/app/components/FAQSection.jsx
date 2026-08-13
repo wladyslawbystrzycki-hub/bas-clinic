@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import FAQAccordion from './FAQAccordion';
 
 /**
@@ -86,14 +87,13 @@ export default function FAQSection({
               aria-hidden
               className="pointer-events-none absolute -inset-5 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary-100/70 via-cream to-transparent blur-2xl"
             />
-            <div className="relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className={`relative ${imageRatio} overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5`}>
+              <Image
                 src={image}
                 alt={imageAlt}
-                className={`${imageRatio} w-full object-cover`}
-                loading="lazy"
-                decoding="async"
+                fill
+                sizes="(min-width: 1024px) 45vw, (min-width: 640px) 90vw, 100vw"
+                className="object-cover"
               />
               <div
                 aria-hidden

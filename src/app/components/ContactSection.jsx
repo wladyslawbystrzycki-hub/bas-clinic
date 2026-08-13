@@ -82,31 +82,38 @@ export default function ContactSection() {
               </a>
             </div>
 
-            <div className="mt-8 flex items-center gap-5 border-t border-white/10 pt-6">
-              <span className="text-xs font-medium uppercase tracking-wider text-secondary-400">
-                Obserwuj nas
-              </span>
-              <div className="flex gap-3">
-                <a
-                  href={CLINIC.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook Bas Clinic"
-                  className="text-white/60 transition-colors hover:text-secondary-300"
-                >
-                  <FacebookIcon />
-                </a>
-                <a
-                  href={CLINIC.social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram Bas Clinic"
-                  className="text-white/60 transition-colors hover:text-secondary-300"
-                >
-                  <InstagramIcon />
-                </a>
+            {/* Social — tylko gdy istnieje realny profil Bas Clinic (patrz clinic.js) */}
+            {(CLINIC.social.facebook || CLINIC.social.instagram) && (
+              <div className="mt-8 flex items-center gap-5 border-t border-white/10 pt-6">
+                <span className="text-xs font-medium uppercase tracking-wider text-secondary-400">
+                  Obserwuj nas
+                </span>
+                <div className="flex gap-3">
+                  {CLINIC.social.facebook && (
+                    <a
+                      href={CLINIC.social.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook Bas Clinic"
+                      className="text-white/60 transition-colors hover:text-secondary-300"
+                    >
+                      <FacebookIcon />
+                    </a>
+                  )}
+                  {CLINIC.social.instagram && (
+                    <a
+                      href={CLINIC.social.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram Bas Clinic"
+                      className="text-white/60 transition-colors hover:text-secondary-300"
+                    >
+                      <InstagramIcon />
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 

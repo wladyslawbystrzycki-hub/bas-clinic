@@ -2,7 +2,7 @@ import { generatePageMetadata } from '@/lib/metadata';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 export const metadata = generatePageMetadata({
-  title: 'Programy zabiegowe Wrocław - Medycyna estetyczna',
+  title: 'Programy zabiegowe Wrocław - protokoły łączone',
   description: 'Programy zabiegowe - intensywne odmładzanie i poprawa owalu twarzy. Indywidualne protokoły zabiegowe. Bas Clinic Wrocław.',
   path: '/medycyna-estetyczna/programy-zabiegowe/',
 });

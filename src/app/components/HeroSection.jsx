@@ -239,6 +239,10 @@ export default function HeroSection({
           {/* Prawa kolumna — wycinanka lekarzy (tylko desktop) */}
           <div className="relative hidden self-stretch lg:col-span-5 lg:flex lg:items-end lg:justify-center">
             {heroImage && (
+              // Wycinanka lekarza z przezroczystym tłem, dopasowana `object-contain`
+              // + `max-h` (nie sztywnym boxem). next/image (model width/height/fill)
+              // nie da tu zysku dla i tak zoptymalizowanego, przezroczystego webp, a
+              // psułby swobodne skalowanie wysokością — świadomie zostaje <img>.
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={heroImage}

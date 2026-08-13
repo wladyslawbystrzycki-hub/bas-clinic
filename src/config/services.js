@@ -237,13 +237,6 @@ export const AESTHETIC_SERVICES = [
     bodyAreas: ['oczy'],
   },
   {
-    id: 'blefaroplastyka',
-    slug: 'medycyna-estetyczna/blefaroplastyka',
-    name: 'Blefaroplastyka górna i dolna',
-    shortDesc: 'Plastyka powiek — korekta nadmiaru skóry powiek górnych i dolnych.',
-    bodyAreas: ['oczy'],
-  },
-  {
     id: 'modelowanie-ust',
     slug: 'medycyna-estetyczna/modelowanie-ust',
     name: 'Modelowanie ust',

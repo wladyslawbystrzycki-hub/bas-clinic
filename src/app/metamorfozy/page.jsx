@@ -7,7 +7,7 @@ import BreadcrumbSchema from '../components/schema/BreadcrumbSchema';
 import { METAMORFOZY_CASES, METAMORFOZY_STEPS } from '@/config/metamorfozy';
 
 export const metadata = generatePageMetadata({
-  title: 'Metamorfozy - efekty przed i po',
+  title: 'Metamorfozy - efekty przed i po, Wrocław',
   description:
     'Metamorfozy Pacjentów Bas Clinic we Wrocławiu - efekty leczenia stomatologicznego i zabiegów medycyny estetycznej. Autentyczne realizacje publikowane za zgodą Pacjentów.',
   path: '/metamorfozy/',

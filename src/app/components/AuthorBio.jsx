@@ -105,6 +105,10 @@ function Avatar({ image, initials, name }) {
           className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,var(--color-primary-800)_0%,transparent_60%)]"
         />
         {image ? (
+          // Wycinanka-portret w kolistym dysku, dopasowana `object-contain object-bottom`
+          // + `h-[98%]` — nie sztywny box. next/image nic tu nie zyska (mały,
+          // przezroczysty webp) i kolidowałby ze skalą — świadomie zostaje <img>
+          // (ta sama zasada co hero i FoundersSlider).
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={image}

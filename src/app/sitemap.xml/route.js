@@ -1,11 +1,16 @@
 import { STOMATOLOGIA_SERVICES, AESTHETIC_SERVICES, USG_SERVICES } from '@/config/services';
+// Realne daty modyfikacji per trasa, wyliczone z historii git i scommitowane
+// (`npm run lastmod`). NIE używamy `new Date()` — automatyczny, jednakowy lastmod
+// jest wykrywany przez Google i ignorowany (kompendium 03-02-03). Brak wpisu →
+// pomijamy `<lastmod>` (uczciwie) zamiast podawać zmyśloną datę.
+import LASTMOD from './lastmod.json';
 
 const SITE_URL = 'https://bas.clinic';
 
 function buildUrl(path, priority = 0.7, changeFrequency = 'monthly') {
   return {
     url: `${SITE_URL}${path}`,
-    lastModified: new Date().toISOString(),
+    lastModified: LASTMOD[path] ?? null,
     changeFrequency,
     priority,
   };
@@ -15,8 +20,7 @@ function generateSitemapXml(urls) {
   const entries = urls
     .map(
       (u) => `  <url>
-    <loc>${u.url}</loc>
-    <lastmod>${u.lastModified}</lastmod>
+    <loc>${u.url}</loc>${u.lastModified ? `\n    <lastmod>${u.lastModified}</lastmod>` : ''}
     <changefreq>${u.changeFrequency}</changefreq>
     <priority>${u.priority}</priority>
   </url>`

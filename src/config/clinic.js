@@ -72,9 +72,13 @@ export const CLINIC = {
       ],
     },
   ],
+  // Profile social USUNIĘTE na razie: poprzednie linki prowadziły do profili
+  // `smile.expert` (inna marka) — niespójność encji brandowej (sameAs/spamrank).
+  // Wstaw oficjalne profile Bas Clinic, gdy powstaną; pusty string = link i ikona
+  // social się nie renderują (Footer/ContactSection są warunkowe).
   social: {
-    facebook: 'https://facebook.com/smile.expert/',
-    instagram: 'https://instagram.com/smile.expert/',
+    facebook: '',
+    instagram: '',
   },
   // Osadzona mapa na stronie kontaktu. Domyślnie budowana z adresu powyżej
   // (działa bez klucza API). Aby uzyskać dokładną pinezkę wizytówki Google:

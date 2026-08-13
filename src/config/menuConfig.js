@@ -149,7 +149,6 @@ function getMedycynaEstetycznaMenu() {
           { id: 'regeneracja-konturu-oka', label: 'Regeneracja konturu oka', href: '/medycyna-estetyczna/regeneracja-konturu-oka/' },
           { id: 'stymulatory-tkankowe-oczy', label: 'Stymulatory tkankowe', href: '/medycyna-estetyczna/stymulatory-tkankowe/' },
           { id: 'redukcja-cieni', label: 'Redukcja cieni pod oczami', href: '/medycyna-estetyczna/redukcja-cieni/' },
-          { id: 'blefaroplastyka', label: 'Blefaroplastyka górna i dolna', href: '/medycyna-estetyczna/blefaroplastyka/' },
         ],
       },
       {

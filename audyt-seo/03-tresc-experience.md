@@ -30,6 +30,27 @@
 
 ---
 
+## ⚙️ Aktualizacja 2026-07-01 — pogodzenie z kodem (dev domknął większość F3)
+
+Raport F3 wykonano na wcześniejszym stanie repo. W niezacommitowanym kodzie **dev domknął większość findingów** — poniższe sekcje czytać z tą korektą:
+
+| Finding | Stan w raporcie | Realnie w kodzie (2026-07-01) |
+|---|---|---|
+| **EX‑09** CTA boilerplate ×63 | ❌ FAIL | ✅ `WHY_US` = 67/67 stron usług (per‑usługa `benefits`/`intro`); szablonowy CTA leci już tylko na home. |
+| **EX‑20** brak autora zabiegu | ❌ FAIL P0 | ✅ `AuthorBio` + `Person` JSON‑LD (Ivanna Bas) na stomatologii/estetyce. |
+| **EX‑22** homepage „nasze realizacje" = stock z mylącymi altami | ❌ FAIL P0 | ✅ zastąpione `ClinicGallery` (wnętrze/sprzęt) + osobną `/metamorfozy/` z klauzulą RODO/zgody. |
+| **EX‑23/24/27** 100% stock ×63, 1 zdjęcie, generyczne alty | ❌ FAIL | ⚙️ częściowo: stomatologia ma realne `/uploads/services/*.webp` per usługa + własne alty. Reszta (estetyka/USG CTA fallback, galeria/kompendium/FAQ) nadal Unsplash → **wymaga zdjęć kliniki**. |
+| **EX‑25** brak `next/image`, martwa konfiguracja `formats` | ❌ FAIL | ✅ NAPRAWIONE (batch niżej). |
+| **EX‑30…34** Video SEO | ❌/⚠️ | ✅ bezprzedmiotowe: `hero-bg.mp4` usunięty, 0 `<video>` w `src/` (hero = CSS/SVG). |
+
+**Migracja `next/image` (EX‑25 — batch 2026-07-01):** prostokątne zdjęcia treściowe w sized‑boxach → `next/image fill` + `sizes` (ClinicGallery, KnowledgeSection ×2, FAQSection, CTASection ×2, AboutSection ×2, BeforeAfter, ServicesAccordion). Pipeline AVIF/WebP **aktywny** (potwierdzone: `Accept: image/avif` → `image/avif`); `images.remotePatterns` dla resztkowych placeholderów Unsplash. Wycinanki‑portrety (hero / FoundersSlider / AuthorBio) świadomie zostają `<img>` (przezroczysty webp dopasowany `max‑h` — zero zysku z optymalizatora; WHY w kodzie). Martwy `HoverGallery` usunięty. **CLS = 0** po migracji (weryfikacja screenshotami desktop+mobile).
+
+**Nadal otwarte — wymaga materiałów kliniki / treści medycznej (nie fabrykujemy, YMYL):** głębia treści (EX‑01/02/05/13), liczby z praktyki (EX‑17), głos praktyka / mikro‑case (EX‑16/18/19), oryginalne media przed‑po + infografiki (EX‑21/26/28), realne zdjęcia w miejsce resztkowych placeholderów Unsplash. To **brief dla kliniki**, nie zadanie kodowe.
+
+**Wpływ na wynik:** Image SEO 14 → ~**40** (optymalizator aktywny + realne foto stomatologii + własne alty; sufit trzyma brak przed‑po i resztkowy stock). Video 38 → n/d (kanał usunięty). Rdzeń Experience 22 bez zmian — nadal blokada na materiałach (liczby z praktyki, głos praktyka, media przed‑po).
+
+---
+
 ## A. `contentEffort` — głębia i koszt odtworzenia · wynik **34/100**
 
 > Skill: `060` (algorytmiczny pomiar wysiłku), `061` (definicja replicability), `062` (LLM‑ocena złożoności), `063` (walka z cienkim contentem), `064/068` (ludzkie ograniczenia), `069` (content‑layering), `070` (eksperckie klastry).
@@ -165,7 +186,7 @@
 - **Werdykt sceptyka:** *needs‑adjustment, `P0→P1`.* Potwierdzone i niedoszacowane co do liczby; korekta prio — obraz dekoracyjny (`hidden lg:block`, alt istnieje), sygnał `original_media_score`, nie ranking‑killer. **Sama parametryzacja nie rozwiązuje problemu, że wszystkie obrazy to stock** (EX‑23).
 - **Rekomendacja:** sparametryzować obraz CTA (prop `serviceImage` z `ServicePageTemplate`) — w połączeniu z self‑hostem (EX‑23).
 
-**[EX‑25] Brak `next/image` — surowe `<img>`, brak AVIF/WebP/optymalizacji (martwa konfiguracja)** · ❌ FAIL · `next/image / Best Practices` · Prio **P1** (`P0→P1` adwersaryjnie) · Effort L
+**[EX‑25] Brak `next/image` — surowe `<img>`, brak AVIF/WebP/optymalizacji (martwa konfiguracja)** · ✅ NAPRAWIONE 2026-07-01 (migracja zdjęć treściowych na `next/image fill`; AVIF aktywny; cut‑outy świadomie `<img>` — patrz Aktualizacja 2026-07-01) · ~~❌ FAIL~~ · `next/image / Best Practices` · Prio **P1** (`P0→P1` adwersaryjnie) · Effort L
 - **Dowód:** `grep next/image src/` = 0. Surowe `<img>` w [HoverGallery.jsx:15](../src/app/components/HoverGallery.jsx#L15) i [CTASection.jsx:101](../src/app/components/CTASection.jsx#L101). `next.config.mjs` deklaruje `images.formats=['avif','webp']` ale **brak `remotePatterns`** → optymalizator nie odpala dla zewnętrznego hosta przy surowych `<img>`. Brak `loading=lazy`/`fetchPriority` w całym `src/`.
 - **Werdykt sceptyka:** *needs‑adjustment, `P0→P1`.* Fakty 100% potwierdzone, ale „LCP" zawyżone — żaden surowy `<img>` nie jest elementem LCP (CTA‑obraz `hidden lg:block` desktop‑only/nisko; HoverGallery tylko homepage). Realny dług Best Practices/optymalizacji, nie blocker LCP. Złagodzić sygnał do „optymalizacja obrazów".
 - **Rekomendacja:** migracja na `next/image` (po self‑hoście) — AVIF/WebP, srcset, lazy; `fetchPriority='high'` tylko dla realnego obrazu LCP, `loading='lazy'` dla reszty.

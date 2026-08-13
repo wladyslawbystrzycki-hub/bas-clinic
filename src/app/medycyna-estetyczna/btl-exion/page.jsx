@@ -2,7 +2,7 @@ import { generatePageMetadata } from '@/lib/metadata';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 export const metadata = generatePageMetadata({
-  title: 'BTL Exion Wrocław - Medycyna estetyczna',
+  title: 'BTL Exion Wrocław - radiofrekwencja i ultradźwięki',
   description: 'BTL Exion - nieinwazyjna technologia odmładzania i ujędrniania skóry. Bas Clinic Wrocław.',
   path: '/medycyna-estetyczna/btl-exion/',
 });

@@ -2,7 +2,7 @@ import { generatePageMetadata } from '@/lib/metadata';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 export const metadata = generatePageMetadata({
-  title: 'Redukcja głębokich zmarszczek kwasem hialuronowym Wrocław - Medycyna estetyczna',
+  title: 'Redukcja głębokich zmarszczek kwasem hialuronowym Wrocław',
   description: 'Redukcja głębokich zmarszczek kwasem hialuronowym w okolicy oczu. Bas Clinic Wrocław.',
   path: '/medycyna-estetyczna/redukcja-glebokich-zmarszczek/',
 });

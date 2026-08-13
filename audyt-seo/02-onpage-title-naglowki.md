@@ -23,6 +23,26 @@ Słabości koncentrują się w kilku miejscach i są **łatwe do naprawienia**:
 
 ---
 
+## ⚠️ Aktualizacja 2026-06-30 — restrukturyzacja URL + naprawy On-Page
+
+Raport powstał 06-18, **przed** restrukturyzacją URL usług (commit „Restrukturyzacja URL usług…") i zmianą marki na **Bas Clinic**. Re-walidacja względem bieżącego kodu (`scratchpad/f2_current.mjs` → 73 trasy) + `npm run build` (zielony):
+
+**Zamknięte przez restrukturyzację (już w kodzie, bez działania):**
+- **OG-03** podwójny sufiks USG ×16 → ✅ żaden USG `page.jsx` nie zaszywa już marki; template `%s | Bas Clinic` dokleja ją raz. 0 `dupTokens`.
+- **OG-04** brand „w Klinice BAS" ×6 → ✅ tytuły przepisane keyword-first.
+- **OG-07** brak geo ×47 → ✅ **67/73 tytułów ma „Wrocław"** (cała stomatologia 18 + estetyka 24 + USG + uzależnienia + wlewy). Bez geo zostają tylko strony użytkowe (OG-08, niżej) i home (geo w `title.absolute`).
+- **OG-14** rozjazd title↔H1 (home + hub estetyki) → ✅ H1 hubów ma już frazę + geo, home ma `absolute` z frazą. 0 stron coh<0.5 poza 1 granicznym (`redukcja-drobnych-zmarszczek-ha` — semantycznie spójny, niski overlap tokenów; bez działania).
+- **OG-17** „Wszystko o: {X}" ×57 → ✅ `ServicePageTemplate` nie generuje już tego H2.
+
+**Naprawione w tym batchu (06-30):**
+- **OG-03 resztkowy** — `/rejestracja/` (NOWA strona spoza audytu) zaszywała `| Bas Clinic` → render `… | Bas Clinic | Bas Clinic`. Usunięto ręczną markę, dodano geo.
+- **OG-05/06** ×5 — usunięto boilerplate `- Medycyna estetyczna` (btl-exion, mezoterapia-skóry-głowy, programy-zabiegowe, redukcja-głębokich-zmarszczek, regeneracja-konturu-oka), wstawiono trafny deskryptor (metoda/obszar). To zamyka też OG-06: `redukcja-głębokich-zmarszczek` 78→56 zn. (koniec ucięcia pikselowego).
+- **OG-08** ×4 — wzbogacono ubogie tytuły stron użytkowych o geo + propozycję wartości: cennik, kontakt, o-nas (encje autorów — E‑E‑A‑T), metamorfozy.
+
+**Bilans On-Page po 06-30:** wszystkie P1 ✅, wszystkie wskazane P2 ✅. Pozostają tylko opcjonalne ℹ️: OG-11 (home meta 166 zn.), OG-19 (H4 YMYL), OG-20 (footer H3). **Wynik On-Page ~82 → ~92.**
+
+---
+
 ## A. TYTUŁY — system Goldmine (`048–052`)
 
 > Kontekst: `<title>` to tylko **jeden z kandydatów** w wewnętrznym konkursie Goldmine (`AlternativeTitlesAnnotator`). Konkurenci: `<h1>` (`goldmineHeaderIsH1`), anchory wewn./zewn., duży widoczny tekst (`sourceGeometry`). Werdykt rozstrzyga `goldmineBlockbertFactor` (semantyka) → `goldmineNavboostFactor` (kliknięcia). Kary: `isTruncated`/`widthFraction`, `dupTokens`, `goldmineHasBoilerplateInTitle`.

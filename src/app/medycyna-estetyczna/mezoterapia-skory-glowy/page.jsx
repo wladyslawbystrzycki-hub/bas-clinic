@@ -2,7 +2,7 @@ import { generatePageMetadata } from '@/lib/metadata';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 export const metadata = generatePageMetadata({
-  title: 'Mezoterapia skóry głowy Wrocław - Medycyna estetyczna',
+  title: 'Mezoterapia skóry głowy Wrocław - zabieg na włosy',
   description: 'Mezoterapia skóry głowy - stymulacja wzrostu włosów i regeneracja cebulek włosowych. Bas Clinic Wrocław.',
   path: '/medycyna-estetyczna/mezoterapia-skory-glowy/',
 });

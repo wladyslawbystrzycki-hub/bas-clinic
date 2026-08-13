@@ -6,7 +6,7 @@ import PageHeader from '../components/PageHeader';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema';
 
 export const metadata = generatePageMetadata({
-  title: 'Cennik',
+  title: 'Cennik - stomatologia, estetyka, USG Wrocław',
   description:
     'Cennik usług stomatologicznych i medycyny estetycznej w Bas Clinic we Wrocławiu. Sprawdź ceny zabiegów.',
   path: '/cennik/',

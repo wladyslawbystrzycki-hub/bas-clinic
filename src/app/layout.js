@@ -14,17 +14,35 @@ const poppins = Poppins({
 
 export const metadata = {
   metadataBase: new URL('https://bas.clinic'),
+  applicationName: 'Bas Clinic',
   title: {
-    default: 'Bas Clinic - Stomatologia i Medycyna Estetyczna | Wrocław',
+    default: 'Bas Clinic | Prywatna klinika medyczna we Wrocławiu',
     template: '%s | Bas Clinic',
   },
   description:
-    'Klinika stomatologiczno-estetyczna Bogdana i Ivanny Bas we Wrocławiu. Stomatologia, medycyna estetyczna, wlewy witaminowe. Kompleksowa opieka w nowoczesnym gabinecie.',
-  openGraph: {
-    type: 'website',
-    locale: 'pl_PL',
-    siteName: 'Bas Clinic',
+    'Prywatna klinika medyczna Bas Clinic we Wrocławiu: stomatologia, medycyna estetyczna, USG, wlewy witaminowe i leczenie uzależnień. Lekarze Bogdan i Ivanna Bas.',
+  // Karta społecznościowa Twittera/X — bez title/description, żeby dziedziczyła
+  // per-stronę z og:title/og:description; obraz z pliku-konwencji opengraph-image.
+  twitter: { card: 'summary_large_image' },
+  appleWebApp: { capable: true, title: 'Bas Clinic', statusBarStyle: 'black-translucent' },
+  // Jawny sygnał indeksacji site-wide (dziedziczony przez wszystkie strony, żadna nie
+  // nadpisuje robots). max-image-preview:large → duże miniatury w SERP (klinika wizualna).
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
+};
+
+// theme-color = grafit hero/stopki (pasek adresu na mobile scala się z marką).
+export const viewport = {
+  themeColor: '#14171a',
 };
 
 export default function RootLayout({ children }) {

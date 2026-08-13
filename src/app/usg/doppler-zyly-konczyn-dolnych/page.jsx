@@ -1,11 +1,12 @@
 import { generatePageMetadata } from '@/lib/metadata';
 import { getServiceBySlug } from '@/config/services';
+import { CLINIC } from '@/config/clinic';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 export const metadata = generatePageMetadata({
-  title: 'USG Doppler żył kończyn dolnych Wrocław | Bas Clinic',
+  title: 'USG Doppler żył kończyn dolnych Wrocław',
   description:
-    'USG Doppler żył kończyn dolnych we Wrocławiu - diagnostyka żylaków i podejrzenia zakrzepicy żył głębokich (DVT). Bas Clinic, ul. Opatowicka 132. Umów termin.',
+    'USG Doppler żył kończyn dolnych (USG doppler nóg) we Wrocławiu - diagnostyka żylaków i zakrzepicy żył głębokich. Bas Clinic, ul. Opatowicka 132. Umów termin.',
   path: '/usg/doppler-zyly-konczyn-dolnych/',
 });
 
@@ -19,61 +20,113 @@ const RELATED = ['usg/doppler', 'usg/doppler-tetnice-szyjne'].map(getServiceBySl
 const EXPERT_INFO = [
   {
     title: 'Czym jest USG Doppler żył kończyn dolnych?',
+    tocLabel: 'Czym jest',
     content:
-      '<p>USG Doppler żył kończyn dolnych to badanie przepływu krwi w żyłach nóg wykonywane metodą dopplerowską. Ultrasonografia dopplerowska żył kończyn dolnych obrazuje zarówno układ żył głębokich, jak i żył powierzchownych, pozwalając ocenić kierunek i prędkość przepływu oraz pracę zastawek żylnych.</p>' +
-      '<p>Badanie funkcjonuje pod wieloma nazwami zwyczajowymi, takimi jak USG doppler nóg, USG żył kończyn dolnych czy doppler żylny nóg. Niezależnie od określenia chodzi o tę samą diagnostykę układu żylnego konczyn dolnych, czyli ocenę żył nóg za pomocą fali ultradźwiękowej.</p>' +
-      '<p><strong>Uwaga:</strong> badanie dotyczy wyłącznie układu żylnego. USG Doppler tętnic kończyn dolnych jest osobnym badaniem oceniającym tętnice nóg i nie stanowi synonimu tego badania.</p>',
+      '<p><strong>USG Doppler żył kończyn dolnych</strong> to nieinwazyjne, bezbolesne badanie ultrasonograficzne, które ocenia przepływ krwi w żyłach nóg metodą dopplerowską. Obrazuje zarówno układ żył głębokich, jak i powierzchownych, pozwalając ocenić ich drożność, kierunek przepływu oraz pracę zastawek żylnych.</p>' +
+      '<p>Badanie funkcjonuje pod wieloma nazwami zwyczajowymi: USG doppler nóg, USG żył kończyn dolnych, doppler żylny nóg czy ultrasonografia dopplerowska żył. Wszystkie te określenia opisują tę samą diagnostykę układu żylnego nóg, czyli ocenę żył odpiszczelowej, odstrzałkowej, udowej i podkolanowej za pomocą fali ultradźwiękowej. Obraz i wynik zawsze interpretuje lekarz w odniesieniu do objawów i pełnego obrazu klinicznego pacjenta.</p>' +
+      '<p><strong>Uwaga:</strong> badanie dotyczy wyłącznie układu żylnego. USG Doppler tętnic kończyn dolnych jest osobnym badaniem, które ocenia tętnice nóg i nie stanowi synonimu tej diagnostyki.</p>',
   },
   {
-    title: 'Co wykrywa USG Doppler żył kończyn dolnych?',
+    title: 'Jak działa USG Doppler żył - efekt Dopplera i ocena refluksu',
+    tocLabel: 'Jak działa',
     content:
-      '<p>USG Doppler żył kończyn dolnych pozwala uwidocznić najczęstsze nieprawidłowości układu żylnego nóg. Badanie dopplerowskie żył nóg pomaga ocenić drożność żył oraz wydolność zastawek, a także wykryć cechy przepływu wstecznego.</p>' +
+      '<p>USG Doppler żył działa dzięki <strong>efektowi Dopplera</strong>: fala ultradźwiękowa odbita od poruszających się krwinek czerwonych wraca do głowicy ze zmienioną częstotliwością, co pozwala zmierzyć kierunek i prędkość przepływu krwi. W zdrowych żyłach kończyn dolnych krew płynie w jednym kierunku, ku sercu, a zastawki żylne nie pozwalają jej się cofać.</p>' +
+      '<p>To właśnie odróżnia badanie dopplerowskie od klasycznej ultrasonografii w skali szarości, która pokazuje samą strukturę naczynia, bez informacji o przepływie. W praktyce naczyniowej standardem jest tryb duplex, łączący obraz żyły z barwną mapą płynącej w niej krwi (Doppler kolorowy) oraz pomiarem prędkości (Doppler spektralny).</p>' +
+      '<h3>Kiedy refluks żylny jest nieprawidłowy?</h3>' +
+      '<p>O niewydolności zastawek świadczy zbyt długi przepływ wsteczny, nazywany refluksem. Zgodnie z dokumentem konsensusowym UIP (Coleridge-Smith i wsp., 2006) oraz wytycznymi ESVS dotyczącymi przewlekłej choroby żylnej (De Maeseneer i wsp., 2022) refluks uznaje się za patologiczny, gdy cofanie krwi trwa dłużej niż 0,5 sekundy w żyłach powierzchownych i przeszywających oraz dłużej niż 1 sekundę w żyłach głębokich odcinka udowo-podkolanowego.</p>' +
+      '<p>Aby uwidocznić refluks, trzeba na chwilę zwiększyć ciśnienie w żyłach. Służą do tego manewry prowokacyjne: próba Valsalvy oraz uciskowa próba łydki, które prowokują przepływ i pozwalają sprawdzić, czy zastawki domykają się prawidłowo.</p>',
+  },
+  {
+    title: 'Co wykrywa USG Doppler żył nóg - żylaki, refluks i zakrzepica',
+    tocLabel: 'Co wykrywa',
+    content:
+      '<p>USG Doppler żył nóg uwidacznia najczęstsze nieprawidłowości układu żylnego kończyn dolnych. Badanie pozwala ocenić drożność żył oraz wydolność zastawek, a także wykryć cechy przepływu wstecznego.</p>' +
       '<ul>' +
-      '<li><strong>Niewydolność żylna i refluks</strong> - cofanie się krwi przez nieszczelne zastawki żylne.</li>' +
+      '<li><strong>Niewydolność żylna i refluks</strong> - cofanie się krwi przez nieszczelne zastawki, podstawa przewlekłej choroby żylnej.</li>' +
       '<li><strong>Żylaki</strong> - poszerzone, niewydolne żyły powierzchowne.</li>' +
-      '<li><strong>Cechy zakrzepicy żył głębokich (DVT)</strong> - obecność skrzepliny i zaburzenia drożności żyły.</li>' +
+      '<li><strong>Cechy zakrzepicy żył głębokich (DVT)</strong> - obecność skrzepliny i zaburzenia drożności żyły, oceniane uciskiem żyły głowicą.</li>' +
       '<li><strong>Zmiany pozakrzepowe</strong> - następstwa przebytej zakrzepicy w świetle żyły i w obrębie zastawek.</li>' +
       '</ul>' +
-      '<p>Podejrzenie zakrzepicy żył głębokich jest stanem potencjalnie groźnym i wymaga pilnej konsultacji lekarskiej. USG pomaga ocenić drożność żył i uwidocznić cechy zakrzepu, jednak wynik badania interpretuje lekarz i USG nie zastępuje oceny klinicznej.</p>',
+      '<p>W diagnostyce zakrzepicy żył głębokich kompresyjna ultrasonografia żył jest badaniem obrazowym pierwszego wyboru (przegląd systematyczny, Bhatt i wsp., 2020). Zaawansowanie przewlekłej choroby żylnej lekarz może opisać według międzynarodowej klasyfikacji CEAP, która porządkuje obraz kliniczny, etiologię, anatomię i mechanizm choroby.</p>' +
+      '<p>Podejrzenie zakrzepicy żył głębokich jest stanem potencjalnie groźnym ze względu na ryzyko zatorowości płucnej i wymaga pilnej konsultacji lekarskiej. USG pomaga ocenić drożność żył i uwidocznić cechy zakrzepu, jednak wynik interpretuje lekarz, a badanie nie zastępuje oceny klinicznej.</p>',
   },
   {
     title: 'Wskazania do USG Doppler żył nóg',
+    tocLabel: 'Wskazania',
     content:
-      '<p>Wskazaniem do USG Doppler żył nóg są dolegliwości i objawy sugerujące zaburzenia układu żylnego. Ocenę żył kończyn dolnych rozważa się zwłaszcza wtedy, gdy występują objawy przewlekłej niewydolności żylnej lub podejrzenie zakrzepicy.</p>' +
+      '<p>Wskazaniem do USG Doppler żył nóg są dolegliwości sugerujące zaburzenia układu żylnego. Ocenę żył kończyn dolnych rozważa się zwłaszcza przy objawach przewlekłej niewydolności żylnej lub podejrzeniu zakrzepicy.</p>' +
       '<ul>' +
-      '<li>Obrzęki nóg oraz uczucie ciężkości i zmęczenia kończyn.</li>' +
-      '<li>Ból łydek i nocne kurcze mięśni.</li>' +
-      '<li>Widoczne żylaki oraz poszerzone naczynia powierzchowne.</li>' +
-      '<li>Zmiany skórne podudzi, takie jak przebarwienia, stwardnienia czy owrzodzenia.</li>' +
-      '<li>Podejrzenie zakrzepicy żył głębokich, na przykład nagły obrzęk i bolesność jednej kończyny.</li>' +
-      '<li>Kwalifikacja do leczenia żylaków i monitorowanie po zabiegach.</li>' +
+      '<li>obrzęki nóg oraz uczucie ciężkości i zmęczenia kończyn,</li>' +
+      '<li>ból łydek i nocne kurcze mięśni,</li>' +
+      '<li>widoczne żylaki oraz poszerzone naczynia powierzchowne,</li>' +
+      '<li>zmiany skórne podudzi - przebarwienia, stwardnienia czy owrzodzenia żylne,</li>' +
+      '<li>nagły obrzęk i bolesność jednej kończyny, nasuwające podejrzenie zakrzepicy żył głębokich,</li>' +
+      '<li>kwalifikacja do leczenia żylaków oraz kontrola po zabiegach na układzie żylnym.</li>' +
       '</ul>' +
-      '<p>Diagnostyka żylaków za pomocą badania dopplerowskiego służy ustaleniu zakresu choroby i kwalifikacji do leczenia. Samo USG nie leczy żylaków, lecz dostarcza informacji niezbędnych do zaplanowania dalszego postępowania przez lekarza.</p>',
-  },
-  {
-    title: 'Jak przygotować się do USG Doppler żył kończyn dolnych?',
-    content:
-      '<p>USG Doppler żył kończyn dolnych nie wymaga specjalnego przygotowania. Badanie przepływu w żyłach nóg można wykonać bez wcześniejszego postu czy odstawiania leków, o ile lekarz nie zaleci inaczej.</p>' +
-      '<ul>' +
-      '<li>Zaleca się wygodny strój umożliwiający swobodne odsłonięcie obu nóg do pachwiny.</li>' +
-      '<li>Wskazana jest higiena skóry kończyn dolnych w dniu badania.</li>' +
-      '<li>Warto zabrać wyniki wcześniejszych badań żylnych oraz dokumentację medyczną, jeśli jest dostępna.</li>' +
-      '</ul>' +
-      '<p>Część oceny układu żylnego wykonuje się w pozycji stojącej, dlatego komfortowy ubiór ułatwia przebieg badania. Pozwala to dokładniej ocenić wydolność zastawek i ewentualny refluks.</p>',
-  },
-  {
-    title: 'Jak przebiega badanie i kiedy wynik?',
-    content:
-      '<p>Badanie przebiega w pozycji leżącej i stojącej, co pozwala kompleksowo ocenić układ żylny kończyn dolnych. Na skórę nanosi się żel, a osoba wykonująca badanie przesuwa głowicę ultrasonograficzną wzdłuż przebiegu żył nóg.</p>' +
-      '<p>Do oceny refluksu stosuje się próbę Valsalvy oraz próbę uciskową łydki, które prowokują przepływ krwi i pozwalają uwidocznić cofanie się jej przez niewydolne zastawki. USG żył kończyn dolnych jest bezbolesne, nieinwazyjne i nie wykorzystuje promieniowania jonizującego.</p>' +
-      '<p>Opis badania sporządza lekarz i to on interpretuje uzyskany obraz w kontekście objawów oraz pozostałych wyników. USG nie zastępuje konsultacji lekarskiej, a ostateczne rozpoznanie i decyzję o leczeniu podejmuje lekarz. Pełną ofertę diagnostyki obrazowej można sprawdzić w sekcji <a href="/usg/">pracownia USG we Wrocławiu</a>.</p>',
+      '<p>Przed planowanym leczeniem żylaków badanie służy do tak zwanego mapowania żył, czyli odwzorowania ich przebiegu i miejsc refluksu - tę rolę wytyczne ESVS (2022) wskazują jako podstawę planowania zabiegu. Samo USG nie leczy żylaków, lecz dostarcza informacji niezbędnych do zaplanowania dalszego postępowania przez lekarza.</p>',
   },
   {
     title: 'USG Doppler żył a inne badania naczyń',
+    tocLabel: 'Doppler żył a inne badania',
     content:
-      '<p>USG Doppler żył kończyn dolnych ocenia wyłącznie żyły nóg, czyli układ żylny głęboki i powierzchowny. Jest to badanie ukierunkowane na drożność żył, wydolność zastawek i obecność refluksu w obrębie kończyn dolnych.</p>' +
-      '<p>Szersza diagnostyka naczyniowa, obejmująca tętnice i żyły różnych okolic ciała, prowadzona jest w ramach badania <a href="/usg/doppler/">USG Doppler naczyń</a>. Ocenę naczyń doprowadzających krew do mózgu umożliwia natomiast <a href="/usg/doppler-tetnice-szyjne/">USG Doppler tętnic szyjnych</a>, które jest innym badaniem naczyniowym wykonywanym metodą Dopplera.</p>' +
-      '<p>Dobór odpowiedniego zakresu badania zależy od objawów i wskazań. W razie wątpliwości warto skonsultować rodzaj diagnostyki z lekarzem prowadzącym.</p>',
+      '<p>USG Doppler żył kończyn dolnych ocenia wyłącznie żyły nóg, czyli układ żylny głęboki i powierzchowny. Inne badania dopplerowskie obejmują tętnice lub naczynia innych okolic ciała, dlatego zakres dobiera się do objawów.</p>' +
+      '<table>' +
+      '<tr><th>Cecha</th><th>USG Doppler żył nóg</th><th>USG Doppler tętnic szyjnych</th><th>USG Doppler naczyń (zbiorcze)</th></tr>' +
+      '<tr><td>Co ocenia</td><td>przepływ w żyłach nóg, drożność i zastawki</td><td>tętnice doprowadzające krew do mózgu</td><td>tętnice i żyły wybranej okolicy ciała</td></tr>' +
+      '<tr><td>Układ naczyniowy</td><td>żylny</td><td>tętniczy</td><td>tętniczy i żylny</td></tr>' +
+      '<tr><td>Typowe wskazanie</td><td>żylaki, obrzęki, podejrzenie zakrzepicy</td><td>profilaktyka udaru, miażdżyca</td><td>szeroka diagnostyka naczyniowa</td></tr>' +
+      '</table>' +
+      '<p>Szerszą diagnostykę naczyniową, obejmującą różne okolice ciała, prowadzi się w ramach badania <a href="/usg/doppler/">USG Doppler naczyń</a>. Ocenę tętnic doprowadzających krew do mózgu umożliwia natomiast <a href="/usg/doppler-tetnice-szyjne/">USG Doppler tętnic szyjnych</a>. W razie wątpliwości, który zakres będzie właściwy, warto skonsultować rodzaj badania z lekarzem prowadzącym.</p>',
+  },
+  {
+    title: 'Jak przygotować się do badania i jak przebiega?',
+    tocLabel: 'Przygotowanie i przebieg',
+    content:
+      '<p>USG Doppler żył kończyn dolnych nie wymaga specjalnego przygotowania. Badania nie trzeba wykonywać na czczo ani odstawiać leków, o ile lekarz nie zaleci inaczej.</p>' +
+      '<ul>' +
+      '<li>wygodny strój umożliwiający swobodne odsłonięcie obu nóg do pachwiny,</li>' +
+      '<li>higiena skóry kończyn dolnych w dniu badania,</li>' +
+      '<li>dokumentacja wcześniejszych badań żylnych, jeśli jest dostępna.</li>' +
+      '</ul>' +
+      '<h3>Przebieg badania</h3>' +
+      '<p>Badanie przypomina klasyczną ultrasonografię: na skórę nanosi się żel sprzęgający, a osoba wykonująca badanie przesuwa głowicę liniową wzdłuż przebiegu żył nóg. Drożność żyły sprawdza się, uciskając ją głowicą - zdrowa żyła zapada się pod naciskiem, a wypełniona skrzepliną nie.</p>' +
+      '<p>Ocenę refluksu wykonuje się zwykle w pozycji stojącej, którą wytyczne ESVS (2022) wskazują jako najbardziej wiarygodną dla żył kończyn dolnych, z użyciem próby Valsalvy oraz uciskowej próby łydki. Badanie jest bezbolesne, nieinwazyjne i nie wykorzystuje promieniowania jonizującego; trwa zwykle od kilkunastu do kilkudziesięciu minut. Pisemny opis sporządza lekarz i to on interpretuje obraz w kontekście objawów. Pełną ofertę diagnostyki obrazowej znajdziesz w sekcji <a href="/usg/">pracownia USG we Wrocławiu</a>.</p>',
+  },
+  {
+    title: 'Bezpieczeństwo, ograniczenia i przeciwwskazania',
+    tocLabel: 'Bezpieczeństwo',
+    content:
+      '<p>USG Doppler żył jest badaniem bezpiecznym - nie wykorzystuje promieniowania jonizującego i nie ma bezwzględnych przeciwwskazań. Aparaturę stosuje się zgodnie z zasadą ALARA, czyli z możliwie najniższą konieczną energią (oświadczenie AIUM), a diagnostyczną ultrasonografię uznaje się za bezpieczną także w ciąży.</p>' +
+      '<p>Badanie ma jednak ograniczenia. Jest podstawową, nieinwazyjną metodą oceny żył, ale jego czułość zależy od umiejscowienia zakrzepicy: dla zakrzepicy żył proksymalnych (udowej, podkolanowej) jest wysoka, natomiast dla izolowanej zakrzepicy żył łydki wyraźnie niższa (Goodacre i wsp., 2005 - czułość proksymalna 96,5%, dystalna 71,2%). Z tego powodu przy podejrzeniu zakrzepicy lekarz ocenia prawdopodobieństwo kliniczne, a badanie bywa powtarzane lub uzupełniane innymi metodami.</p>' +
+      '<p>Pozostałe ograniczenia mają charakter techniczny i względny:</p>' +
+      '<ul>' +
+      '<li><strong>zależność od operatora</strong> - jakość obrazu i interpretacja zależą od doświadczenia osoby wykonującej badanie,</li>' +
+      '<li><strong>warunki anatomiczne</strong> - otyłość i znaczne obrzęki mogą pogarszać widoczność głębiej położonych żył,</li>' +
+      '<li><strong>ograniczenia miejscowe</strong> - rozległa rana, opatrunek, gips lub stan zapalny skóry w okolicy przyłożenia głowicy.</li>' +
+      '</ul>' +
+      '<p>Powyższe informacje mają charakter edukacyjny i nie zastępują konsultacji lekarskiej. O zasadności badania, jego zakresie oraz interpretacji wyniku decyduje lekarz podczas indywidualnej wizyty.</p>',
+  },
+  {
+    title: 'Cena USG Doppler żył kończyn dolnych we Wrocławiu',
+    tocLabel: 'Cena',
+    content:
+      '<p>Cena USG Doppler żył kończyn dolnych we Wrocławiu zależy od zakresu badania - tego, czy oceniana jest jedna czy obie nogi, oraz od zakresu konsultacji. Z tego powodu ustala się ją indywidualnie.</p>' +
+      '<p>W Bas Clinic badanie wykonuje <a href="/usg/">pracownia USG we Wrocławiu</a>. Aktualne ceny znajdziesz w sekcji <a href="/cennik/">cennik</a>, a dogodny termin ustalisz przez <a href="/rejestracja/">rejestrację</a>. Badanie wykonywane jest prywatnie i nie wymaga skierowania.</p>',
+  },
+  {
+    title: 'Źródła',
+    content:
+      '<ol>' +
+      '<li>De Maeseneer MG, Kakkos SK, Aherne T, i wsp. ESVS 2022 Clinical Practice Guidelines on the Management of Chronic Venous Disease of the Lower Limbs. Eur J Vasc Endovasc Surg 2022;63(2):184-267 (PMID 35027279).</li>' +
+      '<li>Coleridge-Smith P, Labropoulos N, Partsch H, i wsp. Duplex ultrasound investigation of the veins in chronic venous disease of the lower limbs - UIP Consensus Document Part I. Eur J Vasc Endovasc Surg 2006;31(1):83-92 (PMID 16226898).</li>' +
+      '<li>Labropoulos N, Tiongson J, Pryor L, i wsp. Definition of venous reflux in lower-extremity veins. J Vasc Surg 2003;38(4):793-798 (PMID 14560232).</li>' +
+      '<li>Bhatt M, Braun C, Patel P, i wsp. Diagnosis of deep vein thrombosis of the lower extremity: a systematic review and meta-analysis. Blood Adv 2020;4(7):1250-1264 (PMID 32227213).</li>' +
+      '<li>Goodacre S, Sampson F, Thomas S, i wsp. Systematic review and meta-analysis of the diagnostic accuracy of ultrasonography for deep vein thrombosis. BMC Med Imaging 2005;5:6 (PMID 16202135).</li>' +
+      '<li>Lim W, Le Gal G, Bates SM, i wsp. American Society of Hematology 2018 guidelines for management of venous thromboembolism: diagnosis of venous thromboembolism. Blood Adv 2018;2(22):3226-3256 (PMID 30482764).</li>' +
+      '<li>Peripheral Venous Duplex Ultrasound: Technique and Clinical Applications. StatPearls / NCBI Bookshelf NBK570555, National Library of Medicine, 2024.</li>' +
+      '<li>AIUM Official Statement: Prudent Clinical Use and Safety of Diagnostic Ultrasound. American Institute of Ultrasound in Medicine, 2024.</li>' +
+      '<li>Torloni MR, Vedmedovska N, Merialdi M, i wsp. Safety of ultrasonography in pregnancy: WHO systematic review and meta-analysis. Ultrasound Obstet Gynecol 2009;33(5):599-608 (PMID 19291813).</li>' +
+      '</ol>',
   },
 ];
 
@@ -81,12 +134,12 @@ const FAQ = [
   {
     question: 'Co wykrywa USG Doppler żył kończyn dolnych?',
     answer:
-      'USG Doppler żył kończyn dolnych wykrywa nieprawidłowości układu żylnego nóg, takie jak niewydolność żylna i refluks, żylaki, cechy zakrzepicy żył głębokich oraz zmiany pozakrzepowe. Badanie pozwala ocenić drożność żył i wydolność zastawek. Wynik interpretuje lekarz, a USG nie zastępuje konsultacji lekarskiej.',
+      'USG Doppler żył kończyn dolnych wykrywa nieprawidłowości układu żylnego nóg: niewydolność żylną i refluks, żylaki, cechy zakrzepicy żył głębokich oraz zmiany pozakrzepowe. Badanie pozwala ocenić drożność żył i wydolność zastawek. Wynik interpretuje lekarz, a USG nie zastępuje konsultacji lekarskiej.',
   },
   {
     question: 'Czy USG Doppler wykryje zakrzepicę żył głębokich?',
     answer:
-      'USG Doppler pomaga ocenić drożność żył i uwidocznić cechy zakrzepu, dlatego jest podstawowym badaniem przy podejrzeniu zakrzepicy żył głębokich. Zakrzepica żył głębokich (DVT) to stan potencjalnie groźny ze względu na ryzyko zatorowości płucnej, dlatego przy jej podejrzeniu konieczna jest pilna konsultacja lekarska. USG wspiera diagnostykę, lecz nie zastępuje oceny lekarza, który ustala rozpoznanie i dalsze postępowanie.',
+      'USG Doppler pomaga ocenić drożność żył i uwidocznić cechy zakrzepu, dlatego kompresyjna ultrasonografia jest badaniem obrazowym pierwszego wyboru przy podejrzeniu zakrzepicy żył głębokich. Zakrzepica (DVT) to stan potencjalnie groźny ze względu na ryzyko zatorowości płucnej, dlatego wymaga pilnej konsultacji lekarskiej. USG wspiera diagnostykę, lecz nie zastępuje oceny lekarza.',
   },
   {
     question: 'Jak przygotować się do USG Doppler żył nóg?',
@@ -96,12 +149,17 @@ const FAQ = [
   {
     question: 'Ile kosztuje USG Doppler żył kończyn dolnych we Wrocławiu?',
     answer:
-      'Cena USG Doppler żył kończyn dolnych we Wrocławiu zależy od zakresu badania. Aktualny cennik jest dostępny w zakładce Cennik na stronie Bas Clinic oraz pod numerem telefonu 690 511 511. Bas Clinic mieści się przy ul. Opatowickiej 132 we Wrocławiu.',
+      `Cena USG Doppler żył kończyn dolnych we Wrocławiu zależy od zakresu badania - tego, czy oceniana jest jedna czy obie nogi. Aktualny cennik jest dostępny w zakładce Cennik na stronie ${CLINIC.name} oraz pod numerem telefonu ${CLINIC.phone}. Badanie wykonywane jest prywatnie i nie wymaga skierowania.`,
   },
   {
     question: 'Czy na USG Doppler żył potrzebne jest skierowanie?',
     answer:
-      'Na USG Doppler żył nie jest potrzebne skierowanie, ponieważ badanie wykonywane jest prywatnie. Termin można umówić bezpośrednio, dzwoniąc pod numer +48 690 511 511. Warto jednak zabrać dokumentację wcześniejszych badań, jeśli jest dostępna.',
+      'Na USG Doppler żył skierowanie nie jest potrzebne, ponieważ badanie wykonywane jest prywatnie. Termin można umówić bezpośrednio, telefonicznie. Warto jednak zabrać dokumentację wcześniejszych badań żylnych, jeśli jest dostępna, aby lekarz mógł porównać obraz.',
+  },
+  {
+    question: 'Gdzie we Wrocławiu wykonać USG Doppler żył kończyn dolnych?',
+    answer:
+      `USG Doppler żył kończyn dolnych we Wrocławiu wykonasz w ${CLINIC.name} przy ${CLINIC.address.street} (${CLINIC.address.city}). Termin umówisz telefonicznie pod numerem ${CLINIC.phone}. Pracownia przyjmuje w dni powszednie w godzinach ${CLINIC.hours.weekdays}; w soboty i niedziele jest zamknięta.`,
   },
 ];
 

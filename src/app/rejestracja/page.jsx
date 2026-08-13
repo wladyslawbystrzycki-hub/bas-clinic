@@ -5,7 +5,7 @@ import BookingFlow from '../components/BookingFlow';
 import { CLINIC } from '@/config/clinic';
 
 export const metadata = generatePageMetadata({
-  title: 'Rejestracja online — umów wizytę | Bas Clinic',
+  title: 'Rejestracja online — umów wizytę we Wrocławiu',
   description:
     'Umów wizytę online w Bas Clinic we Wrocławiu. Wybierz usługę, dogodny termin i godzinę — oddzwonimy, aby potwierdzić rezerwację.',
   path: '/rejestracja/',

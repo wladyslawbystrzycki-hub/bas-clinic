@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
+    // Placeholdery galerii/kompendium/FAQ hostowane są jeszcze na Unsplash (do
+    // podmiany na realne foto) — optymalizator next/image musi mieć jawnie
+    // dozwolony host zewnętrzny, inaczej odrzuca <Image src> spoza domeny.
+    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
   },
   async redirects() {
     // 301 po zmianie slugów USG (dopełniacz -> mianownik): stare, zaindeksowane
@@ -42,6 +46,20 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          // HSTS: wymuszenie HTTPS w przeglądarce (2 lata + subdomeny + preload).
+          // Cała witryna jest HTTPS-only (Vercel) — bezpieczne; chroni przed
+          // downgrade/SSL-strip i wzmacnia sygnał Trust.
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          // Domyślnie odbieramy uprawnienia, których strona nie używa (zmniejsza
+          // powierzchnię ataku i wycisza Topics API). Mapa Google to <iframe> z
+          // własnym originem — nie wymaga top-level geolocation.
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
+          },
         ],
       },
     ];

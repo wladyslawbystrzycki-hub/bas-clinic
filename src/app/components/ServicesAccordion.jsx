@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /**
  * Interaktywny akordeon usług.
@@ -99,14 +100,13 @@ function DesktopExpanded({ item, num, Icon }) {
       <div className="relative hidden w-[38%] shrink-0 flex-col overflow-hidden rounded-xl bg-primary-950 md:flex">
         {item.image ? (
           <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={item.image}
               alt={item.imageAlt}
               title={item.title}
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="lazy"
-              decoding="async"
+              fill
+              sizes="(min-width: 1024px) 22rem, (min-width: 768px) 30vw, 0px"
+              className="object-cover"
             />
             {/* scrim u dołu — czytelność białego CTA na zdjęciu */}
             <span
@@ -194,7 +194,7 @@ function MobilePanel({ item, index, isActive, onToggle }) {
         <span className="flex-1 font-display text-base font-semibold text-gray-900">
           {item.title}
         </span>
-        <span aria-hidden className="font-display text-sm font-bold text-primary-200">
+        <span aria-hidden className="font-display text-sm font-bold text-primary-500">
           {num}
         </span>
         <span

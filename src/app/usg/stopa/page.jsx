@@ -1,11 +1,12 @@
 import { generatePageMetadata } from '@/lib/metadata';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import { getServiceBySlug } from '@/config/services';
+import { CLINIC } from '@/config/clinic';
 
 export const metadata = generatePageMetadata({
-  title: 'USG stopy Wrocław - badanie | Bas Clinic',
+  title: 'USG stopy Wrocław - ból pięty i przodostopia',
   description:
-    'USG stopy we Wrocławiu - ocena rozcięgna podeszwowego, nerwiaka Mortona i ścięgien stopy. Bezbolesne badanie bez promieniowania. Umów termin w Bas Clinic.',
+    'USG stopy we Wrocławiu - diagnostyka bólu pięty, zapalenia rozcięgna podeszwowego i nerwiaka Mortona. Bezbolesne badanie bez promieniowania w Bas Clinic.',
   path: '/usg/stopa/',
 });
 
@@ -20,27 +21,103 @@ const EXPERT_INFO = [
   {
     title: 'Czym jest USG stopy?',
     content:
-      '<p>USG stopy to ultrasonografia narządu ruchu obejmująca struktury przodostopia, śródstopia oraz okolicy pięty. Badanie pozwala ocenić tkanki miękkie stopy, w tym rozcięgno podeszwowe, ścięgna, drobne stawy oraz przestrzenie międzykostne.</p><p>Ultrasonografia stopy wykorzystuje głowicę liniową o wysokiej częstotliwości, która bardzo dobrze obrazuje położone powierzchownie struktury. Metoda umożliwia także ocenę dynamiczną, czyli obserwację ścięgien i innych struktur podczas ruchu, co bywa pomocne w wykrywaniu drobnych zmian.</p><p>USG stopy jest częścią szerszej diagnostyki, jaką stanowi <a href="/usg/stawy/">USG stawów (narządu ruchu)</a>. Badanie jest nieinwazyjne, bezbolesne i nie wykorzystuje promieniowania jonizującego, dzięki czemu można je w razie potrzeby powtarzać.</p>',
+      '<p><strong>USG stopy</strong> to ultrasonograficzne badanie narządu ruchu, które obrazuje tkanki miękkie przodostopia, śródstopia oraz okolicy pięty - rozcięgno podeszwowe, ścięgna, drobne stawy, kaletki maziowe i nerwy. Ultrasonografia stopy jest nieinwazyjna, bezbolesna i nie wykorzystuje promieniowania jonizującego, dzięki czemu w razie potrzeby można ją bezpiecznie powtarzać.</p>' +
+      '<p>Badanie wykonuje się <strong>głowicą liniową o wysokiej częstotliwości</strong>, która bardzo dokładnie obrazuje struktury położone powierzchownie. Cechą wyróżniającą ultrasonografię jest <strong>ocena dynamiczna</strong>, czyli obserwacja ścięgien i innych struktur w ruchu oraz pod uciskiem, w czasie rzeczywistym - takiej możliwości nie daje statyczny rezonans magnetyczny ani zdjęcie rentgenowskie.</p>' +
+      '<p>USG stopy jest częścią szerszej diagnostyki narządu ruchu. Pełen zakres oceny stawów i tkanek okołostawowych opisujemy przy <a href="/usg/stawy/">USG stawów (narządu ruchu)</a>; ultrasonografię stopy wykonujemy w pracowni USG we Wrocławiu.</p>',
   },
   {
     title: 'Co wykrywa USG stopy?',
     content:
-      '<p>USG stopy pozwala uwidocznić zmiany w obrębie tkanek miękkich, które często odpowiadają za ból stopy. Badanie pomaga ocenić struktury najczęściej będące źródłem dolegliwości w okolicy pięty oraz przodostopia.</p><ul><li>zapalenie rozcięgna podeszwowego, czyli częstą przyczynę bólu pięty;</li><li>nerwiaka Mortona oraz inne zmiany w przestrzeniach międzypalcowych przodostopia;</li><li>uszkodzenia i stany zapalne ścięgien, w tym ścięgna Achillesa w okolicy jego przyczepu;</li><li>torbiele, ganglion oraz zmiany w obrębie kaletek maziowych;</li><li>obecność ciał obcych w tkankach miękkich oraz zmiany pourazowe.</li></ul><p>Warto podkreślić, że tak zwana ostroga piętowa, czyli element kostny, potwierdzana jest zdjęciem RTG, a nie w badaniu USG, które ocenia towarzyszące jej zmiany w tkankach miękkich. USG stopy nie zastępuje pełnej diagnostyki obrazowej, a ostateczne rozpoznanie ustala lekarz w odniesieniu do obrazu klinicznego.</p>',
+      '<p>USG stopy pozwala ocenić struktury tkanek miękkich, które najczęściej odpowiadają za dolegliwości bólowe w okolicy pięty i przodostopia. Zgodnie z zaleceniami europejskich towarzystw radiologii narządu ruchu (EFSUMB, ESSR) ultrasonografia dobrze obrazuje ścięgna, więzadła, rozcięgna, kaletki maziowe, nerwy obwodowe oraz tkanki miękkie.</p>' +
+      '<p>W badaniu stopy ocenia się między innymi:</p>' +
+      '<ul>' +
+      '<li><strong>zapalenie rozcięgna podeszwowego</strong> (fasciitis plantaris) - częstą przyczynę bólu pięty;</li>' +
+      '<li><strong>nerwiaka Mortona</strong> oraz inne zmiany przestrzeni międzyplusnowych przodostopia;</li>' +
+      '<li>tendinopatie, stany zapalne i uszkodzenia ścięgien, w tym ścięgna Achillesa w okolicy przyczepu;</li>' +
+      '<li>torbiele galaretowate (ganglion), wysięki oraz zapalenie kaletek maziowych (bursitis);</li>' +
+      '<li>ciała obce w tkankach miękkich oraz zmiany pourazowe.</li>' +
+      '</ul>' +
+      '<p>Ultrasonografia ocenia przede wszystkim tkanki miękkie i nie obrazuje wnętrza kości. Dlatego struktury kostne, takie jak ostroga piętowa czy złamania, ocenia się na zdjęciu rentgenowskim, a ostateczne rozpoznanie zawsze ustala lekarz na podstawie obrazu klinicznego.</p>',
   },
   {
-    title: 'Wskazania do USG stopy',
+    title: 'USG stopy w bólu pięty: zapalenie rozcięgna podeszwowego i ostroga piętowa',
+    tocLabel: 'Ból pięty i rozcięgno',
     content:
-      '<p>Najczęstszym wskazaniem do USG stopy jest przewlekły lub nawracający ból stopy, zwłaszcza pięty oraz przodostopia. Badanie ultrasonograficzne stopy zaleca się także przy objawach sugerujących stan zapalny lub uszkodzenie tkanek miękkich.</p><ul><li>ból pięty, który może wskazywać na zapalenie rozcięgna podeszwowego;</li><li>ból i drętwienie przodostopia mogące towarzyszyć nerwiakowi Mortona;</li><li>obrzęk, wyczuwalny guzek lub zgrubienie w obrębie stopy;</li><li>podejrzenie uszkodzenia lub stanu zapalnego ścięgien;</li><li>kontrola przebiegu leczenia oraz ocena efektów rehabilitacji.</li></ul><p>Ocena stopy w USG bywa elementem szerszej diagnostyki ortopedycznej oraz reumatologicznej. O zakresie badania i dalszym postępowaniu decyduje lekarz prowadzący.</p>',
+      '<p>W diagnostyce przewlekłego bólu pięty USG ocenia przede wszystkim <strong>rozcięgno podeszwowe</strong>. Za cechę <strong>zapalenia rozcięgna podeszwowego</strong> uznaje się jego pogrubienie w miejscu przyczepu do guza piętowego powyżej około 4 mm, podczas gdy prawidłowe rozcięgno ma zwykle 2-4 mm grubości.</p>' +
+      '<p>Poza grubością lekarz ocenia także obniżoną echogeniczność (hipoechogeniczność), zatarcie prawidłowego, włóknistego utkania oraz wzmożone unaczynienie w opcji Dopplera. W badaniu Aggarwal i wsp. (2020) ultrasonografia przy progu powyżej 4 mm rozpoznawała zapalenie rozcięgna z czułością 96%, była to jednak pojedyncza, niewielka praca, a inne badania podają wartości niższe.</p>' +
+      '<p>Sam pomiar grubości ma ograniczenia. Próg 4 mm bywa krytykowany za brak standaryzacji - na wynik wpływa pozycja stopy i napięcie rozcięgna, a pogrubienie powyżej 4 mm opisywano także u osób bez dolegliwości. Z tego powodu wynik USG interpretuje się łącznie z obrazem klinicznym, a nie wyłącznie na podstawie samej liczby milimetrów.</p>' +
+      '<h3>Ostroga piętowa a zapalenie rozcięgna podeszwowego</h3>' +
+      '<p>Ostroga piętowa to wyrośl kostna i jako struktura kostna uwidacznia się na zdjęciu rentgenowskim, a nie w USG. Ultrasonografia ocenia natomiast towarzyszące jej zmiany w tkankach miękkich, przede wszystkim stan rozcięgna podeszwowego. Obecność ostrogi nie jest równoznaczna z bólem, a wielu pacjentów z bólem pięty nie ma ostrogi.</p>',
   },
   {
-    title: 'USG stopy a rezonans magnetyczny i RTG',
+    title: 'USG w diagnostyce nerwiaka Mortona',
+    tocLabel: 'Nerwiak Mortona',
     content:
-      '<p>USG stopy, rezonans magnetyczny oraz RTG to metody uzupełniające się, a nie zamienne. Ultrasonografia bardzo dobrze ocenia tkanki miękkie stopy, ścięgna i rozcięgno podeszwowe oraz umożliwia ocenę dynamiczną w ruchu, jednak nie zastępuje rezonansu magnetycznego ani zdjęcia rentgenowskiego.</p><p>Zmiany kostne, w tym ostrogę piętową oraz złamania, ocenia się na podstawie RTG, natomiast struktury położone głębiej oraz chrząstkę stawową dokładniej obrazuje rezonans magnetyczny. O wyborze metody diagnostycznej każdorazowo decyduje lekarz, uwzględniając obraz kliniczny i lokalizację zmian.</p><p>Gdy dolegliwości obejmują okolicę kostki, pomocne bywa <a href="/usg/staw-skokowy/">USG stawu skokowego</a>, a w ocenie powierzchownych guzków i zmian wykorzystuje się <a href="/usg/tkanki-miekkie/">USG tkanek miękkich</a>.</p>',
+      '<p>USG jest jednym z podstawowych badań obrazowych w diagnostyce <strong>nerwiaka Mortona</strong> (nerwiaka międzyplusnowego). Badanie uwidacznia charakterystyczną, hipoechogeniczną zmianę w przestrzeni międzyplusnowej przodostopia, najlepiej widoczną od strony podeszwowej oraz przy ucisku.</p>' +
+      '<p>Atutem ultrasonografii jest tu <strong>ocena dynamiczna</strong>: uciskając głowy kości śródstopia w czasie rzeczywistym, badający może wywołać tak zwany ultrasonograficzny objaw Muldera, co ułatwia odróżnienie nerwiaka od innych zmian. Według metaanalizy (Bignotti i wsp., 2015) czułość USG w nerwiaku Mortona jest zbliżona do czułości rezonansu magnetycznego, choć swoistość rezonansu bywa wyższa.</p>' +
+      '<p>Wynik obrazowania trzeba zawsze odnieść do objawów, ponieważ rozpoznanie nerwiaka Mortona jest przede wszystkim kliniczne. Niewielkie pogrubienia nerwu spotyka się także u osób bez dolegliwości, dlatego o znaczeniu zmiany decyduje lekarz w korelacji z badaniem pacjenta.</p>',
   },
   {
-    title: 'Jak przygotować się i jak przebiega USG stopy?',
+    title: 'USG ścięgien i tkanek miękkich stopy: Achilles, ganglion, kaletki, ciała obce',
+    tocLabel: 'Ścięgna i tkanki miękkie',
     content:
-      '<p>USG stopy nie wymaga specjalnego przygotowania. Zaleca się jedynie wygodne obuwie oraz strój, które umożliwią łatwe odsłonięcie stopy i okolicy kostki.</p><p>Podczas badania na skórę nakłada się żel ułatwiający przewodzenie fal ultradźwiękowych, a następnie lekarz przesuwa głowicę liniową nad poszczególnymi okolicami stopy. Ocena obejmuje zwykle część statyczną oraz dynamiczną, czyli obserwację struktur podczas ruchu. Badanie jest bezbolesne, nie wykorzystuje promieniowania jonizującego, a jego opis sporządza lekarz wykonujący ultrasonografię.</p><p>Należy pamiętać, że USG stopy ocenia przede wszystkim tkanki miękkie i nie zastępuje konsultacji ortopedycznej ani pełnej diagnostyki obrazowej. Ultrasonografię stopy wykonujemy w <a href="/usg/">pracowni USG we Wrocławiu</a> przy ulicy Opatowickiej 132, a termin można ustalić telefonicznie pod numerem +48 690 511 511.</p>',
+      '<p>USG jest podstawową metodą obrazowania <strong>ścięgna Achillesa</strong> i pozostałych tkanek miękkich stopy. W tendinopatii ścięgno bywa pogrubiałe, z obszarami obniżonej echogeniczności i zaburzoną strukturą włókienkową; w postaci przyczepowej (entezopatii) zmiany dotyczą dystalnego odcinka ścięgna, a w przypadkach przewlekłych w badaniu Dopplerem widoczna jest neowaskularyzacja, czyli patologiczne unaczynienie.</p>' +
+      '<p>Ultrasonografia dobrze uwidacznia również:</p>' +
+      '<ul>' +
+      '<li><strong>ganglion</strong> (torbiel galaretowatą) - dobrze odgraniczoną, bezechową zmianę;</li>' +
+      '<li>zapalenie kaletek maziowych (bursitis), w tym kaletki zapiętowej;</li>' +
+      '<li><strong>ciała obce</strong> w tkankach miękkich, w tym drzazgi, ciernie czy fragmenty szkła, które bywają niewidoczne na zdjęciu rentgenowskim.</li>' +
+      '</ul>' +
+      '<p>Warto pamiętać o granicach metody: przy podejrzeniu częściowego lub całkowitego zerwania ścięgna albo zmian w głębszych strukturach pomocny bywa rezonans magnetyczny. W ocenie okolicy kostki uzupełnieniem jest <a href="/usg/staw-skokowy/">USG stawu skokowego</a>, a powierzchownych guzków i zmian podskórnych - <a href="/usg/tkanki-miekkie/">USG tkanek miękkich</a>.</p>',
+  },
+  {
+    title: 'USG stopy a RTG i rezonans magnetyczny',
+    tocLabel: 'USG a RTG i rezonans',
+    content:
+      '<p>USG, RTG oraz rezonans magnetyczny to metody uzupełniające się, a nie zamienne. Ultrasonografia najlepiej ocenia tkanki miękkie, zdjęcie rentgenowskie obrazuje kość, a rezonans magnetyczny struktury głębokie, chrząstkę i szpik.</p>' +
+      '<table>' +
+      '<tr><th>Cecha</th><th>USG</th><th>RTG</th><th>Rezonans (MRI)</th></tr>' +
+      '<tr><td>Co ocenia najlepiej</td><td>tkanki miękkie, ścięgna, rozcięgno</td><td>kość</td><td>struktury głębokie, chrząstka, szpik</td></tr>' +
+      '<tr><td>Promieniowanie jonizujące</td><td>nie</td><td>tak</td><td>nie</td></tr>' +
+      '<tr><td>Ocena dynamiczna (w ruchu)</td><td>tak</td><td>nie</td><td>nie</td></tr>' +
+      '<tr><td>Ostroga i złamania kości</td><td>ograniczona</td><td>tak</td><td>tak</td></tr>' +
+      '<tr><td>Chrząstka, szpik, głębokie struktury</td><td>ograniczona</td><td>nie</td><td>tak</td></tr>' +
+      '</table>' +
+      '<p>W praktyce USG jest często badaniem pierwszego rzutu przy bólu pięty, dolegliwościach ścięgna Achillesa czy podejrzeniu nerwiaka Mortona, ponieważ szybko i bez promieniowania ocenia tkanki miękkie. Nie zastępuje jednak pozostałych metod: wczesne złamanie przeciążeniowe bywa początkowo niewidoczne na RTG, a chrząstkę, szpik kostny i głębiej położone struktury najdokładniej obrazuje rezonans magnetyczny. O wyborze badania decyduje lekarz na podstawie obrazu klinicznego.</p>',
+  },
+  {
+    title: 'Jak przebiega USG stopy we Wrocławiu i jak się przygotować?',
+    tocLabel: 'Przebieg i przygotowanie',
+    content:
+      '<p>USG stopy nie wymaga specjalnego przygotowania, a samo badanie trwa zwykle kilkanaście minut. Wystarczy zadbać o wygodny strój oraz obuwie, które pozwolą swobodnie odsłonić stopę i okolicę kostki.</p>' +
+      '<p>W trakcie badania na skórę nakłada się żel ułatwiający przewodzenie fal ultradźwiękowych, a lekarz przesuwa głowicę liniową nad kolejnymi okolicami stopy. Ocena obejmuje zwykle część statyczną oraz dynamiczną, czyli obserwację struktur podczas ruchu. Badanie jest bezbolesne, a jego opis sporządza lekarz wykonujący ultrasonografię.</p>' +
+      '<p>Ultrasonografię stopy wykonujemy w <a href="/usg/">pracowni USG we Wrocławiu</a> przy ulicy Opatowickiej 132. Aktualne ceny badań znajdziesz w zakładce <a href="/cennik/">cennik</a>, a dogodny termin ustalisz telefonicznie lub przez <a href="/rejestracja/">rejestrację online</a>.</p>',
+  },
+  {
+    title: 'Ograniczenia, bezpieczeństwo i przeciwwskazania USG stopy',
+    tocLabel: 'Bezpieczeństwo i ograniczenia',
+    content:
+      '<p>USG stopy jest badaniem bezpiecznym i nie ma typowych przeciwwskazań. Nie wykorzystuje promieniowania jonizującego, więc można je powtarzać, a w razie potrzeby wykonać także u kobiet w ciąży.</p>' +
+      '<p>Najważniejszym ograniczeniem ultrasonografii jest jej <strong>zależność od osoby badającej</strong> - jakość obrazu i jego interpretacja zależą od doświadczenia lekarza oraz klasy sprzętu. USG nie ocenia wnętrza kości i struktur głębokich, dlatego nie zastępuje zdjęcia rentgenowskiego ani rezonansu magnetycznego, a o doborze badań i dalszym postępowaniu decyduje lekarz.</p>' +
+      '<p>Powyższe informacje mają charakter edukacyjny i nie zastępują konsultacji lekarskiej. O wskazaniach do USG stopy, interpretacji wyniku oraz dalszej diagnostyce decyduje lekarz podczas indywidualnej wizyty.</p>',
+  },
+  {
+    title: 'Źródła',
+    content:
+      '<ol>' +
+      '<li>EFSUMB Guidelines and Recommendations on Musculoskeletal Ultrasound. Part I: Extraarticular pathologies. Ultraschall in der Medizin 2022 (PMID 34479372).</li>' +
+      '<li>Möller I. i wsp. The 2017 EULAR standardised procedures for ultrasound imaging in rheumatology. Annals of the Rheumatic Diseases 2017; 76(12): 1974-1979 (PMID 28814430).</li>' +
+      '<li>European Society of Musculoskeletal Radiology (ESSR). Musculoskeletal Ultrasound Technical Guidelines - Ankle.</li>' +
+      '<li>McMillan A.M. i wsp. Diagnostic imaging for chronic plantar heel pain: a systematic review and meta-analysis. Journal of Foot and Ankle Research 2009; 2: 32 (PMID 19912628).</li>' +
+      '<li>Aggarwal P. i wsp. Evaluation of plantar fascia using high-resolution ultrasonography in clinically diagnosed cases of plantar fasciitis. Polish Journal of Radiology 2020; 85: e375-e380 (PMID 32817771).</li>' +
+      '<li>Radwan A. i wsp. Ultrasonography, an effective tool in diagnosing plantar fasciitis: a systematic review of diagnostic trials. International Journal of Sports Physical Therapy 2016; 11(5): 663-671 (PMID 27757279).</li>' +
+      '<li>Bignotti B. i wsp. Ultrasound versus magnetic resonance imaging for Morton neuroma: systematic review and meta-analysis. European Radiology 2015; 25(8): 2254-2262 (PMID 25809742).</li>' +
+      '<li>Xu Z. i wsp. The accuracy of ultrasonography and magnetic resonance imaging for the diagnosis of Morton neuroma: a systematic review. Clinical Radiology 2015; 70(4): 351-358 (PMID 25466436).</li>' +
+      '<li>Padua L. i wsp. Relationship between sensory symptoms, Mulder sign, and dynamic ultrasonographic findings in Morton neuroma. Foot and Ankle International 2020; 41(12): 1474-1479 (PMID 32856473).</li>' +
+      '<li>Page P. i wsp. Diagnostic musculoskeletal ultrasound of the Achilles tendon. International Journal of Sports Physical Therapy 2025; 20(2): 296-304 (PMID 39906049).</li>' +
+      '<li>Tantray M.D. i wsp. Role of ultrasound in detection of radiolucent foreign bodies in extremities. Strategies in Trauma and Limb Reconstruction 2018; 13(2): 81-85 (PMID 29426979).</li>' +
+      '<li>Draghi F. i wsp. Imaging of plantar fascia disorders: findings on plain radiography, ultrasound and magnetic resonance imaging. Insights into Imaging 2017; 8(1): 69-78 (DOI 10.1007/s13244-016-0533-2; PMC5265197).</li>' +
+      '</ol>',
   },
 ];
 
@@ -48,32 +125,32 @@ const FAQ = [
   {
     question: 'Co wykrywa USG stopy?',
     answer:
-      'USG stopy wykrywa zmiany w obrębie tkanek miękkich. Pozwala ocenić zapalenie rozcięgna podeszwowego będące częstą przyczyną bólu pięty, nerwiaka Mortona i inne zmiany w przestrzeniach międzypalcowych, uszkodzenia oraz stany zapalne ścięgien, a także torbiele, ganglion, ciała obce i zmiany pourazowe. Element kostny, czyli ostroga piętowa, potwierdzany jest zdjęciem RTG, a wynik USG interpretuje lekarz.',
+      'USG stopy wykrywa zmiany w tkankach miękkich będące częstą przyczyną bólu stopy. Pozwala ocenić zapalenie rozcięgna podeszwowego, nerwiaka Mortona, tendinopatie i uszkodzenia ścięgien, w tym ścięgna Achillesa, a także torbiele galaretowate, zapalenie kaletek i ciała obce. Struktury kostne, jak ostroga piętowa, ocenia się na RTG, a wynik interpretuje lekarz.',
   },
   {
-    question: 'Czy USG stopy pomoże przy bólu pięty?',
+    question: 'Czy USG stopy wykryje zapalenie rozcięgna podeszwowego i ostrogę piętową?',
     answer:
-      'USG stopy jest pomocne przy bólu pięty, ponieważ pozwala ocenić rozcięgno podeszwowe i wykryć cechy jego zapalenia, które jest częstą przyczyną takich dolegliwości. Badanie ocenia również ścięgna oraz inne tkanki miękkie okolicy pięty. Tak zwaną ostrogę piętową, czyli zmianę kostną, potwierdza się zdjęciem RTG, a dalsze postępowanie ustala lekarz.',
+      'USG stopy jest pomocne w rozpoznaniu zapalenia rozcięgna podeszwowego, częstej przyczyny bólu pięty - ocenia grubość, strukturę oraz unaczynienie rozcięgna. Ostroga piętowa to zmiana kostna i uwidacznia się na zdjęciu rentgenowskim, a nie w USG, które obrazuje towarzyszące jej zmiany w tkankach miękkich.',
   },
   {
     question: 'Czy USG stopy wykryje nerwiaka Mortona?',
     answer:
-      'USG stopy jest jednym z badań stosowanych w diagnostyce nerwiaka Mortona, ponieważ pozwala ocenić przestrzenie międzypalcowe przodostopia i uwidocznić charakterystyczne zgrubienie. Badanie umożliwia także ocenę dynamiczną. Ostateczne rozpoznanie lekarz ustala w odniesieniu do objawów, a w razie potrzeby zaleca dodatkową diagnostykę obrazową.',
+      'USG stopy należy do podstawowych badań w diagnostyce nerwiaka Mortona. Uwidacznia hipoechogeniczną zmianę w przestrzeni międzyplusnowej, a ocena dynamiczna pod uciskiem (objaw Muldera) zwiększa jej pewność. Czułość USG jest zbliżona do rezonansu magnetycznego, jednak rozpoznanie jest przede wszystkim kliniczne i wymaga odniesienia do objawów.',
   },
   {
-    question: 'Jak przygotować się do USG stopy?',
+    question: 'Czy USG stopy zastępuje RTG lub rezonans magnetyczny?',
     answer:
-      'Do USG stopy nie trzeba się specjalnie przygotowywać. Wystarczy zadbać o wygodne obuwie i strój, które umożliwią łatwe odsłonięcie stopy oraz okolicy kostki. Badanie jest bezbolesne, nie wykorzystuje promieniowania i polega na przesuwaniu głowicy po skórze pokrytej żelem, zarówno w spoczynku, jak i podczas ruchu.',
+      'USG stopy nie zastępuje RTG ani rezonansu magnetycznego - te metody się uzupełniają. Ultrasonografia najlepiej ocenia tkanki miękkie i umożliwia badanie w ruchu, RTG obrazuje kość (ostroga, złamania), a rezonans magnetyczny chrząstkę, szpik i struktury głębokie. O wyborze badania decyduje lekarz na podstawie objawów.',
   },
   {
-    question: 'Ile kosztuje USG stopy we Wrocławiu?',
+    question: 'Czy na USG stopy potrzebne jest skierowanie i jak się przygotować?',
     answer:
-      'Cena USG stopy we Wrocławiu zależy od zakresu badania. Aktualny cennik jest dostępny w zakładce Cennik na stronie Bas Clinic oraz pod numerem telefonu 690 511 511, gdzie można też ustalić dogodny termin badania.',
+      'Na USG stopy wykonywane prywatnie skierowanie nie jest wymagane - badanie można umówić bezpośrednio. Nie wymaga ono specjalnego przygotowania; wystarczy strój i obuwie pozwalające odsłonić stopę oraz kostkę. Warto zabrać dotychczasową dokumentację i wyniki wcześniejszych badań, jeśli były wykonywane.',
   },
   {
-    question: 'Czy na USG stopy potrzebne jest skierowanie?',
+    question: 'Gdzie we Wrocławiu wykonać USG stopy?',
     answer:
-      'Na USG stopy wykonywane prywatnie skierowanie nie jest wymagane. Badanie można umówić bezpośrednio, kontaktując się z Bas Clinic. Warto zabrać ze sobą dotychczasową dokumentację medyczną oraz wyniki wcześniejszych badań, jeśli takie były wykonywane.',
+      `Badanie USG stopy we Wrocławiu wykonasz w ${CLINIC.name} przy ${CLINIC.address.street} (${CLINIC.address.city}). Pracownia USG jest czynna w dni powszednie w godzinach ${CLINIC.hours.weekdays}; termin badania umówisz telefonicznie pod numerem ${CLINIC.phone}. Aktualny cennik USG stopy znajdziesz w zakładce Cennik na stronie Bas Clinic.`,
   },
 ];
 

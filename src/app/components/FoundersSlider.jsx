@@ -231,6 +231,10 @@ function FounderVisual({ founder }) {
         <span aria-hidden className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,var(--color-primary-800)_0%,transparent_60%)]" />
         <span aria-hidden className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] [background-size:22px_22px]" />
         {founder.image ? (
+          // Wycinanka (przezroczyste tło) wtapiana w grafitowy dysk maską gradientową
+          // i dopasowana `object-contain` + `max-h` — nie sztywny box. next/image nic
+          // tu nie optymalizuje (przezroczysty webp), a kolidowałby z maską/skalą —
+          // świadomie zostaje <img>. Ta sama zasada co avatar w AuthorBio i hero.
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={founder.image}

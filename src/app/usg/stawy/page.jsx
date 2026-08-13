@@ -3,7 +3,7 @@ import ServicePageTemplate from '../../components/ServicePageTemplate';
 import { getServiceBySlug } from '@/config/services';
 
 export const metadata = generatePageMetadata({
-  title: 'USG stawów Wrocław - narząd ruchu | Bas Clinic',
+  title: 'USG stawów Wrocław - narząd ruchu',
   description:
     'USG stawów (narządu ruchu) we Wrocławiu - bezbolesne badanie kolana, barku, nadgarstka i innych stawów. Ocena ścięgien, więzadeł i tkanek miękkich. Umów termin.',
   path: '/usg/stawy/',

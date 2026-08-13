@@ -458,18 +458,6 @@ export const WHY_US = {
       'Wizyta kontrolna po zabiegu',
     ],
   },
-  'medycyna-estetyczna/blefaroplastyka': {
-    title: 'Dlaczego blefaroplastyka w Bas Clinic?',
-    intro: 'Zabieg na powiekach poprzedzamy konsultacją i oceną okolicy oczu, omawiając zakres korekty oraz przebieg gojenia, zanim podejmiemy decyzję o zabiegu.',
-    benefits: [
-      'Konsultacja i ocena powiek',
-      'Powieki górne i dolne',
-      'Omówienie zakresu korekty',
-      'Komfortowe znieczulenie miejscowe',
-      'Sterylne warunki zabiegu',
-      'Jasne zalecenia pozabiegowe',
-    ],
-  },
   'medycyna-estetyczna/modelowanie-ust': {
     title: 'Dlaczego modelowanie ust w Bas Clinic?',
     intro: 'Usta modelujemy do proporcji Twojej twarzy, dbając o naturalny kształt, symetrię i komfort podczas zabiegu.',

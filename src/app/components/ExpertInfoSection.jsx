@@ -216,7 +216,7 @@ function TableOfContents({ items, light }) {
                   className={`text-xs font-semibold tabular-nums ${
                     light
                       ? 'text-secondary-400'
-                      : 'text-primary-400 group-hover:text-primary-600'
+                      : 'text-primary-600 group-hover:text-primary-700'
                   }`}
                 >
                   {String(i + 1).padStart(2, '0')}

@@ -214,17 +214,6 @@ export const KNOWLEDGE_HOME = {
 // nowych obietnic skuteczności, liczb i twierdzeń diagnostycznych
 // (UOKiK/Omnibus + reklama usług medycznych).
 const KNOWLEDGE_BY_SLUG = {
-  "medycyna-estetyczna/blefaroplastyka": {
-    title: "Co warto wiedzieć o blefaroplastyce powiek",
-    description:
-      "Blefaroplastyka to zabieg w obrębie powiek, który koryguje nadmiar skóry powiek górnych lub dolnych i poprawia wygląd okolicy oczu. Może obejmować powieki górne, dolne lub obie okolice naraz.",
-    points: [
-      { title: "Blefaroplastyka górna i dolna", text: "Blefaroplastyka górna koryguje nadmiar skóry powiek górnych, a dolna obejmuje powieki dolne i uwypuklenia tkanek." },
-      { title: "Konsultacja kwalifikacyjna", text: "Zabieg poprzedza konsultacja, na której lekarz ocenia okolicę oczu, ustala zakres korekty i ewentualne przeciwwskazania." },
-      { title: "Znieczulenie i przebieg zabiegu", text: "Blefaroplastykę wykonuje się zwykle w znieczuleniu miejscowym, dbając o komfort Pacjenta w trakcie zabiegu." },
-      { title: "Rekonwalescencja po blefaroplastyce", text: "Po zabiegu w okolicy powiek mogą wystąpić obrzęk i zasinienie, które stopniowo ustępują w ciągu kilkunastu dni." },
-    ],
-  },
   "stomatologia/bonding": {
     title: "Co warto wiedzieć o bondingu zębów",
     description:

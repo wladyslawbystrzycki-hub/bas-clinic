@@ -16,6 +16,19 @@ import { CLINIC } from '@/config/clinic';
 import { TESTIMONIALS } from '@/config/testimonials';
 import { CLINIC_GALLERY } from '@/config/gallery';
 import { KNOWLEDGE_HOME } from '@/config/knowledge';
+import { generatePageMetadata } from '@/lib/metadata';
+
+// Home: canonical + og:url + komplet OG, których jako jedyna nie miała (T-05/T-27). Tytuł
+// OGÓLNY (parasol „prywatna klinika medyczna" — oddaje wszystkie 5 filarów bez wymieniania
+// usług; lista zabiegów zniekształcałaby zakres i grozi kanibalizacją z podstronami). Podany
+// jako `absolute`, bo szablon „%s | Bas Clinic" dotyczy tylko podstron. title/description
+// jawne, bo Next ZASTĘPUJE openGraph i bez nich nie wyrenderuje og:title/desc.
+export const metadata = generatePageMetadata({
+  title: { absolute: 'Bas Clinic | Prywatna klinika medyczna we Wrocławiu' },
+  description:
+    'Prywatna klinika medyczna Bas Clinic we Wrocławiu: stomatologia, medycyna estetyczna, USG, wlewy witaminowe i leczenie uzależnień. Lekarze Bogdan i Ivanna Bas.',
+  path: '/',
+});
 
 const FEATURED_SERVICES = [
   {

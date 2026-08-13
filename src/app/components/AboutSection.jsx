@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Fundamenty każdej terapii — realne (z treści klienta), zamiast zmyślonej
 // „odznaki 215 lekarzy / 12k opinii" z referencji (zakaz: UOKiK/Omnibus +
@@ -32,14 +33,13 @@ export default function AboutSection() {
             />
 
             {/* zdjęcie główne */}
-            <figure className="relative w-full overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5 sm:ml-auto sm:w-[86%]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5 sm:ml-auto sm:w-[86%]">
+              <Image
                 src={IMG_MAIN}
                 alt="Naturalne piękno i harmonia — Pacjentka Bas Clinic"
-                className="aspect-[4/5] w-full object-cover"
-                loading="lazy"
-                decoding="async"
+                fill
+                sizes="(min-width: 1024px) 38vw, (min-width: 640px) 86vw, 100vw"
+                className="object-cover"
               />
               <div
                 aria-hidden
@@ -48,14 +48,13 @@ export default function AboutSection() {
             </figure>
 
             {/* zdjęcie poboczne — nakładka (kolaż), tylko od sm */}
-            <div className="absolute bottom-7 left-0 hidden w-2/5 overflow-hidden rounded-2xl shadow-xl ring-4 ring-white sm:block">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="absolute bottom-7 left-0 hidden aspect-square w-2/5 overflow-hidden rounded-2xl shadow-xl ring-4 ring-white sm:block">
+              <Image
                 src={IMG_SIDE}
                 alt=""
-                className="aspect-square w-full object-cover"
-                loading="lazy"
-                decoding="async"
+                fill
+                sizes="(min-width: 1024px) 15vw, 34vw"
+                className="object-cover"
               />
             </div>
           </div>

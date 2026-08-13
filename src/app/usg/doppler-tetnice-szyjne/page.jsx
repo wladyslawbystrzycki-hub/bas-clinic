@@ -3,7 +3,7 @@ import { getServiceBySlug } from '@/config/services';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 
 export const metadata = generatePageMetadata({
-  title: 'USG Doppler tętnic szyjnych Wrocław | Bas Clinic',
+  title: 'USG Doppler tętnic szyjnych Wrocław',
   description:
     'USG Doppler tętnic szyjnych we Wrocławiu - ocena blaszki miażdżycowej i ryzyka udaru. Badanie tętnic dogłowowych w Bas Clinic, ul. Opatowicka 132.',
   path: '/usg/doppler-tetnice-szyjne/',

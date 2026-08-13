@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { CLINIC } from '@/config/clinic';
 import ReviewsBadge from './ReviewsBadge';
 
@@ -89,14 +90,13 @@ export default function CTASection({
             />
 
             {/* zdjęcie główne */}
-            <div className="relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="relative aspect-square overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
+              <Image
                 src={image}
                 alt={imageAlt}
-                className="aspect-square w-full object-cover"
-                loading="lazy"
-                decoding="async"
+                fill
+                sizes="(min-width: 1024px) 45vw, (min-width: 640px) 90vw, 100vw"
+                className="object-cover"
               />
               <div
                 aria-hidden
@@ -108,14 +108,13 @@ export default function CTASection({
                 wyłączyć (image2={null}), gdy główne zdjęcie to pełny rezultat,
                 którego róg nie może być zasłonięty (np. kolaż przed/po). */}
             {image2 && (
-              <div className="absolute -bottom-8 -right-3 hidden w-2/5 overflow-hidden rounded-2xl shadow-xl ring-4 ring-white sm:block lg:-right-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <div className="absolute -bottom-8 -right-3 hidden aspect-square w-2/5 overflow-hidden rounded-2xl shadow-xl ring-4 ring-white sm:block lg:-right-6">
+                <Image
                   src={image2}
                   alt={image2Alt}
-                  className="aspect-square w-full object-cover"
-                  loading="lazy"
-                  decoding="async"
+                  fill
+                  sizes="(min-width: 1024px) 18vw, 36vw"
+                  className="object-cover"
                 />
               </div>
             )}

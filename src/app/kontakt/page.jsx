@@ -6,7 +6,7 @@ import PageHeader from '../components/PageHeader';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema';
 
 export const metadata = generatePageMetadata({
-  title: 'Kontakt',
+  title: 'Kontakt i rejestracja we Wrocławiu',
   description:
     'Skontaktuj się z Bas Clinic we Wrocławiu. Adres, telefon, email, godziny otwarcia. Umów wizytę stomatologiczną lub na zabieg medycyny estetycznej.',
   path: '/kontakt/',

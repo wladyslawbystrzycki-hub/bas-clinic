@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 /**
  * ClinicGallery — pozioma karuzela prezentująca wnętrza kliniki i sprzęt.
@@ -108,13 +109,12 @@ export default function ClinicGallery({
               className="shrink-0 basis-[80%] snap-start sm:basis-[46%] lg:basis-[20rem] xl:basis-[22rem]"
             >
               <figure className="group relative aspect-[4/5] overflow-hidden rounded-2xl shadow-sm ring-1 ring-black/5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={img.src}
                   alt={img.alt || img.caption || ''}
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  fill
+                  sizes="(min-width: 1280px) 22rem, (min-width: 1024px) 20rem, (min-width: 640px) 46vw, 80vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div
                   aria-hidden

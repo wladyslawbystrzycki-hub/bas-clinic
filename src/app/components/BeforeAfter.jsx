@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 /**
  * BeforeAfter — pojedyncza metamorfoza: para zdjęć „Przed / Po" + opis zabiegu.
@@ -77,13 +78,12 @@ function Frame({ image, label, alt, tone }) {
   return (
     <div className="relative aspect-[4/5] bg-cream">
       {image ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <Image
           src={image}
           alt={alt}
-          className="h-full w-full object-cover"
-          loading="lazy"
-          decoding="async"
+          fill
+          sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw"
+          className="object-cover"
         />
       ) : (
         <Placeholder />

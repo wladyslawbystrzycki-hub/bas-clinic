@@ -7,7 +7,7 @@ import BreadcrumbSchema from '../components/schema/BreadcrumbSchema';
 import { CLINIC } from '@/config/clinic';
 
 export const metadata = generatePageMetadata({
-  title: 'O nas',
+  title: 'O nas - lekarze Bogdan i Ivanna Bas, Wrocław',
   description:
     'Poznaj Bas Clinic - stomatologię i medycynę estetyczną we Wrocławiu. Dowiedz się więcej o naszych założycielach: Bogdanie i Ivannie Bas.',
   path: '/o-nas/',
@@ -45,21 +45,21 @@ export default function ONasPage() {
             <div className="mt-6 grid grid-cols-3 gap-4">
               <div className="rounded-xl bg-primary-50 p-4 text-center">
                 <p className="font-display text-2xl font-bold text-primary-700">{bogdan.experience}</p>
-                <p className="mt-1 text-xs text-gray-500">lat doświadczenia</p>
+                <p className="mt-1 text-xs text-gray-600">lat doświadczenia</p>
               </div>
               <div className="rounded-xl bg-primary-50 p-4 text-center">
                 <p className="font-display text-2xl font-bold text-primary-700">{bogdan.patients}</p>
-                <p className="mt-1 text-xs text-gray-500">Pacjentów</p>
+                <p className="mt-1 text-xs text-gray-600">Pacjentów</p>
               </div>
               <div className="rounded-xl bg-primary-50 p-4 text-center">
                 <p className="font-display text-2xl font-bold text-primary-700">od {bogdan.since}</p>
-                <p className="mt-1 text-xs text-gray-500">Bas Clinic</p>
+                <p className="mt-1 text-xs text-gray-600">Bas Clinic</p>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary-500">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-600">
               Założyciel Bas Clinic
             </p>
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -81,7 +81,7 @@ export default function ONasPage() {
             {/* Podpis bez tytułu „lek. med." — pełna, tytułowana forma jest w nagłówku wyżej */}
             <div className="mt-8">
               <p className="font-display text-xl font-semibold text-gray-900">Bogdan Bas</p>
-              <p className="mt-1 text-sm font-medium text-gray-500">
+              <p className="mt-1 text-sm font-medium text-gray-600">
                 Założyciel {CLINIC.name}
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function ONasPage() {
       <Section bg="light" id="ivanna-bas">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-5">
           <div className="order-2 lg:order-1 lg:col-span-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary-500">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-600">
               Współzałożycielka Bas Clinic
             </p>
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -108,7 +108,7 @@ export default function ONasPage() {
             {/* Podpis bez tytułu „lek. dent." — pełna, tytułowana forma jest w nagłówku wyżej */}
             <div className="mt-10">
               <p className="font-display text-xl font-semibold text-gray-900">Ivanna Bas</p>
-              <p className="mt-1 text-sm font-medium text-gray-500">
+              <p className="mt-1 text-sm font-medium text-gray-600">
                 Współzałożycielka {CLINIC.name}
               </p>
             </div>
