@@ -19,9 +19,15 @@ const FAQ = [
 ];
 
 const EXPERT_INFO = [
-  { title: 'Czym jest mezoterapia skóry głowy?', content: '<p>Mezoterapia skóry głowy to zabieg polegający na wstrzykiwaniu specjalistycznych koktajli witaminowych i peptydowych bezpośrednio w skórę głowy, w okolice mieszków włosowych. Substancje aktywne stymulują cebulki włosowe, poprawiają mikrokrążenie, dostarczają składniki odżywcze i hamują procesy prowadzące do wypadania włosów. To jedna z najskuteczniejszych niechirurgicznych metod leczenia wypadania włosów.</p>' },
-  { title: 'Jak przebiega zabieg?', content: '<p>Lekarz wykonuje serię drobnych wstrzyknięć preparatu w skórę głowy przy użyciu cienkiej igły lub pistoletu do mezoterapii. Preparaty są aplikowane równomiernie na całej powierzchni skóry głowy lub w obszarach największego przerzedzenia. Zabieg trwa 20-30 minut. Może powodować lekki dyskomfort, który jest dobrze tolerowany przez pacjentów.</p>' },
-  { title: 'Jakie efekty daje mezoterapia skóry głowy?', content: '<p>Regularna mezoterapia skóry głowy skutkuje zmniejszeniem wypadania włosów, pogrubieniem włosów istniejących, stymulacją wzrostu nowych włosów z uśpionych mieszków oraz poprawę ogólnej kondycji włosów - blasku, elastyczności i gęstości. Efekty są długotrwałe przy regularnych zabiegach podtrzymujących.</p>' },
+  { title: 'Czym jest mezoterapia skóry głowy?', content: (
+                                                   <p>Mezoterapia skóry głowy to zabieg polegający na wstrzykiwaniu specjalistycznych koktajli witaminowych i peptydowych bezpośrednio w skórę głowy, w okolice mieszków włosowych. Substancje aktywne stymulują cebulki włosowe, poprawiają mikrokrążenie, dostarczają składniki odżywcze i hamują procesy prowadzące do wypadania włosów. To jedna z najskuteczniejszych niechirurgicznych metod leczenia wypadania włosów.</p>
+                                                 ) },
+  { title: 'Jak przebiega zabieg?', content: (
+                                      <p>Lekarz wykonuje serię drobnych wstrzyknięć preparatu w skórę głowy przy użyciu cienkiej igły lub pistoletu do mezoterapii. Preparaty są aplikowane równomiernie na całej powierzchni skóry głowy lub w obszarach największego przerzedzenia. Zabieg trwa 20-30 minut. Może powodować lekki dyskomfort, który jest dobrze tolerowany przez pacjentów.</p>
+                                    ) },
+  { title: 'Jakie efekty daje mezoterapia skóry głowy?', content: (
+                                                           <p>Regularna mezoterapia skóry głowy skutkuje zmniejszeniem wypadania włosów, pogrubieniem włosów istniejących, stymulacją wzrostu nowych włosów z uśpionych mieszków oraz poprawę ogólnej kondycji włosów - blasku, elastyczności i gęstości. Efekty są długotrwałe przy regularnych zabiegach podtrzymujących.</p>
+                                                         ) },
 ];
 
 export default function MezoterapiaSkoryglowyPage() {

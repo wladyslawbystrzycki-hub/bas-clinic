@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { generatePageMetadata } from '@/lib/metadata';
 import HeroSection from '../components/HeroSection';
 import Section from '../components/Section';
@@ -28,111 +29,173 @@ const EXPERT_INFO = [
     title: 'Czym zajmuje się stomatolog we Wrocławiu?',
     tocLabel: 'Czym zajmuje się stomatolog?',
     content:
-      '<p><strong>Stomatologia</strong> to dziedzina medycyny zajmująca się profilaktyką, diagnostyką i leczeniem chorób zębów, dziąseł i przyzębia. Dobry <strong>stomatolog</strong> (dentysta) we Wrocławiu prowadzi pacjenta przez całą ścieżkę leczenia - od przeglądu kontrolnego, przez leczenie zachowawcze, po protetykę i implantologię.</p>' +
-      '<p>Skala potrzeb jest duża. Według Światowej Organizacji Zdrowia choroby jamy ustnej dotykają blisko <strong>3,7 mld</strong> osób na świecie, a nieleczona <strong>próchnica</strong> zębów stałych pozostaje najczęstszym schorzeniem człowieka (dane WHO, Global Burden of Disease 2021). Dlatego w naszym gabinecie we Wrocławiu kładziemy nacisk na wczesne wykrywanie i zapobieganie, zamiast skupiać się wyłącznie na leczeniu skutków.</p>',
+      (
+      <>
+        <p><strong>Stomatologia</strong> to dziedzina medycyny zajmująca się profilaktyką, diagnostyką i leczeniem chorób zębów, dziąseł i przyzębia. Dobry <strong>stomatolog</strong> (dentysta) we Wrocławiu prowadzi pacjenta przez całą ścieżkę leczenia - od przeglądu kontrolnego, przez leczenie zachowawcze, po protetykę i implantologię.</p>
+        <p>Skala potrzeb jest duża. Według Światowej Organizacji Zdrowia choroby jamy ustnej dotykają blisko <strong>3,7 mld</strong> osób na świecie, a nieleczona <strong>próchnica</strong> zębów stałych pozostaje najczęstszym schorzeniem człowieka (dane WHO, Global Burden of Disease 2021). Dlatego w naszym gabinecie we Wrocławiu kładziemy nacisk na wczesne wykrywanie i zapobieganie, zamiast skupiać się wyłącznie na leczeniu skutków.</p>
+      </>
+    ),
   },
   {
     title: 'Dziedziny stomatologii: od profilaktyki po implanty zębowe',
     tocLabel: 'Dziedziny stomatologii',
     content:
-      '<p>Stomatologia obejmuje kilka wyspecjalizowanych dziedzin, które najczęściej uzupełniają się w obrębie jednego planu leczenia. W naszym gabinecie pacjent znajduje je w jednym miejscu:</p>' +
-      '<ul>' +
-      '<li><strong>Profilaktyka i higienizacja</strong> - przeglądy, skaling i piaskowanie; podstawa zdrowia jamy ustnej (<a href="/stomatologia/higienizacja/">profesjonalna higienizacja</a>).</li>' +
-      '<li><strong>Stomatologia zachowawcza i endodoncja</strong> - leczenie próchnicy oraz leczenie kanałowe (<a href="/stomatologia/leczenie-zebow/">leczenie zębów i kanałowe</a>).</li>' +
-      '<li><strong>Protetyka</strong> - odbudowa zniszczonych lub utraconych zębów koronami i mostami (<a href="/stomatologia/protetyka-korony/">korony protetyczne</a>).</li>' +
-      '<li><strong>Implantologia</strong> - odtwarzanie pojedynczych braków oraz <a href="/stomatologia/leczenie-bezzebia/">leczenie bezzębia</a> z użyciem <a href="/stomatologia/implanty-zebowe/">implantów zębowych</a>.</li>' +
-      '<li><strong>Ortodoncja</strong> - korekta wad zgryzu aparatami i nakładkami (<a href="/stomatologia/ortodoncja/">leczenie ortodontyczne</a>).</li>' +
-      '<li><strong>Chirurgia stomatologiczna</strong> - usuwanie zębów i zabiegi w obrębie jamy ustnej (<a href="/stomatologia/chirurgia/">chirurgia stomatologiczna</a>).</li>' +
-      '<li><strong>Stomatologia dziecięca</strong> - opieka nad zębami mlecznymi i stałymi u najmłodszych (<a href="/stomatologia/dziecieca/">stomatologia dziecięca</a>).</li>' +
-      '<li><strong>Stomatologia estetyczna</strong> - poprawa wyglądu uśmiechu, między innymi <a href="/stomatologia/licowki/">licówki</a> i <a href="/stomatologia/bonding/">bonding</a> (<a href="/stomatologia/estetyczna/">stomatologia estetyczna</a>).</li>' +
-      '</ul>',
+      (
+      <>
+        <p>Stomatologia obejmuje kilka wyspecjalizowanych dziedzin, które najczęściej uzupełniają się w obrębie jednego planu leczenia. W naszym gabinecie pacjent znajduje je w jednym miejscu:</p>
+        <ul>
+          <li><strong>Profilaktyka i higienizacja</strong> - przeglądy, skaling i piaskowanie; podstawa zdrowia jamy ustnej (<Link href="/stomatologia/higienizacja/">profesjonalna higienizacja</Link>).</li>
+          <li><strong>Stomatologia zachowawcza i endodoncja</strong> - leczenie próchnicy oraz leczenie kanałowe (<Link href="/stomatologia/leczenie-zebow/">leczenie zębów i kanałowe</Link>).</li>
+          <li><strong>Protetyka</strong> - odbudowa zniszczonych lub utraconych zębów koronami i mostami (<Link href="/stomatologia/protetyka-korony/">korony protetyczne</Link>).</li>
+          <li><strong>Implantologia</strong> - odtwarzanie pojedynczych braków oraz <Link href="/stomatologia/leczenie-bezzebia/">leczenie bezzębia</Link> z użyciem <Link href="/stomatologia/implanty-zebowe/">implantów zębowych</Link>.</li>
+          <li><strong>Ortodoncja</strong> - korekta wad zgryzu aparatami i nakładkami (<Link href="/stomatologia/ortodoncja/">leczenie ortodontyczne</Link>).</li>
+          <li><strong>Chirurgia stomatologiczna</strong> - usuwanie zębów i zabiegi w obrębie jamy ustnej (<Link href="/stomatologia/chirurgia/">chirurgia stomatologiczna</Link>).</li>
+          <li><strong>Stomatologia dziecięca</strong> - opieka nad zębami mlecznymi i stałymi u najmłodszych (<Link href="/stomatologia/dziecieca/">stomatologia dziecięca</Link>).</li>
+          <li><strong>Stomatologia estetyczna</strong> - poprawa wyglądu uśmiechu, między innymi <Link href="/stomatologia/licowki/">licówki</Link> i <Link href="/stomatologia/bonding/">bonding</Link> (<Link href="/stomatologia/estetyczna/">stomatologia estetyczna</Link>).</li>
+        </ul>
+      </>
+    ),
   },
   {
     title: 'Profilaktyka stomatologiczna - dlaczego chroni zęby lepiej niż leczenie?',
     tocLabel: 'Profilaktyka',
     content:
-      '<p><strong>Profilaktyka</strong> stomatologiczna - regularne przeglądy, higienizacja i prawidłowa higiena domowa - pozwala wykryć próchnicę i choroby dziąseł, zanim staną się bolesne i wymagające rozległego leczenia.</p>' +
-      '<p>Codzienna higiena ma policzalny efekt. Przeglądy systematyczne Cochrane wskazują, że pasta z <strong>fluorem</strong> w stężeniu co najmniej 1000 ppm zmniejsza próchnicę o około 24% w porównaniu z pastą bez fluoru, a szczotkowanie dwa razy dziennie zwiększa tę korzyść (Cochrane, Walsh i wsp., 2019). Na ryzyko próchnicy i chorób przyzębia wpływają też dieta bogata w cukry, palenie tytoniu oraz alkohol.</p>' +
-      '<p>Z tego powodu domową higienę łączymy z regularną <a href="/stomatologia/higienizacja/">higienizacją w gabinecie</a>, która usuwa płytkę i kamień w miejscach niedostępnych dla szczoteczki.</p>',
+      (
+      <>
+        <p><strong>Profilaktyka</strong> stomatologiczna - regularne przeglądy, higienizacja i prawidłowa higiena domowa - pozwala wykryć próchnicę i choroby dziąseł, zanim staną się bolesne i wymagające rozległego leczenia.</p>
+        <p>Codzienna higiena ma policzalny efekt. Przeglądy systematyczne Cochrane wskazują, że pasta z <strong>fluorem</strong> w stężeniu co najmniej 1000 ppm zmniejsza próchnicę o około 24% w porównaniu z pastą bez fluoru, a szczotkowanie dwa razy dziennie zwiększa tę korzyść (Cochrane, Walsh i wsp., 2019). Na ryzyko próchnicy i chorób przyzębia wpływają też dieta bogata w cukry, palenie tytoniu oraz alkohol.</p>
+        <p>Z tego powodu domową higienę łączymy z regularną <Link href="/stomatologia/higienizacja/">higienizacją w gabinecie</Link>, która usuwa płytkę i kamień w miejscach niedostępnych dla szczoteczki.</p>
+      </>
+    ),
   },
   {
     title: 'Jak często chodzić do stomatologa?',
     tocLabel: 'Jak często do stomatologa?',
     content:
-      '<p>Optymalna częstotliwość wizyt kontrolnych jest ustalana indywidualnie. Wytyczne NICE zalecają odstęp między przeglądami od 3 do 24 miesięcy, dobierany na podstawie ryzyka próchnicy i chorób przyzębia u danego pacjenta.</p>' +
-      '<p>W praktyce u większości dorosłych o stabilnym stanie jamy ustnej kontrola co 6-12 miesięcy jest wystarczająca, natomiast dzieci, kobiety w ciąży oraz osoby z częstą próchnicą lub chorobą przyzębia korzystają z częstszych wizyt. Termin kolejnego przeglądu wyznacza stomatolog po ocenie stanu zębów i dziąseł.</p>',
+      (
+      <>
+        <p>Optymalna częstotliwość wizyt kontrolnych jest ustalana indywidualnie. Wytyczne NICE zalecają odstęp między przeglądami od 3 do 24 miesięcy, dobierany na podstawie ryzyka próchnicy i chorób przyzębia u danego pacjenta.</p>
+        <p>W praktyce u większości dorosłych o stabilnym stanie jamy ustnej kontrola co 6-12 miesięcy jest wystarczająca, natomiast dzieci, kobiety w ciąży oraz osoby z częstą próchnicą lub chorobą przyzębia korzystają z częstszych wizyt. Termin kolejnego przeglądu wyznacza stomatolog po ocenie stanu zębów i dziąseł.</p>
+      </>
+    ),
   },
   {
     title: 'Pierwsza wizyta u dentysty we Wrocławiu - jak wygląda?',
     tocLabel: 'Pierwsza wizyta',
     content:
-      '<p>Leczenie w gabinecie zaczyna się od konsultacji i diagnostyki, a nie od samego zabiegu. Pierwsza wizyta u dentysty zwykle przebiega w kilku krokach:</p>' +
-      '<ol>' +
-      '<li>wywiad zdrowotny i rozmowa o oczekiwaniach pacjenta;</li>' +
-      '<li>badanie zębów, dziąseł i błony śluzowej jamy ustnej;</li>' +
-      '<li>w razie potrzeby zdjęcie RTG lub inna diagnostyka obrazowa;</li>' +
-      '<li>plan leczenia z ustaloną kolejnością i zakresem zabiegów;</li>' +
-      '<li>realizacja zabiegów, w razie potrzeby w <strong>znieczuleniu miejscowym</strong>.</li>' +
-      '</ol>' +
-      '<p>W diagnostyce zmian w obrębie głowy i szyi gabinet korzysta także z badań ultrasonograficznych, na przykład <a href="/usg/slinianki/">USG ślinianek</a> czy <a href="/usg/szyja/">USG szyi</a>, co pozwala ocenić ślinianki i węzły chłonne bez promieniowania.</p>',
+      (
+      <>
+        <p>Leczenie w gabinecie zaczyna się od konsultacji i diagnostyki, a nie od samego zabiegu. Pierwsza wizyta u dentysty zwykle przebiega w kilku krokach:</p>
+        <ol>
+          <li>wywiad zdrowotny i rozmowa o oczekiwaniach pacjenta;</li>
+          <li>badanie zębów, dziąseł i błony śluzowej jamy ustnej;</li>
+          <li>w razie potrzeby zdjęcie RTG lub inna diagnostyka obrazowa;</li>
+          <li>plan leczenia z ustaloną kolejnością i zakresem zabiegów;</li>
+          <li>realizacja zabiegów, w razie potrzeby w <strong>znieczuleniu miejscowym</strong>.</li>
+        </ol>
+        <p>W diagnostyce zmian w obrębie głowy i szyi gabinet korzysta także z badań ultrasonograficznych, na przykład <Link href="/usg/slinianki/">USG ślinianek</Link> czy <Link href="/usg/szyja/">USG szyi</Link>, co pozwala ocenić ślinianki i węzły chłonne bez promieniowania.</p>
+      </>
+    ),
   },
   {
     title: 'Próchnica i choroby przyzębia - najczęstsze problemy',
     tocLabel: 'Próchnica a przyzębie',
     content:
-      '<p>Dwa najczęstsze problemy jamy ustnej - próchnica i choroby przyzębia - mają różne przyczyny i wymagają różnego leczenia. Próchnica to ubytek twardych tkanek zęba powstający w wyniku działania bakterii i cukrów, natomiast <strong>choroby przyzębia</strong> to przewlekłe zapalenie tkanek otaczających ząb.</p>' +
-      '<p>Zaawansowane zapalenie przyzębia prowadzi do utraty kości i rozchwiania zębów; według WHO jego ciężka postać dotyczy ponad 1 mld osób na świecie. Europejska Federacja Periodontologii (EFP) zaleca leczenie etapowe - od instruktażu higieny i kontroli czynników ryzyka, przez instrumentację pod- i naddziąsłową, po leczenie podtrzymujące (wytyczne EFP S3, Sanz i wsp., 2020). Podstawą terapii jest regularne usuwanie płytki i kamienia podczas higienizacji.</p>',
+      (
+      <>
+        <p>Dwa najczęstsze problemy jamy ustnej - próchnica i choroby przyzębia - mają różne przyczyny i wymagają różnego leczenia. Próchnica to ubytek twardych tkanek zęba powstający w wyniku działania bakterii i cukrów, natomiast <strong>choroby przyzębia</strong> to przewlekłe zapalenie tkanek otaczających ząb.</p>
+        <p>Zaawansowane zapalenie przyzębia prowadzi do utraty kości i rozchwiania zębów; według WHO jego ciężka postać dotyczy ponad 1 mld osób na świecie. Europejska Federacja Periodontologii (EFP) zaleca leczenie etapowe - od instruktażu higieny i kontroli czynników ryzyka, przez instrumentację pod- i naddziąsłową, po leczenie podtrzymujące (wytyczne EFP S3, Sanz i wsp., 2020). Podstawą terapii jest regularne usuwanie płytki i kamienia podczas higienizacji.</p>
+      </>
+    ),
   },
   {
     title: 'Leczenie zachowawcze, korona czy implant - jak dobieramy metodę?',
     tocLabel: 'Leczenie czy odbudowa?',
     content:
-      '<p>Gdy ząb jest uszkodzony, wybór między leczeniem zachowawczym, odbudową protetyczną a usunięciem i wszczepieniem implantu zależy od stopnia zniszczenia tkanek, stanu kości oraz oczekiwań pacjenta.</p>' +
-      '<p>Punktem wyjścia jest zachowanie własnego zęba: leczenie zachowawcze i kanałowe pozwala go uratować przy odwracalnych uszkodzeniach. Przy rozległej destrukcji korony ząb chroni jednak korona protetyczna, a gdy zęba nie da się utrzymać, jego korzeń zastępuje implant. To, że implant jest trwałym rozwiązaniem, nie znaczy, że sprawdza się w każdej sytuacji - o doborze metody decyduje diagnostyka i ocena lekarza.</p>' +
-      '<h3>Porównanie metod odbudowy zęba</h3>' +
-      '<table>' +
-      '<tr><th>Metoda</th><th>Cel</th><th>Kiedy rozważana</th></tr>' +
-      '<tr><td><a href="/stomatologia/leczenie-zebow/">Leczenie zachowawcze i kanałowe</a></td><td>zachowanie naturalnego zęba</td><td>próchnica, zapalenie miazgi, odwracalne uszkodzenia</td></tr>' +
-      '<tr><td><a href="/stomatologia/protetyka-korony/">Korona protetyczna</a></td><td>odbudowa mocno zniszczonego zęba</td><td>rozległa utrata tkanek, ząb po leczeniu kanałowym</td></tr>' +
-      '<tr><td><a href="/stomatologia/implanty-zebowe/">Implant zębowy</a></td><td>zastąpienie utraconego zęba</td><td>pojedyncze braki, brak możliwości uratowania zęba</td></tr>' +
-      '<tr><td><a href="/stomatologia/leczenie-bezzebia/">Leczenie bezzębia</a></td><td>odbudowa wielu lub wszystkich zębów</td><td>rozległe lub całkowite braki zębowe</td></tr>' +
-      '</table>',
+      (
+      <>
+        <p>Gdy ząb jest uszkodzony, wybór między leczeniem zachowawczym, odbudową protetyczną a usunięciem i wszczepieniem implantu zależy od stopnia zniszczenia tkanek, stanu kości oraz oczekiwań pacjenta.</p>
+        <p>Punktem wyjścia jest zachowanie własnego zęba: leczenie zachowawcze i kanałowe pozwala go uratować przy odwracalnych uszkodzeniach. Przy rozległej destrukcji korony ząb chroni jednak korona protetyczna, a gdy zęba nie da się utrzymać, jego korzeń zastępuje implant. To, że implant jest trwałym rozwiązaniem, nie znaczy, że sprawdza się w każdej sytuacji - o doborze metody decyduje diagnostyka i ocena lekarza.</p>
+        <h3>Porównanie metod odbudowy zęba</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Metoda</th>
+              <th>Cel</th>
+              <th>Kiedy rozważana</th>
+            </tr>
+            <tr>
+              <td><Link href="/stomatologia/leczenie-zebow/">Leczenie zachowawcze i kanałowe</Link></td>
+              <td>zachowanie naturalnego zęba</td>
+              <td>próchnica, zapalenie miazgi, odwracalne uszkodzenia</td>
+            </tr>
+            <tr>
+              <td><Link href="/stomatologia/protetyka-korony/">Korona protetyczna</Link></td>
+              <td>odbudowa mocno zniszczonego zęba</td>
+              <td>rozległa utrata tkanek, ząb po leczeniu kanałowym</td>
+            </tr>
+            <tr>
+              <td><Link href="/stomatologia/implanty-zebowe/">Implant zębowy</Link></td>
+              <td>zastąpienie utraconego zęba</td>
+              <td>pojedyncze braki, brak możliwości uratowania zęba</td>
+            </tr>
+            <tr>
+              <td><Link href="/stomatologia/leczenie-bezzebia/">Leczenie bezzębia</Link></td>
+              <td>odbudowa wielu lub wszystkich zębów</td>
+              <td>rozległe lub całkowite braki zębowe</td>
+            </tr>
+          </tbody>
+        </table>
+      </>
+    ),
   },
   {
     title: 'Przeciwwskazania do zabiegów stomatologicznych i bezpieczeństwo',
     tocLabel: 'Przeciwwskazania',
     content:
-      '<p>Większość zabiegów stomatologicznych jest bezpieczna, jednak część wymaga uwzględnienia stanu ogólnego pacjenta i indywidualnych przeciwwskazań. Dlatego wywiad zdrowotny przed leczeniem jest tak samo ważny jak samo badanie zębów.</p>' +
-      '<h3>Kiedy leczenie zębów wymaga ostrożności?</h3>' +
-      '<p>Szczególnej ostrożności lub modyfikacji planu wymagają między innymi:</p>' +
-      '<ul>' +
-      '<li>ciąża i karmienie piersią - zabiegi planowe ustalamy z lekarzem, a zdjęcia RTG wykonujemy z osłoną i tylko gdy są konieczne;</li>' +
-      '<li>przyjmowanie leków przeciwzakrzepowych i zaburzenia krzepnięcia - istotne przy zabiegach chirurgicznych;</li>' +
-      '<li>niewyrównana cukrzyca oraz palenie tytoniu - wpływają na gojenie i powodzenie leczenia przyzębia i implantów;</li>' +
-      '<li>osteoporoza leczona bisfosfonianami i inne choroby kości - wymagają oceny przed zabiegami chirurgicznymi i implantacją;</li>' +
-      '<li>czynne zakażenie w jamie ustnej oraz alergie na leki lub środki znieczulające.</li>' +
-      '</ul>' +
-      '<h3>Czego nie robić samodzielnie?</h3>' +
-      '<p>Nie zaleca się samodzielnego wybielania ani leczenia bólu zęba bez wcześniejszej diagnozy - objaw może maskować poważniejszy problem. O kwalifikacji do konkretnego zabiegu zawsze decyduje lekarz.</p>',
+      (
+      <>
+        <p>Większość zabiegów stomatologicznych jest bezpieczna, jednak część wymaga uwzględnienia stanu ogólnego pacjenta i indywidualnych przeciwwskazań. Dlatego wywiad zdrowotny przed leczeniem jest tak samo ważny jak samo badanie zębów.</p>
+        <h3>Kiedy leczenie zębów wymaga ostrożności?</h3>
+        <p>Szczególnej ostrożności lub modyfikacji planu wymagają między innymi:</p>
+        <ul>
+          <li>ciąża i karmienie piersią - zabiegi planowe ustalamy z lekarzem, a zdjęcia RTG wykonujemy z osłoną i tylko gdy są konieczne;</li>
+          <li>przyjmowanie leków przeciwzakrzepowych i zaburzenia krzepnięcia - istotne przy zabiegach chirurgicznych;</li>
+          <li>niewyrównana cukrzyca oraz palenie tytoniu - wpływają na gojenie i powodzenie leczenia przyzębia i implantów;</li>
+          <li>osteoporoza leczona bisfosfonianami i inne choroby kości - wymagają oceny przed zabiegami chirurgicznymi i implantacją;</li>
+          <li>czynne zakażenie w jamie ustnej oraz alergie na leki lub środki znieczulające.</li>
+        </ul>
+        <h3>Czego nie robić samodzielnie?</h3>
+        <p>Nie zaleca się samodzielnego wybielania ani leczenia bólu zęba bez wcześniejszej diagnozy - objaw może maskować poważniejszy problem. O kwalifikacji do konkretnego zabiegu zawsze decyduje lekarz.</p>
+      </>
+    ),
   },
   {
     title: 'Ile kosztuje leczenie stomatologiczne we Wrocławiu?',
     tocLabel: 'Cena leczenia',
     content:
-      '<p>Koszt leczenia stomatologicznego we Wrocławiu zależy od rodzaju i zakresu zabiegu, użytych materiałów oraz liczby wizyt. Z tego powodu wiążącą wycenę przedstawiamy po badaniu i ustaleniu planu leczenia.</p>' +
-      '<p>Część świadczeń podstawowych jest refundowana przez NFZ, natomiast większość leczenia zaawansowanego, protetycznego i estetycznego realizowana jest prywatnie. Aktualne ceny poszczególnych zabiegów zebraliśmy w <a href="/cennik/">cenniku</a>, a termin konsultacji można ustalić przez <a href="/rejestracja/">rejestrację online</a>.</p>' +
-      '<p>Powyższe informacje mają charakter edukacyjny i nie zastępują konsultacji lekarskiej. O kwalifikacji do zabiegu, jego przebiegu i ewentualnych przeciwwskazaniach decyduje lekarz podczas indywidualnej wizyty.</p>',
+      (
+      <>
+        <p>Koszt leczenia stomatologicznego we Wrocławiu zależy od rodzaju i zakresu zabiegu, użytych materiałów oraz liczby wizyt. Z tego powodu wiążącą wycenę przedstawiamy po badaniu i ustaleniu planu leczenia.</p>
+        <p>Część świadczeń podstawowych jest refundowana przez NFZ, natomiast większość leczenia zaawansowanego, protetycznego i estetycznego realizowana jest prywatnie. Aktualne ceny poszczególnych zabiegów zebraliśmy w <Link href="/cennik/">cenniku</Link>, a termin konsultacji można ustalić przez <Link href="/rejestracja/">rejestrację online</Link>.</p>
+        <p>Powyższe informacje mają charakter edukacyjny i nie zastępują konsultacji lekarskiej. O kwalifikacji do zabiegu, jego przebiegu i ewentualnych przeciwwskazaniach decyduje lekarz podczas indywidualnej wizyty.</p>
+      </>
+    ),
   },
   {
     title: 'Źródła',
     content:
-      '<p>Treść opracowano na podstawie wytycznych i przeglądów naukowych:</p>' +
-      '<ol>' +
-      '<li>Światowa Organizacja Zdrowia (WHO). Oral health - fact sheet (dane Global Burden of Disease 2021).</li>' +
-      '<li>Walsh T. i wsp. Fluoride toothpastes of different concentrations for preventing dental caries. Cochrane Database of Systematic Reviews 2019.</li>' +
-      '<li>NICE. Dental recall - recall interval between routine dental examinations (CG19).</li>' +
-      '<li>Sanz M. i wsp. Treatment of stage I-III periodontitis - the EFP S3 level clinical practice guideline. Journal of Clinical Periodontology 2020; 47(Suppl. 22): 4-60 (PMID 32383274).</li>' +
-      '</ol>',
+      (
+      <>
+        <p>Treść opracowano na podstawie wytycznych i przeglądów naukowych:</p>
+        <ol>
+          <li>Światowa Organizacja Zdrowia (WHO). Oral health - fact sheet (dane Global Burden of Disease 2021).</li>
+          <li>Walsh T. i wsp. Fluoride toothpastes of different concentrations for preventing dental caries. Cochrane Database of Systematic Reviews 2019.</li>
+          <li>NICE. Dental recall - recall interval between routine dental examinations (CG19).</li>
+          <li>Sanz M. i wsp. Treatment of stage I-III periodontitis - the EFP S3 level clinical practice guideline. Journal of Clinical Periodontology 2020; 47(Suppl. 22): 4-60 (PMID 32383274).</li>
+        </ol>
+      </>
+    ),
   },
 ];
 

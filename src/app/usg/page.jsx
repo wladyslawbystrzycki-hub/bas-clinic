@@ -88,103 +88,160 @@ const EXPERT_INFO = [
     title: 'Jak działa badanie USG? Fizyka ultradźwięków w praktyce',
     tocLabel: 'Jak działa USG?',
     content:
-      '<p>Obraz w badaniu <strong>USG</strong> powstaje dzięki <strong>falom ultradźwiękowym</strong> o częstotliwości od około 2 do 18 MHz. Głowica ultrasonografu wysyła je w głąb ciała i odbiera echo odbite od granic tkanek, a z czasu powrotu i siły tego echa aparat buduje obraz w skali szarości w czasie rzeczywistym.</p>' +
-      '<p>Falę wytwarza <strong>przetwornik piezoelektryczny</strong> w głowicy, który zamienia impuls elektryczny na drgania mechaniczne i odwrotnie. Podstawowy obraz narządów nazywamy <strong>trybem B</strong> (B-mode) - to dwuwymiarowa mapa odcieni szarości, na której struktury silnie odbijające falę są jasne, a przestrzenie wypełnione płynem pozostają ciemne.</p>' +
-      '<h3>Głowica, częstotliwość i rozdzielczość</h3>' +
-      '<p>Dobór głowicy zależy od głębokości badanej okolicy. Głowice o wysokiej częstotliwości dają szczegółowy obraz struktur położonych płytko, takich jak <a href="/usg/tarczyca/">tarczyca</a>, węzły chłonne czy ścięgna, ale słabiej penetrują w głąb. Głowice o niższej częstotliwości sięgają głębiej i służą do oceny narządów <a href="/usg/jama-brzuszna/">jamy brzusznej</a>, kosztem nieco mniejszej rozdzielczości.</p>',
+      (
+      <>
+        <p>Obraz w badaniu <strong>USG</strong> powstaje dzięki <strong>falom ultradźwiękowym</strong> o częstotliwości od około 2 do 18 MHz. Głowica ultrasonografu wysyła je w głąb ciała i odbiera echo odbite od granic tkanek, a z czasu powrotu i siły tego echa aparat buduje obraz w skali szarości w czasie rzeczywistym.</p>
+        <p>Falę wytwarza <strong>przetwornik piezoelektryczny</strong> w głowicy, który zamienia impuls elektryczny na drgania mechaniczne i odwrotnie. Podstawowy obraz narządów nazywamy <strong>trybem B</strong> (B-mode) - to dwuwymiarowa mapa odcieni szarości, na której struktury silnie odbijające falę są jasne, a przestrzenie wypełnione płynem pozostają ciemne.</p>
+        <h3>Głowica, częstotliwość i rozdzielczość</h3>
+        <p>Dobór głowicy zależy od głębokości badanej okolicy. Głowice o wysokiej częstotliwości dają szczegółowy obraz struktur położonych płytko, takich jak <Link href="/usg/tarczyca/">tarczyca</Link>, węzły chłonne czy ścięgna, ale słabiej penetrują w głąb. Głowice o niższej częstotliwości sięgają głębiej i służą do oceny narządów <Link href="/usg/jama-brzuszna/">jamy brzusznej</Link>, kosztem nieco mniejszej rozdzielczości.</p>
+      </>
+    ),
   },
   {
     title: 'Rodzaje USG: od trybu 2D po elastografię',
     tocLabel: 'Rodzaje badań USG',
     content:
-      '<p>Ultrasonografia obejmuje kilka trybów obrazowania, dobieranych do badanej okolicy. Poza podstawowym dwuwymiarowym obrazem narządów aparat potrafi ocenić także przepływ krwi, sztywność tkanek oraz ich unaczynienie.</p>' +
-      '<ul>' +
-      '<li><strong>Tryb B (2D)</strong> - przekrojowy obraz narządów i tkanek w skali szarości; podstawa większości badań.</li>' +
-      '<li><strong>USG Doppler</strong> - ocena przepływu krwi w naczyniach, którą omawiamy osobno poniżej (<a href="/usg/doppler/">badanie dopplerowskie</a>).</li>' +
-      '<li><strong>Echokardiografia</strong> - USG serca oceniające kurczliwość mięśnia, zastawki i frakcję wyrzutową (<a href="/usg/serce/">USG serca</a>).</li>' +
-      '<li><strong>Elastografia</strong> - pomiar sztywności tkanki na podstawie jej odkształcenia lub fali poprzecznej; pomocna między innymi w ocenie wątroby, tarczycy i piersi.</li>' +
-      '<li><strong>USG z kontrastem (CEUS)</strong> - dożylne mikropęcherzyki uwidaczniają unaczynienie zmian ogniskowych.</li>' +
-      '<li><strong>Obrazowanie 3D/4D</strong> - rekonstrukcja przestrzenna stosowana w wybranych wskazaniach.</li>' +
-      '</ul>' +
-      '<p>Znaczenie ma też droga dostępu. Większość badań wykonuje się przez powłoki ciała (przezbrzusznie), a część badań miednicy - przez sondę dopochwową lub doodbytniczą, co przybliża głowicę do ocenianego narządu.</p>',
+      (
+      <>
+        <p>Ultrasonografia obejmuje kilka trybów obrazowania, dobieranych do badanej okolicy. Poza podstawowym dwuwymiarowym obrazem narządów aparat potrafi ocenić także przepływ krwi, sztywność tkanek oraz ich unaczynienie.</p>
+        <ul>
+          <li><strong>Tryb B (2D)</strong> - przekrojowy obraz narządów i tkanek w skali szarości; podstawa większości badań.</li>
+          <li><strong>USG Doppler</strong> - ocena przepływu krwi w naczyniach, którą omawiamy osobno poniżej (<Link href="/usg/doppler/">badanie dopplerowskie</Link>).</li>
+          <li><strong>Echokardiografia</strong> - USG serca oceniające kurczliwość mięśnia, zastawki i frakcję wyrzutową (<Link href="/usg/serce/">USG serca</Link>).</li>
+          <li><strong>Elastografia</strong> - pomiar sztywności tkanki na podstawie jej odkształcenia lub fali poprzecznej; pomocna między innymi w ocenie wątroby, tarczycy i piersi.</li>
+          <li><strong>USG z kontrastem (CEUS)</strong> - dożylne mikropęcherzyki uwidaczniają unaczynienie zmian ogniskowych.</li>
+          <li><strong>Obrazowanie 3D/4D</strong> - rekonstrukcja przestrzenna stosowana w wybranych wskazaniach.</li>
+        </ul>
+        <p>Znaczenie ma też droga dostępu. Większość badań wykonuje się przez powłoki ciała (przezbrzusznie), a część badań miednicy - przez sondę dopochwową lub doodbytniczą, co przybliża głowicę do ocenianego narządu.</p>
+      </>
+    ),
   },
   {
     title: 'USG Doppler - badanie przepływu krwi',
     tocLabel: 'USG Doppler',
     content:
-      '<p><strong>USG Doppler</strong> to technika oceny przepływu krwi. Wykorzystuje zjawisko Dopplera, czyli zmianę częstotliwości fali odbitej od poruszających się krwinek, aby pokazać kierunek i prędkość przepływu w tętnicach oraz żyłach.</p>' +
-      '<h3>Tryby Dopplera</h3>' +
-      '<ul>' +
-      '<li><strong>Doppler kolorowy</strong> - nakłada na obraz mapę przepływu; barwa czerwona i niebieska oznacza ruch krwi w stronę głowicy lub od niej.</li>' +
-      '<li><strong>Doppler spektralny</strong> - przedstawia prędkość przepływu w czasie jako krzywą, co pozwala zmierzyć parametry hemodynamiczne.</li>' +
-      '<li><strong>Doppler mocy (power)</strong> - bardzo czuły na wolny przepływ, użyteczny w drobnych naczyniach, choć nie pokazuje jego kierunku.</li>' +
-      '</ul>' +
-      '<p>Badania dopplerowskie służą między innymi ocenie blaszek miażdżycowych w <a href="/usg/doppler-tetnice-szyjne/">tętnicach szyjnych</a> oraz diagnostyce żylaków i zakrzepicy w <a href="/usg/doppler-zyly-konczyn-dolnych/">żyłach kończyn dolnych</a>. Pełny zakres opcji naczyniowych opisuje strona <a href="/usg/doppler/">USG Doppler naczyń</a>.</p>',
+      (
+      <>
+        <p><strong>USG Doppler</strong> to technika oceny przepływu krwi. Wykorzystuje zjawisko Dopplera, czyli zmianę częstotliwości fali odbitej od poruszających się krwinek, aby pokazać kierunek i prędkość przepływu w tętnicach oraz żyłach.</p>
+        <h3>Tryby Dopplera</h3>
+        <ul>
+          <li><strong>Doppler kolorowy</strong> - nakłada na obraz mapę przepływu; barwa czerwona i niebieska oznacza ruch krwi w stronę głowicy lub od niej.</li>
+          <li><strong>Doppler spektralny</strong> - przedstawia prędkość przepływu w czasie jako krzywą, co pozwala zmierzyć parametry hemodynamiczne.</li>
+          <li><strong>Doppler mocy (power)</strong> - bardzo czuły na wolny przepływ, użyteczny w drobnych naczyniach, choć nie pokazuje jego kierunku.</li>
+        </ul>
+        <p>Badania dopplerowskie służą między innymi ocenie blaszek miażdżycowych w <Link href="/usg/doppler-tetnice-szyjne/">tętnicach szyjnych</Link> oraz diagnostyce żylaków i zakrzepicy w <Link href="/usg/doppler-zyly-konczyn-dolnych/">żyłach kończyn dolnych</Link>. Pełny zakres opcji naczyniowych opisuje strona <Link href="/usg/doppler/">USG Doppler naczyń</Link>.</p>
+      </>
+    ),
   },
   {
     title: 'USG a RTG, tomografia i rezonans - czym się różnią',
     tocLabel: 'USG a inne badania',
     content:
-      '<p>USG różni się od <strong>RTG</strong>, <strong>tomografii komputerowej (TK)</strong> i <strong>rezonansu magnetycznego (MRI)</strong> przede wszystkim tym, że wykorzystuje fale ultradźwiękowe, a nie promieniowanie jonizujące, i pokazuje obraz w czasie rzeczywistym. Każda z metod ma jednak inne mocne strony.</p>' +
-      '<table>' +
-      '<tr><th>Cecha</th><th>USG</th><th>RTG / TK</th><th>MRI</th></tr>' +
-      '<tr><td>Promieniowanie jonizujące</td><td>nie</td><td>tak</td><td>nie</td></tr>' +
-      '<tr><td>Obraz w czasie rzeczywistym</td><td>tak</td><td>nie</td><td>nie</td></tr>' +
-      '<tr><td>Najlepsze do</td><td>tkanki miękkie, naczynia, narządy jamy brzusznej, tarczyca, piersi</td><td>kości, płuca, ostra diagnostyka urazowa</td><td>mózg, rdzeń, stawy, szczegółowy obraz tkanek miękkich</td></tr>' +
-      '<tr><td>Główne ograniczenie</td><td>gazy, kość i powietrze zasłaniają obraz; zależność od badającego</td><td>dawka promieniowania</td><td>czas badania, dostępność, przeciwwskazania do pola magnetycznego</td></tr>' +
-      '</table>' +
-      '<p>W praktyce metody się uzupełniają. USG bywa badaniem pierwszego wyboru ze względu na bezpieczeństwo i dostępność, a w razie wątpliwości lekarz kieruje na tomografię lub rezonans. Ultrasonografia nie zastępuje tych badań ani konsultacji lekarskiej.</p>',
+      (
+      <>
+        <p>USG różni się od <strong>RTG</strong>, <strong>tomografii komputerowej (TK)</strong> i <strong>rezonansu magnetycznego (MRI)</strong> przede wszystkim tym, że wykorzystuje fale ultradźwiękowe, a nie promieniowanie jonizujące, i pokazuje obraz w czasie rzeczywistym. Każda z metod ma jednak inne mocne strony.</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>Cecha</th>
+              <th>USG</th>
+              <th>RTG / TK</th>
+              <th>MRI</th>
+            </tr>
+            <tr>
+              <td>Promieniowanie jonizujące</td>
+              <td>nie</td>
+              <td>tak</td>
+              <td>nie</td>
+            </tr>
+            <tr>
+              <td>Obraz w czasie rzeczywistym</td>
+              <td>tak</td>
+              <td>nie</td>
+              <td>nie</td>
+            </tr>
+            <tr>
+              <td>Najlepsze do</td>
+              <td>tkanki miękkie, naczynia, narządy jamy brzusznej, tarczyca, piersi</td>
+              <td>kości, płuca, ostra diagnostyka urazowa</td>
+              <td>mózg, rdzeń, stawy, szczegółowy obraz tkanek miękkich</td>
+            </tr>
+            <tr>
+              <td>Główne ograniczenie</td>
+              <td>gazy, kość i powietrze zasłaniają obraz; zależność od badającego</td>
+              <td>dawka promieniowania</td>
+              <td>czas badania, dostępność, przeciwwskazania do pola magnetycznego</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>W praktyce metody się uzupełniają. USG bywa badaniem pierwszego wyboru ze względu na bezpieczeństwo i dostępność, a w razie wątpliwości lekarz kieruje na tomografię lub rezonans. Ultrasonografia nie zastępuje tych badań ani konsultacji lekarskiej.</p>
+      </>
+    ),
   },
   {
     title: 'Ograniczenia USG - czego badanie nie pokaże',
     tocLabel: 'Ograniczenia USG',
     content:
-      '<p>USG jest badaniem uniwersalnym, ale ma realne ograniczenia, o których warto wiedzieć. Fala ultradźwiękowa dobrze przenika tkanki miękkie i płyny, natomiast zatrzymuje się na powietrzu i kości.</p>' +
-      '<p>Wynika z tego kilka praktycznych konsekwencji:</p>' +
-      '<ul>' +
-      '<li><strong>Gazy jelitowe</strong> utrudniają ocenę narządów jamy brzusznej - z tego powodu część badań wykonuje się na czczo (<a href="/usg/jama-brzuszna/">USG jamy brzusznej</a>).</li>' +
-      '<li><strong>Powietrze i kość</strong> zasłaniają struktury położone głębiej, takie jak wnętrze płuc, mózg czy rdzeń kręgowy - tu lepiej sprawdzają się inne metody.</li>' +
-      '<li><strong>Tkanka tłuszczowa</strong> osłabia i rozprasza falę, więc u osób z otyłością obraz bywa mniej czytelny.</li>' +
-      '<li><strong>Zależność od osoby badającej</strong> - jakość obrazu i opisu zależy od doświadczenia lekarza oraz klasy aparatu.</li>' +
-      '</ul>' +
-      '<p>Dlatego USG warto traktować jako precyzyjne, lecz nie wszechstronne narzędzie. Gdy obraz jest niejednoznaczny, badanie się powtarza albo uzupełnia diagnostyką obrazową innego typu.</p>',
+      (
+      <>
+        <p>USG jest badaniem uniwersalnym, ale ma realne ograniczenia, o których warto wiedzieć. Fala ultradźwiękowa dobrze przenika tkanki miękkie i płyny, natomiast zatrzymuje się na powietrzu i kości.</p>
+        <p>Wynika z tego kilka praktycznych konsekwencji:</p>
+        <ul>
+          <li><strong>Gazy jelitowe</strong> utrudniają ocenę narządów jamy brzusznej - z tego powodu część badań wykonuje się na czczo (<Link href="/usg/jama-brzuszna/">USG jamy brzusznej</Link>).</li>
+          <li><strong>Powietrze i kość</strong> zasłaniają struktury położone głębiej, takie jak wnętrze płuc, mózg czy rdzeń kręgowy - tu lepiej sprawdzają się inne metody.</li>
+          <li><strong>Tkanka tłuszczowa</strong> osłabia i rozprasza falę, więc u osób z otyłością obraz bywa mniej czytelny.</li>
+          <li><strong>Zależność od osoby badającej</strong> - jakość obrazu i opisu zależy od doświadczenia lekarza oraz klasy aparatu.</li>
+        </ul>
+        <p>Dlatego USG warto traktować jako precyzyjne, lecz nie wszechstronne narzędzie. Gdy obraz jest niejednoznaczny, badanie się powtarza albo uzupełnia diagnostyką obrazową innego typu.</p>
+      </>
+    ),
   },
   {
     title: 'Bezpieczeństwo USG i przeciwwskazania',
     tocLabel: 'Bezpieczeństwo i przeciwwskazania',
     content:
-      '<p>Diagnostyczne <strong>USG</strong> jest uznawane za bezpieczne i nie ma bezwzględnych przeciwwskazań. Wykorzystuje fale ultradźwiękowe, a nie promieniowanie jonizujące, dlatego badanie można powtarzać oraz wykonywać u dzieci i u kobiet w ciąży.</p>' +
-      '<h3>Na czym opiera się bezpieczeństwo badania</h3>' +
-      '<p>Aparaty pracują zgodnie z zasadą <strong>ALARA</strong> (ang. As Low As Reasonably Achievable), czyli moc akustyczną utrzymuje się na możliwie najniższym rozsądnym poziomie. Na ekranie wyświetlane są wskaźnik <strong>termiczny (TI)</strong> oraz <strong>mechaniczny (MI)</strong>, które pozwalają badającemu kontrolować ekspozycję tkanek (EFSUMB, 2022).</p>' +
-      '<h3>Kiedy potrzebna jest ostrożność</h3>' +
-      '<p>Względne uwagi dotyczą sytuacji szczególnych, a nie samej metody. Badania wykonywane sondą dopochwową lub doodbytniczą lekarz dobiera indywidualnie, a rozległe rany czy opatrunki w polu badania mogą ograniczać dostęp głowicy. Osobne przeciwwskazania ma środek kontrastowy stosowany w USG z kontrastem (CEUS) - o jego podaniu decyduje lekarz po ocenie stanu pacjenta.</p>',
+      (
+      <>
+        <p>Diagnostyczne <strong>USG</strong> jest uznawane za bezpieczne i nie ma bezwzględnych przeciwwskazań. Wykorzystuje fale ultradźwiękowe, a nie promieniowanie jonizujące, dlatego badanie można powtarzać oraz wykonywać u dzieci i u kobiet w ciąży.</p>
+        <h3>Na czym opiera się bezpieczeństwo badania</h3>
+        <p>Aparaty pracują zgodnie z zasadą <strong>ALARA</strong> (ang. As Low As Reasonably Achievable), czyli moc akustyczną utrzymuje się na możliwie najniższym rozsądnym poziomie. Na ekranie wyświetlane są wskaźnik <strong>termiczny (TI)</strong> oraz <strong>mechaniczny (MI)</strong>, które pozwalają badającemu kontrolować ekspozycję tkanek (EFSUMB, 2022).</p>
+        <h3>Kiedy potrzebna jest ostrożność</h3>
+        <p>Względne uwagi dotyczą sytuacji szczególnych, a nie samej metody. Badania wykonywane sondą dopochwową lub doodbytniczą lekarz dobiera indywidualnie, a rozległe rany czy opatrunki w polu badania mogą ograniczać dostęp głowicy. Osobne przeciwwskazania ma środek kontrastowy stosowany w USG z kontrastem (CEUS) - o jego podaniu decyduje lekarz po ocenie stanu pacjenta.</p>
+      </>
+    ),
   },
   {
     title: 'Jak czytać wynik USG? Echogeniczność, TI-RADS i BI-RADS',
     tocLabel: 'Jak czytać wynik USG',
     content:
-      '<p>Wynik USG to opis obrazu narządów i tkanek, a podstawowym pojęciem jest w nim <strong>echogeniczność</strong> - to, jak silnie dana struktura odbija falę ultradźwiękową. Na tej podstawie lekarz różnicuje zmiany i opisuje ich charakter.</p>' +
-      '<h3>Echogeniczność i zmiany ogniskowe</h3>' +
-      '<ul>' +
-      '<li><strong>Bezechowa</strong> - czarna na obrazie, typowa dla struktur wypełnionych płynem, na przykład prostej torbieli.</li>' +
-      '<li><strong>Hipoechogeniczna</strong> - ciemniejsza od otaczającej tkanki.</li>' +
-      '<li><strong>Izoechogeniczna</strong> - o echogeniczności zbliżonej do otoczenia.</li>' +
-      '<li><strong>Hiperechogeniczna</strong> - jaśniejsza, silnie odbijająca falę.</li>' +
-      '</ul>' +
-      '<h3>Standaryzowane skale ryzyka: TI-RADS i BI-RADS</h3>' +
-      '<p>Aby opisy były porównywalne, stosuje się standaryzowane systemy oceny. <strong>TI-RADS</strong> (ACR, 2017) porządkuje cechy guzków <a href="/usg/tarczyca/">tarczycy</a> - skład, echogeniczność, kształt, brzeg i ogniska echogeniczne - w skali od TR1 do TR5 i pomaga zdecydować, czy potrzebna jest biopsja. Zbudowany na tej samej zasadzie system <strong>BI-RADS</strong> opisuje zmiany w <a href="/usg/piersi/">piersi</a>.</p>' +
-      '<p>Wynik USG nie jest jednak rozpoznaniem. Ostateczną diagnozę i dalsze postępowanie ustala lekarz na podstawie całości obrazu klinicznego, wywiadu oraz innych badań. Treść tej sekcji ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.</p>',
+      (
+      <>
+        <p>Wynik USG to opis obrazu narządów i tkanek, a podstawowym pojęciem jest w nim <strong>echogeniczność</strong> - to, jak silnie dana struktura odbija falę ultradźwiękową. Na tej podstawie lekarz różnicuje zmiany i opisuje ich charakter.</p>
+        <h3>Echogeniczność i zmiany ogniskowe</h3>
+        <ul>
+          <li><strong>Bezechowa</strong> - czarna na obrazie, typowa dla struktur wypełnionych płynem, na przykład prostej torbieli.</li>
+          <li><strong>Hipoechogeniczna</strong> - ciemniejsza od otaczającej tkanki.</li>
+          <li><strong>Izoechogeniczna</strong> - o echogeniczności zbliżonej do otoczenia.</li>
+          <li><strong>Hiperechogeniczna</strong> - jaśniejsza, silnie odbijająca falę.</li>
+        </ul>
+        <h3>Standaryzowane skale ryzyka: TI-RADS i BI-RADS</h3>
+        <p>Aby opisy były porównywalne, stosuje się standaryzowane systemy oceny. <strong>TI-RADS</strong> (ACR, 2017) porządkuje cechy guzków <Link href="/usg/tarczyca/">tarczycy</Link> - skład, echogeniczność, kształt, brzeg i ogniska echogeniczne - w skali od TR1 do TR5 i pomaga zdecydować, czy potrzebna jest biopsja. Zbudowany na tej samej zasadzie system <strong>BI-RADS</strong> opisuje zmiany w <Link href="/usg/piersi/">piersi</Link>.</p>
+        <p>Wynik USG nie jest jednak rozpoznaniem. Ostateczną diagnozę i dalsze postępowanie ustala lekarz na podstawie całości obrazu klinicznego, wywiadu oraz innych badań. Treść tej sekcji ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.</p>
+      </>
+    ),
   },
   {
     title: 'Źródła',
     content:
-      '<ol>' +
-      '<li>EFSUMB Safety Committee. Thermal (TI) and Mechanical (MI) Indices - explanation and update. European Federation of Societies for Ultrasound in Medicine and Biology, 2022.</li>' +
-      '<li>Tessler FN i wsp. ACR Thyroid Imaging, Reporting and Data System (TI-RADS): White Paper of the ACR TI-RADS Committee. Journal of the American College of Radiology 2017; 14(5): 587-595.</li>' +
-      '<li>American Institute of Ultrasound in Medicine (AIUM). Official Statement: Prudent Use and Safety of Diagnostic Ultrasound.</li>' +
-      '<li>American College of Radiology (ACR). Breast Imaging Reporting and Data System (BI-RADS) Atlas, wydanie 5.</li>' +
-      '<li>Meola M i wsp. Basics for performing a high-quality color Doppler sonography. The Journal of Vascular Access 2021.</li>' +
-      '</ol>',
+      (
+      <ol>
+        <li>EFSUMB Safety Committee. Thermal (TI) and Mechanical (MI) Indices - explanation and update. European Federation of Societies for Ultrasound in Medicine and Biology, 2022.</li>
+        <li>Tessler FN i wsp. ACR Thyroid Imaging, Reporting and Data System (TI-RADS): White Paper of the ACR TI-RADS Committee. Journal of the American College of Radiology 2017; 14(5): 587-595.</li>
+        <li>American Institute of Ultrasound in Medicine (AIUM). Official Statement: Prudent Use and Safety of Diagnostic Ultrasound.</li>
+        <li>American College of Radiology (ACR). Breast Imaging Reporting and Data System (BI-RADS) Atlas, wydanie 5.</li>
+        <li>Meola M i wsp. Basics for performing a high-quality color Doppler sonography. The Journal of Vascular Access 2021.</li>
+      </ol>
+    ),
   },
 ];
 

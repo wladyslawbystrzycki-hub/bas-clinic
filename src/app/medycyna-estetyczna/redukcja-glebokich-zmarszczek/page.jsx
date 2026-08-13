@@ -19,8 +19,12 @@ const FAQ = [
 ];
 
 const EXPERT_INFO = [
-  { title: 'Czym jest redukcja głębokich zmarszczek w okolicy oczu?', content: '<p>Zabieg polega na precyzyjnym wstrzyknięciu kwasu hialuronowego w obszary głębokich zmarszczek wokół oczu. Okolica oczu jest jednym z pierwszych miejsc, gdzie pojawiają się oznaki starzenia - skóra jest tutaj bardzo cienka i podatna na zmarszczki. Kwas hialuronowy wypełnia zagłębienia, nawilża skórę od wewnątrz i wygładza nawet głębokie zmarszczki.</p>' },
-  { title: 'Jak przebiega zabieg?', content: '<p>Lekarz aplikuje krem znieczulający na okolice oczu. Po 20 minutach oczekiwania przystępuje do precyzyjnych iniekcji kwasu hialuronowego dedykowanego do okolicy oczu. Używane są najcieńsze igły lub kaniule dla minimalizacji urazowości. Zabieg trwa 20-30 minut. Po zabiegu mogą wystąpić niewielkie obrzęki ustępujące w ciągu 1-2 dni.</p>' },
+  { title: 'Czym jest redukcja głębokich zmarszczek w okolicy oczu?', content: (
+                                                                        <p>Zabieg polega na precyzyjnym wstrzyknięciu kwasu hialuronowego w obszary głębokich zmarszczek wokół oczu. Okolica oczu jest jednym z pierwszych miejsc, gdzie pojawiają się oznaki starzenia - skóra jest tutaj bardzo cienka i podatna na zmarszczki. Kwas hialuronowy wypełnia zagłębienia, nawilża skórę od wewnątrz i wygładza nawet głębokie zmarszczki.</p>
+                                                                      ) },
+  { title: 'Jak przebiega zabieg?', content: (
+                                      <p>Lekarz aplikuje krem znieczulający na okolice oczu. Po 20 minutach oczekiwania przystępuje do precyzyjnych iniekcji kwasu hialuronowego dedykowanego do okolicy oczu. Używane są najcieńsze igły lub kaniule dla minimalizacji urazowości. Zabieg trwa 20-30 minut. Po zabiegu mogą wystąpić niewielkie obrzęki ustępujące w ciągu 1-2 dni.</p>
+                                    ) },
 ];
 
 export default function RedukcjaGlebokichZmarszczekPage() {

@@ -19,8 +19,12 @@ const FAQ = [
 ];
 
 const EXPERT_INFO = [
-  { title: 'Czym są programy zabiegowe?', content: '<p>Programy zabiegowe to zaawansowane protokoły łączące różne metody medycyny estetycznej w celu uzyskania synergicznego efektu odmłodzenia. Mogą obejmować kombinację mezoterapii, stymulatorów tkankowych, toksyny botulinowej, wypełniaczy i zabiegów aparatowych. Każdy program jest indywidualnie projektowany na podstawie dokładnej analizy stanu skóry pacjenta.</p>' },
-  { title: 'Jak przebiega program zabiegowy?', content: '<p>Program rozpoczyna się od kompleksowej konsultacji, podczas której lekarz ocenia stan skóry, potrzeby pacjenta i cele terapeutyczne. Następnie przygotowywany jest indywidualny plan zabiegów z harmonogramem wizyt. Podczas kolejnych wizyt wykonywane są zaplanowane zabiegi, a lekarz monitoruje postępy i w razie potrzeby modyfikuje plan.</p>' },
+  { title: 'Czym są programy zabiegowe?', content: (
+                                            <p>Programy zabiegowe to zaawansowane protokoły łączące różne metody medycyny estetycznej w celu uzyskania synergicznego efektu odmłodzenia. Mogą obejmować kombinację mezoterapii, stymulatorów tkankowych, toksyny botulinowej, wypełniaczy i zabiegów aparatowych. Każdy program jest indywidualnie projektowany na podstawie dokładnej analizy stanu skóry pacjenta.</p>
+                                          ) },
+  { title: 'Jak przebiega program zabiegowy?', content: (
+                                                 <p>Program rozpoczyna się od kompleksowej konsultacji, podczas której lekarz ocenia stan skóry, potrzeby pacjenta i cele terapeutyczne. Następnie przygotowywany jest indywidualny plan zabiegów z harmonogramem wizyt. Podczas kolejnych wizyt wykonywane są zaplanowane zabiegi, a lekarz monitoruje postępy i w razie potrzeby modyfikuje plan.</p>
+                                               ) },
 ];
 
 export default function ProgramyZabiegowePage() {

@@ -32,17 +32,23 @@ const EXPERT_INFO = [
   {
     title: 'Czym są wlewy witaminowe?',
     content:
-      '<p>Wlewy witaminowe to nowoczesna metoda suplementacji, która pozwala na dostarczenie wysokich dawek witamin i minerałów bezpośrednio do krwioobiegu. W przeciwieństwie do doustnych suplementów, terapia infuzyjna omija układ pokarmowy, zapewniając niemal 100% biodostępność podawanych składników.</p>',
+      (
+      <p>Wlewy witaminowe to nowoczesna metoda suplementacji, która pozwala na dostarczenie wysokich dawek witamin i minerałów bezpośrednio do krwioobiegu. W przeciwieństwie do doustnych suplementów, terapia infuzyjna omija układ pokarmowy, zapewniając niemal 100% biodostępność podawanych składników.</p>
+    ),
   },
   {
     title: 'Jakie składniki zawierają wlewy?',
     content:
-      '<p>W naszej klinice oferujemy różne kompozycje wlewów witaminowych, które mogą zawierać witaminę C w wysokich dawkach, witaminy z grupy B, magnez, cynk, selen, glutation, aminokwasy i inne składniki dobrane indywidualnie do potrzeb pacjenta.</p>',
+      (
+      <p>W naszej klinice oferujemy różne kompozycje wlewów witaminowych, które mogą zawierać witaminę C w wysokich dawkach, witaminy z grupy B, magnez, cynk, selen, glutation, aminokwasy i inne składniki dobrane indywidualnie do potrzeb pacjenta.</p>
+    ),
   },
   {
     title: 'Wskazania do terapii infuzyjnej',
     content:
-      '<p>Wlewy witaminowe są szczególnie polecane przy chronicznym zmęczeniu, obniżeniu odporności, w okresie rekonwalescencji, przy intensywnym wysiłku fizycznym, a także jako wsparcie w terapii anti-aging i poprawie kondycji skóry, włosów i paznokci.</p>',
+      (
+      <p>Wlewy witaminowe są szczególnie polecane przy chronicznym zmęczeniu, obniżeniu odporności, w okresie rekonwalescencji, przy intensywnym wysiłku fizycznym, a także jako wsparcie w terapii anti-aging i poprawie kondycji skóry, włosów i paznokci.</p>
+    ),
   },
 ];
 

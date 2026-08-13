@@ -7,9 +7,11 @@
  * Linki w spisie to natywne kotwice (#slug) — `scroll-behavior: smooth` jest
  * ustawione globalnie w globals.css, więc to czysty Server Component bez JS.
  *
- * `content` to zaufany HTML (dangerouslySetInnerHTML) — stylujemy go selektorami
+ * `content` to JSX (elementy `<p>`, `<ul>`, `<table>`…) — stylujemy je selektorami
  * potomków (Preflight zeruje marginesy/punktory, a typografii nie ma w projekcie).
  */
+
+import { Children, Fragment, isValidElement } from 'react';
 
 const PL_DIACRITICS = { ą: 'a', ć: 'c', ę: 'e', ł: 'l', ń: 'n', ó: 'o', ś: 's', ź: 'z', ż: 'z' };
 
@@ -21,8 +23,8 @@ function slugify(text) {
     .replace(/^-+|-+$/g, '');
 }
 
-/** Klasy dla wstrzykiwanego HTML — naprawiają listy, linki, akapity, <strong>. */
-function injectedHtmlClass(light) {
+/** Klasy dla treści — naprawiają listy, linki, akapity, <strong>. */
+function contentClass(light) {
   return [
     'mt-3 leading-relaxed',
     light ? 'text-primary-100' : 'text-gray-600',
@@ -59,19 +61,26 @@ function injectedHtmlClass(light) {
 // za checkboxem (peer + :checked), bez JS (komponent zostaje serwerowy).
 const VISIBLE_SOURCES = 3;
 
+/** Rozwija fragment (`<>…</>`) na listę węzłów; pojedynczy element zwraca jako jeden. */
+function toNodes(content) {
+  const children = isValidElement(content) && content.type === Fragment ? content.props.children : content;
+  return Children.toArray(children);
+}
+
 /**
- * Wyciąga z treści źródeł listę `<li>`. Zwraca null, gdy treść nie pasuje do
+ * Wyciąga z treści źródeł pozycje `<li>`. Zwraca null, gdy treść nie pasuje do
  * oczekiwanego kształtu (`<ol>`) albo lista jest krótka — wtedy renderujemy ją
  * normalnie, bez chowania.
  */
 function splitSources(content) {
-  const ol = content.match(/<ol[^>]*>([\s\S]*?)<\/ol>/i);
-  if (!ol) return null;
-  const items = ol[1].match(/<li[\s\S]*?<\/li>/gi) || [];
+  const nodes = toNodes(content);
+  const olIndex = nodes.findIndex((n) => isValidElement(n) && n.type === 'ol');
+  if (olIndex === -1) return null;
+  const items = Children.toArray(nodes[olIndex].props.children);
   if (items.length <= VISIBLE_SOURCES + 1) return null;
   return {
-    before: content.slice(0, ol.index), // ewentualny akapit-wstęp przed listą
-    all: items.join(''),
+    before: nodes.slice(0, olIndex), // ewentualny akapit-wstęp przed listą
+    items,
     hiddenCount: items.length - VISIBLE_SOURCES,
   };
 }
@@ -79,18 +88,17 @@ function splitSources(content) {
 /** Treść sekcji „Źródła" — jedna lista, nadmiarowe pozycje chowane pod przyciskiem. */
 function SourcesContent({ content, className, light, id }) {
   const split = splitSources(content);
-  if (!split) return <div className={className} dangerouslySetInnerHTML={{ __html: content }} />;
+  if (!split) return <div className={className}>{content}</div>;
 
   const toggleId = `${id}-toggle`;
   return (
     <div className={className}>
-      {split.before && <div dangerouslySetInnerHTML={{ __html: split.before }} />}
+      {split.before}
       <input type="checkbox" id={toggleId} className="peer sr-only" />
       {/* jedna jednolita lista; poz. 4+ (n+4 = VISIBLE_SOURCES+1) ukryte do zaznaczenia */}
-      <ol
-        className="[&>li:nth-child(n+4)]:hidden peer-checked:[&>li:nth-child(n+4)]:list-item"
-        dangerouslySetInnerHTML={{ __html: split.all }}
-      />
+      <ol className="[&>li:nth-child(n+4)]:hidden peer-checked:[&>li:nth-child(n+4)]:list-item">
+        {split.items}
+      </ol>
       {/* przełączniki sterowane z label (peer-checked) — spany w środku nie są
           rodzeństwem checkboxa, więc wariant musi celować w nie przez label */}
       <label
@@ -145,12 +153,9 @@ export default function ExpertInfoSection({ items, light = false, eyebrow }) {
             </h2>
           )}
           {slugify(s.title || '') === 'zrodla' ? (
-            <SourcesContent content={s.content} className={injectedHtmlClass(light)} light={light} id={s.id} />
+            <SourcesContent content={s.content} className={contentClass(light)} light={light} id={s.id} />
           ) : (
-            <div
-              className={injectedHtmlClass(light)}
-              dangerouslySetInnerHTML={{ __html: s.content }}
-            />
+            <div className={contentClass(light)}>{s.content}</div>
           )}
         </div>
       ))}

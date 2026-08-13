@@ -96,6 +96,13 @@ All service pages use `ServicePageTemplate`. To add a new service:
 3. Add to `menuConfig.js` if it should appear in navigation
 4. For aesthetic services: add `bodyAreas` array to map to body area categories
 
+### Expert Info Content
+
+`EXPERT_INFO` items in a page's `page.jsx` hold `content` as **JSX**, not an HTML string:
+`content: (<><p>…</p><ul><li>…</li></ul></>)`. Allowed elements: `<p> <ul> <ol> <li> <h3> <h4>
+<strong> <table>/<tbody>/<tr>/<th>/<td>` + `next/link` for internal links (trailing slash).
+`ExpertInfoSection` renders it directly — no `dangerouslySetInnerHTML`, no `className` in content.
+
 ### Aesthetic Medicine: Shared Services
 
 Services like "Wypelniacze HA" appear under multiple body areas. Each gets ONE canonical page at `/{slug}/`. Body area pages (`/medycyna-estetyczna/{area}/`) list services via `getAestheticServicesByArea()`.

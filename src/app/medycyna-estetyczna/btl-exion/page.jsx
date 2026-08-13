@@ -19,9 +19,15 @@ const FAQ = [
 ];
 
 const EXPERT_INFO = [
-  { title: 'Czym jest BTL Exion?', content: '<p>BTL Exion to innowacyjne urządzenie medyczne łączące monopolarną radiofrekwencję z mechaniczną stymulacją falami ultradźwiękowymi. Technologia dociera do najaktywniejszych fibroblastów w skórze właściwej, łącząc stres termiczny generowany przez radiofrekwencję ze stymulacją ultradźwiękową. System kontroli impulsu AI eliminuje potrzebę wielokrotnych przejść podczas zabiegu.</p>' },
-  { title: 'Jak przebiega zabieg?', content: '<p>Zabieg rozpoczyna się od oczyszczenia skóry i nałożenia żelu przewodzącego. Następnie lekarz aplikuje głowicę urządzenia na wybrane obszary twarzy lub szyi. System AI automatycznie dostosowuje parametry energii dla optymalnych rezultatów. Cały zabieg trwa około 30-45 minut. Po zabiegu skóra może być lekko zaczerwieniona, co ustępuje w ciągu kilku godzin.</p>' },
-  { title: 'Udowodnione efekty kliniczne', content: '<p>Badania kliniczne po serii 4 zabiegów BTL Exion wykazały imponujące rezultaty: wzrost produkcji kwasu hialuronowego o <strong>224%</strong>, zwiększenie elastyny o <strong>50%</strong> oraz wzrost syntezy kolagenu o <strong>47%</strong>. Efekty to wyraźne ujędrnienie skóry, redukcja zmarszczek, poprawa owalu twarzy oraz napięty, odmłodzony wygląd skóry. Rezultaty narastają przez kilka miesięcy po zabiegu.</p>' },
+  { title: 'Czym jest BTL Exion?', content: (
+                                     <p>BTL Exion to innowacyjne urządzenie medyczne łączące monopolarną radiofrekwencję z mechaniczną stymulacją falami ultradźwiękowymi. Technologia dociera do najaktywniejszych fibroblastów w skórze właściwej, łącząc stres termiczny generowany przez radiofrekwencję ze stymulacją ultradźwiękową. System kontroli impulsu AI eliminuje potrzebę wielokrotnych przejść podczas zabiegu.</p>
+                                   ) },
+  { title: 'Jak przebiega zabieg?', content: (
+                                      <p>Zabieg rozpoczyna się od oczyszczenia skóry i nałożenia żelu przewodzącego. Następnie lekarz aplikuje głowicę urządzenia na wybrane obszary twarzy lub szyi. System AI automatycznie dostosowuje parametry energii dla optymalnych rezultatów. Cały zabieg trwa około 30-45 minut. Po zabiegu skóra może być lekko zaczerwieniona, co ustępuje w ciągu kilku godzin.</p>
+                                    ) },
+  { title: 'Udowodnione efekty kliniczne', content: (
+                                             <p>Badania kliniczne po serii 4 zabiegów BTL Exion wykazały imponujące rezultaty: wzrost produkcji kwasu hialuronowego o <strong>224%</strong>, zwiększenie elastyny o <strong>50%</strong> oraz wzrost syntezy kolagenu o <strong>47%</strong>. Efekty to wyraźne ujędrnienie skóry, redukcja zmarszczek, poprawa owalu twarzy oraz napięty, odmłodzony wygląd skóry. Rezultaty narastają przez kilka miesięcy po zabiegu.</p>
+                                           ) },
 ];
 
 export default function BtlExionPage() {
