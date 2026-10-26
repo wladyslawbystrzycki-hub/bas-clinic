@@ -40,7 +40,7 @@ const EXPERT_INFO = [
     title: 'Jakie składniki zawierają wlewy?',
     content:
       (
-      <p>W naszej klinice oferujemy różne kompozycje wlewów witaminowych, które mogą zawierać witaminę C w wysokich dawkach, witaminy z grupy B, magnez, cynk, selen, glutation, aminokwasy i inne składniki dobrane indywidualnie do potrzeb pacjenta.</p>
+      <p>W naszej klinice oferujemy różne kompozycje wlewów witaminowych, które mogą zawierać witaminę C w wysokich dawkach, witaminy z grupy B, magnez, glutation, aminokwasy i inne składniki dobrane indywidualnie do potrzeb pacjenta.</p>
     ),
   },
   {

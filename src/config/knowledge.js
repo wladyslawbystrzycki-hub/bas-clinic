@@ -942,7 +942,7 @@ const KNOWLEDGE_BY_SLUG = {
       "Wlewy witaminowe to terapia infuzyjna, w której witaminy, minerały i aminokwasy podaje się dożylnie. Metoda dla osób zmęczonych, w okresie rekonwalescencji oraz dbających o samopoczucie i odporność.",
     points: [
       { title: "Jak działa wlew dożylny", text: "Składniki trafiają wprost do krwioobiegu, z pominięciem układu pokarmowego, dzięki czemu wchłaniają się niemal w całości." },
-      { title: "Skład kroplówki witaminowej", text: "Kompozycja jest dobierana indywidualnie i może obejmować witaminę C, witaminy z grupy B, magnez, cynk, selen, glutation oraz aminokwasy." },
+      { title: "Skład kroplówki witaminowej", text: "Kompozycja jest dobierana indywidualnie i może obejmować witaminę C, witaminy z grupy B, magnez, glutation oraz aminokwasy." },
       { title: "Wskazania do wlewów witaminowych", text: "Wlewy bywają polecane przy chronicznym zmęczeniu, obniżonej odporności, w rekonwalescencji oraz przy intensywnym wysiłku fizycznym." },
       { title: "Ile trwa pojedynczy wlew?", text: "Pojedynczy wlew trwa zwykle od 30 do 60 minut, a czas zależy od rodzaju i objętości podawanych składników." },
     ],
