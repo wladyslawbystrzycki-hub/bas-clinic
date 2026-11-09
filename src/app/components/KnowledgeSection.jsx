@@ -32,7 +32,9 @@ export default function KnowledgeSection({
   bg = 'white',
 }) {
   const ringPathId = `${id}-ring-path`;
-  const ringText = 'KOMPENDIUM WIEDZY · BAS CLINIC · ';
+  // Pierścień powtarza eyebrow sekcji — hub wlewów używa tego samego bloku pod
+  // innym nagłówkiem („Terapia infuzyjna”), więc tekst nie może być zaszyty na sztywno.
+  const ringText = `${eyebrow.toUpperCase()} · BAS CLINIC · `;
 
   return (
     <section

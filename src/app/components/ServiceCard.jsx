@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function ServiceCard({ name, description, href, onDark = false }) {
+export default function ServiceCard({ name, description, meta, href, onDark = false }) {
   return (
     <Link
       href={href}
@@ -33,6 +33,15 @@ export default function ServiceCard({ name, description, href, onDark = false })
           }`}
         >
           {description}
+        </p>
+      )}
+      {meta && (
+        <p
+          className={`mt-4 text-sm font-semibold tabular-nums ${
+            onDark ? 'text-secondary-300' : 'text-primary-700'
+          }`}
+        >
+          {meta}
         </p>
       )}
       <span

@@ -1,11 +1,17 @@
-import { USG_CLUSTERS, getUsgServicesByCluster } from '@/config/services';
+import {
+  USG_CLUSTERS,
+  getUsgServicesByCluster,
+  WLEWY_CLUSTERS,
+  getWlewyServicesByCluster,
+  getPeptydy,
+} from '@/config/services';
 
 export function getMainMenu() {
   return [
     getStomatologiaMenu(),
     getMedycynaEstetycznaMenu(),
     getUsgMenu(),
-    { id: 'wlewy', label: 'Wlewy witaminowe', href: '/wlewy-witaminowe/' },
+    getWlewyMenu(),
     { id: 'uzaleznienia', label: 'Leczenie uzależnień', href: '/leczenie-uzaleznien/' },
     { id: 'metamorfozy', label: 'Metamorfozy', href: '/metamorfozy/' },
     { id: 'cennik', label: 'Cennik', href: '/cennik/' },
@@ -37,6 +43,47 @@ function getUsgMenu() {
         href: `/${s.slug}/`,
       })),
     })),
+  };
+}
+
+function getWlewyMenu() {
+  return {
+    id: 'wlewy',
+    label: 'Wlewy witaminowe',
+    href: '/wlewy-witaminowe/',
+    megaMenu: true,
+    featured: {
+      title: 'Kroplówki witaminowe\ni peptydy we Wrocławiu',
+      description:
+        'Wlewy dożylne w trzech wariantach składu oraz terapie peptydowe, po kwalifikacji lekarskiej w Bas Clinic.',
+      ctaLabel: 'Umów wlew',
+      ctaHref: '/kontakt/',
+    },
+    // Nagłówki grup są linkami: klaster kroplówek → sekcja na hubie wlewów,
+    // peptydy → osobny hub /terapie-peptydowe/ (jedna pozycja w pasku zamiast dwóch,
+    // bo pasek ma już 9 pozycji i dziesiąta zepchnęłaby go do hamburgera).
+    children: [
+      ...WLEWY_CLUSTERS.map((cluster) => ({
+        id: `wlewy-${cluster.slug}`,
+        label: cluster.name,
+        href: `/wlewy-witaminowe/#${cluster.slug}`,
+        children: getWlewyServicesByCluster(cluster.slug).map((s) => ({
+          id: s.id,
+          label: s.name,
+          href: `/${s.slug}/`,
+        })),
+      })),
+      {
+        id: 'wlewy-peptydy',
+        label: 'Terapie peptydowe',
+        href: '/terapie-peptydowe/',
+        children: getPeptydy().map((s) => ({
+          id: s.id,
+          label: s.name,
+          href: `/${s.slug}/`,
+        })),
+      },
+    ],
   };
 }
 

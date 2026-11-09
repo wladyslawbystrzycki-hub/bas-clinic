@@ -336,6 +336,7 @@ const ICONS = {
   usg: PulseIcon,
   wlewy: DropletIcon,
   uzaleznienia: LifeRingIcon,
+  peptydy: MoleculeIcon,
 };
 
 function ArrowUpRight({ className }) {
@@ -374,6 +375,18 @@ function PulseIcon({ className }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
       <path d="M2.5 12h4l2-5.5 4 11 2-5.5h6.5" />
+    </svg>
+  );
+}
+
+// Trzy połączone atomy — metafora łańcucha aminokwasów (terapie peptydowe).
+function MoleculeIcon({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
+      <circle cx="6" cy="16" r="2.3" />
+      <circle cx="12" cy="8.6" r="2.3" />
+      <circle cx="18" cy="16" r="2.3" />
+      <path d="m7.5 14.2 3-3.7M13.5 10.5l3 3.7M8.3 16h7.4" />
     </svg>
   );
 }

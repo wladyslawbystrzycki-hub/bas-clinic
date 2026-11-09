@@ -129,7 +129,7 @@ export const TESTIMONIALS = { general, stomatologia, estetyka, usg, wlewy };
 export function getTestimonials(category = '') {
   const c = (category || '').toLowerCase();
   if (c.includes('ultrasonograf') || c.includes('usg')) return TESTIMONIALS.usg;
-  if (c.includes('infuz') || c.includes('wlew')) return TESTIMONIALS.wlewy;
+  if (c.includes('infuz') || c.includes('wlew') || c.includes('peptyd')) return TESTIMONIALS.wlewy;
   // „Stomatologia estetyczna" celowo sprawdzane przed „estetyczn" → trafia tu.
   if (
     c.includes('stomatolog') ||

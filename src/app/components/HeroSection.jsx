@@ -45,18 +45,18 @@ export default function HeroSection({
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
-        {/* 1 — baza */}
-        <div className="absolute inset-0 bg-primary-950" />
+        {/* 1 — baza (900, nie 950: przy 950 warstwy mesh/blob były niewidoczne) */}
+        <div className="absolute inset-0 bg-primary-900" />
         {/* 2 — mesh: rozświetlenie lewy-górny */}
-        <div className="absolute inset-0 bg-[radial-gradient(100%_80%_at_10%_-8%,var(--color-primary-800)_0%,transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(100%_80%_at_10%_-8%,var(--color-primary-600)_0%,transparent_65%)]" />
         {/* 3 — mesh: poświata prawy-górny (za postacią) */}
-        <div className="absolute inset-0 opacity-70 bg-[radial-gradient(70%_65%_at_88%_14%,var(--color-primary-700)_0%,transparent_55%)]" />
+        <div className="absolute inset-0 opacity-85 bg-[radial-gradient(70%_65%_at_88%_14%,var(--color-primary-500)_0%,transparent_65%)]" />
         {/* 4 — mesh: poświata lewy-dolny (równoważy lewą stronę kadru) */}
-        <div className="absolute inset-0 opacity-80 bg-[radial-gradient(58%_60%_at_4%_66%,var(--color-primary-800)_0%,transparent_55%)]" />
+        <div className="absolute inset-0 opacity-90 bg-[radial-gradient(58%_60%_at_4%_66%,var(--color-primary-600)_0%,transparent_65%)]" />
         {/* 5 — blob za postacią (prawy-górny) */}
-        <div className="absolute right-[-10%] top-0 h-[40rem] w-[40rem] rounded-full bg-primary-700/30 blur-[130px]" />
+        <div className="absolute right-[-10%] top-0 h-[40rem] w-[40rem] rounded-full bg-primary-400/30 blur-[130px]" />
         {/* 6 — blob lewy-dolny (bleeduje poza krawędź — domyka lewą stronę) */}
-        <div className="absolute bottom-[-18%] left-[-8%] h-[32rem] w-[32rem] rounded-full bg-primary-800/45 blur-[120px]" />
+        <div className="absolute bottom-[-18%] left-[-8%] h-[32rem] w-[32rem] rounded-full bg-primary-500/50 blur-[120px]" />
         {/* 7 — koncentryczne łuki PRAWA (subtelny motyw „fali" zza postaci) */}
         <svg
           aria-hidden
@@ -65,15 +65,15 @@ export default function HeroSection({
           className="absolute right-[-24%] top-1/2 h-[640px] w-[640px] -translate-y-1/2 sm:right-[-14%] sm:h-[860px] sm:w-[860px] lg:right-[-8%] lg:h-[1000px] lg:w-[1000px]"
         >
           <g stroke="var(--color-secondary-500)" strokeWidth="1" strokeLinecap="round">
-            <circle cx="410" cy="410" r="250" strokeOpacity="0.14" pathLength="1" strokeDasharray="0.30 1" />
-            <circle cx="410" cy="410" r="330" strokeOpacity="0.18" pathLength="1" strokeDasharray="0.34 1" />
-            <circle cx="410" cy="410" r="400" strokeOpacity="0.10" pathLength="1" strokeDasharray="0.30 1" />
+            <circle cx="410" cy="410" r="250" strokeOpacity="0.40" pathLength="1" strokeDasharray="0.30 1" />
+            <circle cx="410" cy="410" r="330" strokeOpacity="0.50" pathLength="1" strokeDasharray="0.34 1" />
+            <circle cx="410" cy="410" r="400" strokeOpacity="0.32" pathLength="1" strokeDasharray="0.30 1" />
           </g>
         </svg>
         {/* 8 — animowane drobinki SVG (wypełniają puste przestrzenie kadru) */}
         <HeroParticles />
         {/* 9 — siatka kropek na CAŁEJ szerokości (wygaszona pionowo) */}
-        <div className="absolute inset-0 opacity-[0.045] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] [background-size:40px_40px] [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)]" />
+        <div className="absolute inset-0 opacity-[0.12] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] [background-size:40px_40px] [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)]" />
         {/* 10 — ziarno (subtelny grain; „premium" + znosi banding gradientów) */}
         <svg
           aria-hidden
@@ -86,9 +86,9 @@ export default function HeroSection({
           <rect width="100%" height="100%" filter="url(#heroGrain)" />
         </svg>
         {/* 11 — winieta (delikatnie ściemnia rogi) */}
-        <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_40%,transparent_58%,rgba(6,8,10,0.45)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_40%,transparent_66%,rgba(6,8,10,0.18)_100%)]" />
         {/* 12 — dolne wygaszenie (scala z następną sekcją) */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary-950 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary-900 to-transparent" />
       </div>
 
       {/* ------------------------------ Zawartość ----------------------------- */}
@@ -99,8 +99,8 @@ export default function HeroSection({
       >
         <div className="grid grid-cols-1 items-center gap-y-12 lg:grid-cols-12 lg:gap-x-8">
           {/* Lewa kolumna — treść */}
-          <div className="flex flex-col justify-center lg:col-span-7">
-            <div className="max-w-2xl lg:max-w-3xl">
+          <div className="flex flex-col justify-center lg:col-span-8">
+            <div className="max-w-[44rem] lg:max-w-[52rem]">
               {hasBreadcrumbs && (
                 <nav aria-label="Breadcrumb" className="mb-6 lg:mb-8">
                   <ol className="flex flex-wrap items-center gap-1.5 text-sm">
@@ -144,8 +144,10 @@ export default function HeroSection({
                 </p>
               )}
 
+              {/* Bez [hyphens:auto]: dzielenie słów w nagłówku („es-tetycznej") wygląda źle;
+                  break-words to tylko zabezpieczenie przed przelaniem bardzo długiego słowa na wąskim ekranie. */}
               <h1
-                className={`mt-5 font-display font-semibold tracking-tight text-balance [hyphens:auto] text-white ${
+                className={`mt-5 font-display font-semibold tracking-tight text-balance break-words text-white ${
                   isHome
                     ? 'text-[2.6rem] leading-[1.05] sm:text-5xl lg:text-[3.75rem]'
                     : 'text-[2.1rem] leading-[1.08] sm:text-4xl lg:text-5xl'
@@ -155,13 +157,13 @@ export default function HeroSection({
               </h1>
 
               {lead && (
-                <p className="mt-6 max-w-lg text-xl font-light leading-snug text-pretty text-primary-100 sm:text-2xl">
+                <p className="mt-6 text-xl font-light leading-snug text-pretty text-primary-100 sm:text-2xl">
                   {lead}
                 </p>
               )}
 
               {quote && (
-                <figure className="mt-8 max-w-md border-l-2 border-secondary-500/60 pl-5">
+                <figure className="mt-8 border-l-2 border-secondary-500/60 pl-5">
                   <blockquote className="text-base italic leading-relaxed text-pretty text-primary-200/90 sm:text-lg">
                     „{quote}”
                   </blockquote>
@@ -174,35 +176,35 @@ export default function HeroSection({
               )}
 
               {description && (
-                <p className="mt-6 max-w-md text-base leading-relaxed text-pretty text-primary-200/90 sm:text-lg">
+                <p className="mt-6 text-base leading-relaxed text-pretty text-primary-200/90 sm:text-lg">
                   {description}
                 </p>
               )}
 
               {/* Blok kontaktowy */}
-              <dl className="mt-8 grid gap-3 sm:max-w-lg sm:grid-cols-2">
-                <div className="flex items-center gap-3 rounded-xl bg-white/[0.04] px-4 py-3 ring-1 ring-white/10 transition-colors hover:bg-white/[0.06]">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-secondary-500/10 text-secondary-400 ring-1 ring-secondary-500/20">
+              <dl className="mt-8 grid gap-3 sm:grid-cols-2">
+                <div className="flex items-center gap-3 rounded-xl bg-white/[0.08] px-4 py-3.5 ring-1 ring-white/20 shadow-lg shadow-black/20 transition-colors hover:bg-white/[0.11]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary-500/15 text-secondary-300 ring-1 ring-secondary-500/35">
                     <MapPinIcon className="h-5 w-5" />
                   </span>
                   <div className="min-w-0">
-                    <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-secondary-400">
+                    <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-secondary-400">
                       Adres
                     </dt>
-                    <dd className="mt-0.5 text-sm font-medium text-primary-50">
+                    <dd className="mt-0.5 text-base font-semibold text-white">
                       {CLINIC.address.street}, {CLINIC.address.cityDisplay}
                     </dd>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl bg-white/[0.04] px-4 py-3 ring-1 ring-white/10 transition-colors hover:bg-white/[0.06]">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-secondary-500/10 text-secondary-400 ring-1 ring-secondary-500/20">
+                <div className="flex items-center gap-3 rounded-xl bg-white/[0.08] px-4 py-3.5 ring-1 ring-white/20 shadow-lg shadow-black/20 transition-colors hover:bg-white/[0.11]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary-500/15 text-secondary-300 ring-1 ring-secondary-500/35">
                     <ClockIcon className="h-5 w-5" />
                   </span>
                   <div className="min-w-0">
-                    <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-secondary-400">
+                    <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-secondary-400">
                       Godziny
                     </dt>
-                    <dd className="mt-0.5 text-sm font-medium text-primary-50">
+                    <dd className="mt-0.5 text-base font-semibold text-white">
                       Pon–Pt {CLINIC.hours.weekdays}
                     </dd>
                   </div>
@@ -237,7 +239,7 @@ export default function HeroSection({
           </div>
 
           {/* Prawa kolumna — wycinanka lekarzy (tylko desktop) */}
-          <div className="relative hidden self-stretch lg:col-span-5 lg:flex lg:items-end lg:justify-center">
+          <div className="relative hidden self-stretch lg:col-span-4 lg:flex lg:items-end lg:justify-center">
             {heroImage && (
               // Wycinanka lekarza z przezroczystym tłem, dopasowana `object-contain`
               // + `max-h` (nie sztywnym boxem). next/image (model width/height/fill)
@@ -297,7 +299,7 @@ function HeroParticles() {
           style={{ top: p.top, left: p.left, animation: `heroFloat ${p.float}s ease-in-out ${p.delay}s infinite` }}
         >
           <span
-            className="hero-anim block opacity-30"
+            className="hero-anim block opacity-70"
             style={{ animation: `heroTwinkle ${p.tw}s ease-in-out ${p.delay}s infinite` }}
           >
             {p.type === 'ring' ? (

@@ -122,10 +122,10 @@ const FEATURED_SERVICES = [
     description:
       'Nowoczesna terapia dożylna, która wspiera organizm tam, gdzie najbardziej tego potrzebuje. Każdy wlew dobieramy indywidualnie — pod stan zdrowia, styl życia i cel terapii — aby uzupełnić niedobory, poprawić samopoczucie i wesprzeć naturalną regenerację.\n\nZadbaj o zdrowie od wewnątrz — dobre samopoczucie zaczyna się na poziomie komórkowym.',
     bullets: [
-      'Wlewy witaminowe – odporność, witalność, anti-aging',
-      'Wlewy sportowe – regeneracja po wysiłku',
-      'Wlewy na kaca – nawodnienie i detoksykacja',
-      'Wlewy na zjazd – energia i wsparcie wątroby',
+      'Witaminowa bomba, odporność, anti-age',
+      'Sport i regeneracja, energia, nawodnienie',
+      'After party i detox wątroby',
+      'Terapie peptydowe: GHK-Cu, BPC-157, oś GH',
     ],
     expert: { name: 'lek. dent. Ivanna Bas', role: 'Terapie infuzyjne', initials: 'IB' },
   },

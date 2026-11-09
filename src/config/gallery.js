@@ -271,7 +271,7 @@ export const GALLERY_HOME = [
 export function getGallery(category = '') {
   const c = (category || '').toLowerCase();
   if (c.includes('ultrasonograf') || c.includes('usg')) return GALLERIES.usg;
-  if (c.includes('infuz') || c.includes('wlew')) return GALLERIES.wlewy;
+  if (c.includes('infuz') || c.includes('wlew') || c.includes('peptyd')) return GALLERIES.wlewy;
   if (
     c.includes('stomatolog') ||
     c.includes('ortodonc') ||

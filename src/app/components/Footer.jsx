@@ -36,7 +36,7 @@ export default function Footer() {
                 className="h-10 w-10"
               />
               <span className="font-display text-2xl font-bold text-white">
-                Bas Clinic
+                {LOGO.wordmark}
               </span>
             </Link>
             <p className="mt-4 text-sm leading-6 text-gray-400">
@@ -124,6 +124,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {[
                 { href: '/usg/', label: 'Wszystkie badania USG' },
+                { href: '/usg/kontrola-wypelniaczy/', label: 'USG - kontrola wypełniaczy' },
                 { href: '/usg/jama-brzuszna/', label: 'USG jamy brzusznej' },
                 { href: '/usg/tarczyca/', label: 'USG tarczycy' },
                 { href: '/usg/piersi/', label: 'USG piersi' },

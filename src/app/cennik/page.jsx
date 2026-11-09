@@ -1,4 +1,5 @@
 import { generatePageMetadata } from '@/lib/metadata';
+import { WLEWY_TIERS, getWlewyDrips, getPeptydy } from '@/config/services';
 import Section from '../components/Section';
 import SectionHeader from '../components/SectionHeader';
 import CTASection from '../components/CTASection';
@@ -61,12 +62,27 @@ const PRICING_CATEGORIES = [
       { name: 'Osocze bogatopłytkowe', price: 'od 800 zł' },
     ],
   },
+  // Kroplówki z configu (SSOT składu i wariantów): cena „od" = wariant Standard,
+  // a osobne wiersze wariantów pokazują pełną siatkę wspólną dla wszystkich kroplówek.
   {
     category: 'Wlewy witaminowe',
     items: [
-      { name: 'Wlew witaminowy podstawowy', price: 'od 250 zł' },
-      { name: 'Wlew witaminowy premium', price: 'od 500 zł' },
+      ...WLEWY_TIERS.map((t) => ({
+        name: `Kroplówka witaminowa - wariant ${t.label}`,
+        price: `${t.price} zł`,
+      })),
+      ...getWlewyDrips().map((s) => ({
+        name: s.name,
+        price: `od ${WLEWY_TIERS[0].price} zł`,
+      })),
     ],
+  },
+  {
+    category: 'Terapie peptydowe',
+    items: getPeptydy().map((s) => ({
+      name: s.name,
+      price: 'wycena po konsultacji',
+    })),
   },
 ];
 

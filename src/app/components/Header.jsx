@@ -33,7 +33,7 @@ export default function Header() {
               className="h-9 w-9 sm:h-10 sm:w-10"
             />
             <span className="font-display text-2xl font-bold text-primary-800">
-              Bas Clinic
+              {LOGO.wordmark}
             </span>
           </Link>
 
@@ -421,6 +421,17 @@ function AreaIcon({ id, className = 'h-4 w-4' }) {
         <path d="M6.5 12c0-3 2.5-5.5 5.5-5.5S17.5 9 17.5 12" />
         <path d="M9.5 12c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5" />
         <path d="M3 16.5h3.5l1.8 3 3.2-9 2 4.5 1.2-2h4.1" />
+      </>
+    );
+  }
+
+  // Grupy mega-menu wlewów (id 'wlewy-*') - jedna ikona kropli/wlewu.
+  if (id && id.startsWith('wlewy')) {
+    return svg(
+      <>
+        <path d="M12 3.2s6 6.6 6 10.6a6 6 0 0 1-12 0c0-4 6-10.6 6-10.6Z" />
+        <path d="M12 8.5v6" />
+        <path d="M9.5 11.5h5" />
       </>
     );
   }

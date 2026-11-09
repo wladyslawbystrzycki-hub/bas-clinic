@@ -311,6 +311,12 @@ export const AESTHETIC_SERVICES = [
 // Klastry tematyczne grupy USG (kokon semantyczny) - uzywane na hubie /usg/
 // do grupowania kart oraz do matriarchalnego linkowania wewnetrznego.
 export const USG_CLUSTERS = [
+  // Pierwszy klaster celowo: pozycja na początku mega-menu USG i hubu (decyzja właściciela).
+  {
+    slug: 'medycyna-estetyczna',
+    name: 'USG w medycynie estetycznej',
+    description: 'Ocena wypełniaczy kwasu hialuronowego i tkanek twarzy przed zabiegiem, po zabiegu i przy powikłaniach.',
+  },
   {
     slug: 'glowa-szyja',
     name: 'Głowa i szyja',
@@ -357,6 +363,15 @@ export const USG_SERVICES = [
     name: 'USG',
     shortDesc: 'Pracownia ultrasonografii we Wrocławiu. Pełen zakres badań USG.',
     isLanding: true,
+  },
+  // --- Klaster: USG w medycynie estetycznej ---
+  {
+    id: 'usg-kontrola-wypelniaczy',
+    slug: 'usg/kontrola-wypelniaczy',
+    name: 'USG - kontrola wypełniaczy',
+    shortDesc: 'Kontrola wypełniaczy HA po zabiegu: lokalizacja preparatu, guzki, obrzęki i mapowanie naczyń przed kolejną iniekcją.',
+    cluster: 'medycyna-estetyczna',
+    related: ['medycyna-estetyczna/wypelniacze-ha', 'usg/tkanki-miekkie', 'usg/wezly-chlonne', 'usg/slinianki'],
   },
   // --- Klaster: jama brzuszna i uklad moczowy ---
   {
@@ -527,12 +542,357 @@ export const USG_SERVICES = [
   },
 ];
 
+// ————————————————————————— Wlewy witaminowe i peptydy —————————————————————————
+// Oferta przeniesiona z serwisu kroplowka-witaminowa.pl (ta sama grupa medyczna):
+// 10 kroplówek w trzech wariantach (Standard / VIP / Exclusive). Klaster jest jeden
+// (`kroplowki`), ale struktura zostaje taka jak w USG, żeby hub i menu były 1:1.
+// Skład wariantów trzymamy tu (SSOT) — z niego rysują się tabela na stronie wlewu,
+// karty na hubie /wlewy-witaminowe/ i cennik.
+
+// Warianty wspólne dla wszystkich kroplówek: etykieta + cena w gabinecie. `description`
+// i `icon` zasilają karty `PricingTiers` na hubie (`icon` to klucz z tamtejszych `ICONS`).
+export const WLEWY_TIERS = [
+  {
+    id: 'standard',
+    label: 'Standard',
+    price: 500,
+    icon: 'butelka',
+    description:
+      'Baza wlewu z jednym lub dwoma składnikami czynnymi. Punkt wyjścia dla większości pacjentów.',
+  },
+  {
+    id: 'vip',
+    label: 'VIP',
+    price: 600,
+    badge: 'najczęściej wybierany',
+    icon: 'butelka-plus',
+    description:
+      'Skład Standardu rozszerzony o kolejny składnik, na przykład witaminę C, kompleks witamin B lub glukozę.',
+  },
+  {
+    id: 'exclusive',
+    label: 'Exclusive',
+    price: 800,
+    icon: 'butelki',
+    description:
+      'Najszersza receptura: zwykle druga butelka z glutationem (TAD 600) albo zmieniony zestaw składników.',
+  },
+];
+
+export const WLEWY_CLUSTERS = [
+  {
+    slug: 'kroplowki',
+    name: 'Kroplówki witaminowe',
+    description:
+      'Wlewy dożylne witamin, elektrolitów i antyoksydantów w trzech wariantach składu. Skład dobiera lekarz po kwalifikacji.',
+  },
+];
+
+// Hub (isLanding) + strony kroplówek (cluster `kroplowki`, z `variants`). `related` to
+// linki „Powiązane zabiegi" w obrębie kokonu (jak w USG); mogą wskazywać też peptydy.
+// `icon` to klucz z `ICONS` w `OfferCards` (karta kroplówki na hubie).
+export const WLEWY_SERVICES = [
+  {
+    id: 'wlewy-witaminowe',
+    slug: 'wlewy-witaminowe',
+    name: 'Wlewy witaminowe',
+    shortDesc: 'Kroplówki witaminowe i terapie peptydowe we Wrocławiu.',
+    isLanding: true,
+  },
+  // --- Klaster: kroplówki witaminowe ---
+  {
+    id: 'wlewy-witaminowa-bomba',
+    slug: 'wlewy-witaminowe/witaminowa-bomba',
+    name: 'Kroplówka Witaminowa bomba',
+    shortDesc:
+      'Kompleks witamin B i witamina C we wlewie wspierającym odporność i regenerację po infekcji.',
+    cluster: 'kroplowki',
+    duration: '60 min',
+    icon: 'witaminy',
+    variants: [
+      { tier: 'standard', composition: ['NaCl 0,9% 500 ml (baza)', 'Kompleks witamin B (B1, B6, B12)'] },
+      { tier: 'vip', composition: ['NaCl 0,9% 500 ml (baza)', 'Witamina C', 'Kompleks witamin B (B1, B6, B12)'] },
+      { tier: 'exclusive', composition: ['NaCl 0,9% 500 ml (baza)', 'Witamina C', 'Cernevit (kompleks multiwitaminowy)'] },
+    ],
+    related: [
+      'wlewy-witaminowe/kroplowka-na-odpornosc',
+      'wlewy-witaminowe/kroplowka-sport-i-regeneracja',
+      'wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres',
+      'wlewy-witaminowe/kroplowka-anti-age',
+    ],
+  },
+  {
+    id: 'wlewy-sport-i-regeneracja',
+    slug: 'wlewy-witaminowe/kroplowka-sport-i-regeneracja',
+    name: 'Kroplówka Sport i regeneracja',
+    shortDesc:
+      'Elektrolity, magnez i witaminy B dla osób aktywnych: regeneracja po treningu i uzupełnienie strat z potem.',
+    cluster: 'kroplowki',
+    duration: '60 min',
+    icon: 'sport',
+    variants: [
+      { tier: 'standard', composition: ['Optylite 500 ml (baza)', 'Magnez'] },
+      { tier: 'vip', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Kompleks witamin B (B1, B6, B12)'] },
+      { tier: 'exclusive', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Kompleks witamin B (B1, B6, B12)', 'Druga butelka: NaCl 100-250 ml + TAD 600 (glutation)'] },
+    ],
+    related: [
+      'wlewy-witaminowe/witaminowa-bomba',
+      'wlewy-witaminowe/kroplowka-na-odpornosc',
+      'wlewy-witaminowe/kroplowka-nawodnienie',
+      'wlewy-witaminowe/kroplowka-energetyczna',
+    ],
+  },
+  {
+    id: 'wlewy-na-odpornosc',
+    slug: 'wlewy-witaminowe/kroplowka-na-odpornosc',
+    name: 'Kroplówka na odporność',
+    shortDesc:
+      'Witamina C, magnez i elektrolity w sezonie infekcyjnym oraz w rekonwalescencji po chorobie.',
+    cluster: 'kroplowki',
+    duration: '90 min',
+    icon: 'odpornosc',
+    variants: [
+      { tier: 'standard', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Witamina C'] },
+      { tier: 'vip', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Witamina C (3 amp.)'] },
+      { tier: 'exclusive', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Witamina C (3 amp.)', 'Druga butelka: NaCl 100-250 ml + TAD 600 (glutation)'] },
+    ],
+    related: [
+      'wlewy-witaminowe/witaminowa-bomba',
+      'wlewy-witaminowe/kroplowka-sport-i-regeneracja',
+      'wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres',
+      'wlewy-witaminowe/kroplowka-detox-watroby',
+    ],
+  },
+  {
+    id: 'wlewy-na-zmeczenie-i-stres',
+    slug: 'wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres',
+    name: 'Kroplówka na zmęczenie i stres',
+    shortDesc:
+      'Magnez, glutation i glukoza dla osób przemęczonych i przeciążonych pracą; wsparcie koncentracji.',
+    cluster: 'kroplowki',
+    duration: '90 min',
+    icon: 'regeneracja',
+    variants: [
+      { tier: 'standard', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Witamina B12'] },
+      { tier: 'vip', composition: ['Optylite 500 ml (baza)', 'TAD 600 (glutation)', 'Glukoza 250 ml', 'Magnez'] },
+      { tier: 'exclusive', composition: ['Optylite 500 ml (baza)', 'TAD 600 (glutation)', 'Glukoza 250 ml', 'Magnez', 'Druga butelka: NaCl 250 ml', 'Witamina C'] },
+    ],
+    related: [
+      'wlewy-witaminowe/witaminowa-bomba',
+      'wlewy-witaminowe/kroplowka-na-odpornosc',
+      'wlewy-witaminowe/kroplowka-energetyczna',
+      'wlewy-witaminowe/kroplowka-na-libido',
+    ],
+  },
+  {
+    id: 'wlewy-anti-age',
+    slug: 'wlewy-witaminowe/kroplowka-anti-age',
+    name: 'Kroplówka Anti-age',
+    shortDesc:
+      'Witamina C i B12 wspierające syntezę kolagenu oraz kondycję skóry, włosów i paznokci.',
+    cluster: 'kroplowki',
+    duration: '60 min',
+    icon: 'anti-age',
+    variants: [
+      { tier: 'standard', composition: ['NaCl 0,9% 500 ml (baza)', 'Witamina C', 'Witamina B12'] },
+      { tier: 'vip', composition: ['NaCl 0,9% 500 ml (baza)', 'Magnez', 'Witamina C', 'Witamina B12'] },
+      { tier: 'exclusive', composition: ['NaCl 0,9% 500 ml (baza)', 'Witamina C', 'Witamina B12', 'Natrium Bicarbonicum', 'Magnez'] },
+    ],
+    related: [
+      'wlewy-witaminowe/witaminowa-bomba',
+      'terapie-peptydowe/ghk-cu',
+      'wlewy-witaminowe/kroplowka-na-odpornosc',
+      'wlewy-witaminowe/kroplowka-na-libido',
+    ],
+  },
+  {
+    id: 'wlewy-after-party',
+    slug: 'wlewy-witaminowe/kroplowka-after-party',
+    name: 'Kroplówka After party',
+    shortDesc:
+      'Nawodnienie, glukoza i buforowanie kwasicy po nadmiernym spożyciu alkoholu; ulga w objawach kaca.',
+    cluster: 'kroplowki',
+    duration: '90 min',
+    icon: 'after-party',
+    variants: [
+      { tier: 'standard', composition: ['Glukoza 500 ml (baza)', 'Natrium Bicarbonicum'] },
+      { tier: 'vip', composition: ['Glukoza 500 ml (baza)', 'Natrium Bicarbonicum', 'Druga butelka: NaCl 250 ml', 'Magnez'] },
+      { tier: 'exclusive', composition: ['Glukoza 500 ml (baza)', 'Natrium Bicarbonicum', 'Druga butelka: NaCl 250 ml', 'Magnez', 'Witamina C'] },
+    ],
+    related: [
+      'wlewy-witaminowe/kroplowka-detox-watroby',
+      'wlewy-witaminowe/kroplowka-nawodnienie',
+      'wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres',
+      'wlewy-witaminowe/witaminowa-bomba',
+    ],
+  },
+  {
+    id: 'wlewy-na-libido',
+    slug: 'wlewy-witaminowe/kroplowka-na-libido',
+    name: 'Kroplówka na libido',
+    shortDesc:
+      'Elektrolity, magnez i koenzym Q10 jako wsparcie witalności i wytrzymałości; bez hormonów.',
+    cluster: 'kroplowki',
+    duration: '60 min',
+    icon: 'libido',
+    variants: [
+      { tier: 'standard', composition: ['Optylite 500 ml (baza)', 'Magnez'] },
+      { tier: 'vip', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Kompleks witamin B (B1, B6, B12)'] },
+      { tier: 'exclusive', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Koenzym Q10 (ubichinon)'] },
+    ],
+    related: [
+      'wlewy-witaminowe/kroplowka-energetyczna',
+      'wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres',
+      'wlewy-witaminowe/kroplowka-sport-i-regeneracja',
+      'terapie-peptydowe/peptydy-osi-gh',
+    ],
+  },
+  {
+    id: 'wlewy-detox-watroby',
+    slug: 'wlewy-witaminowe/kroplowka-detox-watroby',
+    name: 'Kroplówka Detox wątroby',
+    shortDesc:
+      'L-ornityna L-asparaginian (Hepa-Merz) i elektrolity jako wsparcie wątroby po lekach lub alkoholu.',
+    cluster: 'kroplowki',
+    duration: '60 min',
+    icon: 'detox',
+    variants: [
+      { tier: 'standard', composition: ['NaCl 0,9% 500 ml (baza)', 'Hepa-Merz (L-ornityna L-asparaginian)'] },
+      { tier: 'vip', composition: ['NaCl 0,9% 500 ml (baza)', 'Hepa-Merz (L-ornityna L-asparaginian)', 'Druga butelka: Optylite 500 ml', 'Natrium Bicarbonicum'] },
+      { tier: 'exclusive', composition: ['NaCl 0,9% 500 ml (baza)', 'Hepa-Merz (L-ornityna L-asparaginian)', 'Druga butelka: Optylite 500 ml', 'Natrium Bicarbonicum', 'Magnez'] },
+    ],
+    related: [
+      'wlewy-witaminowe/kroplowka-after-party',
+      'wlewy-witaminowe/kroplowka-nawodnienie',
+      'wlewy-witaminowe/kroplowka-na-odpornosc',
+      'wlewy-witaminowe/witaminowa-bomba',
+    ],
+  },
+  {
+    id: 'wlewy-nawodnienie',
+    slug: 'wlewy-witaminowe/kroplowka-nawodnienie',
+    name: 'Kroplówka nawadniająca',
+    shortDesc:
+      'Szybkie uzupełnienie płynów i elektrolitów po wysiłku, upale i infekcji z gorączką.',
+    cluster: 'kroplowki',
+    duration: '60 min',
+    icon: 'nawodnienie',
+    variants: [
+      { tier: 'standard', composition: ['Optylite 500 ml (baza)'] },
+      { tier: 'vip', composition: ['Optylite 500 ml (baza)', 'Witamina B12', 'Magnez'] },
+      { tier: 'exclusive', composition: ['Optylite 500 ml (baza)', 'Kompleks witamin B (B1, B6, B12)', 'Magnez', 'Druga butelka: NaCl 250 ml + TAD 600 (glutation)'] },
+    ],
+    related: [
+      'wlewy-witaminowe/kroplowka-sport-i-regeneracja',
+      'wlewy-witaminowe/kroplowka-after-party',
+      'wlewy-witaminowe/kroplowka-energetyczna',
+      'wlewy-witaminowe/kroplowka-na-odpornosc',
+    ],
+  },
+  {
+    id: 'wlewy-energetyczna',
+    slug: 'wlewy-witaminowe/kroplowka-energetyczna',
+    name: 'Kroplówka energetyczna',
+    shortDesc:
+      'Magnez i witaminy B wspierające metabolizm energetyczny w okresach wzmożonego wysiłku.',
+    cluster: 'kroplowki',
+    duration: '60 min',
+    icon: 'energia',
+    variants: [
+      { tier: 'standard', composition: ['Optylite 500 ml (baza)', 'Magnez'] },
+      { tier: 'vip', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Kompleks witamin B (B1, B6, B12)'] },
+      { tier: 'exclusive', composition: ['Optylite 500 ml (baza)', 'Magnez', 'Kompleks witamin B (B1, B6, B12)', 'Druga butelka: NaCl 100-250 ml + TAD 600 (glutation)'] },
+    ],
+    related: [
+      'wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres',
+      'wlewy-witaminowe/witaminowa-bomba',
+      'wlewy-witaminowe/kroplowka-sport-i-regeneracja',
+      'wlewy-witaminowe/kroplowka-nawodnienie',
+    ],
+  },
+];
+
+// ————————————————————————— Terapie peptydowe —————————————————————————
+// Osobny hub /terapie-peptydowe/ (peptydy to głównie iniekcje podskórne, nie wlewy;
+// inna intencja wyszukiwania). Bez `variants` i ceny - wycena po konsultacji.
+// Żaden z peptydów nie jest zarejestrowanym lekiem; treść stron musi podawać
+// status prawny (WADA) i stan dowodów.
+export const PEPTYDY_SERVICES = [
+  {
+    id: 'terapie-peptydowe',
+    slug: 'terapie-peptydowe',
+    name: 'Terapie peptydowe',
+    shortDesc: 'GHK-Cu, BPC-157 i peptydy osi GH po konsultacji lekarskiej we Wrocławiu.',
+    isLanding: true,
+  },
+  {
+    id: 'wlewy-ghk-cu',
+    slug: 'terapie-peptydowe/ghk-cu',
+    name: 'Peptyd GHK-Cu',
+    shortDesc:
+      'Peptyd miedziowy stosowany w terapiach regeneracyjnych skóry; droga podania i kwalifikacja po konsultacji lekarskiej.',
+    related: [
+      'terapie-peptydowe/bpc-157',
+      'terapie-peptydowe/peptydy-osi-gh',
+      'wlewy-witaminowe/kroplowka-anti-age',
+      'medycyna-estetyczna/mezoterapia-iglowa',
+    ],
+  },
+  {
+    id: 'wlewy-bpc-157',
+    slug: 'terapie-peptydowe/bpc-157',
+    name: 'Peptyd BPC-157',
+    shortDesc:
+      'Syntetyczny peptyd badany pod kątem regeneracji tkanek; substancja eksperymentalna, decyzja po konsultacji lekarskiej.',
+    related: [
+      'terapie-peptydowe/ghk-cu',
+      'terapie-peptydowe/peptydy-osi-gh',
+      'wlewy-witaminowe/kroplowka-sport-i-regeneracja',
+    ],
+  },
+  {
+    id: 'wlewy-peptydy-osi-gh',
+    slug: 'terapie-peptydowe/peptydy-osi-gh',
+    name: 'Peptydy osi GH',
+    shortDesc:
+      'Sekretagogi hormonu wzrostu (sermorelina, CJC-1295, ipamorelin, tesamorelina); kwalifikacja lekarska i omówienie statusu prawnego.',
+    related: [
+      'terapie-peptydowe/bpc-157',
+      'terapie-peptydowe/ghk-cu',
+      'wlewy-witaminowe/kroplowka-energetyczna',
+      'wlewy-witaminowe/kroplowka-na-libido',
+    ],
+  },
+];
+
 export function getServiceBySlug(slug) {
   return (
     STOMATOLOGIA_SERVICES.find((s) => s.slug === slug) ||
     AESTHETIC_SERVICES.find((s) => s.slug === slug) ||
-    USG_SERVICES.find((s) => s.slug === slug)
+    USG_SERVICES.find((s) => s.slug === slug) ||
+    WLEWY_SERVICES.find((s) => s.slug === slug) ||
+    PEPTYDY_SERVICES.find((s) => s.slug === slug)
   );
+}
+
+export function getWlewyServicesByCluster(clusterSlug) {
+  return WLEWY_SERVICES.filter((s) => s.cluster === clusterSlug);
+}
+
+// Kroplówki z wariantami (bez huba) — cennik, ItemList, karty z ceną „od".
+export function getWlewyDrips() {
+  return WLEWY_SERVICES.filter((s) => s.variants);
+}
+
+// Cena „od" kroplówki = cena wariantu Standard (pierwszy tier). Sklejanie wyższych
+// wariantów w jedną cenę obiecywałoby składniki dostępne dopiero w VIP/Exclusive.
+export function getWlewyPriceFrom() {
+  return WLEWY_TIERS[0].price;
+}
+
+// Strony peptydów (bez huba) — hub, menu, cennik, ItemList.
+export function getPeptydy() {
+  return PEPTYDY_SERVICES.filter((s) => !s.isLanding);
 }
 
 export function getUsgServicesByCluster(clusterSlug) {

@@ -903,6 +903,20 @@ const KNOWLEDGE_BY_SLUG = {
       { title: "Wskazania do USG tarczycy", text: "Wskazaniem jest wyczuwalny guzek, powiększenie szyi lub nieprawidłowe wyniki hormonów, a badanie jest prywatne, więc skierowanie nie jest potrzebne." },
     ],
   },
+  "usg/kontrola-wypelniaczy": {
+    title: "Co warto wiedzieć o USG wypełniaczy",
+    description:
+      "USG wypełniaczy to badanie skóry i tkanki podskórnej twarzy głowicą wysokiej częstotliwości. Pokazuje, gdzie leży kwas hialuronowy, jak głęboko i w jakim zasięgu, a w opcji Dopplera uwidacznia naczynia przed kolejnym zabiegiem.",
+    points: [
+      { title: "Co pokazuje USG wypełniaczy", text: "Kwas hialuronowy widać jako dobrze odgraniczone, bezechowe lub hipoechogeniczne złogi; inne materiały, jak hydroksyapatyt wapnia czy silikon, dają odmienny obraz." },
+      { title: "Kontrola po zabiegu", text: "Badanie wyjaśnia przyczynę guzka, asymetrii, przedłużającego się obrzęku lub przemieszczenia preparatu i wskazuje, gdzie ewentualnie podać hialuronidazę." },
+      { title: "Przed kolejnym zabiegiem", text: "USG Doppler mapuje przebieg tętnic twarzy i uwidacznia wcześniej podane wypełniacze, o których pacjent często nie pamięta." },
+      { title: "Przebieg i przygotowanie", text: "Badanie trwa zwykle kilkanaście do trzydziestu minut, jest bezbolesne i nie wymaga przygotowania; warto zabrać dokumentację wcześniejszych zabiegów." },
+    ],
+    image: "/uploads/services/kompendium-usg-wypelniacze-badanie-bas-clinic-wroclaw.webp",
+    image2: "/uploads/services/kompendium-usg-wypelniacze-glowica-bas-clinic-wroclaw.webp",
+    imageAlt: "USG wypełniaczy twarzy głowicą liniową w Bas Clinic we Wrocławiu",
+  },
   "usg/tkanki-miekkie": {
     title: "Co warto wiedzieć o USG tkanek miękkich",
     description:
@@ -947,6 +961,150 @@ const KNOWLEDGE_BY_SLUG = {
       { title: "Ile trwa pojedynczy wlew?", text: "Pojedynczy wlew trwa zwykle od 30 do 60 minut, a czas zależy od rodzaju i objętości podawanych składników." },
     ],
   },
+  // ————————————————— Wlewy witaminowe: kroplówki i peptydy —————————————————
+  "wlewy-witaminowe/witaminowa-bomba": {
+    title: "Co warto wiedzieć o kroplówce Witaminowa bomba",
+    description:
+      "Kroplówka Witaminowa bomba to wlew dożylny z kompleksem witamin B (B1, B6, B12), a w wariantach VIP i Exclusive także z witaminą C. Trwa około godziny i poprzedza go kwalifikacja lekarska.",
+    points: [
+      { title: "Trzy warianty składu", text: "Standard zawiera sól fizjologiczną i kompleks witamin B, VIP dokłada witaminę C, a Exclusive łączy witaminę C z preparatem Cernevit zamiast kompleksu B." },
+      { title: "Dlaczego dożylnie", text: "Wlew omija wchłanianie jelitowe, co ma znaczenie przy niedoborach, zaburzeniach wchłaniania i w rekonwalescencji; u osób zdrowych dieta zwykle wystarcza." },
+      { title: "Kwalifikacja i przeciwwskazania", text: "Lekarz wyklucza m.in. niewydolność nerek i serca, hemochromatozę i niedobór G6PD, a wariant dobiera do celu wizyty." },
+      { title: "Czas i cena", text: "Wizyta trwa około 80 minut łącznie z kwalifikacją i obserwacją, a cena zaczyna się od wariantu Standard." },
+    ],
+  },
+  "terapie-peptydowe/bpc-157": {
+    title: "Co warto wiedzieć o peptydzie BPC-157",
+    description:
+      "BPC-157 to syntetyczny peptyd badany niemal wyłącznie na zwierzętach, bez rejestracji jako lek w Polsce, UE i USA. Od 2022 roku jest zabroniony w sporcie (WADA, kategoria S0), a o jego zastosowaniu decyduje lekarz po konsultacji i świadomej zgodzie pacjenta.",
+    points: [
+      { title: "Czym jest BPC-157", text: "Łańcuch 15 aminokwasów o sekwencji z białka soku żołądkowego, badany od lat 90. głównie na szczurach; nie jest hormonem ani sterydem." },
+      { title: "Dowody u ludzi", text: "Opublikowano tylko trzy małe prace bez grupy kontrolnej, łącznie na mniej niż 30 osobach; nie ma żadnego randomizowanego badania klinicznego." },
+      { title: "Status prawny i WADA", text: "Nie jest lekiem ani suplementem; od 1 stycznia 2022 roku podlega zakazowi WADA w każdym czasie, bez możliwości wyłączenia terapeutycznego." },
+      { title: "Konsultacja i odmowa", text: "Podanie tylko po konsultacji lekarskiej, badaniach i pisemnej zgodzie; lekarz może odmówić, między innymi przy nowotworze w wywiadzie, w ciąży i u sportowców." },
+    ],
+  },
+  "terapie-peptydowe/ghk-cu": {
+    title: "Co warto wiedzieć o peptydzie GHK-Cu",
+    description:
+      "GHK-Cu to naturalny tripeptyd z miedzią, obecny w ludzkim osoczu, którego stężenie spada z wiekiem. W badaniach laboratoryjnych pobudza syntezę kolagenu, a u pacjentów stosuje się go miejscowo i w mezoterapii po kwalifikacji lekarskiej.",
+    points: [
+      { title: "Czym jest GHK-Cu", text: "Kompleks tripeptydu glicylo-histydylo-lizyny z jonem miedzi, wyizolowany z ludzkiego osocza przez Pickarta w 1973 roku." },
+      { title: "Stan badań", text: "Większość danych o kolagenie, naczyniach i genach pochodzi z badań in vitro i na zwierzętach; badania u ludzi są małe i dotyczą stosowania miejscowego." },
+      { title: "Drogi podania i prawo", text: "W UE GHK-Cu jest składnikiem kosmetyków i preparatów do mezoterapii, nie zarejestrowanym lekiem do iniekcji; o podaniu decyduje lekarz po świadomej zgodzie." },
+      { title: "Przeciwwskazania", text: "Ciąża, karmienie, choroba Wilsona i zaburzenia gospodarki miedzią, aktywna choroba nowotworowa oraz alergia na składniki preparatu." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-after-party": {
+    title: "Co warto wiedzieć o kroplówce After party",
+    description:
+      "Kroplówka After party to wlew dożylny z glukozą 5% i wodorowęglanem sodu, podawany po epizodzie nadmiernego spożycia alkoholu, gdy utrzymują się objawy kaca. Uzupełnia płyny i glukozę oraz buforuje zakwaszenie, ale nie przyspiesza trzeźwienia i nie zastępuje leczenia.",
+    points: [
+      { title: "Skład w trzech wariantach", text: "Bazą jest glukoza 5% z wodorowęglanem sodu; VIP dokłada NaCl 250 ml i magnez, Exclusive dodatkowo witaminę C." },
+      { title: "Czego wlew nie robi", text: "Nie obniża stężenia alkoholu we krwi, nie leczy uzależnienia i nie chroni wątroby; łagodzi część objawów kaca." },
+      { title: "Kiedy potrzebny jest szpital", text: "Drgawki, majaczenie lub kołatanie serca z zaburzeniami świadomości to objawy zespołu abstynencyjnego, nie wskazanie do kroplówki." },
+      { title: "Jak wygląda wizyta", text: "Kwalifikacja lekarska, około 90 minut wlewu i krótka obserwacja; wlew podajemy dopiero po wytrzeźwieniu." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-anti-age": {
+    title: "Co warto wiedzieć o kroplówce Anti-age",
+    description:
+      "Kroplówka Anti-age to wlew dożylny z witaminą C i witaminą B12, które uczestniczą w syntezie kolagenu i odnowie naskórka, włosów oraz paznokci. Ma sens przy niedoborach lub zaburzeniach wchłaniania, a o wskazaniach decyduje lekarz podczas kwalifikacji.",
+    points: [
+      { title: "Skład w trzech wariantach", text: "Każdy wariant zawiera witaminę C i B12 w soli fizjologicznej; VIP dokłada magnez, a Exclusive dodatkowo wodorowęglan sodu." },
+      { title: "Witamina C a kolagen", text: "Witamina C jest kofaktorem enzymów, bez których fibroblasty nie wytwarzają stabilnych włókien kolagenowych." },
+      { title: "Czego wlew nie zastępuje", text: "Kroplówka nie zastępuje codziennej fotoprotekcji ani zabiegów dermatologicznych i nie wygładza zmarszczek." },
+      { title: "Przeciwwskazania", text: "Niedobór G6PD, niewydolność nerek i hemochromatoza wykluczają dożylną witaminę C, dlatego wlew poprzedza kwalifikacja lekarska." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-detox-watroby": {
+    title: "Co warto wiedzieć o kroplówce Detox wątroby",
+    description:
+      "Kroplówka Detox wątroby to wlew dożylny z lekiem Hepa-Merz (L-ornityna L-asparaginian), który wspiera usuwanie amoniaku w cyklu mocznikowym, oraz z płynami i elektrolitami. Ma sens przy wątrobie przejściowo obciążonej lekami lub alkoholem; chorób wątroby nie leczy i nie zastępuje ich diagnostyki.",
+    points: [
+      { title: "Hepa-Merz w każdym wariancie", text: "Lek zarejestrowany w hiperamonemii i encefalopatii wątrobowej; obniża stężenie amoniaku, nie przyspiesza metabolizmu alkoholu." },
+      { title: "Druga butelka w VIP i Exclusive", text: "Optylite z wodorowęglanem sodu uzupełnia płyny i elektrolity oraz buforuje kwaśne metabolity, a Exclusive dokłada magnez." },
+      { title: "Czym jest „detoks”", text: "To określenie potoczne: wątroba ma własne szlaki biotransformacji, a wlew wspiera tylko jeden z nich, cykl mocznikowy." },
+      { title: "Kiedy potrzebna jest diagnostyka", text: "Stłuszczenie, wirusowe zapalenie i marskość wymagają USG wątroby i badań krwi, a problem alkoholowy leczenia uzależnień." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-energetyczna": {
+    title: "Co warto wiedzieć o kroplówce energetycznej",
+    description:
+      "Kroplówka energetyczna to wlew z elektrolitami i magnezem, który w wyższych wariantach uzupełnia witaminy B i glutation. Nie zawiera kofeiny ani stymulantów i nie zastępuje snu, diety ani diagnostyki przyczyn zmęczenia.",
+    points: [
+      { title: "Bez stymulantów", text: "Wlew nie zawiera kofeiny ani tauryny; dostarcza kofaktory reakcji, w których komórka wytwarza ATP, i nie zaburza snu." },
+      { title: "Skład wlewu", text: "Każdy wariant zawiera Optylite i magnez; VIP dokłada witaminy B1, B6 i B12, a Exclusive drugą butelkę z glutationem (TAD 600)." },
+      { title: "Kiedy pomaga", text: "Poprawa pojawia się wtedy, gdy zmęczenie wynika z niedoboru magnezu lub witamin B; u osoby bez niedoborów efekt może nie wystąpić." },
+      { title: "Zmęczenie wymaga badań", text: "Zmęczenie trwające ponad kilka tygodni wymaga morfologii, TSH, ferrytyny i witaminy B12, bo może mieć przyczynę wymagającą leczenia." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-na-libido": {
+    title: "Co warto wiedzieć o kroplówce na libido",
+    description:
+      "Kroplówka na libido to wlew dożylny z elektrolitami i magnezem, w wariancie VIP z witaminami B, a w Exclusive z koenzymem Q10. Nie zawiera hormonów i nie leczy zaburzeń seksualnych; wspiera nawodnienie i metabolizm energetyczny u kobiet i mężczyzn.",
+    points: [
+      { title: "Bez hormonów i leków na potencję", text: "W składzie jest Optylite, magnez, a w wyższych wariantach witaminy B albo koenzym Q10; nie ma testosteronu ani leków na zaburzenia erekcji." },
+      { title: "Przyczyny wymagają diagnostyki", text: "Obniżone libido może mieć podłoże hormonalne, naczyniowe, psychiczne lub lekowe, a lekarz podczas kwalifikacji wskazuje, gdzie szukać dalej." },
+      { title: "Koenzym Q10 tylko w Exclusive", text: "Zastępuje kompleks witamin B, a przy acenokumarolu lub warfarynie lekarz wybiera wariant bez Q10, bo dane o interakcji są sprzeczne." },
+      { title: "Dla kobiet i mężczyzn", text: "Składniki działają niezależnie od płci, a wlew trwa około godziny i poprzedza go kwalifikacja lekarska." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-na-odpornosc": {
+    title: "Co warto wiedzieć o kroplówce na odporność",
+    description:
+      "Kroplówka na odporność to wlew dożylny witaminy C i magnezu w płynie wieloelektrolitowym Optylite, a w wariancie Exclusive także glutationu TAD 600. Wlew uzupełnia składniki przy zwiększonym zużyciu, na przykład w rekonwalescencji, ale nie zapobiega infekcjom i nie zastępuje szczepień.",
+    points: [
+      { title: "Skład trzech wariantów", text: "Wszystkie warianty zawierają Optylite, magnez i witaminę C; VIP ma potrójną dawkę witaminy C, a Exclusive dokłada drugą butelkę z glutationem TAD 600." },
+      { title: "Co mówią badania", text: "Przegląd Cochrane z 2013 roku nie wykazał, aby witamina C zapobiegała przeziębieniom u osób zdrowych; regularne przyjmowanie skracało czas infekcji o około 8%." },
+      { title: "Czego wlew nie zastąpi", text: "Kroplówka nie zastępuje szczepień, leczenia infekcji, diagnostyki nawracających zakażeń ani snu i diety." },
+      { title: "Przebieg i kwalifikacja", text: "Wlew trwa około 90 minut, bo magnez podaje się wolno; wariant i wskazania ustala lekarz po wywiadzie i ocenie funkcji nerek." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres": {
+    title: "Co warto wiedzieć o kroplówce na zmęczenie i stres",
+    description:
+      "Kroplówka na zmęczenie i stres to wlew dożylny z elektrolitami i magnezem, a w wariantach VIP i Exclusive z glutationem TAD 600 i glukozą. Uzupełnia zasoby, które przewlekły stres zużywa, ale nie zastępuje snu, psychoterapii ani leczenia.",
+    points: [
+      { title: "Warianty nie sumują się", text: "Standard zawiera Optylite, magnez i witaminę B12; w VIP witaminę B12 zastępują glutation i glukoza, a Exclusive dokłada sól fizjologiczną z witaminą C." },
+      { title: "Stres wypłukuje magnez", text: "Podwyższony kortyzol zwiększa wydalanie magnezu z moczem, a jego niedobór nasila odpowiedź stresową i napięcie mięśni." },
+      { title: "Glukoza a cukrzyca", text: "Warianty VIP i Exclusive zawierają 250 ml glukozy, więc przy niewyrównanej cukrzycy lekarz proponuje wariant Standard bez glukozy." },
+      { title: "Czego wlew nie zastąpi", text: "Obniżony nastrój trwający ponad dwa tygodnie, napady lęku i przewlekła bezsenność wymagają konsultacji lekarskiej, nie kroplówki." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-nawodnienie": {
+    title: "Co warto wiedzieć o kroplówce nawadniającej",
+    description:
+      "Kroplówka nawadniająca to dożylny wlew zbilansowanego płynu wieloelektrolitowego Optylite, który uzupełnia wodę i jony z pominięciem przewodu pokarmowego. Jest zabiegiem doraźnym dla dorosłych z łagodnym lub umiarkowanym odwodnieniem po wysiłku, upale i infekcji z gorączką.",
+    points: [
+      { title: "Skład zbliżony do osocza", text: "Optylite zawiera sód, potas, wapń, magnez, chlorki i octany w stężeniach bliskich osoczu, więc obciąża organizm mniej niż sama sól fizjologiczna." },
+      { title: "Dożylnie czy doustnie", text: "Przy łagodnym odwodnieniu wystarczy picie; wlew ma przewagę, gdy nudności lub duża utrata płynów utrudniają nawadnianie doustne." },
+      { title: "Kiedy potrzebny jest szpital", text: "Ciężkie odwodnienie, wymioty z zaburzeniami świadomości i odwodnienie u małych dzieci wymagają leczenia szpitalnego, nie wlewu w gabinecie." },
+      { title: "Przebieg i kwalifikacja", text: "Wlew 500 ml trwa około 60 minut; lekarz ocenia stopień odwodnienia, stan serca i nerek oraz wskazuje jeden z trzech wariantów o stałym składzie." },
+    ],
+  },
+  "wlewy-witaminowe/kroplowka-sport-i-regeneracja": {
+    title: "Co warto wiedzieć o kroplówce Sport i regeneracja",
+    description:
+      "Kroplówka Sport i regeneracja to wlew z elektrolitami i magnezem, który w wyższych wariantach uzupełnia witaminy B i glutation. Uzupełnia straty po dużym wysiłku, ale nie zastępuje snu, posiłku po treningu ani odpoczynku.",
+    points: [
+      { title: "Skład wlewu", text: "Każdy wariant zawiera Optylite i magnez; VIP dokłada witaminy B1, B6 i B12, a Exclusive drugą butelkę z glutationem (TAD 600)." },
+      { title: "Kiedy podać", text: "Najlepszy moment to 24-48 godzin po zawodach lub najcięższym treningu, gdy straty elektrolitów są największe." },
+      { title: "Sportowcy a WADA", text: "Składniki nie są zabronione, ale lista WADA zakazuje wlewów powyżej 100 ml na 12 godzin poza szpitalem, więc zawodnik objęty kontrolą potrzebuje zgody TUE." },
+      { title: "U kogo działa", text: "Uzupełnienie magnezu poprawia wydolność tylko u osób z jego niedoborem; u osób z prawidłowym stężeniem nie wykazano wpływu na wyniki." },
+    ],
+  },
+  "terapie-peptydowe/peptydy-osi-gh": {
+    title: "Co warto wiedzieć o peptydach osi GH",
+    description:
+      "Peptydy osi GH (sermorelina, CJC-1295, ipamorelin, tesamorelina) pobudzają przysadkę do wydzielania własnego hormonu wzrostu. Nie są zarejestrowanymi lekami w Polsce, a dowody u zdrowych dorosłych są ograniczone, dlatego o ich zastosowaniu decyduje lekarz po badaniach.",
+    points: [
+      { title: "Czym różnią się od hormonu wzrostu", text: "Sekretagogi wywołują własne pulsy GH, które nadal podlegają hamowaniu przez IGF-1, ale dzielą z hormonem wzrostu większość ryzyk." },
+      { title: "Co mówią badania", text: "U zdrowych osób starszych pobudzanie osi GH daje niewielki przyrost beztłuszczowej masy ciała bez poprawy siły, kosztem obrzęków, bólów stawów i zaburzeń glikemii." },
+      { title: "Status prawny i WADA", text: "Żaden sekretagog GH nie jest w Polsce zarejestrowany do terapii, a wszystkie znajdują się w klasie S2 listy zabronionej WADA." },
+      { title: "Kwalifikacja i badania", text: "Przed decyzją lekarz zleca IGF-1, glukozę i HbA1c, morfologię, lipidogram i hormony tarczycy, a w trakcie terapii kontroluje IGF-1 i glikemię." },
+    ],
+  },
   "medycyna-estetyczna/wypelniacze-ha": {
     title: "Co warto wiedzieć o wypełniaczach na bazie kwasu hialuronowego",
     description:
@@ -966,7 +1124,7 @@ const KNOWLEDGE_BY_SLUG = {
 function resolveCategory(category = '') {
   const c = (category || '').toLowerCase();
   if (c.includes('ultrasonograf') || c.includes('usg')) return KNOWLEDGE.usg;
-  if (c.includes('infuz') || c.includes('wlew')) return KNOWLEDGE.wlewy;
+  if (c.includes('infuz') || c.includes('wlew') || c.includes('peptyd')) return KNOWLEDGE.wlewy;
   if (
     c.includes('stomatolog') ||
     c.includes('ortodonc') ||

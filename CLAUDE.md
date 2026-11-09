@@ -56,7 +56,7 @@ npm run lint      # ESLint
 
 - Polish language throughout all UI text and content
 - IMPORTANT: Use Tailwind CSS v4 utility classes only. Theme tokens in `src/app/globals.css` via `@theme inline`
-- Server Components by default. `"use client"` only for interactive elements (Header, BackToTop, FAQAccordion, FoundersSlider, RelatedServicesSlider, ClinicGallery, ServicesAccordion, BookingFlow)
+- Server Components by default. `"use client"` only for interactive elements (Header, BackToTop, FAQAccordion, FoundersSlider, RelatedServicesSlider, ClinicGallery, ServicesAccordion, ProcessStepsTabs, BookingFlow)
 - Import alias: `@/` maps to `./src/`
 - All URLs use trailing slashes (`trailingSlash: true` in next.config.mjs)
 - Clinic data centralized in `src/config/clinic.js` — never hardcode phone/address/email

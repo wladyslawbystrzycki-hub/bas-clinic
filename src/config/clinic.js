@@ -103,6 +103,7 @@ export const CLINIC = {
 // stopki, ikon (icon.js/apple-icon.js) i pola `logo` w JSON-LD organizacji.
 export const LOGO = {
   src: '/logo-bas-clinic-wroclaw.svg',
+  wordmark: 'dr Bas Clinic',
   alt: 'Logo Bas Clinic — klinika stomatologii i medycyny estetycznej we Wrocławiu',
   width: 1080,
   height: 1080,

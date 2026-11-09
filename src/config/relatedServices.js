@@ -3,7 +3,7 @@
 // `getRelatedServices(slug)` zwraca gotowy pakiet dla komponentu <RelatedServices/>
 // (subtitle/title/intro + CTA do hubu + lista usług). Relewancję WYWODZIMY z modelu
 // danych w services.js, więc działa automatycznie dla każdej strony usługi:
-//   • USG          → kuratorskie pole `related` (fallback: ten sam `cluster`)
+//   • USG / Wlewy / Peptydy → kuratorskie pole `related` (fallback: ten sam `cluster`)
 //   • Stomatologia → `children` (strony-kategorie) lub „rodzeństwo" spod tego samego `parent`
 //   • Estetyka     → usługi dzielące `bodyAreas` (sortowane wg liczby wspólnych obszarów)
 // `RELATED_OVERRIDES` pozwala ręcznie dobrać najbardziej trafne linki tam, gdzie
@@ -13,6 +13,8 @@ import {
   STOMATOLOGIA_SERVICES,
   AESTHETIC_SERVICES,
   USG_SERVICES,
+  WLEWY_SERVICES,
+  PEPTYDY_SERVICES,
   getServiceBySlug,
 } from './services';
 
@@ -48,6 +50,8 @@ const HUBS = {
   stomatologia: { href: '/stomatologia/', label: 'Zobacz wszystkie zabiegi' },
   estetyka: { href: '/medycyna-estetyczna/', label: 'Zobacz wszystkie zabiegi' },
   usg: { href: '/usg/', label: 'Zobacz wszystkie badania USG' },
+  wlewy: { href: '/wlewy-witaminowe/', label: 'Zobacz wszystkie wlewy' },
+  peptydy: { href: '/terapie-peptydowe/', label: 'Zobacz wszystkie terapie peptydowe' },
 };
 
 const COPY = {
@@ -66,12 +70,24 @@ const COPY = {
     title: 'Powiązane badania USG',
     intro: 'Zobacz powiązane badania USG, które wykonujemy w naszej pracowni we Wrocławiu.',
   },
+  wlewy: {
+    subtitle: 'Wlewy witaminowe',
+    title: 'Powiązane wlewy i terapie',
+    intro: 'Zobacz pokrewne kroplówki i terapie, które lekarz może zaproponować w ramach jednego planu.',
+  },
+  peptydy: {
+    subtitle: 'Terapie peptydowe',
+    title: 'Powiązane terapie i wlewy',
+    intro: 'Zobacz pokrewne terapie peptydowe i kroplówki, które lekarz może omówić podczas jednej konsultacji.',
+  },
 };
 
 const DEFAULT_HUB = { href: '/cennik/', label: 'Zobacz wszystkie usługi' };
 
 function categoryOf(svc) {
   if (USG_SERVICES.includes(svc)) return 'usg';
+  if (WLEWY_SERVICES.includes(svc)) return 'wlewy';
+  if (PEPTYDY_SERVICES.includes(svc)) return 'peptydy';
   if (AESTHETIC_SERVICES.includes(svc)) return 'estetyka';
   if (STOMATOLOGIA_SERVICES.includes(svc)) return 'stomatologia';
   return null;
@@ -106,10 +122,11 @@ export function getRelatedServices(slug, max = 6) {
 
   if (RELATED_OVERRIDES[slug]) {
     candidates = resolveSlugs(RELATED_OVERRIDES[slug], slug);
-  } else if (cat === 'usg') {
+  } else if (cat === 'usg' || cat === 'wlewy' || cat === 'peptydy') {
+    const pool = { usg: USG_SERVICES, wlewy: WLEWY_SERVICES, peptydy: PEPTYDY_SERVICES }[cat];
     candidates = resolveSlugs(svc.related, slug);
     if (candidates.length === 0 && svc.cluster) {
-      candidates = USG_SERVICES.filter(
+      candidates = pool.filter(
         (s) => s.cluster === svc.cluster && s.slug !== slug && !s.isLanding,
       );
     }

@@ -700,6 +700,22 @@ export const WHY_US = {
       'Komfort i dyskrecja',
     ],
   },
+  'usg/kontrola-wypelniaczy': {
+    title: 'Dlaczego USG wypełniaczy w Bas Clinic?',
+    intro: 'Oceniamy położenie i zasięg wypełniacza oraz naczynia twarzy w jednym badaniu, a wynik omawia lekarz, który zna zarówno USG, jak i zabiegi medycyny estetycznej.',
+    benefits: [
+      'Lokalizacja i zasięg wypełniacza',
+      'Mapowanie naczyń przed zabiegiem',
+      'Ocena guzków i obrzęków po zabiegu',
+      'USG i medycyna estetyczna w jednym miejscu',
+      'Bez przygotowania, bezbolesne',
+      'Opis wyniku od razu',
+    ],
+    image: '/uploads/services/dlaczego-my-usg-wypelniacze-pacjentka-bas-clinic-wroclaw.webp',
+    imageAlt: 'Pacjentka po kontroli wypełniaczy w USG w Bas Clinic we Wrocławiu',
+    image2: '/uploads/services/dlaczego-my-usg-wypelniacze-ekran-bas-clinic-wroclaw.webp',
+    image2Alt: 'Obraz USG skóry i tkanki podskórnej na ekranie aparatu w Bas Clinic we Wrocławiu',
+  },
   'usg/tkanki-miekkie': {
     title: 'Dlaczego USG tkanek miękkich u nas?',
     intro: 'Oceniamy guzki podskórne, mięśnie i ścięgna w celowanym badaniu, które wykonuje i opisuje lekarz, omawiając obraz na bieżąco.',
@@ -847,6 +863,177 @@ export const WHY_US = {
     ],
   },
 
+  'wlewy-witaminowe/witaminowa-bomba': {
+    title: 'Dlaczego kroplówka Witaminowa bomba w Bas Clinic?',
+    intro: 'Wariant dobiera lekarz po wywiadzie, a wlew z preparatów do podania pozajelitowego podajemy w gabinecie z pełną dokumentacją medyczną.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Trzy warianty składu do wyboru',
+      'Preparaty do podania pozajelitowego',
+      'Około 60 minut w wygodnym fotelu',
+      'Opieka personelu przez cały wlew',
+      'Bez skierowania, bez rekonwalescencji',
+    ],
+  },
+
+  'terapie-peptydowe/bpc-157': {
+    title: 'Dlaczego konsultacja BPC-157 w Bas Clinic?',
+    intro: 'Rozmawiamy wprost o braku badań na ludziach i statusie prawnym, a decyzję o podaniu podejmuje lekarz po kwalifikacji i pisemnej zgodzie pacjenta.',
+    benefits: [
+      'Konsultacja lekarska przed decyzją',
+      'Omówienie statusu prawnego i WADA',
+      'Badania laboratoryjne przed terapią',
+      'Pisemna świadoma zgoda',
+      'Iniekcje w gabinecie, nie w domu',
+      'Wizyta kontrolna po terapii',
+    ],
+  },
+  'terapie-peptydowe/ghk-cu': {
+    title: 'Dlaczego peptyd GHK-Cu w Bas Clinic?',
+    intro: 'Drogę podania i plan serii dobiera lekarz po konsultacji, a pacjent otrzymuje pełną informację o stanie badań i statusie prawnym peptydu.',
+    benefits: [
+      'Konsultacja lekarska przed zabiegiem',
+      'Preparaty z legalnego obrotu',
+      'Świadoma zgoda i omówienie dowodów',
+      'Zabieg wykonuje lekarz',
+      'Plan łączony z mezoterapią',
+      'Kontrola po serii zabiegów',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-after-party': {
+    title: 'Dlaczego kroplówka After party w Bas Clinic?',
+    intro: 'Lekarz kwalifikuje każdego pacjenta przed wlewem i odróżnia kaca od stanów, które wymagają innej pomocy.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Produkty lecznicze do infuzji',
+      'Wariant dobrany do objawów',
+      'Opieka przez cały czas wlewu',
+      'Dyskretne, spokojne stanowiska',
+      'Wizyta bez skierowania',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-anti-age': {
+    title: 'Dlaczego kroplówka Anti-age w Bas Clinic?',
+    intro: 'Wariant wlewu dobiera lekarz po wywiadzie i ocenie wyników, a wlew podajemy w gabinecie medycznym z pełną dokumentacją.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Preparaty do podania pozajelitowego',
+      'Trzy jawne warianty składu',
+      'Uczciwa informacja o ograniczeniach',
+      'Opieka personelu podczas wlewu',
+      'Medycyna estetyczna w tej samej klinice',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-detox-watroby': {
+    title: 'Dlaczego kroplówka Detox wątroby w Bas Clinic?',
+    intro: 'Lekarz kwalifikuje do wlewu po wywiadzie dotyczącym wątroby, leków i alkoholu, a w razie potrzeby kieruje na USG wątroby w tej samej klinice.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Lek Hepa-Merz, nie suplement',
+      'USG wątroby na miejscu',
+      'Trzy jawne warianty składu',
+      'Uczciwa informacja o ograniczeniach',
+      'Leczenie uzależnień w tej samej klinice',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-energetyczna': {
+    title: 'Dlaczego kroplówka energetyczna w Bas Clinic?',
+    intro: 'Lekarz ocenia przyczynę zmęczenia przed wlewem i kieruje na badania, gdy kroplówka nie jest właściwą odpowiedzią.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Wywiad o przyczynach zmęczenia',
+      'Skład bez kofeiny i stymulantów',
+      'Produkty lecznicze do podania dożylnego',
+      'Tempo wlewu ustalane przez lekarza',
+      'Opieka personelu podczas wlewu',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-na-libido': {
+    title: 'Dlaczego kroplówka na libido w Bas Clinic?',
+    intro: 'Lekarz przeprowadza dyskretny wywiad, sprawdza leki i przeciwwskazania, a jeśli spadek libido wymaga diagnostyki, mówi o tym wprost.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Dyskretna rozmowa o objawach',
+      'Sprawdzenie interakcji z lekami',
+      'Skład bez hormonów',
+      'Wlew dla kobiet i mężczyzn',
+      'Opieka przez cały wlew',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-na-odpornosc': {
+    title: 'Dlaczego kroplówka na odporność w Bas Clinic?',
+    intro: 'Każdy wlew poprzedza kwalifikacja lekarska, a skład wariantu jest stały i oparty na preparatach do podania pozajelitowego.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Produkty lecznicze, nie suplementy',
+      'Wolne tempo podawania magnezu',
+      'Uczciwa informacja o dowodach',
+      'Opieka personelu przez 90 minut',
+      'Dokumentacja medyczna zabiegu',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-na-zmeczenie-i-stres': {
+    title: 'Dlaczego kroplówka na zmęczenie i stres w Bas Clinic?',
+    intro: 'Lekarz kwalifikuje do wlewu, dobiera wariant i tempo podawania magnezu, a wlew trwa około 90 minut w spokojnym gabinecie.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Wariant dobrany do wywiadu',
+      'Glutation TAD 600 w ampułce',
+      'Wolne tempo podawania magnezu',
+      'Produkty lecznicze, nie suplementy',
+      'Opieka przez cały wlew',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-nawodnienie': {
+    title: 'Dlaczego kroplówka nawadniająca w Bas Clinic?',
+    intro: 'Lekarz ocenia stopień odwodnienia i przeciwwskazania przed każdym wlewem, a płyn bazowy to zarejestrowany produkt leczniczy o składzie zbliżonym do osocza.',
+    benefits: [
+      'Kwalifikacja lekarska przed wlewem',
+      'Zbilansowany płyn wieloelektrolitowy',
+      'Ocena tętna i ciśnienia',
+      'Wlew w około 60 minut',
+      'Opieka personelu podczas wlewu',
+      'Dokumentacja medyczna zabiegu',
+    ],
+  },
+  'wlewy-witaminowe/kroplowka-sport-i-regeneracja': {
+    title: 'Dlaczego kroplówka Sport i regeneracja w Bas Clinic?',
+    intro: 'Lekarz kwalifikuje do wlewu z wywiadem treningowym, sprawdza suplementację i status antydopingowy, a wlew podajemy z produktów leczniczych.',
+    benefits: [
+      'Kwalifikacja lekarska z wywiadem treningowym',
+      'Pytanie o kontrolę antydopingową',
+      'Optylite i TAD 600 jako produkty lecznicze',
+      'Roztwór przygotowany na miejscu',
+      'Opieka personelu podczas wlewu',
+      'Wyniki badań uwzględnione w doborze wariantu',
+    ],
+  },
+  'terapie-peptydowe/peptydy-osi-gh': {
+    title: 'Dlaczego peptydy osi GH w Bas Clinic?',
+    intro: 'Decyzję o terapii peptydowej podejmuje lekarz po konsultacji, badaniach i omówieniu statusu prawnego oraz stanu badań.',
+    benefits: [
+      'Konsultacja lekarska przed decyzją',
+      'Badania IGF-1 i glikemii',
+      'Omówienie statusu prawnego',
+      'Świadoma zgoda na piśmie',
+      'Kontrole w trakcie terapii',
+      'Pełna dokumentacja medyczna',
+    ],
+  },
+
+  'terapie-peptydowe': {
+    title: 'Dlaczego terapie peptydowe w Bas Clinic?',
+    intro: 'Zaczynamy od konsultacji lekarskiej i badań, omawiamy stan dowodów oraz status prawny każdego peptydu i dopiero wtedy podejmujemy decyzję razem z pacjentem.',
+    benefits: [
+      'Konsultacja i kwalifikacja lekarska',
+      'Badania przed rozpoczęciem terapii',
+      'Omówienie statusu prawnego i WADA',
+      'Świadoma zgoda po rozmowie o ryzyku',
+      'Monitorowanie w trakcie terapii',
+      'Dyskrecja i pełna dokumentacja',
+    ],
+  },
+
   // ———————————————————————— Leczenie uzależnień ————————————————————————
   'leczenie-uzaleznien': {
     title: 'Dlaczego leczenie uzależnień w Bas Clinic?',
@@ -927,7 +1114,7 @@ export function getWhyUs(slug, category = '') {
 
   const c = (category || '').toLowerCase();
   if (c.includes('ultrasonograf') || c.includes('usg')) return CATEGORY_WHY_US.usg;
-  if (c.includes('infuz') || c.includes('wlew')) return CATEGORY_WHY_US.wlewy;
+  if (c.includes('infuz') || c.includes('wlew') || c.includes('peptyd')) return CATEGORY_WHY_US.wlewy;
   if (
     c.includes('stomatolog') ||
     c.includes('ortodonc') ||

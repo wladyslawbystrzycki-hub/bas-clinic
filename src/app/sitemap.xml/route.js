@@ -1,4 +1,4 @@
-import { STOMATOLOGIA_SERVICES, AESTHETIC_SERVICES, USG_SERVICES } from '@/config/services';
+import { STOMATOLOGIA_SERVICES, AESTHETIC_SERVICES, USG_SERVICES, WLEWY_SERVICES, PEPTYDY_SERVICES } from '@/config/services';
 // Realne daty modyfikacji per trasa, wyliczone z historii git i scommitowane
 // (`npm run lastmod`). NIE używamy `new Date()` — automatyczny, jednakowy lastmod
 // jest wykrywany przez Google i ignorowany (kompendium 03-02-03). Brak wpisu →
@@ -42,6 +42,7 @@ export async function GET() {
   urls.push(buildUrl('/medycyna-estetyczna/', 0.9, 'weekly'));
   urls.push(buildUrl('/usg/', 0.9, 'weekly'));
   urls.push(buildUrl('/wlewy-witaminowe/', 0.8, 'monthly'));
+  urls.push(buildUrl('/terapie-peptydowe/', 0.8, 'monthly'));
   urls.push(buildUrl('/leczenie-uzaleznien/', 0.8, 'monthly'));
   urls.push(buildUrl('/metamorfozy/', 0.7, 'monthly'));
   urls.push(buildUrl('/cennik/', 0.7, 'monthly'));
@@ -62,6 +63,13 @@ export async function GET() {
 
   // USG (ultrasonografia) - hub juz dodany wyzej, tu strony badan
   USG_SERVICES.forEach((s) => {
+    if (!s.isLanding) {
+      urls.push(buildUrl(`/${s.slug}/`, 0.8, 'monthly'));
+    }
+  });
+
+  // Wlewy witaminowe i terapie peptydowe - huby juz dodane wyzej, tu strony uslug
+  [...WLEWY_SERVICES, ...PEPTYDY_SERVICES].forEach((s) => {
     if (!s.isLanding) {
       urls.push(buildUrl(`/${s.slug}/`, 0.8, 'monthly'));
     }
